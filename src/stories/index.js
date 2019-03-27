@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
+import Alert from "../lib/Alert/Alert";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -79,6 +80,16 @@ storiesOf("Button", module)
         onClick={action("Secondary 5 Clicked")}
         text="Secondary 5"
         className="ter-button--secondary--5"
+      />
+    </div>
+  ));
+
+  storiesOf("Alert", module)
+  .add("Alerts", () => (
+    <div>
+      <Alert
+        text="Primary 1"
+        className="ter-alert--default"
       />
     </div>
   ));
