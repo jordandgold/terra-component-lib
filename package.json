@@ -47,5 +47,10 @@
   "repository": {
     "type": "git",
     "url": "URL_OF_YOUR_REPOSITORY"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/lib/*/*js"
+    ]
   }
 }
