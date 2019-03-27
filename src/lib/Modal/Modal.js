@@ -6,7 +6,9 @@ const Modal = props => {
   const { className, title, body, buttonOne, buttonTwo, closeModal } = props;
   return (
     <aside className={`modal ${className}`}>
-      <button onClick={closeModal()}>close</button>
+      <button className="close-modal-button" onClick={closeModal()}>
+        close
+      </button>
       <h4>{title}</h4>
       <p>{body}</p>
       {buttonOne && (
