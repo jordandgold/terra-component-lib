@@ -7,6 +7,7 @@ const Alert = props => {
 
   return (
     <div
+        onClick={props.onClick}
         className={`ter-alert ${className}`}
     >
         {text}
