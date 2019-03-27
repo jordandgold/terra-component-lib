@@ -3,8 +3,8 @@
  * Button.scss
  */
 
-@import '../global-styles/yiq.scss';
-@import '../global-styles/global-vars.scss';
+@import "../global-styles/yiq.scss";
+@import "../global-styles/terra.scss";
 
 @mixin button-reset() {
   border: 0;
@@ -18,7 +18,7 @@
 @mixin button-base() {
   font-size: $button-font-size;
   font-weight: $button-font-weight;
-  padding: 0 spacing('sm');
+  padding: 0 spacing("sm");
   height: $button-height;
   line-height: calc(#{$button-height} - (#{$button-border-size * 2}));
   border-radius: $button-border-radius;
@@ -31,20 +31,20 @@
   display: inline-flex;
   align-items: center;
   &[href] {
-      &:hover,
-      &:visited,
-      &:active,
-      &:focus,
-      a:active {
-          cursor: pointer;
-          text-decoration: none;
-      }
-      &:active {
-          box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
-      }
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus,
+    a:active {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    &:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
   }
   .ter-button__icon {
-      margin-left: spacing('xxs');
+    margin-left: spacing("xxs");
   }
 }
 
@@ -52,50 +52,45 @@
   background-color: $bg;
   border: $button-border-size solid $borderColor;
   @if $bg == $color {
-      color: yiq-contrast-color($bg);
-  }
-  @else {
-      color: $color;
+    color: yiq-contrast-color($bg);
+  } @else {
+    color: $color;
   }
   &:visited,
   &:active,
   &:focus {
-      @if $bg == $color {
-          color: yiq-contrast-color($bg);
-      }
-      @else {
-          color: $color;
-      }
+    @if $bg == $color {
+      color: yiq-contrast-color($bg);
+    } @else {
+      color: $color;
+    }
   }
   &:hover {
-      @if $bg == $color {
-          color: yiq-contrast-color($bg);
-      }
-      @else {
-          color: $color;
-      }
-      text-decoration: none;
-      @if $bg == $bgHover {
-          background-color: darken($bg, 7%);
-      }
-      @else {
-          background-color: $bgHover;
-      }
-      border-color: darken($borderColor, 7%);
-      cursor: pointer;
+    @if $bg == $color {
+      color: yiq-contrast-color($bg);
+    } @else {
+      color: $color;
+    }
+    text-decoration: none;
+    @if $bg == $bgHover {
+      background-color: darken($bg, 7%);
+    } @else {
+      background-color: $bgHover;
+    }
+    border-color: darken($borderColor, 7%);
+    cursor: pointer;
   }
   &:active {
-      background-color: darken($bg, 12%);
+    background-color: darken($bg, 12%);
   }
   svg {
-      width: 16px;
-      height: 16px;
-      @if $bg == $color {
-          fill: yiq-contrast-color($bg);
-      }
-      @else {
-          fill: $color;
-      }
+    width: 16px;
+    height: 16px;
+    @if $bg == $color {
+      fill: yiq-contrast-color($bg);
+    } @else {
+      fill: $color;
+    }
   }
 }
 
@@ -104,37 +99,34 @@
   border: $button-border-size solid $borderColor;
   color: $color;
   &:hover {
+    @if $bg == $color {
+      color: yiq-contrast-color($bg);
+    } @else {
+      color: $color;
+    }
+    text-decoration: none;
+    @if $bg == $bgHover {
+      background-color: darken($bg, 7%);
+    } @else {
+      background-color: $bgHover;
+    }
+    border-color: darken($borderColor, 7%);
+    cursor: pointer;
+    svg {
       @if $bg == $color {
-          color: yiq-contrast-color($bg);
+        fill: yiq-contrast-color($bg);
+      } @else {
+        fill: $color;
       }
-      @else {
-          color: $color;
-      }
-      text-decoration: none;
-      @if $bg == $bgHover {
-          background-color: darken($bg, 7%);
-      }
-      @else {
-          background-color: $bgHover;
-      }
-      border-color: darken($borderColor, 7%);
-      cursor: pointer;
-      svg {
-          @if $bg == $color {
-              fill: yiq-contrast-color($bg);
-          }
-          @else {
-              fill: $color;
-          }
-      }
+    }
   }
   &:active {
-      background-color: darken($bg, 12%);
+    background-color: darken($bg, 12%);
   }
   svg {
-      width: 16px;
-      height: 16px;
-      fill: $color;
+    width: 16px;
+    height: 16px;
+    fill: $color;
   }
 }
 
@@ -151,18 +143,18 @@ a.ter-button {
 
 // primary button definitions
 @each $color, $value in $button-colors {
-.ter-button--primary--#{$color},
-a.ter-button--primary--#{$color} {
-  @include button-primary($value);
-}
+  .ter-button--primary--#{$color},
+  a.ter-button--primary--#{$color} {
+    @include button-primary($value);
+  }
 }
 
 // secondary button definitions
 @each $color, $value in $button-colors {
-.ter-button--secondary--#{$color},
-a.ter-button--secondary--#{$color} {
-  @include button-secondary($value);
-}
+  .ter-button--secondary--#{$color},
+  a.ter-button--secondary--#{$color} {
+    @include button-secondary($value);
+  }
 }
 
 // small button variant
@@ -183,28 +175,28 @@ a.ter-button--block {
 .ter-split-button {
   position: relative;
   button {
-      float: left;
-      margin-right: 1px;
-      &:first-of-type {
-          border-top-right-radius: 0px;
-          border-bottom-right-radius: 0px;
-      }
-      &:last-of-type {
-          margin-right: 0px;
-          border-top-left-radius: 0px;
-          border-bottom-left-radius: 0px;
-          padding-left: 1em;
-          padding-right: 1em;
-      }
-      &:only-of-type {
-          margin-right: 0px;
-          border-radius: initial;
-      }
+    float: left;
+    margin-right: 1px;
+    &:first-of-type {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    &:last-of-type {
+      margin-right: 0px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    &:only-of-type {
+      margin-right: 0px;
+      border-radius: initial;
+    }
   }
   .dropdown {
-      position: unset;
+    position: unset;
   }
   .ter-button__icon {
-      margin-left: 0px;
+    margin-left: 0px;
   }
 }
