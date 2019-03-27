@@ -1,0 +1,71 @@
+body,
+html {
+  color: $body-font-color;
+  background: $body-bg-color;
+  height: 100%;
+}
+
+body {
+  // padding-top: 4rem;
+  &.no-nav {
+    padding-top: 0;
+  }
+}
+
+a,
+a:visited,
+a:active,
+a:focus,
+.link,
+.link:visited,
+.link:active,
+.link:focus {
+  font-weight: $link-font-weight;
+  color: $link-color;
+  transition: color 200ms ease;
+  text-decoration: underline;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .is-inverse & {
+    color: $link-inverse-color;
+    &:hover {
+      color: $link-inverse-hover-color;
+    }
+  }
+}
+
+.is-inverse {
+  color: type-color('inverse');
+  *:not(a) {
+    color: type-color('inverse');
+  }
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: color('gray-2');
+  border: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+.hidden,
+[hidden],
+[aria-hidden="true"] {
+  display: none;
+  visibility: hidden;
+}
+
+pre {
+  margin: 0;
+}
+
+::selection {
+  background: $selection-highlight-bg;
+}
