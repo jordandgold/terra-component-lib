@@ -84,24 +84,11 @@ storiesOf("Button", module)
     </div>
   ));
 
-  storiesOf("Alert", module)
-  .add("Alerts", () => (
-    <div>
-      <Alert
-        text="Default Alert"
-        className="ter-alert--default"
-      />
-      <Alert
-        text="Warning Alert"
-        className="ter-alert--warning"
-      />
-      <Alert
-        text="Danger Alert"
-        className="ter-alert--danger"
-      />
-      <Alert
-        text="Success Alert"
-        className="ter-alert--success"
-      />
-    </div>
-  ));
+storiesOf("Alert", module).add("Alerts", () => (
+  <div>
+    <Alert onClick={action("Clicked!")} text="Default Alert" />
+    <Alert onClick={action("Clicked!")} text="Warning Alert" type="warning" />
+    <Alert onClick={action("Clicked!")} text="Danger Alert" type="danger" />
+    <Alert onClick={action("Clicked!")} text="Success Alert" type="success" />
+  </div>
+));
