@@ -21,6 +21,12 @@ describe("Alert", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match snapshot without a type", () => {
+    wrapper = shallow(<Alert text="This is an alert." onClick={mockOnClick} />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it("should call onClick when clicked", () => {
     wrapper.find(".ter-alert").simulate("click");
     expect(mockOnClick).toHaveBeenCalled();
