@@ -4,7 +4,9 @@ exports[`Button should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    className="test class"
     onClick={[MockFunction]}
+    text="test text"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -21,9 +23,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <button
-        className="ter-button undefined"
+        className="ter-button test class"
         onClick={[Function]}
-      />,
+      >
+        test text
+      </button>,
     },
     "ref": null,
     "rendered": Object {
@@ -31,12 +35,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": undefined,
-        "className": "ter-button undefined",
+        "children": "test text",
+        "className": "ter-button test class",
         "onClick": [Function],
       },
       "ref": null,
-      "rendered": null,
+      "rendered": "test text",
       "type": "button",
     },
     "type": "div",
@@ -48,9 +52,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <button
-          className="ter-button undefined"
+          className="ter-button test class"
           onClick={[Function]}
-        />,
+        >
+          test text
+        </button>,
       },
       "ref": null,
       "rendered": Object {
@@ -58,12 +64,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
-          "className": "ter-button undefined",
+          "children": "test text",
+          "className": "ter-button test class",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "test text",
         "type": "button",
       },
       "type": "div",
