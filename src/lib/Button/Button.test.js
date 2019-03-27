@@ -11,7 +11,9 @@ describe("Button", () => {
 
   beforeEach(() => {
     mockOnClick = jest.fn();
-    wrapper = shallow(<Button onClick={mockOnClick} />);
+    wrapper = shallow(
+      <Button className="test class" onClick={mockOnClick} text="test text" />
+    );
   });
 
   it("should match the snapshot", () => {
