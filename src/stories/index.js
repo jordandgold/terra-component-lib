@@ -88,8 +88,20 @@ storiesOf("Button", module)
   .add("Alerts", () => (
     <div>
       <Alert
-        text="Primary 1"
+        text="Default Alert"
         className="ter-alert--default"
+      />
+      <Alert
+        text="Warning Alert"
+        className="ter-alert--warning"
+      />
+      <Alert
+        text="Danger Alert"
+        className="ter-alert--danger"
+      />
+      <Alert
+        text="Success Alert"
+        className="ter-alert--success"
       />
     </div>
   ));

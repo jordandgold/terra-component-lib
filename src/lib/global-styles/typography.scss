@@ -1,0 +1,55 @@
+@mixin header-type-setting() {
+	font-size: 1em;
+	font-family: $header-font-family;
+	line-height: line-height('tight');
+	font-weight: $header-font-weight;
+	color: $header-font-color;
+	display: block;
+	margin: 0 0 .67em 0;
+}
+
+@mixin type-setting($font-size: 'base', $line-height: 'regular') {
+	font-size: font-size($font-size);
+	line-height: line-height($line-height);
+}
+
+@mixin paragraph-type-setting {
+	@include type-setting('base', 'loose');
+	margin: 0 0 1.5em 0;
+}
+
+@mixin font-size($size) {
+	@include type-setting($size);
+}
+
+body, html {
+	font-family: $body-font-family;
+	@include type-setting('base');
+	font-weight: $body-font-weight;
+}
+
+p {
+	@include paragraph-type-setting;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include header-type-setting;
+}
+
+@each $level, $value in $font-size-scale {
+    .font-size-#{$level} {
+        font-size: $value;
+    }
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-lowercase {
+	text-transform: lowercase;
+}
