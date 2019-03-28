@@ -70,7 +70,7 @@ describe("Modal", () => {
   });
 
   it("should call close modal on click", () => {
-    wrapper.find(".close-modal-button").simulate("click");
+    wrapper.find(".ter-modal__close").simulate("click");
 
     expect(mockCloseModal).toHaveBeenCalled();
   });
