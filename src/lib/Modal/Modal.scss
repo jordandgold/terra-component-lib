@@ -8,10 +8,10 @@
     transition: transform 225ms ease-in-out;
     width: auto;
     &__title {
-        @include type-setting();
-        padding-bottom: spacing('sm');
+        @include header-type-setting();
+        font-size: font-size('base');
     }
-    &__content {
+    &__body {
         padding: spacing('md') spacing('sm');
         font-size: $modal-font-size;
         p {
