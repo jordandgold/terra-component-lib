@@ -1,1 +1,93 @@
 @import "../global-styles/terra.scss";
+
+.ter-modal {
+    @include depth(2);
+    width: 100%;
+    margin: spacing('xs');
+    position: relative;
+    transition: transform 225ms ease-in-out;
+    width: auto;
+    &__title {
+        @include type-setting();
+        padding-bottom: spacing('sm');
+    }
+    &__content {
+        padding: spacing('md') spacing('sm');
+        font-size: $modal-font-size;
+        p {
+            font-size: $modal-font-size;
+        }
+    }
+    &__wrap {
+        background: $modal-bg;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__close {
+        display: block;
+        position: absolute;
+        top: spacing('xs');
+        right: spacing('xs');
+        opacity: 0.4;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
+        width: 16px;
+        height: 16px;
+        &:after {
+            @include icon-base();
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0px;
+			transform: rotate(0deg) translateY(-50%);
+			transition: transform 200ms ease-in-out;
+			background-position: -316px -316px;
+            height: 20px;
+            width: 20px;
+		}
+        &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}
+
+body.has-modal-open {
+    overflow: hidden;
+}
+
+.ter-modal--full-page {
+    @include z-index(10);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparentize($modal-overlay-bg, 0.25);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        overflow: scroll;
+        .ter-modal {
+            transform: translateY(0px);
+        }
+    }
+    .ter-modal {
+        position: relative;
+        top: 0;
+        padding: 0;
+        transform: translateY(20px);
+        width: 600px;
+        margin: spacing('xxl') auto;
+        &__wrap {
+            @include for-size(desktop-up) {
+                width: 100%;
+            }
+        }
+    }
+}
