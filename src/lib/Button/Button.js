@@ -8,11 +8,11 @@ const Button = props => {
   const { onClick, className, text } = props;
 
   return (
-    <div>
+    <React.Fragment>
       <button onClick={e => onClick(e)} className={`ter-button ${className}`}>
         {text}
       </button>
-    </div>
+    </React.Fragment>
   );
 };
 
