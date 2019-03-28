@@ -20,7 +20,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": <button
         className="ter-button test class"
@@ -43,13 +43,13 @@ ShallowWrapper {
       "rendered": "test text",
       "type": "button",
     },
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": <button
           className="ter-button test class"
@@ -72,7 +72,7 @@ ShallowWrapper {
         "rendered": "test text",
         "type": "button",
       },
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

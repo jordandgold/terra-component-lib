@@ -1,15 +1,35 @@
 body,
 html {
+  @include type-setting('base');
+  font-family: $body-font-family;
   color: $body-font-color;
   background: $body-bg-color;
   height: 100%;
 }
 
 body {
-  // padding-top: 4rem;
-  &.no-nav {
+  &.has-no-nav {
     padding-top: 0;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include header-type-setting;
+}
+
+@each $level, $value in $font-size-scale {
+  .font-size-#{$level} {
+      font-size: $value;
+  }
+}
+
+p {
+	@include paragraph-type-setting;
 }
 
 a,
@@ -68,4 +88,11 @@ pre {
 
 ::selection {
   background: $selection-highlight-bg;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-lowercase {
+	text-transform: lowercase;
 }

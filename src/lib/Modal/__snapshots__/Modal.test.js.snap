@@ -51,28 +51,34 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
-          className="close-modal-button"
+          className="ter-modal__close"
         >
           close
         </button>,
-        <h4>
-          test title
-        </h4>,
-        <p>
-          test body
-        </p>,
-        <Button
-          className="mock class"
-          onClick={[MockFunction]}
-          text="button one mock text"
-        />,
-        <Button
-          className="mock class"
-          onClick={[MockFunction]}
-          text="button one mock text"
-        />,
+        <div
+          className="ter-modal__body"
+        >
+          <h4
+            class="ter-modal__title"
+          >
+            test title
+          </h4>
+          <p>
+            test body
+          </p>
+          <Button
+            className="mock class"
+            onClick={[MockFunction]}
+            text="button one mock text"
+          />
+          <Button
+            className="mock class"
+            onClick={[MockFunction]}
+            text="button one mock text"
+          />
+        </div>,
       ],
-      "className": "modal test",
+      "className": "ter-modal test",
     },
     "ref": null,
     "rendered": Array [
@@ -82,7 +88,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "close",
-          "className": "close-modal-button",
+          "className": "ter-modal__close",
           "onClick": undefined,
         },
         "ref": null,
@@ -94,48 +100,81 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "test title",
+          "children": Array [
+            <h4
+              class="ter-modal__title"
+            >
+              test title
+            </h4>,
+            <p>
+              test body
+            </p>,
+            <Button
+              className="mock class"
+              onClick={[MockFunction]}
+              text="button one mock text"
+            />,
+            <Button
+              className="mock class"
+              onClick={[MockFunction]}
+              text="button one mock text"
+            />,
+          ],
+          "className": "ter-modal__body",
         },
         "ref": null,
-        "rendered": "test title",
-        "type": "h4",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "test body",
-        },
-        "ref": null,
-        "rendered": "test body",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "className": "mock class",
-          "onClick": [MockFunction],
-          "text": "button one mock text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "className": "mock class",
-          "onClick": [MockFunction],
-          "text": "button one mock text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test title",
+              "class": "ter-modal__title",
+            },
+            "ref": null,
+            "rendered": "test title",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test body",
+            },
+            "ref": null,
+            "rendered": "test body",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "mock class",
+              "onClick": [MockFunction],
+              "text": "button one mock text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "mock class",
+              "onClick": [MockFunction],
+              "text": "button one mock text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "aside",
@@ -148,28 +187,34 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="close-modal-button"
+            className="ter-modal__close"
           >
             close
           </button>,
-          <h4>
-            test title
-          </h4>,
-          <p>
-            test body
-          </p>,
-          <Button
-            className="mock class"
-            onClick={[MockFunction]}
-            text="button one mock text"
-          />,
-          <Button
-            className="mock class"
-            onClick={[MockFunction]}
-            text="button one mock text"
-          />,
+          <div
+            className="ter-modal__body"
+          >
+            <h4
+              class="ter-modal__title"
+            >
+              test title
+            </h4>
+            <p>
+              test body
+            </p>
+            <Button
+              className="mock class"
+              onClick={[MockFunction]}
+              text="button one mock text"
+            />
+            <Button
+              className="mock class"
+              onClick={[MockFunction]}
+              text="button one mock text"
+            />
+          </div>,
         ],
-        "className": "modal test",
+        "className": "ter-modal test",
       },
       "ref": null,
       "rendered": Array [
@@ -179,7 +224,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "close",
-            "className": "close-modal-button",
+            "className": "ter-modal__close",
             "onClick": undefined,
           },
           "ref": null,
@@ -191,48 +236,81 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "test title",
+            "children": Array [
+              <h4
+                class="ter-modal__title"
+              >
+                test title
+              </h4>,
+              <p>
+                test body
+              </p>,
+              <Button
+                className="mock class"
+                onClick={[MockFunction]}
+                text="button one mock text"
+              />,
+              <Button
+                className="mock class"
+                onClick={[MockFunction]}
+                text="button one mock text"
+              />,
+            ],
+            "className": "ter-modal__body",
           },
           "ref": null,
-          "rendered": "test title",
-          "type": "h4",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "test body",
-          },
-          "ref": null,
-          "rendered": "test body",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "className": "mock class",
-            "onClick": [MockFunction],
-            "text": "button one mock text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "className": "mock class",
-            "onClick": [MockFunction],
-            "text": "button one mock text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test title",
+                "class": "ter-modal__title",
+              },
+              "ref": null,
+              "rendered": "test title",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test body",
+              },
+              "ref": null,
+              "rendered": "test body",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "mock class",
+                "onClick": [MockFunction],
+                "text": "button one mock text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "mock class",
+                "onClick": [MockFunction],
+                "text": "button one mock text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "aside",
@@ -306,20 +384,24 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
-          className="close-modal-button"
+          className="ter-modal__close"
         >
           close
         </button>,
-        <h4>
-          test title
-        </h4>,
-        <p>
-          test body
-        </p>,
-        undefined,
-        undefined,
+        <div
+          className="ter-modal__body"
+        >
+          <h4
+            class="ter-modal__title"
+          >
+            test title
+          </h4>
+          <p>
+            test body
+          </p>
+        </div>,
       ],
-      "className": "modal test",
+      "className": "ter-modal test",
     },
     "ref": null,
     "rendered": Array [
@@ -329,7 +411,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "close",
-          "className": "close-modal-button",
+          "className": "ter-modal__close",
           "onClick": undefined,
         },
         "ref": null,
@@ -341,25 +423,50 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "test title",
+          "children": Array [
+            <h4
+              class="ter-modal__title"
+            >
+              test title
+            </h4>,
+            <p>
+              test body
+            </p>,
+            undefined,
+            undefined,
+          ],
+          "className": "ter-modal__body",
         },
         "ref": null,
-        "rendered": "test title",
-        "type": "h4",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test title",
+              "class": "ter-modal__title",
+            },
+            "ref": null,
+            "rendered": "test title",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test body",
+            },
+            "ref": null,
+            "rendered": "test body",
+            "type": "p",
+          },
+          undefined,
+          undefined,
+        ],
+        "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "test body",
-        },
-        "ref": null,
-        "rendered": "test body",
-        "type": "p",
-      },
-      undefined,
-      undefined,
     ],
     "type": "aside",
   },
@@ -371,20 +478,24 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="close-modal-button"
+            className="ter-modal__close"
           >
             close
           </button>,
-          <h4>
-            test title
-          </h4>,
-          <p>
-            test body
-          </p>,
-          undefined,
-          undefined,
+          <div
+            className="ter-modal__body"
+          >
+            <h4
+              class="ter-modal__title"
+            >
+              test title
+            </h4>
+            <p>
+              test body
+            </p>
+          </div>,
         ],
-        "className": "modal test",
+        "className": "ter-modal test",
       },
       "ref": null,
       "rendered": Array [
@@ -394,7 +505,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "close",
-            "className": "close-modal-button",
+            "className": "ter-modal__close",
             "onClick": undefined,
           },
           "ref": null,
@@ -406,25 +517,50 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "test title",
+            "children": Array [
+              <h4
+                class="ter-modal__title"
+              >
+                test title
+              </h4>,
+              <p>
+                test body
+              </p>,
+              undefined,
+              undefined,
+            ],
+            "className": "ter-modal__body",
           },
           "ref": null,
-          "rendered": "test title",
-          "type": "h4",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test title",
+                "class": "ter-modal__title",
+              },
+              "ref": null,
+              "rendered": "test title",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test body",
+              },
+              "ref": null,
+              "rendered": "test body",
+              "type": "p",
+            },
+            undefined,
+            undefined,
+          ],
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "test body",
-          },
-          "ref": null,
-          "rendered": "test body",
-          "type": "p",
-        },
-        undefined,
-        undefined,
       ],
       "type": "aside",
     },
@@ -504,24 +640,29 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
-          className="close-modal-button"
+          className="ter-modal__close"
         >
           close
         </button>,
-        <h4>
-          test title
-        </h4>,
-        <p>
-          test body
-        </p>,
-        <Button
-          className="mock class"
-          onClick={[MockFunction]}
-          text="button one mock text"
-        />,
-        undefined,
+        <div
+          className="ter-modal__body"
+        >
+          <h4
+            class="ter-modal__title"
+          >
+            test title
+          </h4>
+          <p>
+            test body
+          </p>
+          <Button
+            className="mock class"
+            onClick={[MockFunction]}
+            text="button one mock text"
+          />
+        </div>,
       ],
-      "className": "modal test",
+      "className": "ter-modal test",
     },
     "ref": null,
     "rendered": Array [
@@ -531,7 +672,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "close",
-          "className": "close-modal-button",
+          "className": "ter-modal__close",
           "onClick": undefined,
         },
         "ref": null,
@@ -543,37 +684,66 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "test title",
+          "children": Array [
+            <h4
+              class="ter-modal__title"
+            >
+              test title
+            </h4>,
+            <p>
+              test body
+            </p>,
+            <Button
+              className="mock class"
+              onClick={[MockFunction]}
+              text="button one mock text"
+            />,
+            undefined,
+          ],
+          "className": "ter-modal__body",
         },
         "ref": null,
-        "rendered": "test title",
-        "type": "h4",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test title",
+              "class": "ter-modal__title",
+            },
+            "ref": null,
+            "rendered": "test title",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test body",
+            },
+            "ref": null,
+            "rendered": "test body",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "mock class",
+              "onClick": [MockFunction],
+              "text": "button one mock text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          undefined,
+        ],
+        "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "test body",
-        },
-        "ref": null,
-        "rendered": "test body",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "className": "mock class",
-          "onClick": [MockFunction],
-          "text": "button one mock text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      undefined,
     ],
     "type": "aside",
   },
@@ -585,24 +755,29 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
-            className="close-modal-button"
+            className="ter-modal__close"
           >
             close
           </button>,
-          <h4>
-            test title
-          </h4>,
-          <p>
-            test body
-          </p>,
-          <Button
-            className="mock class"
-            onClick={[MockFunction]}
-            text="button one mock text"
-          />,
-          undefined,
+          <div
+            className="ter-modal__body"
+          >
+            <h4
+              class="ter-modal__title"
+            >
+              test title
+            </h4>
+            <p>
+              test body
+            </p>
+            <Button
+              className="mock class"
+              onClick={[MockFunction]}
+              text="button one mock text"
+            />
+          </div>,
         ],
-        "className": "modal test",
+        "className": "ter-modal test",
       },
       "ref": null,
       "rendered": Array [
@@ -612,7 +787,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "close",
-            "className": "close-modal-button",
+            "className": "ter-modal__close",
             "onClick": undefined,
           },
           "ref": null,
@@ -624,37 +799,66 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "test title",
+            "children": Array [
+              <h4
+                class="ter-modal__title"
+              >
+                test title
+              </h4>,
+              <p>
+                test body
+              </p>,
+              <Button
+                className="mock class"
+                onClick={[MockFunction]}
+                text="button one mock text"
+              />,
+              undefined,
+            ],
+            "className": "ter-modal__body",
           },
           "ref": null,
-          "rendered": "test title",
-          "type": "h4",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test title",
+                "class": "ter-modal__title",
+              },
+              "ref": null,
+              "rendered": "test title",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test body",
+              },
+              "ref": null,
+              "rendered": "test body",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "mock class",
+                "onClick": [MockFunction],
+                "text": "button one mock text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            undefined,
+          ],
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "test body",
-          },
-          "ref": null,
-          "rendered": "test body",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "className": "mock class",
-            "onClick": [MockFunction],
-            "text": "button one mock text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        undefined,
       ],
       "type": "aside",
     },

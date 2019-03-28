@@ -100,7 +100,6 @@ const mockBody =
 storiesOf("Modal", module).add("Modal", () => (
   <Modal
     closeModal={action("close!")}
-    className="modal"
     title="Modal title"
     body={mockBody}
     buttonOne={{
@@ -110,7 +109,7 @@ storiesOf("Modal", module).add("Modal", () => (
     }}
     buttonTwo={{
       onClick: action("Clicked!"),
-      className: "ter-button--secondary--2",
+      className: "ter-button--secondary--1",
       text: "buy sketchup, dummy!"
     }}
   />
