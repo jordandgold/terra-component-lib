@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
 import Alert from "../lib/Alert/Alert";
+import Modal from "../lib/Modal/Modal";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -91,4 +92,26 @@ storiesOf("Alert", module).add("Alerts", () => (
     <Alert onClick={action("Clicked!")} text="Danger Alert" type="danger" />
     <Alert onClick={action("Clicked!")} text="Success Alert" type="success" />
   </div>
+));
+
+const mockBody =
+  "Must go faster... go, go, go, go, go! Jaguar shark! So tell me - does it really exist? Just my luck, no ice. What do they got in there? King Kong? Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. So you two dig up, dig up dinosaurs?";
+
+storiesOf("Modal", module).add("Modal", () => (
+  <Modal
+    closeModal={action("close!")}
+    className="modal"
+    title="Modal title"
+    body={mockBody}
+    buttonOne={{
+      onClick: action("Clicked!"),
+      className: "ter-button--primary--1",
+      text: "buy sketchup!"
+    }}
+    buttonTwo={{
+      onClick: action("Clicked!"),
+      className: "ter-button--secondary--2",
+      text: "buy sketchup, dummy!"
+    }}
+  />
 ));

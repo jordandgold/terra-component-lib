@@ -1,0 +1,686 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match the snap shot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Modal
+    body="test body"
+    buttonOne={
+      Object {
+        "className": "mock class",
+        "onClick": [MockFunction],
+        "text": "button one mock text",
+      }
+    }
+    buttonTwo={
+      Object {
+        "className": "mock class",
+        "onClick": [MockFunction],
+        "text": "button one mock text",
+      }
+    }
+    className="test"
+    closeModal={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    title="test title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="close-modal-button"
+        >
+          close
+        </button>,
+        <h4>
+          test title
+        </h4>,
+        <p>
+          test body
+        </p>,
+        <Button
+          className="mock class"
+          onClick={[MockFunction]}
+          text="button one mock text"
+        />,
+        <Button
+          className="mock class"
+          onClick={[MockFunction]}
+          text="button one mock text"
+        />,
+      ],
+      "className": "modal test",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "close",
+          "className": "close-modal-button",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "close",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test title",
+        },
+        "ref": null,
+        "rendered": "test title",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test body",
+        },
+        "ref": null,
+        "rendered": "test body",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "className": "mock class",
+          "onClick": [MockFunction],
+          "text": "button one mock text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "className": "mock class",
+          "onClick": [MockFunction],
+          "text": "button one mock text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "aside",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="close-modal-button"
+          >
+            close
+          </button>,
+          <h4>
+            test title
+          </h4>,
+          <p>
+            test body
+          </p>,
+          <Button
+            className="mock class"
+            onClick={[MockFunction]}
+            text="button one mock text"
+          />,
+          <Button
+            className="mock class"
+            onClick={[MockFunction]}
+            text="button one mock text"
+          />,
+        ],
+        "className": "modal test",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "close",
+            "className": "close-modal-button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "close",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test title",
+          },
+          "ref": null,
+          "rendered": "test title",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test body",
+          },
+          "ref": null,
+          "rendered": "test body",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "mock class",
+            "onClick": [MockFunction],
+            "text": "button one mock text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "mock class",
+            "onClick": [MockFunction],
+            "text": "button one mock text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "aside",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Modal should match the snap shot with no buttons 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Modal
+    body="test body"
+    className="test"
+    closeModal={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    title="test title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="close-modal-button"
+        >
+          close
+        </button>,
+        <h4>
+          test title
+        </h4>,
+        <p>
+          test body
+        </p>,
+        undefined,
+        undefined,
+      ],
+      "className": "modal test",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "close",
+          "className": "close-modal-button",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "close",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test title",
+        },
+        "ref": null,
+        "rendered": "test title",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test body",
+        },
+        "ref": null,
+        "rendered": "test body",
+        "type": "p",
+      },
+      undefined,
+      undefined,
+    ],
+    "type": "aside",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="close-modal-button"
+          >
+            close
+          </button>,
+          <h4>
+            test title
+          </h4>,
+          <p>
+            test body
+          </p>,
+          undefined,
+          undefined,
+        ],
+        "className": "modal test",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "close",
+            "className": "close-modal-button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "close",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test title",
+          },
+          "ref": null,
+          "rendered": "test title",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test body",
+          },
+          "ref": null,
+          "rendered": "test body",
+          "type": "p",
+        },
+        undefined,
+        undefined,
+      ],
+      "type": "aside",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Modal should match the snap shot with one button 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Modal
+    body="test body"
+    buttonOne={
+      Object {
+        "className": "mock class",
+        "onClick": [MockFunction],
+        "text": "button one mock text",
+      }
+    }
+    className="test"
+    closeModal={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    title="test title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="close-modal-button"
+        >
+          close
+        </button>,
+        <h4>
+          test title
+        </h4>,
+        <p>
+          test body
+        </p>,
+        <Button
+          className="mock class"
+          onClick={[MockFunction]}
+          text="button one mock text"
+        />,
+        undefined,
+      ],
+      "className": "modal test",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "close",
+          "className": "close-modal-button",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "close",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test title",
+        },
+        "ref": null,
+        "rendered": "test title",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test body",
+        },
+        "ref": null,
+        "rendered": "test body",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "className": "mock class",
+          "onClick": [MockFunction],
+          "text": "button one mock text",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+    ],
+    "type": "aside",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="close-modal-button"
+          >
+            close
+          </button>,
+          <h4>
+            test title
+          </h4>,
+          <p>
+            test body
+          </p>,
+          <Button
+            className="mock class"
+            onClick={[MockFunction]}
+            text="button one mock text"
+          />,
+          undefined,
+        ],
+        "className": "modal test",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "close",
+            "className": "close-modal-button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "close",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test title",
+          },
+          "ref": null,
+          "rendered": "test title",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test body",
+          },
+          "ref": null,
+          "rendered": "test body",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "mock class",
+            "onClick": [MockFunction],
+            "text": "button one mock text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+      ],
+      "type": "aside",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
