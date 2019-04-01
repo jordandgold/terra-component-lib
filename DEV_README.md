@@ -50,4 +50,5 @@ Components that do not use props do not need to use the prop-types API.
 - [Enyzme](https://airbnb.io/enzyme/) - JavaScript testing utility for React for testing React component output
 - [Jest](https://jestjs.io/docs/en/getting-started) - JavaScript testing framework for snapshot and, spy, and mock testing methods
 - [The Basics of Testing a React Component](https://levelup.gitconnected.com/the-basics-of-testing-a-react-component-2ff635c99044) - Article on basic React component testing syntax and methodology
+- [Testing Component Methods that Return JSX in React](https://medium.com/@relasine/testing-component-methods-that-return-jsx-in-react-dc8032e3cf22) - Article on how to test iterative methods that return JSX in React.
 - [prop-types](https://www.npmjs.com/package/prop-types) - You can use prop-types to document the intended types of properties passed to components. React will check props passed to your components against those definitions, and warn in development if they don’t match.
