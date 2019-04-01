@@ -30,7 +30,7 @@ describe("Card", () => {
         text={mockText}
         label={mockLabel}
         link={mockLink}
-        categor={mockCategory}
+        category={mockCategory}
       />
     );
   });

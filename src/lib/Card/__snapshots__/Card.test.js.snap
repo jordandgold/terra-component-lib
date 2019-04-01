@@ -4,7 +4,7 @@ exports[`Card should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    categor="Hello! I am a category!"
+    category="Hello! I am a category!"
     image={
       Object {
         "description": "This is a mock image description",
@@ -46,7 +46,9 @@ ShallowWrapper {
           className="card-hero-image"
           src="http://www.mocklink.com/mockImage.jpg"
         />,
-        undefined,
+        <p>
+          Hello! I am a category!
+        </p>,
         <h4
           className="card-title"
         >
@@ -90,7 +92,17 @@ ShallowWrapper {
         "rendered": null,
         "type": "img",
       },
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Hello! I am a category!",
+        },
+        "ref": null,
+        "rendered": "Hello! I am a category!",
+        "type": "p",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -165,7 +177,9 @@ ShallowWrapper {
             className="card-hero-image"
             src="http://www.mocklink.com/mockImage.jpg"
           />,
-          undefined,
+          <p>
+            Hello! I am a category!
+          </p>,
           <h4
             className="card-title"
           >
@@ -209,7 +223,17 @@ ShallowWrapper {
           "rendered": null,
           "type": "img",
         },
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Hello! I am a category!",
+          },
+          "ref": null,
+          "rendered": "Hello! I am a category!",
+          "type": "p",
+        },
         Object {
           "instance": null,
           "key": undefined,
