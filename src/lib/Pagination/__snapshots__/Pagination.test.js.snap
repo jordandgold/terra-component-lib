@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Pagination
+    pages={
+      Array [
+        Object {
+          "isActive": false,
+          "link": "www.mockLinkOne.com",
+          "pageNumber": 1,
+        },
+        Object {
+          "isActive": false,
+          "link": "www.mockLinkTwo.com",
+          "pageNumber": 2,
+        },
+        Object {
+          "isActive": true,
+          "link": "www.mockLinkThree.com",
+          "pageNumber": 3,
+        },
+        Object {
+          "isActive": false,
+          "link": "www.mockLinkFour.com",
+          "pageNumber": 4,
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <ul
+        className="ter-pagination__list"
+      >
+        <li
+          className="ter-pagination__list-item"
+        >
+          <a
+            href="/"
+            rel="prev"
+          >
+            <i
+              className="fas fa-chevron-left"
+            />
+          </a>
+        </li>
+        [Function]
+        <li
+          className="ter-pagination__list-item"
+        >
+          <a
+            href="/"
+            rel="next"
+          >
+            <i
+              className="fas fa-chevron-right"
+            />
+          </a>
+        </li>
+      </ul>,
+      "className": "ter-pagination",
+      "role": "navigation",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <li
+            className="ter-pagination__list-item"
+          >
+            <a
+              href="/"
+              rel="prev"
+            >
+              <i
+                className="fas fa-chevron-left"
+              />
+            </a>
+          </li>,
+          [Function],
+          <li
+            className="ter-pagination__list-item"
+          >
+            <a
+              href="/"
+              rel="next"
+            >
+              <i
+                className="fas fa-chevron-right"
+              />
+            </a>
+          </li>,
+        ],
+        "className": "ter-pagination__list",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              href="/"
+              rel="prev"
+            >
+              <i
+                className="fas fa-chevron-left"
+              />
+            </a>,
+            "className": "ter-pagination__list-item",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fas fa-chevron-left"
+              />,
+              "href": "/",
+              "rel": "prev",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fas fa-chevron-left",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          "type": "li",
+        },
+        [Function],
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              href="/"
+              rel="next"
+            >
+              <i
+                className="fas fa-chevron-right"
+              />
+            </a>,
+            "className": "ter-pagination__list-item",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fas fa-chevron-right"
+              />,
+              "href": "/",
+              "rel": "next",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fas fa-chevron-right",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          "type": "li",
+        },
+      ],
+      "type": "ul",
+    },
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <ul
+          className="ter-pagination__list"
+        >
+          <li
+            className="ter-pagination__list-item"
+          >
+            <a
+              href="/"
+              rel="prev"
+            >
+              <i
+                className="fas fa-chevron-left"
+              />
+            </a>
+          </li>
+          [Function]
+          <li
+            className="ter-pagination__list-item"
+          >
+            <a
+              href="/"
+              rel="next"
+            >
+              <i
+                className="fas fa-chevron-right"
+              />
+            </a>
+          </li>
+        </ul>,
+        "className": "ter-pagination",
+        "role": "navigation",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="ter-pagination__list-item"
+            >
+              <a
+                href="/"
+                rel="prev"
+              >
+                <i
+                  className="fas fa-chevron-left"
+                />
+              </a>
+            </li>,
+            [Function],
+            <li
+              className="ter-pagination__list-item"
+            >
+              <a
+                href="/"
+                rel="next"
+              >
+                <i
+                  className="fas fa-chevron-right"
+                />
+              </a>
+            </li>,
+          ],
+          "className": "ter-pagination__list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="/"
+                rel="prev"
+              >
+                <i
+                  className="fas fa-chevron-left"
+                />
+              </a>,
+              "className": "ter-pagination__list-item",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fas fa-chevron-left"
+                />,
+                "href": "/",
+                "rel": "prev",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-chevron-left",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+            "type": "li",
+          },
+          [Function],
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="/"
+                rel="next"
+              >
+                <i
+                  className="fas fa-chevron-right"
+                />
+              </a>,
+              "className": "ter-pagination__list-item",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fas fa-chevron-right"
+                />,
+                "href": "/",
+                "rel": "next",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-chevron-right",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
