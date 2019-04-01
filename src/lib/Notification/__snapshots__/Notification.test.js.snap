@@ -1,134 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Notification should match the snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Notification
+<section
+  className="notification"
+>
+  <p>
+    This is a mock notification message
+  </p>
+  <button
+    className="notification-close-icon"
     onClick={[MockFunction]}
-    text="This is a mock notification message"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <p>
-          This is a mock notification message
-        </p>,
-        <button
-          className="notification-close-icon"
-          onClick={[MockFunction]}
-        />,
-      ],
-      "className": "notification",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "This is a mock notification message",
-        },
-        "ref": null,
-        "rendered": "This is a mock notification message",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "notification-close-icon",
-          "onClick": [MockFunction],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "button",
-      },
-    ],
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <p>
-            This is a mock notification message
-          </p>,
-          <button
-            className="notification-close-icon"
-            onClick={[MockFunction]}
-          />,
-        ],
-        "className": "notification",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "This is a mock notification message",
-          },
-          "ref": null,
-          "rendered": "This is a mock notification message",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "notification-close-icon",
-            "onClick": [MockFunction],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "button",
-        },
-      ],
-      "type": "section",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
+  />
+</section>
 `;

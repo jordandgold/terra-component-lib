@@ -1,325 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card should match the snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Card
-    category="Hello! I am a category!"
-    image={
-      Object {
-        "description": "This is a mock image description",
-        "link": "http://www.mocklink.com/mockImage.jpg",
-      }
-    }
-    label="I am a mock label"
-    link={
-      Object {
-        "label": "I am a link!",
-        "link": "http://www.mocklink.com",
-      }
-    }
-    text={
-      Array [
-        "This is the first paragraph",
-        "This is the second paragraph",
-      ]
-    }
-    title="This is a mock title"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <img
-          alt="This is a mock image description"
-          className="card-hero-image"
-          src="http://www.mocklink.com/mockImage.jpg"
-        />,
-        <p>
-          Hello! I am a category!
-        </p>,
-        <h4
-          className="card-title"
-        >
-          This is a mock title
-        </h4>,
-        Array [
-          <p
-            className="card-text"
-          >
-            This is the first paragraph
-          </p>,
-          <p
-            className="card-text"
-          >
-            This is the second paragraph
-          </p>,
-        ],
-        <a
-          href="http://www.mocklink.com"
-        >
-          I am a link!
-        </a>,
-        <button>
-          I am a mock label
-        </button>,
-      ],
-      "className": "card",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "This is a mock image description",
-          "className": "card-hero-image",
-          "src": "http://www.mocklink.com/mockImage.jpg",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Hello! I am a category!",
-        },
-        "ref": null,
-        "rendered": "Hello! I am a category!",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "This is a mock title",
-          "className": "card-title",
-        },
-        "ref": null,
-        "rendered": "This is a mock title",
-        "type": "h4",
-      },
-      Object {
-        "instance": null,
-        "key": "card-text-0",
-        "nodeType": "host",
-        "props": Object {
-          "children": "This is the first paragraph",
-          "className": "card-text",
-        },
-        "ref": null,
-        "rendered": "This is the first paragraph",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "card-text-1",
-        "nodeType": "host",
-        "props": Object {
-          "children": "This is the second paragraph",
-          "className": "card-text",
-        },
-        "ref": null,
-        "rendered": "This is the second paragraph",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "I am a link!",
-          "href": "http://www.mocklink.com",
-        },
-        "ref": null,
-        "rendered": "I am a link!",
-        "type": "a",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "I am a mock label",
-        },
-        "ref": null,
-        "rendered": "I am a mock label",
-        "type": "button",
-      },
-    ],
-    "type": "article",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <img
-            alt="This is a mock image description"
-            className="card-hero-image"
-            src="http://www.mocklink.com/mockImage.jpg"
-          />,
-          <p>
-            Hello! I am a category!
-          </p>,
-          <h4
-            className="card-title"
-          >
-            This is a mock title
-          </h4>,
-          Array [
-            <p
-              className="card-text"
-            >
-              This is the first paragraph
-            </p>,
-            <p
-              className="card-text"
-            >
-              This is the second paragraph
-            </p>,
-          ],
-          <a
-            href="http://www.mocklink.com"
-          >
-            I am a link!
-          </a>,
-          <button>
-            I am a mock label
-          </button>,
-        ],
-        "className": "card",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "This is a mock image description",
-            "className": "card-hero-image",
-            "src": "http://www.mocklink.com/mockImage.jpg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Hello! I am a category!",
-          },
-          "ref": null,
-          "rendered": "Hello! I am a category!",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "This is a mock title",
-            "className": "card-title",
-          },
-          "ref": null,
-          "rendered": "This is a mock title",
-          "type": "h4",
-        },
-        Object {
-          "instance": null,
-          "key": "card-text-0",
-          "nodeType": "host",
-          "props": Object {
-            "children": "This is the first paragraph",
-            "className": "card-text",
-          },
-          "ref": null,
-          "rendered": "This is the first paragraph",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "card-text-1",
-          "nodeType": "host",
-          "props": Object {
-            "children": "This is the second paragraph",
-            "className": "card-text",
-          },
-          "ref": null,
-          "rendered": "This is the second paragraph",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "I am a link!",
-            "href": "http://www.mocklink.com",
-          },
-          "ref": null,
-          "rendered": "I am a link!",
-          "type": "a",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "I am a mock label",
-          },
-          "ref": null,
-          "rendered": "I am a mock label",
-          "type": "button",
-        },
-      ],
-      "type": "article",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
+<article
+  className="card"
+>
+  <img
+    alt="This is a mock image description"
+    className="card-hero-image"
+    src="http://www.mocklink.com/mockImage.jpg"
+  />
+  <p>
+    Hello! I am a category!
+  </p>
+  <h4
+    className="card-title"
+  >
+    This is a mock title
+  </h4>
+  <p
+    className="card-text"
+    key="card-text-0"
+  >
+    This is the first paragraph
+  </p>
+  <p
+    className="card-text"
+    key="card-text-1"
+  >
+    This is the second paragraph
+  </p>
+  <a
+    href="http://www.mocklink.com"
+  >
+    I am a link!
+  </a>
+  <button>
+    I am a mock label
+  </button>
+</article>
 `;
