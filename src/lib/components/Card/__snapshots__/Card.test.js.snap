@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+<article
+  className="card"
+>
+  <img
+    alt="This is a mock image description"
+    className="card-hero-image"
+    src="http://www.mocklink.com/mockImage.jpg"
+  />
+  <p>
+    Hello! I am a category!
+  </p>
+  <h4
+    className="card-title"
+  >
+    This is a mock title
+  </h4>
+  <p
+    className="card-text"
+    key="card-text-0"
+  >
+    This is the first paragraph
+  </p>
+  <p
+    className="card-text"
+    key="card-text-1"
+  >
+    This is the second paragraph
+  </p>
+  <a
+    href="http://www.mocklink.com"
+  >
+    I am a link!
+  </a>
+  <button>
+    I am a mock label
+  </button>
+</article>
+`;

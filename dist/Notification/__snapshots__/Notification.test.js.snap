@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification should match the snapshot 1`] = `
+<section
+  className="notification"
+>
+  <p>
+    This is a mock notification message
+  </p>
+  <button
+    className="notification-close-icon"
+    onClick={[MockFunction]}
+  />
+</section>
+`;
