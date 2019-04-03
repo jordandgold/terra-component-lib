@@ -37,7 +37,7 @@ export default Modal;
 Modal.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  body: PropTypes.body,
+  body: PropTypes.string,
   closeModal: PropTypes.func.isRequired,
   buttonOne: PropTypes.shape({
     onClick: PropTypes.func.isRequired,
