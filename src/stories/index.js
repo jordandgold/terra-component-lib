@@ -6,6 +6,7 @@ import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
+import Notification from "../lib/Notification/Notification";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -112,5 +113,13 @@ storiesOf("Modal", module).add("Modal", () => (
       className: "ter-button--secondary--1",
       text: "buy sketchup, dummy!"
     }}
+  />
+));
+
+storiesOf("Notifcation", module).add("Notification", () => (
+  <Notification
+    onClick={action("clicked!")}
+    type="default"
+    text={mockBody}
   />
 ));
