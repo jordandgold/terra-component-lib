@@ -42,3 +42,14 @@ class Pagination extends Component {
 }
 
 export default Pagination;
+
+Pagination.propTypes = {
+  pages: PropTypes.arrayOf(
+    PropTypes.shape({
+      isActive: PropTypes.bool,
+      pageNumber: PropTypes.number.isRequired,
+      // ^^^ Should this be string instead of number? ^^^ //
+      link: PropTypes.string.isRequired
+    })
+  ).isRequired
+};

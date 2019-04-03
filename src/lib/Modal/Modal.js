@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 import "./Modal.scss";
 
 const Modal = props => {
@@ -32,3 +33,20 @@ const Modal = props => {
 };
 
 export default Modal;
+
+Modal.propTypes = {
+  className: PropTypes.string,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  closeModal: PropTypes.func.isRequired,
+  buttonOne: PropTypes.shape({
+    onClick: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired
+  }),
+  buttonTwo: PropTypes.shape({
+    onClick: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired
+  })
+};
