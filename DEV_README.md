@@ -52,8 +52,7 @@ This library uses the propTypes library for type checking and for developer erro
 
 Prop type checking should happen at the bottom of the file, below the export statement. Any specific prop that is required to make a component minimally function will need to have the `.isRequired` in their value.
 
-<details><summary>Deep Type-Checking Objects</summary>
-</br>
+<details><summary>Example: Deep Type-Checking Objects</summary>
 
 ```
 Object.propTypes = {
@@ -67,8 +66,7 @@ Object.propTypes = {
 
 </details>
 
-<details><summary>Deep Type-Checking Arrays</summary>
-</br>
+<details><summary>Example: Deep Type-Checking Arrays</summary>
 
 ```
 Array.propTypes = {
@@ -76,6 +74,8 @@ Array.propTypes = {
 }
 ```
 
+</details>
+</br>
 Components that do not use props do not need to use the prop-types API.
 
 #### Creating a Build
