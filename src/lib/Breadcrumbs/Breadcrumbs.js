@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import "./Breadcrumbs.scss";
 
@@ -23,3 +24,7 @@ class Breadcrumbs extends Component {
 }
 
 export default Breadcrumbs;
+
+Breadcrumbs.propTypes = {
+  breadcrumbs: PropTypes.array.isRequired
+};
