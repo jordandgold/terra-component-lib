@@ -50,7 +50,31 @@ This library uses the propTypes library for type checking and for developer erro
 
 `import PropTypes from "prop-types";`
 
-See `src/lib/Button/Button.js` or `src/lib/Alert/Alert.js` for examples on syntax. Prop type checking should happen at the bottom of the file, below the export statement. Any specific prop that is required to make a component minimally function will need to have the `.isRequired` in their value.
+Prop type checking should happen at the bottom of the file, below the export statement. Any specific prop that is required to make a component minimally function will need to have the `.isRequired` in their value.
+
+<details><summary>Deep Type-Checking Objects</summary>
+</br>
+
+```
+Object.propTypes = {
+  button: PropTypes.shape({
+    onClick: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired
+  }),
+};
+```
+
+</details>
+
+<details><summary>Deep Type-Checking Arrays</summary>
+</br>
+
+```
+Array.propTypes = {
+  ourArray: PropTypes.arrayOf(PropTypes.string).isRequired
+}
+```
 
 Components that do not use props do not need to use the prop-types API.
 
