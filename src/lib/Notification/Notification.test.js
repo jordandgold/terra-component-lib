@@ -10,7 +10,8 @@ describe("Notification", () => {
   beforeEach(() => {
     mockOnClick = jest.fn();
     const mockText = "This is a mock notification message";
-    wrapper = shallow(<Notification onClick={mockOnClick} text={mockText} />);
+    const mockType = "default";
+    wrapper = shallow(<Notification onClick={mockOnClick} text={mockText} type={mockType} />);
   });
 
   it("should match the snapshot", () => {

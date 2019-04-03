@@ -2,14 +2,18 @@
 
 exports[`Notification should match the snapshot 1`] = `
 <section
-  className="notification"
+  className="ter-notification ter-notification--default"
 >
-  <p>
-    This is a mock notification message
-  </p>
   <button
-    className="notification-close-icon"
+    className="ter-notification__close"
     onClick={[MockFunction]}
   />
+  <div
+    class="ter-notification__body"
+  >
+    <p>
+      This is a mock notification message
+    </p>
+  </div>
 </section>
 `;
