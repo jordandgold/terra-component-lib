@@ -7,6 +7,7 @@ import Button from "../lib/Button/Button";
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
+import Dropdown from "../lib/Dropdown/Dropdown";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -123,3 +124,17 @@ storiesOf("Notifcation", module).add("Notification", () => (
     text={mockBody}
   />
 ));
+
+const mockDropdownOptions = [
+  { key: "1", value: "Option 1" },
+  { key: "2", value: "Option 2" },
+  { key: "3", value: "Option 3" }
+];
+
+storiesOf("Dropdown", module)
+  .add("Dropdown", () => (
+    <Dropdown
+      options={mockDropdownOptions}
+    />
+  )
+);
