@@ -136,6 +136,7 @@ storiesOf("Dropdown", module)
     <Dropdown
       defaultLabel="Select an option"
       options={mockDropdownOptions}
+      selectOption={action("Option selected!")}
     />
   )
 );

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import "./Dropdown.scss";
 
 class Dropdown extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             isOpen: false,
@@ -23,38 +23,36 @@ class Dropdown extends Component {
             selected: option,
             isOpen: false
         });
+
+        if (option !== this.state.selected) {
+            this.props.selectOption(option)
+        }
     }
 
     getOptions = () => {
         return this.props.options.map((option) => {
-            return <Option option={option} onSelect={this.handleSelectOption} />
+            return <Option key={`option ${option.key}`} option={option} onSelect={this.handleSelectOption} />
         })
     }
 
     render() {
-        let optionsList = this.getOptions();
-        let selected = this.state.selected ? this.state.selected.value : this.props.defaultLabel;
-        let openClass = this.state.isOpen ? 'is-open' : '';
+        const selected = this.state.selected ? this.state.selected.value : this.props.defaultLabel;
+        const openClass = this.state.isOpen ? 'is-open' : '';
 
         return (
             <div className={`ter-dropdown ${openClass}`} onClick={this.handleOpenDropdown}>
                 <span className="ter-dropdown__selected">{selected}</span>
                 <ul className="ter-dropdown__options-list">
-                    {optionsList}
+                    {this.getOptions()}
                 </ul>
             </div>
         )
     }
 }
 
-const Option = props => {
-    const onSelect = (event) => {
-        event.preventDefault()
-        props.onSelect(props.option)
-    }
-    
+export const Option = props => {
     return (
-        <li className="ter-dropdown__options-list-item" onClick={onSelect} key={props.option.key}>{props.option.value}</li>
+        <li className="ter-dropdown__options-list-item" onClick={() => props.onSelect(props.option)}>{props.option.value}</li>
     )
 }
 
@@ -67,5 +65,6 @@ Dropdown.propTypes = {
           key: PropTypes.number.isRequired,
           value: PropTypes.string.isRequired,
         })
-      ).isRequired
-  };
+      ).isRequired,
+    selectOption: PropTypes.func.isRequired
+};

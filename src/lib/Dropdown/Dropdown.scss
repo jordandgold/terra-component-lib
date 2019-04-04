@@ -33,8 +33,9 @@
         width: 100%;
         margin: calc(#{$dropdown-border-size} * -1);
         box-sizing: content-box;
+        display: none;
         .is-open & {
-            display: none;
+            display: block;
         }
     }
     &__options-list-item {
