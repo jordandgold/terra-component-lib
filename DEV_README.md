@@ -122,6 +122,52 @@ describe('onChange', () => {
 })
 ```
 
+##### Testing Sub-Components within the Same Main File
+
+If you are leveraging a smaller sub-component within a larger main component file, you'll need to export it so that it can be exported for testing (recommended) or call `mount()` instead of `shallow()` on the main component so that they can be tested together (not recommended). Import these sub-components and destructure them within the same test file as its parent component and put it in its own `describe()` block with its own snapshot test and other necessary `it()` blocks.
+
+######In your component file:
+
+```
+export const ListItem = (props) => {
+  return (
+    <li className='list-item' onClick={() => props.onClick(props.text)}>{props.text}</li>
+  )
+}
+```
+
+######In your test file:
+
+```
+import UnorderedList, { ListItem } from './UnorderedList'
+
+describe('UnorderedList' () => {
+  ...
+  describe('ListItem', () => {
+
+    let listWrapper;
+    let mockOnClick;
+
+    beforeEach(() => {
+      mockOnClick = jest.fn()
+      listWrapper = shallow(<ListItem onClick={mockOnClick} text='testing text' /> )
+    })
+
+    it('should match the snapshot', () => {
+      expect(listWrapper).toMatchSnapshot();
+    })
+
+    it('should call onClick when clicked with the correct params', () => {
+      const expected = 'testing text'
+      listWrapper.find('.list-item').simulate('click', 'testing text')
+
+      expect(mockOnClick).toHaveBeenCalledWith(expected);
+    })
+  })
+
+})
+```
+
 ##### What to test -
 
 React testing will generally involve testing the following:
