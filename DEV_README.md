@@ -216,17 +216,17 @@ Array.propTypes = {
 </br>
 Components that do not use props do not need to use the prop-types API.
 
-#### Creating a Build -
+## Creating a Build -
 
 To run the build process, run `npm run build`. This will delete any existing builds in the directory and create a new one in the root labeled `/dist`. This folder will contain all our components, the `index.js` for easy access once the package is imported into a project, and all our style data.
 
 The library bundling is done using Babel with `@babel/core` and `@babel/cli` as dependencies. Note that installing normal `babel-cli` will not work with this library as it has been bootstrapped with Create React App 2.0 (this caused a great deal of problems and confusion in initially getting the build process working).
 
-#### Deploying the Build -
+## Deploying the Build -
 
 To deploy a build to npm, you first need to login from the command line with `npm login`. Consult Brandon White for credentials. After you've successfully logged in, deploy the project to npm using `npm deploy`. This will take the bundled `dist` folder and upload it to npm.
 
-### Importing Terra Component Library into a Project -
+## Importing Terra Component Library into a Project -
 
 To install the library into a project, use `npm i --save terra-component-lib`. Import individual components by destructuring them. Example:
 
