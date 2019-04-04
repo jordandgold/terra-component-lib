@@ -85,7 +85,7 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 Unit tests should be written in the `COMPONENT_NAME.test.js` file. All files require the following imports to function correctly:
 
 ```
-import React from 'react
+import React from 'react'
 import { shallow } from 'enzyme'
 import COMPONENT_NAME from './COMPONENT_NAME'
 ```
