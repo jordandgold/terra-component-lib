@@ -18,57 +18,45 @@ You can then use the imported Terra component within your own application.
 
 #### Accordion
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Alert
 
-Props:
+######Props -
 
 - `onClick` **(required)** - determines the method called when the 'close' button is clicked
 - `text` **(required)** - determines the text displayed in the alert
 - `type` - determines the type of alert
 
-<details><summary>Example</summary>
-<br />
+######Example -
 
 ```
 <Alert onClick={this.closeAlert} text="Warning Alert!" type="warning" />
 ```
 
-</details>
-
 ---
 
 #### Breadcrumbs
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Button
 
-Props:
+######Props -
 
 - `onClick` **(required)** - function that determines the method called when the button is clicked
 - `className` **(required)** - string that determines the type of button (see options) - interpolates into component `className` - see options below
 - `text` **(required)** - string that determines the inner text of the button element
 
-<details><summary>className options</summary>
-</br>
+######`className` options -
 
 - **Primary 1** - `"ter-button-primary--1"`
 - **Primary 2** - `"ter-button-primary--2"`
@@ -82,12 +70,7 @@ Props:
 - **Secondary 5** - `"ter-button-secondary--5"`
 - **Small Button** - `"ter-button--small"`
 
-</details>
-
-<br/>
-
-<details><summary>Examples</summary>
-<br />
+######Example -
 
 ```
 <Button
@@ -102,13 +85,11 @@ Props:
 />
 ```
 
-</details>
-
 ---
 
 #### Card
 
-Props:
+######Props -
 
 - `image` - object consisting of a `link` and `description` key/value pairs (strings) used to create a link to the image location and the alt description text for the image
 - `title` **(required)** - string used to determine the title for the card
@@ -117,8 +98,7 @@ Props:
 - `link` - an object consisting of a `link` and `label` text strings as key/values for an `<a>` element
 - `category` - string used for labeling the card's category
 
-<details><summary>Example</summary>
-<br />
+######Example -
 
 ```
 <Card
@@ -131,112 +111,74 @@ Props:
 />
 ```
 
-</details>
-
 ---
 
 #### Dropdown
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Form Items
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Modal
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Navbar
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Notification
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Pagination
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Table
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Tabs
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -
 
 ---
 
 #### Toolstips
 
-Props:
+######Props -
 
-<details><summary>Example</summary>
-<br />
-<p>Hello testing</p>
-
-</details>
+######Example -

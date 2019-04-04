@@ -24,12 +24,14 @@ Once you've run a snapshot test on the component, it'll add an additional snapsh
 
 - `src/lib/[COMPONENT_NAME]/__snapshots__/[COMPONENT_NAME].test.js.snap`
 
+##### Adding a Component to the Library
+
 All components ready to ship should be imported into `/dist/index.js` and then exported from within to be easily accessible once bundled. This file will act as the hub for all component library importing. Example:
 
 `import Alert from "./components/Alert/Alert";`
 `export { Alert }`
 
-###### Folders to ignore
+##### Folders to ignore
 
 - `.storybook` - this directory is setup simply for storybook configuration and can be ignored.
 - `public` - this directory is generally used for housing images and the main user-facing `index.html` file, but as this is a component library and not an actual application, we won't be concerned with this.
@@ -37,6 +39,8 @@ All components ready to ship should be imported into `/dist/index.js` and then e
 #### Storybook
 
 Storybook is an open source tool for developing UI components in isolation for React and other popular JavaScript frameworks. It makes building UIs organized and efficient. Stories are written in `src/stories/index.js` with a syntax not unlike common JavaScript unit tests. See the [Storybook docs](https://storybook.js.org/docs/basics/introduction/) for more information on how to use the Storybook API.
+
+If you prefer a simpler sandbox approach, you can simply import your components into `App.js` like normal and manually test them there.
 
 #### Testing Methodology
 
@@ -52,7 +56,7 @@ This library uses the propTypes library for type checking and for developer erro
 
 Prop type checking should happen at the bottom of the file, below the export statement. Any specific prop that is required to make a component minimally function will need to have the `.isRequired` in their value.
 
-<details><summary>Example: Deep Type-Checking Objects</summary>
+###### Example: Deep Type-Checking Objects -
 
 ```
 Object.propTypes = {
@@ -64,9 +68,7 @@ Object.propTypes = {
 };
 ```
 
-</details>
-
-<details><summary>Example: Deep Type-Checking Arrays</summary>
+###### Example: Deep Type-Checking Arrays -
 
 ```
 Array.propTypes = {
@@ -74,7 +76,6 @@ Array.propTypes = {
 }
 ```
 
-</details>
 </br>
 Components that do not use props do not need to use the prop-types API.
 
