@@ -1,0 +1,54 @@
+@import "../global-styles/terra.scss";
+
+.ter-dropdown {
+    @include input-base();
+    display: block;
+    width: initial;
+    box-sizing: content-box;
+    &:hover {
+        cursor: pointer;
+    }
+    &:after {
+        @include icon-base();
+        content: "\f078";
+        font-size: 75%;
+        margin-left: spacing('xs');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1.5em;
+        color: $drodown-arrow-color;
+    }
+    &__selected {
+        display: block;
+    }
+    &__options-list {
+        border: $dropdown-border-size solid $dropdown-border-color;
+        position: absolute;
+        top: calc(100% + #{$dropdown-border-size});
+        padding: spacing('xxs') 0;
+        left: 0;
+        list-style: none;
+        background: $dropdown-bg;
+        width: 100%;
+        margin: calc(#{$dropdown-border-size} * -1);
+        box-sizing: content-box;
+        display: none;
+        .is-open & {
+            display: block;
+        }
+    }
+    &__options-list-item {
+        @include type-setting();
+        font-size: $dropdown-item-font-size;
+        color: $dropdown-link-color;
+        padding: spacing('mini') spacing('xs');
+        display: block;
+        text-decoration: none;
+        &:hover {
+            color: darken($dropdown-link-color, 10%);
+            background: $dropdown-link-hover-bg;
+            text-decoration: none;
+        }
+    }
+}

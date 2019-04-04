@@ -1,13 +1,14 @@
 // global
 @import './global-vars.scss';
 
-// modules
+// mixins
 @import './mixins/backgrounds';
 @import './mixins/button';
 @import './mixins/box-shadow';
 @import './mixins/clearfix';
 @import './mixins/depth';
 @import './mixins/height';
+@import './mixins/input';
 @import './mixins/typography';
 @import './mixins/yiq';
 @import './mixins/z-index';
