@@ -34,9 +34,10 @@ class Dropdown extends Component {
     render() {
         let optionsList = this.getOptions();
         let selected = this.state.selected ? this.state.selected.value : this.props.defaultLabel;
+        let openClass = this.state.isOpen ? 'is-open' : '';
 
         return (
-            <div className="ter-dropdown" onClick={this.handleOpenDropdown}>
+            <div className={`ter-dropdown ${openClass}`} onClick={this.handleOpenDropdown}>
                 <span className="ter-dropdown__selected">{selected}</span>
                 <ul className="ter-dropdown__options-list">
                     {optionsList}
