@@ -134,6 +134,7 @@ const mockDropdownOptions = [
 storiesOf("Dropdown", module)
   .add("Dropdown", () => (
     <Dropdown
+      defaultLabel="Select an option"
       options={mockDropdownOptions}
     />
   )

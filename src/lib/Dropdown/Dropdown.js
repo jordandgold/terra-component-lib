@@ -33,7 +33,7 @@ class Dropdown extends Component {
 
     render() {
         let optionsList = this.getOptions();
-        let selected = this.state.selected ? this.state.selected.value : 'Select';
+        let selected = this.state.selected ? this.state.selected.value : this.props.defaultLabel;
 
         return (
             <div className="ter-dropdown" onClick={this.handleOpenDropdown}>
@@ -58,3 +58,13 @@ const Option = props => {
 }
 
 export default Dropdown;
+
+Dropdown.propTypes = {
+    defaultLabel: PropTypes.string.isRequired,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+          key: PropTypes.number.isRequired,
+          value: PropTypes.string.isRequired,
+        })
+      ).isRequired
+  };
