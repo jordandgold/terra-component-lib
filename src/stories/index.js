@@ -125,11 +125,7 @@ storiesOf("Notifcation", module).add("Notification", () => (
   />
 ));
 
-const mockDropdownOptions = [
-  { key: "1", value: "Option 1" },
-  { key: "2", value: "Option 2" },
-  { key: "3", value: "Option 3" }
-];
+const mockDropdownOptions = ["Option 1", "Option 2", "Option 3"];
 
 storiesOf("Dropdown", module)
   .add("Dropdown", () => (
