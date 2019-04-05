@@ -7,6 +7,7 @@ import Button from "../lib/Button/Button";
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
+import Icon from "../lib/Icon/Icon";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -117,9 +118,14 @@ storiesOf("Modal", module).add("Modal", () => (
 ));
 
 storiesOf("Notifcation", module).add("Notification", () => (
-  <Notification
-    onClick={action("clicked!")}
-    type="default"
-    text={mockBody}
-  />
+  <Notification onClick={action("clicked!")} type="default" text={mockBody} />
+));
+
+storiesOf("Icon", module).add("Icon", () => (
+  <div>
+    <Icon type="open-caret-right-dark-8px" size="8px" />
+    <Icon type="open-caret-up-dark-8px" size="8px" />
+    <Icon type="open-caret-down-dark-8px" size="8px" />
+    <Icon type="open-caret-left-dark-8px" size="8px" />
+  </div>
 ));
