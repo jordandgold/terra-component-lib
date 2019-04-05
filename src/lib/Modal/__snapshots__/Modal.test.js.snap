@@ -5,9 +5,13 @@ exports[`Modal should match the snap shot 1`] = `
   className="ter-modal test"
 >
   <button
+    aria-label="Close Modal"
     className="ter-modal__close"
   >
-    close
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
   </button>
   <div
     className="ter-modal__body"
@@ -39,9 +43,13 @@ exports[`Modal should match the snap shot with no buttons 1`] = `
   className="ter-modal test"
 >
   <button
+    aria-label="Close Modal"
     className="ter-modal__close"
   >
-    close
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
   </button>
   <div
     className="ter-modal__body"
@@ -63,9 +71,13 @@ exports[`Modal should match the snap shot with one button 1`] = `
   className="ter-modal test"
 >
   <button
+    aria-label="Close Modal"
     className="ter-modal__close"
   >
-    close
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
   </button>
   <div
     className="ter-modal__body"

@@ -18,6 +18,11 @@ exports[`Dropdown should match the snapshot 1`] = `
     className="ter-dropdown__selected"
   >
     Select an option
+    <Icon
+      className="ter-dropdown__caret"
+      size="8px"
+      type="open-caret-down-dark-8px"
+    />
   </span>
   <ul
     className="ter-dropdown__options-list"

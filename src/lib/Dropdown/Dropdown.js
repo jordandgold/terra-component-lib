@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Icon from "../Icon/Icon";
 import "./Dropdown.scss";
 
 class Dropdown extends Component {
@@ -52,7 +53,14 @@ class Dropdown extends Component {
         className={`ter-dropdown ${openClass}`}
         onClick={this.handleOpenDropdown}
       >
-        <span className="ter-dropdown__selected">{selected}</span>
+        <span className="ter-dropdown__selected">
+          {selected}
+          <Icon
+            type="open-caret-down-dark-8px"
+            className="ter-dropdown__caret"
+            size="8px"
+          />
+        </span>
         <ul className="ter-dropdown__options-list">{this.getOptions()}</ul>
       </div>
     );
