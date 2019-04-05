@@ -128,7 +128,7 @@ React testing will generally involve testing the following:
 
 - That a method is called, and sometimes that it is called with something specific
   - This should happen either when a method is called by another method or when is used as a callback by an event listener
-  - This means testing both methods that are written inside the tested component using `jest.spyOn()` and methods that are called by the component that are passed down as props using `jest.mock()`
+  - This means testing both methods that are written inside the tested component using `jest.spyOn()` and methods that are called by the component that are passed down as props using `jest.fn()`
 - That a method returns, and sometimes that it returns something specific
 - When something changes state
 - That all conditional branches create the desired result
