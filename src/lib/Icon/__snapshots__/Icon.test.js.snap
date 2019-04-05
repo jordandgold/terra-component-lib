@@ -2,11 +2,11 @@
 
 exports[`Iron should match the snapshot 1`] = `
 <svg
-  className="ter-icon ter-icon--open-caret-right-dark-8px ter-icon--8px"
+  className="ter-icon ter-icon--open-caret-right-dark-8px ter-icon--8px undefined"
   viewBox="0 0 8 8"
 >
   <use
-    xlinkHref="[object Object]#icon-open-caret-right-dark-8px"
+    xlinkHref="[object Object]#ter-icon--open-caret-right-dark-8px"
   />
 </svg>
 `;

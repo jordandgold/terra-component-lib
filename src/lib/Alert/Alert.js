@@ -14,7 +14,7 @@ const Alert = props => {
     >
       <button
         className="ter-alert__close"
-        onClick={closeAlert()}
+        onClick={closeAlert}
         aria-label="Close Alert"
       >
         <Icon type="enclosed-x-dark-16px" size="16px" />

@@ -5,6 +5,15 @@ exports[`Alert should match snapshot without a type 1`] = `
   className="ter-alert ter-alert--default"
   onClick={[MockFunction]}
 >
+  <button
+    aria-label="Close Alert"
+    className="ter-alert__close"
+  >
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
+  </button>
   This is an alert.
 </div>
 `;
@@ -14,6 +23,15 @@ exports[`Alert should match the snapshot 1`] = `
   className="ter-alert ter-alert--ter-alert--default"
   onClick={[MockFunction]}
 >
+  <button
+    aria-label="Close Alert"
+    className="ter-alert__close"
+  >
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
+  </button>
   This is an alert.
 </div>
 `;

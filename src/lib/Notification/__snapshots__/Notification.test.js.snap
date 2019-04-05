@@ -5,9 +5,15 @@ exports[`Notification should match the snapshot 1`] = `
   className="ter-notification ter-notification--default"
 >
   <button
+    aria-label="Close Notification"
     className="ter-notification__close"
     onClick={[MockFunction]}
-  />
+  >
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
+  </button>
   <div
     class="ter-notification__body"
   >
