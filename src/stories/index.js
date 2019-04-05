@@ -129,6 +129,7 @@ storiesOf("Icon", module).add("Icon", () => (
     <Icon type="open-caret-down-dark-8px" size="8px" />
     <Icon type="open-caret-left-dark-8px" size="8px" />
   </div>
+));
 
 const mockDropdownOptions = ["Option 1", "Option 2", "Option 3"];
 
