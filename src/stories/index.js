@@ -9,6 +9,7 @@ import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
 import Dropdown from "../lib/Dropdown/Dropdown";
 import Icon from "../lib/Icon/Icon";
+import Pagination from "../lib/Pagination/Pagination";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -158,4 +159,10 @@ storiesOf("Dropdown", module).add("Dropdown", () => (
     options={mockDropdownOptions}
     selectOption={action("Option selected!")}
   />
+));
+
+const mockPages = 5;
+
+storiesOf("Pagination", module).add("Pagination", () => (
+  <Pagination activePage={4} pages={mockPages} />
 ));
