@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import Icon from "../Icon/Icon";
 import PropTypes from "prop-types";
 import "./Modal.scss";
 
@@ -7,8 +8,12 @@ const Modal = props => {
   const { className, title, body, buttonOne, buttonTwo, closeModal } = props;
   return (
     <aside className={`ter-modal ${className}`}>
-      <button className="ter-modal__close" onClick={closeModal()}>
-        close
+      <button
+        className="ter-modal__close"
+        onClick={closeModal()}
+        aria-label="Close Modal"
+      >
+        <Icon type="enclosed-x-dark-16px" size="16px" />
       </button>
       <div className="ter-modal__body">
         <h4 class="ter-modal__title">{title}</h4>

@@ -90,10 +90,29 @@ storiesOf("Button", module)
 
 storiesOf("Alert", module).add("Alerts", () => (
   <div>
-    <Alert onClick={action("Clicked!")} text="Default Alert" />
-    <Alert onClick={action("Clicked!")} text="Warning Alert" type="warning" />
-    <Alert onClick={action("Clicked!")} text="Danger Alert" type="danger" />
-    <Alert onClick={action("Clicked!")} text="Success Alert" type="success" />
+    <Alert
+      onClick={action("Clicked!")}
+      text="Default Alert"
+      closeAlert={action("close!")}
+    />
+    <Alert
+      onClick={action("Clicked!")}
+      text="Warning Alert"
+      type="warning"
+      closeAlert={action("close!")}
+    />
+    <Alert
+      onClick={action("Clicked!")}
+      text="Danger Alert"
+      type="danger"
+      closeAlert={action("close!")}
+    />
+    <Alert
+      onClick={action("Clicked!")}
+      text="Success Alert"
+      type="success"
+      closeAlert={action("close!")}
+    />
   </div>
 ));
 

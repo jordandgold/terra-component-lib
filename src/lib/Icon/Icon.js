@@ -11,7 +11,7 @@ const Icon = props => (
       props.className
     }`}
   >
-    <use xlinkHref={`${url}#icon-${props.type}`} />
+    <use xlinkHref={`${url}#ter-icon--${props.type}`} />
   </svg>
 );
 
