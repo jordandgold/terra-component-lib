@@ -9,11 +9,8 @@ import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
 import Dropdown from "../lib/Dropdown/Dropdown";
 import Icon from "../lib/Icon/Icon";
-<<<<<<< 4cf160d500c791f17af631635e8f7392b45dba87
 import Pagination from "../lib/Pagination/Pagination";
-=======
 import Breadcrumbs from "../lib/Breadcrumbs/Breadcrumbs";
->>>>>>> style breadcrumbs
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -165,10 +162,10 @@ storiesOf("Dropdown", module).add("Dropdown", () => (
   />
 ));
 
-const mockPages = 5;
+const mockPages = 4;
 
 storiesOf("Pagination", module).add("Pagination", () => (
-  <Pagination activePage={4} pages={mockPages} />
+  <Pagination activePage={0} pages={mockPages} />
 ));
 
 const mockBreadcrumbs = [

@@ -97,12 +97,8 @@ class Pagination extends Component {
 export default Pagination;
 
 Pagination.propTypes = {
-  pages: PropTypes.arrayOf(
-    PropTypes.shape({
-      isActive: PropTypes.bool,
-      pageNumber: PropTypes.number.isRequired
-    })
-  ).isRequired
+  pages: PropTypes.number.isRequired,
+  activePage: PropTypes.number.isRequired
 };
 
 export const Page = props => {
