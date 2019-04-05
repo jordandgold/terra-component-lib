@@ -1,0 +1,21 @@
+@import "../global-styles/terra.scss";
+
+.ter-pagination {
+  &__list {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  &__list-item {
+    margin: 0;
+    padding: spacing("micro") spacing("xxs");
+    font-size: font-size("sm");
+    &:hover {
+      cursor: pointer;
+    }
+    &.is-active {
+      border-bottom: 2px solid $pagination-border-color;
+    }
+  }
+}
