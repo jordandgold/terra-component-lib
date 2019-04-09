@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Pagination from "./Pagination";
+import Pagination, { Page } from "./Pagination";
 
 describe("Pagination", () => {
   let wrapper;
@@ -126,6 +126,60 @@ describe("Pagination", () => {
         });
 
       expect(result).toEqual(expected);
+    });
+  });
+
+  describe("Page", () => {
+    let pageWrapper;
+    let mockProcessClick;
+
+    beforeEach(() => {
+      mockProcessClick = jest.fn();
+      pageWrapper = shallow(
+        <Page
+          activePage={false}
+          page="test string"
+          processClick={mockProcessClick}
+        />
+      );
+    });
+
+    it("should match the snapshot", () => {
+      expect(pageWrapper).toMatchSnapshot();
+    });
+
+    describe("handleClick", () => {
+      it("should call handleClick on click", () => {
+        const spy = jest.spyOn(pageWrapper.instance(), "handleClick");
+        pageWrapper.instance().forceUpdate();
+
+        pageWrapper.find(".ter-pagination__list-item").simulate("click");
+
+        expect(spy).toHaveBeenCalled();
+      });
+
+      it("should call processClick if not the active page", () => {
+        const expected = "test string";
+        pageWrapper.instance().handleClick();
+
+        expect(mockProcessClick).toHaveBeenCalledWith(expected);
+      });
+
+      it("should return if the active page", () => {
+        pageWrapper = shallow(
+          <Page
+            activePage={true}
+            page="test string"
+            processClick={mockProcessClick}
+          />
+        );
+
+        const spy = jest.spyOn(pageWrapper.instance(), "handleClick");
+
+        pageWrapper.instance().handleClick();
+
+        expect(spy).toHaveReturned();
+      });
     });
   });
 });
