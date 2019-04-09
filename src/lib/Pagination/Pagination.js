@@ -17,6 +17,7 @@ class Pagination extends Component {
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
+            processClick={this.props.handleClick}
           />
         );
       }
@@ -29,6 +30,7 @@ class Pagination extends Component {
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
+            processClick={this.props.handleClick}
           />
         );
       }
@@ -41,6 +43,7 @@ class Pagination extends Component {
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
+            processClick={this.props.handleClick}
           />
         );
       }
@@ -51,6 +54,7 @@ class Pagination extends Component {
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
+            processClick={this.props.handleClick}
           />
         );
       }
@@ -61,6 +65,7 @@ class Pagination extends Component {
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
+            processClick={this.props.handleClick}
           />
         );
       }
@@ -71,6 +76,7 @@ class Pagination extends Component {
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
+            processClick={this.props.handleClick}
           />
         );
       }
@@ -97,23 +103,30 @@ class Pagination extends Component {
 export default Pagination;
 
 Pagination.propTypes = {
-  pages: PropTypes.arrayOf(
-    PropTypes.shape({
-      isActive: PropTypes.bool,
-      pageNumber: PropTypes.number.isRequired
-    })
-  ).isRequired
+  pages: PropTypes.number.isRequired,
+  activePage: PropTypes.number.isRequired
 };
 
-export const Page = props => {
-  const { activePage, page } = props;
-  return (
-    <li
-      className={`ter-pagination__list-item ${
-        activePage === page ? "is-active" : ""
-      }`}
-    >
-      {page}
-    </li>
-  );
-};
+export class Page extends Component {
+  handleClick = () => {
+    if (this.props.activePage) {
+      return;
+    } else {
+      this.props.processClick(this.props.page);
+    }
+  };
+
+  render() {
+    const { activePage, page } = this.props;
+    return (
+      <li
+        onClick={this.handleClick}
+        className={`ter-pagination__list-item ${
+          activePage === page ? "is-active" : ""
+        }`}
+      >
+        {page}
+      </li>
+    );
+  }
+}
