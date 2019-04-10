@@ -35,3 +35,14 @@ class Radios extends Component {
 }
 
 export default Radios;
+
+Radios.propTypes = {
+  radios: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired
+    })
+  ),
+  collection: PropTypes.string.isRequired,
+  selected: PropTypes.string.isRequired,
+  selectRadio: PropTypes.func.isRequired
+};
