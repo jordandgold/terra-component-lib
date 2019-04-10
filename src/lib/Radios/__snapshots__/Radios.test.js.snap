@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radios should match the snapshot 1`] = `
+<div
+  className="ter-radio-group"
+>
+  <div
+    key="radio-0"
+  >
+    <label
+      className="ter-radio__label radio-0"
+    >
+      test one
+    </label>
+    <input
+      checked={true}
+      className="radio-button-0"
+      name="test one"
+      onChange={[Function]}
+      type="radio"
+    />
+  </div>
+  <div
+    key="radio-1"
+  >
+    <label
+      className="ter-radio__label radio-1"
+    >
+      test two
+    </label>
+    <input
+      checked={false}
+      className="radio-button-1"
+      name="test two"
+      onChange={[Function]}
+      type="radio"
+    />
+  </div>
+  <div
+    key="radio-2"
+  >
+    <label
+      className="ter-radio__label radio-2"
+    >
+      test three
+    </label>
+    <input
+      checked={false}
+      className="radio-button-2"
+      name="test three"
+      onChange={[Function]}
+      type="radio"
+    />
+  </div>
+</div>
+`;

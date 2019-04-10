@@ -12,6 +12,7 @@ import Icon from "../lib/Icon/Icon";
 import Pagination from "../lib/Pagination/Pagination";
 import Breadcrumbs from "../lib/Breadcrumbs/Breadcrumbs";
 import TextInput from "../lib/TextInput/TextInput";
+import Radios from "../lib/Radios/Radios";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -189,3 +190,20 @@ storiesOf("TextInput", module).add("TextInput", () => (
     />
   </div>
 ));
+
+storiesOf("Radios", module).add("Radios", () => {
+  const mockRadios = [
+    { name: "name one" },
+    { name: "name two" },
+    { name: "name three" }
+  ];
+  return (
+    <div>
+      <Radios
+        radios={mockRadios}
+        selected={"name one"}
+        selectRadio={() => action("radio selected")}
+      />
+    </div>
+  );
+});
