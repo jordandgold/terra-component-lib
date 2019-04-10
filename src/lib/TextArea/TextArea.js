@@ -7,9 +7,10 @@ class TextArea extends Component {
     return (
       <div className="ter-input__wrap">
         <label classame="ter-input__label">{this.props.label}</label>
-        <textarea onChange={e => this.props.handleChange(e)}>
-          {this.props.value}
-        </textarea>
+        <textarea
+          defaultValue={this.props.value}
+          onChange={e => this.props.handleChange(e)}
+        />
       </div>
     );
   }

@@ -10,9 +10,8 @@ exports[`TextArea should match the snapshot 1`] = `
     mock label
   </label>
   <textarea
+    defaultValue="mock value"
     onChange={[Function]}
-  >
-    mock value
-  </textarea>
+  />
 </div>
 `;
