@@ -193,16 +193,17 @@ storiesOf("TextInput", module).add("TextInput", () => (
 
 storiesOf("Radios", module).add("Radios", () => {
   const mockRadios = [
-    { name: "name one" },
-    { name: "name two" },
-    { name: "name three" }
+    { name: "label one" },
+    { name: "label two" },
+    { name: "label three" }
   ];
   return (
     <div>
       <Radios
         radios={mockRadios}
-        selected={"name one"}
-        selectRadio={() => action("radio selected")}
+        selected={"label one"}
+        selectRadio={action("radio clicked")}
+        collection="storybook-radios"
       />
     </div>
   );

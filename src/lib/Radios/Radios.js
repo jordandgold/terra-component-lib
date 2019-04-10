@@ -4,20 +4,25 @@ import PropTypes from "prop-types";
 
 class Radios extends Component {
   generateRadios = () => {
-    const { radios } = this.props;
+    const { radios, collection } = this.props;
 
     return radios.map((radio, index) => {
       return (
         <div key={`radio-${index}`}>
-          <label className={`ter-radio__label radio-${index}`}>
+          <label
+            htmlFor={`${collection}Choice${index}`}
+            className={`ter-radio__label radio-${index}`}
+          >
             {radio.name}
           </label>
           <input
             className={`radio-button-${index}`}
             type="radio"
-            name={radio.name}
-            onChange={() => this.props.selectRadio(radio)}
+            name={collection}
+            onChange={() => this.props.selectRadio(radio.name)}
             checked={this.props.selected === radio.name}
+            value={radio.name}
+            id={`${collection}Choice${index}`}
           />
         </div>
       );

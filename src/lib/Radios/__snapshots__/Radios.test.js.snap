@@ -9,15 +9,18 @@ exports[`Radios should match the snapshot 1`] = `
   >
     <label
       className="ter-radio__label radio-0"
+      htmlFor="test-radiosChoice0"
     >
       test one
     </label>
     <input
       checked={true}
       className="radio-button-0"
-      name="test one"
+      id="test-radiosChoice0"
+      name="test-radios"
       onChange={[Function]}
       type="radio"
+      value="test one"
     />
   </div>
   <div
@@ -25,15 +28,18 @@ exports[`Radios should match the snapshot 1`] = `
   >
     <label
       className="ter-radio__label radio-1"
+      htmlFor="test-radiosChoice1"
     >
       test two
     </label>
     <input
       checked={false}
       className="radio-button-1"
-      name="test two"
+      id="test-radiosChoice1"
+      name="test-radios"
       onChange={[Function]}
       type="radio"
+      value="test two"
     />
   </div>
   <div
@@ -41,15 +47,18 @@ exports[`Radios should match the snapshot 1`] = `
   >
     <label
       className="ter-radio__label radio-2"
+      htmlFor="test-radiosChoice2"
     >
       test three
     </label>
     <input
       checked={false}
       className="radio-button-2"
-      name="test three"
+      id="test-radiosChoice2"
+      name="test-radios"
       onChange={[Function]}
       type="radio"
+      value="test three"
     />
   </div>
 </div>
