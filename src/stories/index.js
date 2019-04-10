@@ -11,6 +11,7 @@ import Dropdown from "../lib/Dropdown/Dropdown";
 import Icon from "../lib/Icon/Icon";
 import Pagination from "../lib/Pagination/Pagination";
 import Breadcrumbs from "../lib/Breadcrumbs/Breadcrumbs";
+import TextInput from "../lib/TextInput/TextInput";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -176,4 +177,15 @@ const mockBreadcrumbs = [
 
 storiesOf("Breadcrumb", module).add("Breadcrumb", () => (
   <Breadcrumbs breadcrumbs={mockBreadcrumbs} />
+));
+
+storiesOf("TextInput", module).add("TextInput", () => (
+  <div>
+    <TextInput
+      placeholder="placeholder text"
+      value=""
+      inputChange={action("input received")}
+      name="test"
+    />
+  </div>
 ));
