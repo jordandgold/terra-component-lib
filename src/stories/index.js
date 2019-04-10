@@ -13,6 +13,7 @@ import Pagination from "../lib/Pagination/Pagination";
 import Breadcrumbs from "../lib/Breadcrumbs/Breadcrumbs";
 import TextInput from "../lib/TextInput/TextInput";
 import Radios from "../lib/Radios/Radios";
+import TextArea from "../lib/TextArea/TextArea";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -206,5 +207,11 @@ storiesOf("Radios", module).add("Radios", () => {
         collection="storybook-radios"
       />
     </div>
+  );
+});
+
+storiesOf("TextArea", module).add("TextArea", () => {
+  return (
+    <TextArea handleChange={action("ohh, text!")} value="" label="Text Area" />
   );
 });
