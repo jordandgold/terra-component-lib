@@ -14,6 +14,7 @@ import Breadcrumbs from "../lib/Breadcrumbs/Breadcrumbs";
 import TextInput from "../lib/TextInput/TextInput";
 import Radios from "../lib/Radios/Radios";
 import TextArea from "../lib/TextArea/TextArea";
+import Checkbox from "../lib/Checkbox/Checkbox";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -213,5 +214,16 @@ storiesOf("Radios", module).add("Radios", () => {
 storiesOf("TextArea", module).add("TextArea", () => {
   return (
     <TextArea handleChange={action("ohh, text!")} value="" label="Text Area" />
+  );
+});
+
+storiesOf("Checkbox", module).add("Checkbox", () => {
+  return (
+    <Checkbox
+      name="checkbox"
+      label="This is a checkbox"
+      checked={false}
+      handleChange={action("checked/unchecked")}
+    />
   );
 });
