@@ -16,6 +16,7 @@ import Radios from "../lib/Radios/Radios";
 import TextArea from "../lib/TextArea/TextArea";
 import Checkbox from "../lib/Checkbox/Checkbox";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
+import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -246,6 +247,28 @@ storiesOf("SearchSelect", module).add("SearchSelect", () => {
       options={mockOptions}
       selection={undefined}
       handleSelect={action("selection made")}
+    />
+  );
+});
+
+storiesOf("MultipleSearchSelect", module).add("MultipleSearchSelect", () => {
+  const mockOptions = [
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "birds"
+  ];
+
+  return (
+    <MultipleSearchSelect
+      defaultText="This is a MultipleSearchSelect component"
+      options={mockOptions}
+      selections={[]}
+      handleSelect={action("selection made")}
+      removeSelection={action("remove selection")}
     />
   );
 });
