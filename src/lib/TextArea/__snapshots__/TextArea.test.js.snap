@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea should match the snapshot 1`] = `
+<div
+  className="ter-input__wrap"
+>
+  <label
+    classame="ter-input__label"
+  >
+    mock label
+  </label>
+  <textarea
+    defaultValue="mock value"
+    onChange={[Function]}
+  />
+</div>
+`;
