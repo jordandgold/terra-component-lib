@@ -15,6 +15,7 @@ import TextInput from "../lib/TextInput/TextInput";
 import Radios from "../lib/Radios/Radios";
 import TextArea from "../lib/TextArea/TextArea";
 import Checkbox from "../lib/Checkbox/Checkbox";
+import SearchSelect from "../lib/SearchSelect/SearchSelect";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -224,6 +225,27 @@ storiesOf("Checkbox", module).add("Checkbox", () => {
       label="This is a checkbox"
       checked={false}
       handleChange={action("checked/unchecked")}
+    />
+  );
+});
+
+storiesOf("SearchSelect", module).add("SearchSelect", () => {
+  const mockOptions = [
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "birds"
+  ];
+
+  return (
+    <SearchSelect
+      defaultText="This is a SearchSelect component"
+      options={mockOptions}
+      selection={undefined}
+      handleSelect={action("selection made")}
     />
   );
 });

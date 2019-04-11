@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSelect should match the snapshot 1`] = `
+<div
+  className="select-options__search-filter"
+>
+  <p
+    className="ter-search-select-label"
+    onClick={[Function]}
+  >
+    mock default text
+  </p>
+  <ul
+    className="select-options drop-undefined "
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <li
+      className="select-options__items"
+      key="cats-0"
+      onClick={[Function]}
+    >
+      cats
+    </li>
+    <li
+      className="select-options__items"
+      key="dogs-1"
+      onClick={[Function]}
+    >
+      dogs
+    </li>
+    <li
+      className="select-options__items"
+      key="turtles-2"
+      onClick={[Function]}
+    >
+      turtles
+    </li>
+    <li
+      className="select-options__items"
+      key="fish-3"
+      onClick={[Function]}
+    >
+      fish
+    </li>
+    <li
+      className="select-options__items"
+      key="ferrets-4"
+      onClick={[Function]}
+    >
+      ferrets
+    </li>
+    <li
+      className="select-options__items"
+      key="hamsters-5"
+      onClick={[Function]}
+    >
+      hamsters
+    </li>
+    <li
+      className="select-options__items"
+      key="birds-6"
+      onClick={[Function]}
+    >
+      birds
+    </li>
+  </ul>
+  <div />
+</div>
+`;
