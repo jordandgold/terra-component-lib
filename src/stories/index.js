@@ -15,6 +15,7 @@ import TextInput from "../lib/TextInput/TextInput";
 import Radios from "../lib/Radios/Radios";
 import TextArea from "../lib/TextArea/TextArea";
 import Checkbox from "../lib/Checkbox/Checkbox";
+import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 
@@ -269,6 +270,27 @@ storiesOf("MultipleSearchSelect", module).add("MultipleSearchSelect", () => {
       selections={[]}
       handleSelect={action("selection made")}
       removeSelection={action("remove selection")}
+    />
+  );
+});
+
+storiesOf("Select", module).add("Select", () => {
+  const mockOptions = [
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "birds"
+  ];
+
+  return (
+    <Select
+      options={mockOptions}
+      handleSelection={action("clicked an option")}
+      selection={undefined}
+      defaultText="This is a Select Component"
     />
   );
 });
