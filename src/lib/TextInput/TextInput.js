@@ -10,16 +10,21 @@ class TextInput extends Component {
       success: "has-success"
     };
     return (
-      <React.Fragment>
+      <div
+        className={`ter-form-item ${status && statusMessage[status.className]}`}
+      >
         <input
           type="text"
           name={name}
           placeholder={placeholder}
           value={value}
           onChange={e => inputChange(e)}
-          className={`ter-input ${statusMessage[status] || ""}`}
+          className={`ter-input`}
         />
-      </React.Fragment>
+        {status && (
+          <p className="ter-form-item__status-message">{status.message}</p>
+        )}
+      </div>
     );
   }
 }
@@ -30,6 +35,9 @@ TextInput.propTypes = {
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   inputChange: PropTypes.func.isRequired,
-  status: PropTypes.string,
+  status: PropTypes.shape({
+    className: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
+  }),
   name: PropTypes.string.isRequired
 };

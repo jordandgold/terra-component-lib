@@ -1,0 +1,31 @@
+@import "../global-styles/terra.scss";
+
+@mixin input-base() {
+  font-size: $input-font-size;
+  line-height: $input-height;
+  height: $input-height;
+  color: $input-text-color;
+  box-sizing: border-box;
+  padding: 0 spacing("xs");
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $input-border-color;
+  background-color: $input-bg;
+  border-radius: $input-border-radius;
+  box-sizing: border-box;
+  .is-inverse & {
+    color: $input-inverse-text-color;
+    border-width: $input-border-width;
+    border-style: solid;
+    border-color: $input-inverse-border-color;
+    background-color: $input-inverse-bg;
+  }
+}
+
+.ter-input {
+  @include input-base();
+}
