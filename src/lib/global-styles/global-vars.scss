@@ -204,7 +204,6 @@ $box-shadows: (
 );
 
 // font family
-
 $font-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "avenir next",
   avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
   sans-serif;
@@ -212,7 +211,6 @@ $font-serif: georgia, times, serif;
 $font-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
 // globals
-
 $body-bg-color: color("white");
 $body-font-color: type-color("normal");
 $border-radius-base: border-radius("none");
@@ -221,7 +219,6 @@ $body-font-weight: font-weight("normal");
 $selection-highlight-bg: color("brand-3");
 
 // navigation tabs
-
 $nav-tabs-link-color: color("gray-7");
 $nav-tabs-link-hover: color("gray-9");
 $nav-tabs-border-color: color("gray-7");
@@ -231,18 +228,15 @@ $nav-tabs-active-link-bg: color("white");
 $nav-tabs-font-weight: font-weight("bold");
 
 // pagination
-
 $pagination-border-hover-color: color("gray-3");
 $pagination-border-active-color: color("brand-1");
 
 // headers
-
 $header-font-color: color("gray-8");
 $header-font-family: "GTAmericaMono", $font-sans-serif;
 $header-font-weight: font-weight("extra-bold");
 
 // links
-
 $link-color: color("ui-1");
 $link-hover-color: darken($link-color, 10%);
 $link-inverse-color: color("ui-2");
@@ -250,7 +244,6 @@ $link-inverse-hover-color: darken($link-inverse-color, 10%);
 $link-font-weight: font-weight("normal");
 
 // navigation bar
-
 $navbar-height: 72px;
 // set to true if using module
 $has-universal-navbar: false;
@@ -280,7 +273,6 @@ $total-navbar-height: null;
 }
 
 // mega menu
-
 $mega-menu-bg: color("gray-2");
 // $mega-menu-offset: calc(-1 * #{spacing('mini')});
 $mega-menu-offset: 0px;
@@ -289,7 +281,6 @@ $mega-menu-link-color: color("brand-1");
 $mega-menu-link-hover: darken($link-color, 10%);
 
 // buttons
-
 $button-colors: () !default;
 $button-colors: map-merge(
   (
@@ -318,14 +309,12 @@ $button-outline-inverse-border-color: color("ui-2");
 $button-outline-inverse-hover-color: color("brand-2");
 
 // tooltips
-
 $tooltip-bg: color("gray-2");
 $tooltip-font-size: font-size("sm");
 $tooltip-text-color: type-color("normal");
 $tooltip-border-radius: $border-radius-base;
 
 // cards
-
 $card-bg: color("gray-2");
 $card-box-shadow: box-shadow(2);
 $card-border-radius: $border-radius-base;
@@ -334,7 +323,6 @@ $card-border-color: color("gray-3");
 $card-font-size: font-size("sm");
 
 // dropdowns
-
 $dropdown-item-font-size: font-size("sm");
 $dropdown-border-size: 1px;
 $dropdown-border-color: color("gray-7");
@@ -346,12 +334,10 @@ $drodown-arrow-color: color("gray-6");
 $dropdown-no-link-color: color("gray-6");
 
 // panels
-
 $panel-bg: color("white");
 $panel-border-color: color("gray-2");
 
 // accordion
-
 $accordion-font-size: font-size("sm");
 $accordion-bg: color("white");
 $accordion-expanded-bg: color("white");
@@ -360,11 +346,9 @@ $accordion-border-color: color("gray-4");
 $accordion-arrow-color: color("gray-4");
 
 // breadcrumbs
-
 $breadcrumbs-caret-color: color("brand-2");
 
 // form inputs
-
 $input-bg: color("gray-1");
 $input-height: 48px;
 $input-text-color: $body-font-color;
@@ -373,30 +357,27 @@ $input-border-radius: $border-radius-base;
 $input-border-color: color("gray-7");
 $input-border-width: 0.05rem;
 
-$input-label-font-size: font-size("sm");
-$input-label-color: color("gray-9");
-
 $input-placeholder-color: color("gray-5");
 $input-focus-border-color: color("brand-1");
-
-$input-inverse-bg: color("gray-10");
-$input-inverse-text-color: color("gray-4");
-$input-inverse-border-color: color("gray-8");
-
-$fieldset-legend-font-size: font-size("sm");
-$fieldset-legend-font-weight: font-weight("bold");
 
 $input-disabled-color: color("gray-5");
 $input-disabled-border-color: color("gray-5");
 $input-disabled-bg: $input-bg;
 
-// checkboxes
+// forms
+$form-label-font-size: font-size("sm");
+$form-label-color: color("gray-9");
+$form-status-message-font-size: font-size("sm");
 
+// fieldset
+$fieldset-legend-font-size: font-size("sm");
+$fieldset-legend-font-weight: font-weight("bold");
+
+// checkboxes
 $checkbox-border-color: $input-border-color;
 $checkbox-fill-color: color("brand-2");
 
 // radio buttons
-
 $radio-border-color: $input-border-color;
 $radio-fill-color: color("brand-2");
 
@@ -407,13 +388,11 @@ $table-row-bg-even: color("gray-2");
 $table-row-bg-odd: transparent;
 
 // modals
-
 $modal-bg: color("white");
 $modal-overlay-bg: color("gray-9");
 $modal-font-size: font-size("sm");
 
 // alerts
-
 $alert-border-radius: $border-radius-base;
 $alert-padding: spacing("sm");
 
@@ -423,20 +402,17 @@ $noficiation-bg-color: color("gray-1");
 $notification-border-radius: $border-radius-base;
 
 // tree menu
-
 $tree-menu-font-size: font-size("sm");
 $tree-menu-link-color: color("gray-5");
 $tree-menu-link-hover: color("gray-8");
 
 // viewport breakpoints
-
 $breakpoint-xs: 600px;
 $breakpoint-sm: 900px;
 $breakpoint-md: 1200px;
 $breakpoint-lg: 1800px;
 
 // YIQ contrast colors
-
 $yiq-contrasted-dark-default: type-color("normal") !default;
 $yiq-contrasted-light-default: type-color("inverse") !default;
 $yiq-contrasted-threshold: 128 !default;

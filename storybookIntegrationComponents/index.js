@@ -55,6 +55,7 @@ export class TextInputForm extends Component {
     return (
       <form>
         <TextInput
+          label={this.props.label}
           placeholder={this.props.placeholder}
           value={this.state[this.props.name].value}
           inputChange={this.handleChange}
