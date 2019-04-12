@@ -122,7 +122,7 @@ Pagination.propTypes = {
 
 export class Page extends Component {
   handleClick = () => {
-    if (this.props.activePage) {
+    if (this.props.activePage === this.props.page) {
       return;
     } else {
       this.props.handleClick(this.props.page - 1);

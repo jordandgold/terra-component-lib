@@ -217,7 +217,7 @@ describe("Pagination", () => {
 
       it("should return if the active page", () => {
         pageWrapper = shallow(
-          <Page activePage={true} page={1} handleClick={mockProcessClick} />
+          <Page activePage={1} page={1} handleClick={mockProcessClick} />
         );
 
         const spy = jest.spyOn(pageWrapper.instance(), "handleClick");
