@@ -21,7 +21,12 @@ import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSele
 import Table from "../lib/Table/Table";
 import {
   CheckboxForm,
-  TextInputForm
+  TextInputForm,
+  TextAreaForm,
+  SelectForm,
+  SearchSelectForm,
+  MultipleSearchSelectForm,
+  RadiosForm
 } from "../../storybookIntegrationComponents/";
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -196,18 +201,13 @@ storiesOf("TextInput", module).add("TextInput", () => (
 ));
 
 storiesOf("Radios", module).add("Radios", () => {
-  const mockRadios = [
-    { name: "label one" },
-    { name: "label two" },
-    { name: "label three" }
-  ];
+  const mockRadios = ["label one", "label two", "label three"];
   return (
     <div>
-      <Radios
+      <RadiosForm
         radios={mockRadios}
-        selected={"label one"}
-        selectRadio={action("radio clicked")}
         collection="storybook-radios"
+        name="test name"
       />
     </div>
   );
@@ -215,7 +215,12 @@ storiesOf("Radios", module).add("Radios", () => {
 
 storiesOf("TextArea", module).add("TextArea", () => {
   return (
-    <TextArea handleChange={action("ohh, text!")} value="" label="Text Area" />
+    <TextAreaForm
+      handleChange={action("ohh, text!")}
+      value=""
+      label="Text Area"
+      name="text area"
+    />
   );
 });
 
@@ -235,7 +240,7 @@ storiesOf("SearchSelect", module).add("SearchSelect", () => {
   ];
 
   return (
-    <SearchSelect
+    <SearchSelectForm
       defaultText="This is a SearchSelect component"
       options={mockOptions}
       selection={undefined}
@@ -256,12 +261,10 @@ storiesOf("MultipleSearchSelect", module).add("MultipleSearchSelect", () => {
   ];
 
   return (
-    <MultipleSearchSelect
+    <MultipleSearchSelectForm
       defaultText="This is a MultipleSearchSelect component"
       options={mockOptions}
-      selections={[]}
-      handleSelect={action("selection made")}
-      removeSelection={action("remove selection")}
+      name="test name"
     />
   );
 });
@@ -278,11 +281,12 @@ storiesOf("Select", module).add("Select", () => {
   ];
 
   return (
-    <Select
+    <SelectForm
       options={mockOptions}
       handleSelection={action("clicked an option")}
       selection={undefined}
       defaultText="This is a Select Component"
+      name="test-name"
     />
   );
 });

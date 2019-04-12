@@ -22,9 +22,11 @@ class Table extends Component {
   };
 
   render() {
+    const variantClass = this.props.loose ? "ter-table--loose" : "";
+
     return (
       <React.Fragment>
-        <table class="ter-table">
+        <table className={`ter-table ${variantClass}`}>
           {this.props.data.head && <thead>{this.generateHeadCells()}</thead>}
           <tbody>{this.generateBody()}</tbody>
         </table>
@@ -36,5 +38,6 @@ class Table extends Component {
 export default Table;
 
 Table.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  loose: PropTypes.bool
 };

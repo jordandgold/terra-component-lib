@@ -27,6 +27,7 @@ describe("MultipleSearchSelect", () => {
         handleSelect={mockHandleSelect}
         options={mockOptions}
         removeSelection={mockRemoveSelection}
+        name="test name"
       />
     );
   });
@@ -150,7 +151,7 @@ describe("MultipleSearchSelect", () => {
 
       wrapper.instance().handleSelect("mock option");
 
-      expect(mockHandleSelect).toHaveBeenCalledWith("mock option");
+      expect(mockHandleSelect).toHaveBeenCalledWith("mock option", "test name");
     });
 
     it("should call handleSelect on click", () => {
@@ -161,6 +162,7 @@ describe("MultipleSearchSelect", () => {
           handleSelect={mockHandleSelect}
           options={["cats"]}
           removeSelection={mockRemoveSelection}
+          name="test name"
         />
       );
 
@@ -181,6 +183,7 @@ describe("MultipleSearchSelect", () => {
           handleSelect={mockHandleSelect}
           options={["cats"]}
           removeSelection={mockRemoveSelection}
+          name="test name"
         />
       );
 
@@ -209,6 +212,7 @@ describe("MultipleSearchSelect", () => {
           handleSelect={mockHandleSelect}
           options={["cats"]}
           removeSelection={mockRemoveSelection}
+          name="test name"
         />
       );
     });
@@ -235,7 +239,7 @@ describe("MultipleSearchSelect", () => {
 
       wrapper.instance().removeSelection(mockEvent, mockSelection);
 
-      expect(mockRemoveSelection).toHaveBeenCalledWith("dogs");
+      expect(mockRemoveSelection).toHaveBeenCalledWith("dogs", "test name");
     });
 
     it("should call removeSelection on Click", () => {
@@ -246,6 +250,7 @@ describe("MultipleSearchSelect", () => {
           handleSelect={mockHandleSelect}
           options={["cats"]}
           removeSelection={mockRemoveSelection}
+          name="test name"
         />
       );
       const mockStopPropagation = jest.fn();
