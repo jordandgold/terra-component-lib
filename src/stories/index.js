@@ -23,7 +23,10 @@ import {
   CheckboxForm,
   TextInputForm,
   TextAreaForm,
-  SelectForm
+  SelectForm,
+  SearchSelectForm,
+  MultipleSearchSelectForm,
+  RadiosForm
 } from "../../storybookIntegrationComponents/";
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -198,18 +201,13 @@ storiesOf("TextInput", module).add("TextInput", () => (
 ));
 
 storiesOf("Radios", module).add("Radios", () => {
-  const mockRadios = [
-    { name: "label one" },
-    { name: "label two" },
-    { name: "label three" }
-  ];
+  const mockRadios = ["label one", "label two", "label three"];
   return (
     <div>
-      <Radios
+      <RadiosForm
         radios={mockRadios}
-        selected={"label one"}
-        selectRadio={action("radio clicked")}
         collection="storybook-radios"
+        name="test name"
       />
     </div>
   );
@@ -242,7 +240,7 @@ storiesOf("SearchSelect", module).add("SearchSelect", () => {
   ];
 
   return (
-    <SearchSelect
+    <SearchSelectForm
       defaultText="This is a SearchSelect component"
       options={mockOptions}
       selection={undefined}
@@ -263,12 +261,10 @@ storiesOf("MultipleSearchSelect", module).add("MultipleSearchSelect", () => {
   ];
 
   return (
-    <MultipleSearchSelect
+    <MultipleSearchSelectForm
       defaultText="This is a MultipleSearchSelect component"
       options={mockOptions}
-      selections={[]}
-      handleSelect={action("selection made")}
-      removeSelection={action("remove selection")}
+      name="test name"
     />
   );
 });

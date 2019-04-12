@@ -62,7 +62,7 @@ class MultipleSearchSelect extends Component {
   };
 
   handleSelect = option => {
-    this.props.handleSelect(option);
+    this.props.handleSelect(option, this.props.name);
   };
 
   renderSelections = () => {
@@ -84,7 +84,7 @@ class MultipleSearchSelect extends Component {
       e.stopPropagation();
     }
 
-    this.props.removeSelection(selection);
+    this.props.removeSelection(selection, this.props.name);
   };
 
   render() {
@@ -122,5 +122,6 @@ MultipleSearchSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   selections: PropTypes.arrayOf(PropTypes.string),
   handleSelect: PropTypes.func.isRequired,
-  removeSelection: PropTypes.func.isRequired
+  removeSelection: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired
 };

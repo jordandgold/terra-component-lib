@@ -13,15 +13,15 @@ class Radios extends Component {
             htmlFor={`${collection}Choice${index}`}
             className={`ter-radio__label radio-${index}`}
           >
-            {radio.name}
+            {radio}
           </label>
           <input
             className={`radio-button-${index}`}
             type="radio"
             name={collection}
-            onChange={() => this.props.selectRadio(radio.name)}
-            checked={this.props.selected === radio.name}
-            value={radio.name}
+            onChange={() => this.props.selectRadio(radio, this.props.name)}
+            checked={this.props.selected === radio}
+            value={radio}
             id={`${collection}Choice${index}`}
           />
         </div>
@@ -37,12 +37,9 @@ class Radios extends Component {
 export default Radios;
 
 Radios.propTypes = {
-  radios: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired
-    })
-  ),
+  radios: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   collection: PropTypes.string.isRequired,
   selected: PropTypes.string.isRequired,
-  selectRadio: PropTypes.func.isRequired
+  selectRadio: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired
 };

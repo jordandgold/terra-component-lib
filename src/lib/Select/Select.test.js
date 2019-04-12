@@ -15,6 +15,7 @@ describe("Select", () => {
         options={mockOptions}
         selection={undefined}
         defaultText="Test default text"
+        name="test name"
       />
     );
   });
@@ -38,6 +39,7 @@ describe("Select", () => {
           options={["dogs"]}
           selection={undefined}
           defaultText="Test default text"
+          name="test name"
         />
       );
       const spy = jest.spyOn(wrapper.instance(), "toggleDeploy");
@@ -67,6 +69,7 @@ describe("Select", () => {
           options={["dogs"]}
           selection={undefined}
           defaultText="Test default text"
+          name="test name"
         />
       );
       const spy = jest.spyOn(wrapper.instance(), "handleSelection");
@@ -80,7 +83,7 @@ describe("Select", () => {
     it("should call handleSelection from props", () => {
       wrapper.instance().handleSelection("yum");
 
-      expect(mockHandleSelection).toHaveBeenCalledWith("yum");
+      expect(mockHandleSelection).toHaveBeenCalledWith("yum", "test name");
     });
   });
 

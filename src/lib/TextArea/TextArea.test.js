@@ -10,7 +10,7 @@ describe("TextArea", () => {
     mockHandleChange = jest.fn();
     wrapper = shallow(
       <TextArea
-        handleChange={mockHandleChange}
+        inputChange={mockHandleChange}
         value="mock value"
         label="mock label"
       />
