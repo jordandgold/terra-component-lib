@@ -6,6 +6,7 @@ import SearchSelect from "../src/lib/SearchSelect/SearchSelect";
 import Select from "../src/lib/Select/Select";
 import TextArea from "../src/lib/TextArea/TextArea";
 import TextInput from "../src/lib/TextInput/TextInput";
+import Pagination from "../src/lib/Pagination/Pagination";
 
 export class CheckboxForm extends Component {
   constructor(props) {
@@ -219,6 +220,33 @@ export class RadiosForm extends Component {
           name={this.props.name}
         />
       </form>
+    );
+  }
+}
+
+export class PaginationContainer extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      activePage: 0
+    };
+  }
+
+  handleClick = activePage => {
+    console.group("fires");
+    this.setState({ activePage });
+  };
+
+  render() {
+    return (
+      <div>
+        <Pagination
+          pages={this.props.pages}
+          activePage={this.state.activePage}
+          handleClick={this.handleClick}
+        />
+      </div>
     );
   }
 }

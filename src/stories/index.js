@@ -26,7 +26,8 @@ import {
   SelectForm,
   SearchSelectForm,
   MultipleSearchSelectForm,
-  RadiosForm
+  RadiosForm,
+  PaginationContainer
 } from "../../storybookIntegrationComponents/";
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -181,7 +182,7 @@ storiesOf("Dropdown", module).add("Dropdown", () => (
 const mockPages = 4;
 
 storiesOf("Pagination", module).add("Pagination", () => (
-  <Pagination activePage={0} pages={mockPages} />
+  <PaginationContainer pages={mockPages} />
 ));
 
 const mockBreadcrumbs = [
