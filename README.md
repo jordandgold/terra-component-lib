@@ -165,7 +165,17 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
+- `data` **(required)** - function that determines the method called when the button is clicked
+- `loose` - boolean that when set to `true` will add the `ter-table--loose` class to the component
+
 ######Example -
+
+```
+<Table
+  data={tableDataSource}
+  loose={true}
+/>
+```
 
 ---
 
