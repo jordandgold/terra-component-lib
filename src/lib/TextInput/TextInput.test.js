@@ -13,13 +13,27 @@ describe("TextInput", () => {
         inputChange={mockInputChange}
         value="mock value"
         name="mock name"
-        status=""
+        status={undefined}
         placeholder="mock placeholder"
       />
     );
   });
 
   it("should match the snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match the snapshot with a status message", () => {
+    wrapper = shallow(
+      <TextInput
+        inputChange={mockInputChange}
+        value="mock value"
+        name="mock name"
+        status={{ className: "error", message: "error!" }}
+        placeholder="mock placeholder"
+      />
+    );
+
     expect(wrapper).toMatchSnapshot();
   });
 
