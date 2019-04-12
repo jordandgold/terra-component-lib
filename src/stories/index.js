@@ -18,6 +18,7 @@ import Checkbox from "../lib/Checkbox/Checkbox";
 import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
+import Table from "../lib/Table/Table";
 
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -293,4 +294,17 @@ storiesOf("Select", module).add("Select", () => {
       defaultText="This is a Select Component"
     />
   );
+});
+
+storiesOf("Table", module).add("Table", () => {
+  const mockData = {
+    head: ["Table Head 1", "Table Head 2", "Table Head 3"],
+    body: [
+      [["Row 1 Cell 1"], ["Row 1 Cell 2"], ["Row 1 Cell 3"]],
+      [["Row 2 Cell 1"], ["Row 2 Cell 2"], ["Row 2 Cell 3"]],
+      [["Row 3 Cell 1"], ["Row 3 Cell 2"], ["Row 3 Cell 3"]]
+    ]
+  };
+
+  return <Table data={mockData} />;
 });
