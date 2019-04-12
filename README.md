@@ -129,6 +129,33 @@ You can then use the imported Terra component within your own application.
 
 ---
 
+#### Text Input
+
+######Props -
+
+- `label` - string used for the label element of the input
+- `placeholder` - optional string used to determine the placeholder text for an input
+- `inputChange` **(required)** - function that determines what happens when the input value has changed
+- `value` **(required)** - string for the value of the input
+- `status` - object that is passed into the component to provied an `error` or `success` state, accompanied by a `message`. Both the className and message are required in the object. Example below:
+  ```
+  { className: "error", message: "error!" }
+  ```
+- `name` **(required)** - string used as the field name
+
+######Example -
+
+```
+<TextInputForm
+  label="Form Item Label"
+  placeholder="test placeholder text"
+  name="test"
+  status=""
+/>
+```
+
+---
+
 #### Modal
 
 ######Props -

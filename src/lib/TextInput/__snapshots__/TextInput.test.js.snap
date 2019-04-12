@@ -4,6 +4,12 @@ exports[`TextInput should match the snapshot 1`] = `
 <div
   className="ter-form-item undefined"
 >
+  <label
+    className="ter-form-item__label"
+    for="mock name"
+  >
+    mock label
+  </label>
   <input
     className="ter-input"
     name="mock name"
@@ -19,6 +25,12 @@ exports[`TextInput should match the snapshot with a status message 1`] = `
 <div
   className="ter-form-item has-error"
 >
+  <label
+    className="ter-form-item__label"
+    for="mock name"
+  >
+    mock label
+  </label>
   <input
     className="ter-input"
     name="mock name"
