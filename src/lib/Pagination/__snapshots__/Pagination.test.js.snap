@@ -7,32 +7,6 @@ exports[`Pagination should match the snapshot 1`] = `
 >
   <ul
     className="ter-pagination__list"
-  >
-    <li
-      className="ter-pagination__list-item"
-    >
-      <a
-        href="/"
-        rel="prev"
-      >
-        <i
-          className="fas fa-chevron-left"
-        />
-      </a>
-    </li>
-    <Component />
-    <li
-      className="ter-pagination__list-item"
-    >
-      <a
-        href="/"
-        rel="next"
-      >
-        <i
-          className="fas fa-chevron-right"
-        />
-      </a>
-    </li>
-  </ul>
+  />
 </nav>
 `;
