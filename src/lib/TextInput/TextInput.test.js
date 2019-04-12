@@ -10,6 +10,7 @@ describe("TextInput", () => {
     mockInputChange = jest.fn();
     wrapper = shallow(
       <TextInput
+        label="mock label"
         inputChange={mockInputChange}
         value="mock value"
         name="mock name"
@@ -26,6 +27,7 @@ describe("TextInput", () => {
   it("should match the snapshot with a status message", () => {
     wrapper = shallow(
       <TextInput
+        label="mock label"
         inputChange={mockInputChange}
         value="mock value"
         name="mock name"
