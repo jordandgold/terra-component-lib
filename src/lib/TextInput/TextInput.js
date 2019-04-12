@@ -26,7 +26,7 @@ class TextInput extends Component {
           onChange={e => inputChange(e)}
           className={`ter-input`}
         />
-        {status && (
+        {status && status.message && (
           <p className="ter-form-item__status-message">{status.message}</p>
         )}
       </div>
@@ -37,13 +37,13 @@ class TextInput extends Component {
 export default TextInput;
 
 TextInput.propTypes = {
-  label: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
   inputChange: PropTypes.func.isRequired,
   status: PropTypes.shape({
     className: PropTypes.string.isRequired,
-    message: PropTypes.string.isRequired
+    message: PropTypes.string
   }),
   name: PropTypes.string.isRequired
 };
