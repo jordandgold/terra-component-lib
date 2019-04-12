@@ -11,6 +11,11 @@ import Dropdown from "../lib/Dropdown/Dropdown";
 import Icon from "../lib/Icon/Icon";
 import Pagination from "../lib/Pagination/Pagination";
 import Breadcrumbs from "../lib/Breadcrumbs/Breadcrumbs";
+import TextInput from "../lib/TextInput/TextInput";
+import Radios from "../lib/Radios/Radios";
+import TextArea from "../lib/TextArea/TextArea";
+import Checkbox from "../lib/Checkbox/Checkbox";
+import SearchSelect from "../lib/SearchSelect/SearchSelect";
 // import { Button, Welcome } from "@storybook/react/demo";
 
 // storiesOf("Welcome", module).add("to Storybook", () => (
@@ -161,10 +166,10 @@ storiesOf("Dropdown", module).add("Dropdown", () => (
   />
 ));
 
-const mockPages = 5;
+const mockPages = 4;
 
 storiesOf("Pagination", module).add("Pagination", () => (
-  <Pagination activePage={4} pages={mockPages} />
+  <Pagination activePage={0} pages={mockPages} />
 ));
 
 const mockBreadcrumbs = [
@@ -176,3 +181,70 @@ const mockBreadcrumbs = [
 storiesOf("Breadcrumb", module).add("Breadcrumb", () => (
   <Breadcrumbs breadcrumbs={mockBreadcrumbs} />
 ));
+
+storiesOf("TextInput", module).add("TextInput", () => (
+  <div>
+    <TextInput
+      placeholder="placeholder text"
+      value=""
+      inputChange={action("input received")}
+      name="test"
+    />
+  </div>
+));
+
+storiesOf("Radios", module).add("Radios", () => {
+  const mockRadios = [
+    { name: "label one" },
+    { name: "label two" },
+    { name: "label three" }
+  ];
+  return (
+    <div>
+      <Radios
+        radios={mockRadios}
+        selected={"label one"}
+        selectRadio={action("radio clicked")}
+        collection="storybook-radios"
+      />
+    </div>
+  );
+});
+
+storiesOf("TextArea", module).add("TextArea", () => {
+  return (
+    <TextArea handleChange={action("ohh, text!")} value="" label="Text Area" />
+  );
+});
+
+storiesOf("Checkbox", module).add("Checkbox", () => {
+  return (
+    <Checkbox
+      name="checkbox"
+      label="This is a checkbox"
+      checked={false}
+      handleChange={action("checked/unchecked")}
+    />
+  );
+});
+
+storiesOf("SearchSelect", module).add("SearchSelect", () => {
+  const mockOptions = [
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "birds"
+  ];
+
+  return (
+    <SearchSelect
+      defaultText="This is a SearchSelect component"
+      options={mockOptions}
+      selection={undefined}
+      handleSelect={action("selection made")}
+    />
+  );
+});

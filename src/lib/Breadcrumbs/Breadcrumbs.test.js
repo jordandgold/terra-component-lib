@@ -22,9 +22,10 @@ describe("Breadcrumbs", () => {
   describe("generateBreadcrumbs", () => {
     it("should return some jsx", () => {
       const expected = [
-        '<a class="breadcrumb" href="https://www.google.com">Google</a>',
-        '<a class="breadcrumb" href="https://mail.google.com">Gmail</a>'
+        '<li class="ter-breadcrumbs__list-item"><a href="https://www.google.com">Google</a><svg viewBox="0 0 8 8" class="ter-icon ter-icon--open-caret-right-dark-8px ter-icon--8px ter-breadcrumbs__caret"><use xlink:href="[object Object]#ter-icon--open-caret-right-dark-8px"></use></svg></li>',
+        '<li class="ter-breadcrumbs__list-item">Gmail</li>'
       ];
+
       const result = wrapper
         .instance()
         .generateBreadcrumbs()

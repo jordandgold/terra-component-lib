@@ -10,7 +10,7 @@ const Modal = props => {
     <aside className={`ter-modal ${className}`}>
       <button
         className="ter-modal__close"
-        onClick={closeModal()}
+        onClick={closeModal}
         aria-label="Close Modal"
       >
         <Icon type="enclosed-x-dark-16px" size="16px" />

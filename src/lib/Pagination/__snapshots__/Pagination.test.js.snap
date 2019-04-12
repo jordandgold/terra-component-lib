@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Pagination Page should match the snapshot 1`] = `
+<li
+  className="ter-pagination__list-item "
+  onClick={[Function]}
+>
+  test string
+</li>
+`;
+
 exports[`Pagination should match the snapshot 1`] = `
 <nav
   className="ter-pagination"
@@ -7,6 +16,25 @@ exports[`Pagination should match the snapshot 1`] = `
 >
   <ul
     className="ter-pagination__list"
-  />
+  >
+    <Page
+      activePage={1}
+      key="list-item-1"
+      page={1}
+    />
+    <Page
+      activePage={1}
+      key="list-item-2"
+      page={2}
+    />
+    <li
+      className="ter-pagination__list-item ter-pagination__list-item--next"
+    >
+      <Icon
+        size="12px"
+        type="open-caret-right-dark-8px"
+      />
+    </li>
+  </ul>
 </nav>
 `;
