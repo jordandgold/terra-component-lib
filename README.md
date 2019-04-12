@@ -177,7 +177,7 @@ You can then use the imported Terra component within your own application.
 
 ---
 
-#### Toolstips
+#### Tooltips
 
 ######Props -
 

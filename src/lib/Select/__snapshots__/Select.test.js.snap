@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should match the snapshop 1`] = `
+<div>
+  <p
+    className="ter-select__label"
+    onClick={[Function]}
+  >
+    Test default text
+  </p>
+  <ul
+    className="select-options is-open"
+  >
+    <li
+      className="select-options__item"
+      key="cats-0"
+      onClick={[Function]}
+    >
+      cats
+    </li>
+    <li
+      className="select-options__item"
+      key="dogs-1"
+      onClick={[Function]}
+    >
+      dogs
+    </li>
+    <li
+      className="select-options__item"
+      key="birds-2"
+      onClick={[Function]}
+    >
+      birds
+    </li>
+  </ul>
+</div>
+`;

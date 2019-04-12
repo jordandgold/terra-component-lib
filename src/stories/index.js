@@ -15,7 +15,10 @@ import TextInput from "../lib/TextInput/TextInput";
 import Radios from "../lib/Radios/Radios";
 import TextArea from "../lib/TextArea/TextArea";
 import Checkbox from "../lib/Checkbox/Checkbox";
+import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
+import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
+import Table from "../lib/Table/Table";
 // import { Button, Welcome } from "@storybook/react/demo";
 
 // storiesOf("Welcome", module).add("to Storybook", () => (
@@ -247,4 +250,60 @@ storiesOf("SearchSelect", module).add("SearchSelect", () => {
       handleSelect={action("selection made")}
     />
   );
+});
+
+storiesOf("MultipleSearchSelect", module).add("MultipleSearchSelect", () => {
+  const mockOptions = [
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "birds"
+  ];
+
+  return (
+    <MultipleSearchSelect
+      defaultText="This is a MultipleSearchSelect component"
+      options={mockOptions}
+      selections={[]}
+      handleSelect={action("selection made")}
+      removeSelection={action("remove selection")}
+    />
+  );
+});
+
+storiesOf("Select", module).add("Select", () => {
+  const mockOptions = [
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "birds"
+  ];
+
+  return (
+    <Select
+      options={mockOptions}
+      handleSelection={action("clicked an option")}
+      selection={undefined}
+      defaultText="This is a Select Component"
+    />
+  );
+});
+
+storiesOf("Table", module).add("Table", () => {
+  const mockData = {
+    head: ["Table Head 1", "Table Head 2", "Table Head 3"],
+    body: [
+      [["Row 1 Cell 1"], ["Row 1 Cell 2"], ["Row 1 Cell 3"]],
+      [["Row 2 Cell 1"], ["Row 2 Cell 2"], ["Row 2 Cell 3"]],
+      [["Row 3 Cell 1"], ["Row 3 Cell 2"], ["Row 3 Cell 3"]]
+    ]
+  };
+
+  return <Table data={mockData} />;
 });
