@@ -4,6 +4,7 @@ exports[`Select should match the snapshop 1`] = `
 <div>
   <p
     className="ter-select__label"
+    onClick={[Function]}
   >
     Test default text
   </p>
