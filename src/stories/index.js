@@ -19,7 +19,6 @@ import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 import Table from "../lib/Table/Table";
-
 // import { Button, Welcome } from "@storybook/react/demo";
 
 // storiesOf("Welcome", module).add("to Storybook", () => (

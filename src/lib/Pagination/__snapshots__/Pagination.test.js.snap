@@ -27,10 +27,14 @@ exports[`Pagination should match the snapshot 1`] = `
       key="list-item-2"
       page={2}
     />
+    <li
+      className="ter-pagination__list-item ter-pagination__list-item--next"
+    >
+      <Icon
+        size="12px"
+        type="open-caret-right-dark-8px"
+      />
+    </li>
   </ul>
-  <Icon
-    size="8px"
-    type="open-caret-right-dark-8px"
-  />
 </nav>
 `;
