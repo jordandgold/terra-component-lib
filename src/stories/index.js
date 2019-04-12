@@ -196,7 +196,24 @@ storiesOf("Breadcrumb", module).add("Breadcrumb", () => (
 
 storiesOf("TextInput", module).add("TextInput", () => (
   <div>
-    <TextInputForm placeholder="test placeholder text" name="test" status="" />
+    <TextInputForm
+      label="Form Item Label"
+      placeholder="test placeholder text"
+      name="test"
+      status=""
+    />
+    <TextInputForm
+      label="Error State"
+      placeholder="test placeholder text"
+      name="test"
+      status={{ className: "error", message: "This is an error message!" }}
+    />
+    <TextInputForm
+      label="Success State"
+      placeholder="test placeholder text"
+      name="test"
+      status={{ className: "success", message: "" }}
+    />
   </div>
 ));
 

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 class TextInput extends Component {
   render() {
-    const { name, placeholder, value, inputChange, status } = this.props;
+    const { name, label, placeholder, value, inputChange, status } = this.props;
     const statusMessage = {
       error: "has-error",
       success: "has-success"
@@ -13,6 +13,11 @@ class TextInput extends Component {
       <div
         className={`ter-form-item ${status && statusMessage[status.className]}`}
       >
+        {label && (
+          <label className="ter-form-item__label" for={name}>
+            {label}
+          </label>
+        )}
         <input
           type="text"
           name={name}
@@ -32,6 +37,7 @@ class TextInput extends Component {
 export default TextInput;
 
 TextInput.propTypes = {
+  label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   inputChange: PropTypes.func.isRequired,
