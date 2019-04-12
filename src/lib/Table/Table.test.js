@@ -14,10 +14,16 @@ describe("Table", () => {
   };
 
   beforeEach(() => {
-    wrapper = shallow(<Table data={mockData} />);
+    wrapper = shallow(<Table data={mockData} loose={true} />);
   });
 
   it("should match the snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match the snapshot with a false boolean", () => {
+    wrapper = shallow(<Table data={mockData} loose={false} />);
+
     expect(wrapper).toMatchSnapshot();
   });
 

@@ -9,11 +9,7 @@ describe("Radios", () => {
   beforeEach(() => {
     mockSelectRadio = jest.fn();
     const mockSelected = "test one";
-    const mockRadios = [
-      { name: "test one" },
-      { name: "test two" },
-      { name: "test three" }
-    ];
+    const mockRadios = ["test one", "test two", "test three"];
     const mockCollection = "test-radios";
     wrapper = shallow(
       <Radios
@@ -21,6 +17,7 @@ describe("Radios", () => {
         selectRadio={mockSelectRadio}
         selected={mockSelected}
         collection={mockCollection}
+        name="test name"
       />
     );
   });
@@ -50,7 +47,7 @@ describe("Radios", () => {
       const mockRadio = { name: "test one" };
       wrapper.find(".radio-button-0").simulate("change", mockRadio);
 
-      expect(mockSelectRadio).toHaveBeenCalledWith(mockRadio.name);
+      expect(mockSelectRadio).toHaveBeenCalledWith(mockRadio.name, "test name");
     });
   });
 });

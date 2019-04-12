@@ -39,5 +39,5 @@ export default Table;
 
 Table.propTypes = {
   data: PropTypes.object.isRequired,
-  loose: PropTypes.boolean
+  loose: PropTypes.bool
 };
