@@ -19,6 +19,10 @@ import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 import Table from "../lib/Table/Table";
+import {
+  CheckboxForm,
+  TextInputForm
+} from "../../storybookIntegrationComponents/";
 // import { Button, Welcome } from "@storybook/react/demo";
 
 // storiesOf("Welcome", module).add("to Storybook", () => (
@@ -187,12 +191,7 @@ storiesOf("Breadcrumb", module).add("Breadcrumb", () => (
 
 storiesOf("TextInput", module).add("TextInput", () => (
   <div>
-    <TextInput
-      placeholder="placeholder text"
-      value=""
-      inputChange={action("input received")}
-      name="test"
-    />
+    <TextInputForm placeholder="test placeholder text" name="test" status="" />
   </div>
 ));
 
@@ -221,14 +220,7 @@ storiesOf("TextArea", module).add("TextArea", () => {
 });
 
 storiesOf("Checkbox", module).add("Checkbox", () => {
-  return (
-    <Checkbox
-      name="checkbox"
-      label="This is a checkbox"
-      checked={false}
-      handleChange={action("checked/unchecked")}
-    />
-  );
+  return <CheckboxForm name="checkbox" label="This is a checkbox" />;
 });
 
 storiesOf("SearchSelect", module).add("SearchSelect", () => {
