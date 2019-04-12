@@ -88,13 +88,19 @@ class Pagination extends Component {
   render() {
     return (
       <nav className="ter-pagination" role="navigation">
-        {this.props.activePage + 1 > 1 && this.props.activePage > 0 && (
-          <Icon type="open-caret-left-dark-8px" size="8px" />
-        )}
-        <ul className="ter-pagination__list">{this.generatePageListItems()}</ul>
-        {this.props.activePage + 1 < this.props.pages && (
-          <Icon type="open-caret-right-dark-8px" size="8px" />
-        )}
+        <ul className="ter-pagination__list">
+          {this.props.activePage + 1 > 1 && this.props.activePage > 0 && (
+            <li className="ter-pagination__list-item ter-pagination__list-item--previous">
+              <Icon type="open-caret-left-dark-8px" size="8px" />
+            </li>
+          )}
+          {this.generatePageListItems()}
+          {this.props.activePage + 1 < this.props.pages && (
+            <li className="ter-pagination__list-item ter-pagination__list-item--next">
+              <Icon type="open-caret-right-dark-8px" size="12px" />
+            </li>
+          )}
+        </ul>
       </nav>
     );
   }
