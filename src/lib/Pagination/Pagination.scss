@@ -13,9 +13,10 @@
     font-size: font-size("sm");
     &:hover {
       cursor: pointer;
+      border-bottom: 2px solid $pagination-border-hover-color;
     }
     &.is-active {
-      border-bottom: 2px solid $pagination-border-color;
+      border-bottom: 2px solid $pagination-border-active-color;
     }
   }
 }

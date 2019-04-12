@@ -232,7 +232,8 @@ $nav-tabs-font-weight: font-weight("bold");
 
 // pagination
 
-$pagination-border-color: color("brand-1");
+$pagination-border-hover-color: color("gray-3");
+$pagination-border-active-color: color("brand-1");
 
 // headers
 

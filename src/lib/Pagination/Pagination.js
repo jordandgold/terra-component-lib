@@ -91,7 +91,7 @@ class Pagination extends Component {
           {this.generatePageListItems()}
           {this.props.activePage + 1 < this.props.pages && (
             <li className="ter-pagination__list-item ter-pagination__list-item--next">
-              <Icon type="open-caret-right-dark-8px" size="8px" />
+              <Icon type="open-caret-right-dark-8px" size="12px" />
             </li>
           )}
         </ul>
