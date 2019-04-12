@@ -65,3 +65,62 @@ export class TextInputForm extends Component {
     );
   }
 }
+
+export class TextAreaForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      [props.name]: ""
+    };
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  render() {
+    return (
+      <form>
+        <TextArea
+          value={this.state[this.props.name].value}
+          inputChange={this.handleChange}
+          name={this.props.name}
+          label={this.props.label}
+        />
+      </form>
+    );
+  }
+}
+
+export class SelectForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      [this.props.name]: undefined
+    };
+  }
+
+  handleSelection = (selection, name) => {
+    this.setState({
+      [name]: selection
+    });
+  };
+
+  render() {
+    return (
+      <form>
+        <Select
+          name={this.props.name}
+          options={this.props.options}
+          handleSelection={this.handleSelection}
+          defaultText="This is a Select component"
+          selection={this.state[this.props.name]}
+        />
+      </form>
+    );
+  }
+}

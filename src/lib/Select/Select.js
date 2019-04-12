@@ -20,7 +20,7 @@ class Select extends Component {
   handleSelection = selection => {
     this.toggleDeploy();
 
-    this.props.handleSelection(selection);
+    this.props.handleSelection(selection, this.props.name);
   };
 
   generateOptions = () => {
@@ -57,5 +57,6 @@ Select.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleSelection: PropTypes.func.isRequired,
   selection: PropTypes.string,
-  defaultText: PropTypes.string.isRequired
+  defaultText: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };

@@ -21,7 +21,9 @@ import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSele
 import Table from "../lib/Table/Table";
 import {
   CheckboxForm,
-  TextInputForm
+  TextInputForm,
+  TextAreaForm,
+  SelectForm
 } from "../../storybookIntegrationComponents/";
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -215,7 +217,12 @@ storiesOf("Radios", module).add("Radios", () => {
 
 storiesOf("TextArea", module).add("TextArea", () => {
   return (
-    <TextArea handleChange={action("ohh, text!")} value="" label="Text Area" />
+    <TextAreaForm
+      handleChange={action("ohh, text!")}
+      value=""
+      label="Text Area"
+      name="text area"
+    />
   );
 });
 
@@ -278,11 +285,12 @@ storiesOf("Select", module).add("Select", () => {
   ];
 
   return (
-    <Select
+    <SelectForm
       options={mockOptions}
       handleSelection={action("clicked an option")}
       selection={undefined}
       defaultText="This is a Select Component"
+      name="test-name"
     />
   );
 });
