@@ -1,0 +1,81 @@
+@import "../global-styles/terra.scss";
+
+.ter-tabs {
+  @include for-size(tablet-landscape-down) {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: spacing("sm");
+    border-bottom: $nav-tabs-border-size solid $nav-tabs-border-color;
+    @include for-size(tablet-landscape-down) {
+      display: inline-block;
+    }
+    > li {
+      padding: 0;
+      margin-right: 0;
+    }
+  }
+  &__list-item {
+    padding: 0;
+    margin: 0 0 -2px 0;
+    button {
+      @include button-base();
+      color: $nav-tabs-link-color;
+      display: block;
+      background-color: $nav-tabs-link-bg;
+      font-weight: $nav-tabs-font-weight;
+      border-left: $nav-tabs-border-size solid
+        transparentize($nav-tabs-border-color, 0.75);
+      border-top: $nav-tabs-border-size solid
+        transparentize($nav-tabs-border-color, 0.75);
+      border-right: 0px;
+      border-bottom: $nav-tabs-border-size solid $nav-tabs-link-bg;
+      &:hover {
+        color: $nav-tabs-link-hover;
+      }
+    }
+    &:last-child {
+      button {
+        border-right: $nav-tabs-border-size solid
+          transparentize($nav-tabs-border-color, 0.75);
+      }
+    }
+    &.is-selected {
+      button {
+        border-left: $nav-tabs-border-size solid $nav-tabs-border-color;
+        border-top: $nav-tabs-border-size solid $nav-tabs-border-color;
+        border-right: $nav-tabs-border-size solid $nav-tabs-border-color;
+        border-bottom: 0px;
+        color: $nav-tabs-link-hover;
+        background-color: $nav-tabs-active-link-bg;
+      }
+    }
+    &.is-selected + li {
+      > button {
+        border-left: 0px;
+      }
+    }
+  }
+  &--full-width {
+    .ter-tabs {
+      &__list {
+        justify-content: space-between;
+      }
+      &__list-item {
+        flex-grow: 1;
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
