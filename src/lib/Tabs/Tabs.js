@@ -29,7 +29,7 @@ class Tabs extends Component {
         <ul className="ter-tabs__list" role="tablist">
           {this.props.children.map((elem, index) => {
             let selectedClass =
-              index == this.state.selected ? "is-selected" : "";
+              index === this.state.selected ? "is-selected" : "";
             return (
               <li
                 className={`ter-tabs__list-item ${selectedClass}`}

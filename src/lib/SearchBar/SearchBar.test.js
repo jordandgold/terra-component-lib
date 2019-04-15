@@ -53,8 +53,6 @@ describe("SearchBar", () => {
 
     const response = wrapper.instance().renderPredictiveSearchItems();
 
-    console.log(response);
-
     expect(wrapper).toMatchSnapshot();
   });
 
