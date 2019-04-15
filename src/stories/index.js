@@ -19,6 +19,7 @@ import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 import Table from "../lib/Table/Table";
+import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import {
   CheckboxForm,
   TextInputForm,
@@ -320,4 +321,38 @@ storiesOf("Table", module).add("Table", () => {
   };
 
   return <Table data={mockData} />;
+});
+
+storiesOf("Tabs", module).add("Tabs", () => {
+  return (
+    <Tabs selected={1} fullWidth={false}>
+      <TabsPanel name="First">
+        <h3>First Tab</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </TabsPanel>
+      <TabsPanel name="Second">
+        <h3>Second Tab</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </TabsPanel>
+      <TabsPanel name="Third">
+        <h3>Third Tab</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </TabsPanel>
+    </Tabs>
+  );
 });
