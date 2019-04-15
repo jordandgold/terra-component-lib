@@ -40,6 +40,7 @@
       border-right: 0px;
       border-bottom: $nav-tabs-border-size solid $nav-tabs-link-bg;
       &:hover {
+        cursor: pointer;
         color: $nav-tabs-link-hover;
       }
     }
