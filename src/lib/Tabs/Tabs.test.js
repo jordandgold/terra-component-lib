@@ -43,6 +43,42 @@ describe("Tabs", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match the snapshot if fullWidth is true", () => {
+    wrapper = shallow(
+      <Tabs selected={1} fullWidth={true}>
+        <TabsPanel name="First">
+          <h3>First Tab</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+            mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+            sollicitudin.
+          </p>
+        </TabsPanel>
+        <TabsPanel name="Second">
+          <h3>Second Tab</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+            mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+            sollicitudin.
+          </p>
+        </TabsPanel>
+        <TabsPanel name="Third">
+          <h3>Third Tab</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+            mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+            sollicitudin.
+          </p>
+        </TabsPanel>
+      </Tabs>
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe("Tab Button", () => {
     const mockIndex = 0;
     it("Should call handleTabChange when clicked", () => {

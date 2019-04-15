@@ -7,7 +7,7 @@ class Tabs extends Component {
     super(props);
 
     this.state = {
-      selected: this.props.selected || 0
+      selected: this.props.selected
     };
   }
 
@@ -55,3 +55,8 @@ export const TabsPanel = props => {
 };
 
 export default Tabs;
+
+Tabs.propTypes = {
+  selected: PropTypes.number.isRequired,
+  fullWidth: PropTypes.bool
+};

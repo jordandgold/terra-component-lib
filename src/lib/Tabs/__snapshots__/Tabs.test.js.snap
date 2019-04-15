@@ -65,3 +65,61 @@ exports[`Tabs should match the snapshot 1`] = `
   </div>
 </nav>
 `;
+
+exports[`Tabs should match the snapshot if fullWidth is true 1`] = `
+<nav
+  className="ter-tabs ter-tabs--full-width"
+  data-controls="#tabs-one"
+  role="navigation"
+>
+  <ul
+    className="ter-tabs__list"
+    role="tablist"
+  >
+    <li
+      className="ter-tabs__list-item "
+      key="0"
+    >
+      <button
+        onClick={[Function]}
+      >
+        First
+      </button>
+    </li>
+    <li
+      className="ter-tabs__list-item is-selected"
+      key="1"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Second
+      </button>
+    </li>
+    <li
+      className="ter-tabs__list-item "
+      key="2"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Third
+      </button>
+    </li>
+  </ul>
+  <div
+    className="ter-tabs__content"
+  >
+    <TabsPanel
+      name="Second"
+    >
+      <h3>
+        Second Tab
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit sollicitudin.
+      </p>
+    </TabsPanel>
+  </div>
+</nav>
+`;
