@@ -72,3 +72,8 @@ export class AccordionFold extends Component {
     );
   }
 }
+
+Accordion.propTypes = {
+  defaultActive: PropTypes.number,
+  children: PropTypes.node.isRequired
+};
