@@ -34,7 +34,10 @@ class Accordion extends Component {
     return this.props.children.map((child, index) => {
       let activeClass = index == this.state.active ? "is-expanded" : "";
       return (
-        <div className={`ter-accordion__fold ${activeClass}`}>
+        <div
+          key={`accordion-fold-${index}`}
+          className={`ter-accordion__fold ${activeClass}`}
+        >
           <button
             className="ter-accordion__trigger"
             onClick={() => this.accordionToggle(index)}
