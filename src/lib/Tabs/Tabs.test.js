@@ -42,4 +42,30 @@ describe("Tabs", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe("handleTabChange", () => {
+    const mockIndex = 2;
+
+    it("Should set state", () => {
+      wrapper.instance().handleTabChange(mockIndex);
+      expect(wrapper.state().selected).toEqual(mockIndex);
+    });
+  });
+
+  describe("Tabs Panel", () => {
+    let TabsPanelWrapper;
+    let mockName = "mock tab name";
+
+    beforeEach(() => {
+      TabsPanelWrapper = shallow(
+        <TabsPanel name={mockName}>
+          <p>Tab Panel</p>
+        </TabsPanel>
+      );
+    });
+
+    it("should match the snapshot", () => {
+      expect(TabsPanelWrapper).toMatchSnapshot();
+    });
+  });
 });

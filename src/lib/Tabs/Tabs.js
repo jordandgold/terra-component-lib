@@ -35,7 +35,7 @@ class Tabs extends Component {
                 className={`ter-tabs__list-item ${selectedClass}`}
                 key={index}
               >
-                <button onClick={event => this.handleTabChange(index)}>
+                <button onClick={() => this.handleTabChange(index)}>
                   {elem.props.name}
                 </button>
               </li>
