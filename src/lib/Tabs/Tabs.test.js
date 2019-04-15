@@ -43,6 +43,19 @@ describe("Tabs", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  describe("Tab Button", () => {
+    const mockIndex = 0;
+    it("Should call handleTabChange when clicked", () => {
+      const spy = jest.spyOn(wrapper.instance(), "handleTabChange");
+      wrapper.instance().forceUpdate();
+      wrapper
+        .find(".ter-tabs__list-item:first-child button")
+        .simulate("click", mockIndex);
+
+      expect(spy).toHaveBeenCalledWith(mockIndex);
+    });
+  });
+
   describe("handleTabChange", () => {
     const mockIndex = 2;
 
@@ -53,11 +66,11 @@ describe("Tabs", () => {
   });
 
   describe("Tabs Panel", () => {
-    let TabsPanelWrapper;
+    let tabsPanelWrapper;
     let mockName = "mock tab name";
 
     beforeEach(() => {
-      TabsPanelWrapper = shallow(
+      tabsPanelWrapper = shallow(
         <TabsPanel name={mockName}>
           <p>Tab Panel</p>
         </TabsPanel>
@@ -65,7 +78,7 @@ describe("Tabs", () => {
     });
 
     it("should match the snapshot", () => {
-      expect(TabsPanelWrapper).toMatchSnapshot();
+      expect(tabsPanelWrapper).toMatchSnapshot();
     });
   });
 });
