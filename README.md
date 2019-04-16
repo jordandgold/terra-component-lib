@@ -281,6 +281,74 @@ You can then use the imported Terra component within your own application.
 
 ---
 
+#### SearchBar
+
+######Props -
+
+- `searchItems` - an array of strings used for generating predictive text
+- `handleSubmit` **(required)** - function passed down for passing up the search string
+- `placeholder` - string used for generating a custom string of placeholder text, defaults to `Search`
+- `predictiveSearch` - boolean used to tell the component whether or not to produce a list of predictive search items
+
+######Example -
+
+```
+<SearchBar searchItems={}
+  searchItems={['dogs', 'cats', 'frogs', 'birds']}
+  handleSubmit={this.setSearchString}
+  placeholder='I am custom placeholder text'
+  predictiveSearch={true}
+/>
+```
+
+---
+
+#### SearchSelect
+
+######Props -
+
+- `defaultText` **(required)** - string used for generating the default text in the selected field
+- `options` **(required)** - array of strings to select from
+- `selection` **(required)** - string indicating the currently-selected string
+- `handleSelect` **(required)** - function used for changing the currently selected string
+
+######Example -
+
+```
+<SearchSelect
+  defaultText='Select an animal'
+  options={'dog', 'cat', 'turtle'}
+  selection={this.state.selectedAnimal}
+  handleSelect={this.selectAnimal}
+/>
+```
+
+---
+
+#### Select
+
+######Props -
+
+- `options` **(required)** - array of strings used for generating select options
+- `handleSelection` **(required)** - function used for changing the currently selection
+- `selection` **(required)** - string indicating the current select
+- `defaultText` **(required)** - string indicating the default text in the selected field
+- `name` **(required)** - string used for parent processing of the component
+
+######Example -
+
+```
+<Select
+  options={['red', 'blue', 'yellow']}
+  handleSelection={this.selectColor}
+  selection={this.state.color}
+  defaultText='Select a color'
+  name='color'
+/>
+```
+
+---
+
 #### Table
 
 ######Props -

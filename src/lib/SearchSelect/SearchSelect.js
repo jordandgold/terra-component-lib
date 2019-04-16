@@ -96,6 +96,6 @@ export default SearchSelect;
 SearchSelect.propTypes = {
   defaultText: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  selection: PropTypes.string,
+  selection: PropTypes.string.isRequired,
   handleSelect: PropTypes.func.isRequired
 };
