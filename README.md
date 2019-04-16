@@ -263,13 +263,21 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
-- `radios` - an array of strings used to label each individual radio button
-- `collection` -
-- `selected` - string used to indicate the currently selected radio button, generally same as `name`
-- `selectRadio` - function used to change the currently selected radio button in the parent component
-- `name` - string used to name the radio component for processing in the parent component
+- `radios` **(required)**- an array of strings used to label each individual radio button
+- `selected` **(required)**- string used to indicate the currently selected radio button, generally same as `name`
+- `selectRadio` **(required)**- function used to change the currently selected radio button in the parent component
+- `name` **(required)**- string used to name the radio component for processing in the parent component, should be unique
 
 ######Example -
+
+```
+      <Radios
+        radios={['radio one', 'radio two', 'radio three]}
+        selectRadio={this.selectRadio}
+        selected={this.state.selectedRadio}
+        name="selectedRadio"
+      />
+```
 
 ---
 
