@@ -161,6 +161,7 @@ You can then use the imported Terra component within your own application.
 - `defaultLabel` **(required)** - string indicating the default text to display in the dropdown field
 - `options` **(required)** - array of strings consisting of the different dropdown options
 - `selectOption` **(required)** function for passing up a newly-selected option string
+- `selected` - string indicating the currently selected item from the dropdown
 
 ######Example -
 
@@ -169,6 +170,7 @@ You can then use the imported Terra component within your own application.
   defaultLabel='click to select'
   options={['dog', 'cat', 'bird]}
   selectOption={this.handleOptionSelect}
+  selected={this.state.selectedDropdown}
 />
 ```
 

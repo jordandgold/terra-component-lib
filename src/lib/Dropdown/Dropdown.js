@@ -8,8 +8,7 @@ class Dropdown extends Component {
     super();
 
     this.state = {
-      isOpen: false,
-      selected: null
+      isOpen: false
     };
   }
 
@@ -20,12 +19,11 @@ class Dropdown extends Component {
   };
 
   handleSelectOption = option => {
-    if (option !== this.state.selected) {
+    if (option !== this.props.selected) {
       this.props.selectOption(option);
     }
 
     this.setState({
-      selected: option,
       isOpen: false
     });
   };
@@ -43,8 +41,8 @@ class Dropdown extends Component {
   };
 
   render() {
-    const selected = this.state.selected
-      ? this.state.selected
+    const selected = this.props.selected
+      ? this.props.selected
       : this.props.defaultLabel;
     const openClass = this.state.isOpen ? "is-open" : "";
 
@@ -83,5 +81,6 @@ export default Dropdown;
 Dropdown.propTypes = {
   defaultLabel: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  selectOption: PropTypes.func.isRequired
+  selectOption: PropTypes.func.isRequired,
+  selected: PropTypes.string
 };

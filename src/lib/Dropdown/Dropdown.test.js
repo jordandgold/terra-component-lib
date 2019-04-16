@@ -16,6 +16,7 @@ describe("Dropdown", () => {
         defaultLabel={mockDefaultLabel}
         selectOption={mockSelectOption}
         options={mockOptions}
+        selected={undefined}
       />
     );
   });
@@ -47,7 +48,6 @@ describe("Dropdown", () => {
     it("Should set state", () => {
       wrapper.instance().handleSelectOption(mockOption);
       expect(wrapper.state().isOpen).toEqual(false);
-      expect(wrapper.state().selected).toEqual(mockOption);
     });
 
     it("Should call selectOption method if conditions are met", () => {
@@ -56,7 +56,15 @@ describe("Dropdown", () => {
     });
 
     it("Should not call selectOption if conditions aren't met", () => {
-      wrapper.instance().handleSelectOption(null);
+      wrapper = shallow(
+        <Dropdown
+          defaultLabel={mockDefaultLabel}
+          selectOption={mockSelectOption}
+          options={mockOptions}
+          selected={"hello"}
+        />
+      );
+      wrapper.instance().handleSelectOption("hello");
       expect(mockSelectOption).toHaveBeenCalledTimes(0);
     });
   });

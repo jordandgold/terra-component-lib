@@ -29,7 +29,8 @@ import {
   SearchSelectForm,
   MultipleSearchSelectForm,
   RadiosForm,
-  PaginationContainer
+  PaginationContainer,
+  DropdownForm
 } from "../../storybookIntegrationComponents/";
 // import { Button, Welcome } from "@storybook/react/demo";
 
@@ -174,7 +175,7 @@ storiesOf("Icon", module).add("Icon", () => (
 const mockDropdownOptions = ["Option 1", "Option 2", "Option 3"];
 
 storiesOf("Dropdown", module).add("Dropdown", () => (
-  <Dropdown
+  <DropdownForm
     defaultLabel="Select an option"
     options={mockDropdownOptions}
     selectOption={action("Option selected!")}
