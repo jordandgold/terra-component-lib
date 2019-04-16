@@ -20,7 +20,18 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
+- `defaultActive` - number indicating the index of the active accordion 'fold' on load.
+- `children` **(required)** - components rendered inside the individual accordion 'folds', should be nested within the component itself. Components should have a `title` prop string indicating the text displayed when the fold is closed.
+
 ######Example -
+
+```
+<Accordion defaultActive=[0] >
+  <ChildComp title='Child 1' content='I'm a child component' />
+  <ChildComp title='Child 2' content='Me, too!' />
+  <ChildComp title='Child 3' content='Also, me!' />
+</Accordion>
+```
 
 ---
 
