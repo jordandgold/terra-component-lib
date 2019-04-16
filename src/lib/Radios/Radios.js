@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 class Radios extends Component {
   generateRadios = () => {
-    const { radios, collection } = this.props;
+    const { radios, name } = this.props;
 
     return radios.map((radio, index) => {
       return (
         <div key={`radio-${index}`}>
           <label
-            htmlFor={`${collection}Choice${index}`}
+            htmlFor={`${name}Choice${index}`}
             className={`ter-radio__label radio-${index}`}
           >
             {radio}
@@ -18,11 +18,11 @@ class Radios extends Component {
           <input
             className={`radio-button-${index}`}
             type="radio"
-            name={collection}
+            name={name}
             onChange={() => this.props.selectRadio(radio, this.props.name)}
             checked={this.props.selected === radio}
             value={radio}
-            id={`${collection}Choice${index}`}
+            id={`${name}Choice${index}`}
           />
         </div>
       );
@@ -38,8 +38,7 @@ export default Radios;
 
 Radios.propTypes = {
   radios: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  collection: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   selected: PropTypes.string.isRequired,
-  selectRadio: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired
+  selectRadio: PropTypes.func.isRequired
 };
