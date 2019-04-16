@@ -339,7 +339,22 @@ const tableDataSource = {
 
 ######Props -
 
+- `selected` - number indicating the default selected tab on load by its index - defaults to 0
+- `fullWidth` - boolean used for determining the width of the tabs component
+- `children` **(required)** - components rendered inside the individual tabs, should be nested within the component itself
+
 ######Example -
+
+```
+  <Tabs
+    selected={1}
+    fullWidth={true}
+  >
+    <p>I am the first tab</p>
+    <p>I am the second tab</p>
+    <p>I am the third tab</p>
+  </Tabs>
+```
 
 ---
 
