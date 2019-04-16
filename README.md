@@ -403,7 +403,7 @@ const tableDataSource = {
 
 ---
 
-#### Text Area
+#### TextArea
 
 ######Props -
 
@@ -423,7 +423,7 @@ const tableDataSource = {
 
 ---
 
-#### Text Input
+#### TextInput
 
 ######Props -
 
