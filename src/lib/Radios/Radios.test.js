@@ -10,13 +10,11 @@ describe("Radios", () => {
     mockSelectRadio = jest.fn();
     const mockSelected = "test one";
     const mockRadios = ["test one", "test two", "test three"];
-    const mockCollection = "test-radios";
     wrapper = shallow(
       <Radios
         radios={mockRadios}
         selectRadio={mockSelectRadio}
         selected={mockSelected}
-        collection={mockCollection}
         name="test name"
       />
     );
@@ -29,9 +27,9 @@ describe("Radios", () => {
   describe("generateRadios", () => {
     it("should return some JSX", () => {
       const expected = [
-        '<div><label for="test-radiosChoice0" class="ter-radio__label radio-0">test one</label><input type="radio" class="radio-button-0" name="test-radios" checked="" value="test one" id="test-radiosChoice0"/></div>',
-        '<div><label for="test-radiosChoice1" class="ter-radio__label radio-1">test two</label><input type="radio" class="radio-button-1" name="test-radios" value="test two" id="test-radiosChoice1"/></div>',
-        '<div><label for="test-radiosChoice2" class="ter-radio__label radio-2">test three</label><input type="radio" class="radio-button-2" name="test-radios" value="test three" id="test-radiosChoice2"/></div>'
+        '<div><label for="test nameChoice0" class="ter-radio__label radio-0">test one</label><input type="radio" class="radio-button-0" name="test name" checked="" value="test one" id="test nameChoice0"/></div>',
+        '<div><label for="test nameChoice1" class="ter-radio__label radio-1">test two</label><input type="radio" class="radio-button-1" name="test name" value="test two" id="test nameChoice1"/></div>',
+        '<div><label for="test nameChoice2" class="ter-radio__label radio-2">test three</label><input type="radio" class="radio-button-2" name="test name" value="test three" id="test nameChoice2"/></div>'
       ];
       const radioWrappers = wrapper
         .instance()

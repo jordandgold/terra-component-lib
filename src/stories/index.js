@@ -158,7 +158,7 @@ storiesOf("Modal", module).add("Modal", () => (
   />
 ));
 
-storiesOf("Notifcation", module).add("Notification", () => (
+storiesOf("Notification", module).add("Notification", () => (
   <Notification onClick={action("clicked!")} type="default" text={mockBody} />
 ));
 
