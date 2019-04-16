@@ -261,7 +261,7 @@ export class DropdownForm extends Component {
     };
   }
 
-  handleSelect = selected => {
+  handleSelect = (name, selected) => {
     this.setState({ selected });
   };
 
@@ -273,6 +273,7 @@ export class DropdownForm extends Component {
           selectOption={this.handleSelect}
           defaultLabel={this.props.defaultLabel}
           options={this.props.options}
+          name="dropdown"
         />
       </div>
     );
