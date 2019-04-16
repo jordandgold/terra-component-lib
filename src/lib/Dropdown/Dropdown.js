@@ -20,7 +20,7 @@ class Dropdown extends Component {
 
   handleSelectOption = option => {
     if (option !== this.props.selected) {
-      this.props.selectOption(option);
+      this.props.selectOption(this.props.name, option);
     }
 
     this.setState({
@@ -82,5 +82,6 @@ Dropdown.propTypes = {
   defaultLabel: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   selectOption: PropTypes.func.isRequired,
-  selected: PropTypes.string
+  selected: PropTypes.string,
+  name: PropTypes.string.isRequired
 };

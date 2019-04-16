@@ -17,6 +17,7 @@ describe("Dropdown", () => {
         selectOption={mockSelectOption}
         options={mockOptions}
         selected={undefined}
+        name={"test"}
       />
     );
   });
@@ -52,7 +53,7 @@ describe("Dropdown", () => {
 
     it("Should call selectOption method if conditions are met", () => {
       wrapper.instance().handleSelectOption(mockOption);
-      expect(mockSelectOption).toHaveBeenCalledWith(mockOption);
+      expect(mockSelectOption).toHaveBeenCalledWith("test", mockOption);
     });
 
     it("Should not call selectOption if conditions aren't met", () => {
@@ -62,6 +63,7 @@ describe("Dropdown", () => {
           selectOption={mockSelectOption}
           options={mockOptions}
           selected={"hello"}
+          name={"test"}
         />
       );
       wrapper.instance().handleSelectOption("hello");
