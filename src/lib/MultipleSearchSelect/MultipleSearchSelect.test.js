@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import MultipleSearchSelect from "./MultipleSearchSelect";
 
 describe("MultipleSearchSelect", () => {
@@ -50,6 +50,35 @@ describe("MultipleSearchSelect", () => {
       wrapper.find(".ter-search-select-label").simulate("click");
 
       expect(spy).toHaveBeenCalled();
+    });
+
+    it("should focus the input when opening", () => {
+      const mockOptions = [
+        "cats",
+        "dogs",
+        "turtles",
+        "fish",
+        "ferrets",
+        "hamsters",
+        "birds"
+      ];
+
+      wrapper = mount(
+        <MultipleSearchSelect
+          defaultText="mock default text"
+          selections={[]}
+          handleSelect={mockHandleSelect}
+          options={mockOptions}
+          removeSelection={mockRemoveSelection}
+          name="test name"
+        />
+      );
+
+      wrapper.instance().toggleSelect();
+
+      expect(
+        document.activeElement[Object.keys(document.activeElement)[0]].type
+      ).toEqual("input");
     });
   });
 

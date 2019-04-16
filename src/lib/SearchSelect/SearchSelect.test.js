@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import SearchSelect from "./SearchSelect";
 
 describe("SearchSelect", () => {
@@ -46,6 +46,31 @@ describe("SearchSelect", () => {
       wrapper.find(".ter-search-select-label").simulate("click");
 
       expect(spy).toHaveBeenCalled();
+    });
+
+    it("should focus the input when opening", () => {
+      const mockOptions = [
+        "cats",
+        "dogs",
+        "turtles",
+        "fish",
+        "ferrets",
+        "hamsters",
+        "birds"
+      ];
+
+      wrapper = mount(
+        <SearchSelect
+          defaultText="mock default text"
+          selection={undefined}
+          handleSelect={mockHandleSelect}
+          options={mockOptions}
+        />
+      );
+
+      expect(
+        document.activeElement[Object.keys(document.activeElement)[0]].type
+      ).toEqual("input");
     });
   });
 
