@@ -77,6 +77,7 @@ class SearchSelect extends Component {
           }`}
         >
           <input
+            ref={input => input && input.focus()}
             type="text"
             value={this.state.searchField}
             onChange={e => this.handleSearchChange(e)}

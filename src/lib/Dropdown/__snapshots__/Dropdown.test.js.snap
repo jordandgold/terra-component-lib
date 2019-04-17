@@ -13,6 +13,8 @@ exports[`Dropdown should match the snapshot 1`] = `
 <div
   className="ter-dropdown "
   onClick={[Function]}
+  onKeyUp={[Function]}
+  tabIndex="0"
 >
   <span
     className="ter-dropdown__selected"

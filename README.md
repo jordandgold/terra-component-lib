@@ -20,7 +20,18 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
+- `defaultActive` - number indicating the index of the active accordion 'fold' on load.
+- `children` **(required)** - components rendered inside the individual accordion 'folds', should be nested within the component itself. Components should have a `title` prop string indicating the text displayed when the fold is closed.
+
 ######Example -
+
+```
+<Accordion defaultActive=[0] >
+  <ChildComp title='Child 1' content='I'm a child component' />
+  <ChildComp title='Child 2' content='Me, too!' />
+  <ChildComp title='Child 3' content='Also, me!' />
+</Accordion>
+```
 
 ---
 
@@ -60,7 +71,7 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
-- `onClick` **(required)** - function that determines the method called when the button is clicked
+- `onClick` **(required)** - function that determines the method called when the button is clicked taking an argument of the event object.
 - `className` **(required)** - string that determines the type of button (see options) - interpolates into component `className` - see options below
 - `text` **(required)** - string that determines the inner text of the button element
 
@@ -128,7 +139,7 @@ You can then use the imported Terra component within your own application.
 - `label` **(required)** - string used for the check box's label
 - `name` **(required)** - string used for the check box's name for parent state management
 - `checked` **(required)** - boolean used to indicate whether or not the checkbox is checked, you should use whatever state property cooresponds to the component's `name`
-- `handleChange` **(required)** - function called when the checkbox is changed, best used for changing the `checked` state
+- `handleChange` **(required)** - function called when the checkbox is changed, best used for changing the `checked` state, takes a single argument of the components `name`
 
 ######Example -
 
@@ -149,16 +160,32 @@ You can then use the imported Terra component within your own application.
 
 - `defaultLabel` **(required)** - string indicating the default text to display in the dropdown field
 - `options` **(required)** - array of strings consisting of the different dropdown options
-- `selectOption` **(required)** function for passing up a newly-selected option string
+- `selectOption` **(required)** function for passing up a newly-selected option string, takes an argument of the name being passed down and the option being selected
+- `selected` - string indicating the currently selected item from the dropdown
+- `name` **(required)** - string indicating a reference to the Dropdown component for parent data processing
 
 ######Example -
 
 ```
-<Dropdown
-  defaultLabel='click to select'
-  options={['dog', 'cat', 'bird]}
-  selectOption={this.handleOptionSelect}
-/>
+
+handleOptionSelect = (name, selection) => {
+  this.setState({
+    [name]: selection
+  })
+}
+
+render() {
+  return (
+    <Dropdown
+      defaultLabel='click to select'
+      options={['dog', 'cat', 'bird]}
+      selectOption={this.handleOptionSelect}
+      selected={this.state.selectedDropdown}
+      name='animalDropdown'
+    />
+  )
+}
+
 ```
 
 ---
@@ -178,7 +205,7 @@ You can then use the imported Terra component within your own application.
 - `className` - string interpolated into the className of the component for styling options: use with caution.
 - `title` - string used for the modal's title
 - `body` - string used for the modal's body text
-- `closeModal` **(required)** - function used to no longer render the modal
+- `closeModal` **(required)** - function used to no longer render the modal, takes no arguments
 - `buttonOne` - object consisting of an `onClick` method, `text` label string, and `className` for styling. See `<Button>` for options.
 - `buttonTwo` - object consisting of an `onClick` method, `text` label string, and `className` for styling. See `<Button>` for options.
 
@@ -204,8 +231,8 @@ You can then use the imported Terra component within your own application.
 - `defaultText` **(required)** - string used to populate the search field before any selections are made
 - `options` **(required)** - an array of strings used to generate options for selection
 - `selection` **(required)** - an array of string used to provide the currently selected options
-- `handleSelect` **(required)** - function used to add an option to the selection array
-- `removeSelection` **(required)** - function used to remove an option from the selection array
+- `handleSelect` **(required)** - function used to add an option to the selection array, takes two arguments of the selection and the component's name
+- `removeSelection` **(required)** - function used to remove an option from the selection array, takes two arguments of the selection and the component's name
 - `name` **(required)** - string used for labeling the array for parent component processing
 
 ######Example -
@@ -229,7 +256,7 @@ You can then use the imported Terra component within your own application.
 
 - `text` **(required)** - string used for notification content
 - `type` **(required)** - string used for indicating notification type
-- `onClick` **(required)** - function used for calling a method to close the notication and no longer render it
+- `onClick` **(required)** - function used for calling a method to close the notication and no longer render it, takes no arguments
 
 ######Example -
 
@@ -249,7 +276,7 @@ You can then use the imported Terra component within your own application.
 
 - `pages` **(required)** - number indicating the total number of pages accessible via the component
 - `activePage` **(required)** - number indicating the index of the current page in the Pagination array - i.e. passing in `0` would display the first page
-- `handleClick` **(required)** - function used to set the new index of the currently displayed item in the Paginiation array
+- `handleClick` **(required)** - function used to set the new index of the currently displayed item in the Paginiation array, takes a single argument of the new index
 
 ######Example -
 
@@ -265,7 +292,7 @@ You can then use the imported Terra component within your own application.
 
 - `radios` **(required)**- an array of strings used to label each individual radio button
 - `selected` **(required)**- string used to indicate the currently selected radio button, generally same as `name`
-- `selectRadio` **(required)**- function used to change the currently selected radio button in the parent component
+- `selectRadio` **(required)**- function used to change the currently selected radio button in the parent component, takes two arguments of the new selected radio button and the component's name
 - `name` **(required)**- string used to name the radio component for processing in the parent component, should be unique
 
 ######Example -
@@ -286,7 +313,7 @@ You can then use the imported Terra component within your own application.
 ######Props -
 
 - `searchItems` - an array of strings used for generating predictive text
-- `handleSubmit` **(required)** - function passed down for passing up the search string
+- `handleSubmit` **(required)** - function passed down for passing up the search string, takes a single argument of the field's search string
 - `placeholder` - string used for generating a custom string of placeholder text, defaults to `Search`
 - `predictiveSearch` - boolean used to tell the component whether or not to produce a list of predictive search items
 
@@ -310,7 +337,7 @@ You can then use the imported Terra component within your own application.
 - `defaultText` **(required)** - string used for generating the default text in the selected field
 - `options` **(required)** - array of strings to select from
 - `selection` **(required)** - string indicating the currently-selected string
-- `handleSelect` **(required)** - function used for changing the currently selected string
+- `handleSelect` **(required)** - function used for changing the currently selected string, takes a single argument of the newly selected item as a string
 
 ######Example -
 
@@ -330,7 +357,7 @@ You can then use the imported Terra component within your own application.
 ######Props -
 
 - `options` **(required)** - array of strings used for generating select options
-- `handleSelection` **(required)** - function used for changing the currently selection
+- `handleSelection` **(required)** - function used for changing the currently selection, takes two arguments of the new selection and the component's `name`
 - `selection` **(required)** - string indicating the current select
 - `defaultText` **(required)** - string indicating the default text in the selected field
 - `name` **(required)** - string used for parent processing of the component
@@ -376,13 +403,33 @@ const tableDataSource = {
 
 ---
 
-#### Text Input
+#### TextArea
+
+######Props -
+
+- `label` - string used for the label element of the input
+- `inputChange` **(required)** - function that determines what happens when the input value has changed, takes a single argument of the event object
+- `value` **(required)** - string for the value of the input
+
+######Example -
+
+```
+<TextArea
+  label="Form Item Label"
+  placeholder="test placeholder text"
+  value={this.state.textArea}
+/>
+```
+
+---
+
+#### TextInput
 
 ######Props -
 
 - `label` - string used for the label element of the input
 - `placeholder` - optional string used to determine the placeholder text for an input
-- `inputChange` **(required)** - function that determines what happens when the input value has changed
+- `inputChange` **(required)** - function that determines what happens when the input value has changed, takes a single argument of the event object
 - `value` **(required)** - string for the value of the input
 - `status` - object that is passed into the component to provied an `error` or `success` state, accompanied by a `message`. Both the className and message are required in the object. Example below:
   ```
@@ -393,11 +440,12 @@ const tableDataSource = {
 ######Example -
 
 ```
-<TextInputForm
+<TextInput
   label="Form Item Label"
   placeholder="test placeholder text"
   name="test"
   status=""
+  value={this.state.test}
 />
 ```
 

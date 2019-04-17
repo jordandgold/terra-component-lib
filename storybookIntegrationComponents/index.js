@@ -7,6 +7,7 @@ import Select from "../src/lib/Select/Select";
 import TextArea from "../src/lib/TextArea/TextArea";
 import TextInput from "../src/lib/TextInput/TextInput";
 import Pagination from "../src/lib/Pagination/Pagination";
+import Dropdown from "../src/lib/Dropdown/Dropdown";
 
 export class CheckboxForm extends Component {
   constructor(props) {
@@ -245,6 +246,34 @@ export class PaginationContainer extends Component {
           pages={this.props.pages}
           activePage={this.state.activePage}
           handleClick={this.handleClick}
+        />
+      </div>
+    );
+  }
+}
+
+export class DropdownForm extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      selected: undefined
+    };
+  }
+
+  handleSelect = (name, selected) => {
+    this.setState({ selected });
+  };
+
+  render() {
+    return (
+      <div>
+        <Dropdown
+          selected={this.state.selected}
+          selectOption={this.handleSelect}
+          defaultLabel={this.props.defaultLabel}
+          options={this.props.options}
+          name="dropdown"
         />
       </div>
     );
