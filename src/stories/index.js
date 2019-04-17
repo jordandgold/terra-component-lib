@@ -172,7 +172,41 @@ storiesOf("Icon", module).add("Icon", () => (
   </div>
 ));
 
-const mockDropdownOptions = ["Option 1", "Option 2", "Option 3"];
+const mockDropdownOptions = [
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "More Options!",
+  "Look, more!",
+  "What's that?",
+  "You want more?!",
+  "FINE",
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "More Options!",
+  "Look, more!",
+  "What's that?",
+  "You want more?!",
+  "FINE",
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "More Options!",
+  "Look, more!",
+  "What's that?",
+  "You want more?!",
+  "FINE",
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "More Options!",
+  "Look, more!",
+  "What's that?",
+  "You want more?!",
+  "FINE",
+  "Zoo"
+];
 
 storiesOf("Dropdown", module).add("Dropdown", () => (
   <DropdownForm
