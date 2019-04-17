@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Select SelectOption should match the snapshot 1`] = `
+<li
+  className="select-options__item"
+  onClick={[Function]}
+>
+  kitty
+</li>
+`;
+
 exports[`Select should match the snapshop 1`] = `
-<div>
+<div
+  onKeyUp={[Function]}
+  tabIndex="0"
+>
   <p
     className="ter-select__label"
     onClick={[Function]}
@@ -11,27 +23,21 @@ exports[`Select should match the snapshop 1`] = `
   <ul
     className="select-options is-open"
   >
-    <li
-      className="select-options__item"
+    <SelectOption
       key="cats-0"
       onClick={[Function]}
-    >
-      cats
-    </li>
-    <li
-      className="select-options__item"
+      option="cats"
+    />
+    <SelectOption
       key="dogs-1"
       onClick={[Function]}
-    >
-      dogs
-    </li>
-    <li
-      className="select-options__item"
+      option="dogs"
+    />
+    <SelectOption
       key="birds-2"
       onClick={[Function]}
-    >
-      birds
-    </li>
+      option="birds"
+    />
   </ul>
 </div>
 `;
