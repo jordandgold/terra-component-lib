@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./SearchSelect.scss";
 import PropTypes from "prop-types";
+import Icon from "../Icon/Icon";
 
 class SearchSelect extends Component {
   constructor() {
@@ -43,7 +44,7 @@ class SearchSelect extends Component {
         <li
           key={`${option}-${index}`}
           onClick={() => this.handleSelect(option)}
-          className="select-options__items"
+          className="ter-search-select__options-list-item"
         >
           {option}
         </li>
@@ -67,12 +68,20 @@ class SearchSelect extends Component {
 
   render() {
     return (
-      <div className="select-options__search-filter">
-        <p className="ter-search-select-label" onClick={this.toggleDeploy}>
+      <div className="ter-search-select">
+        <div
+          className="ter-search-select__selected"
+          onClick={this.toggleDeploy}
+        >
           {this.props.selection || this.props.defaultText}
-        </p>
+          <Icon
+            type="open-caret-down-dark-16px"
+            className="ter-search-select__caret"
+            size="16px"
+          />
+        </div>
         <ul
-          className={`select-options drop-undefined ${
+          className={`ter-search-select__options-list drop-undefined ${
             this.state.deployed ? "is-open" : ""
           }`}
         >
