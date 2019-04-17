@@ -5,6 +5,7 @@
   display: block;
   width: initial;
   box-sizing: content-box;
+  outline: none;
   &:hover {
     cursor: pointer;
   }
@@ -21,7 +22,7 @@
   &__options-list {
     border: $dropdown-border-size solid $dropdown-border-color;
     position: absolute;
-    top: calc(100% + #{$dropdown-border-size});
+    top: calc(100% + #{$dropdown-border-size} + 2px);
     padding: spacing("xxs") 0;
     left: 0;
     list-style: none;
@@ -30,6 +31,8 @@
     margin: calc(#{$dropdown-border-size} * -1);
     box-sizing: content-box;
     display: none;
+    max-height: 20em;
+    overflow: scroll;
     .is-open & {
       display: block;
     }

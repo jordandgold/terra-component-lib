@@ -90,9 +90,9 @@ class Dropdown extends Component {
         <span className="ter-dropdown__selected">
           {selected}
           <Icon
-            type="open-caret-down-dark-8px"
+            type="open-caret-down-dark-16px"
             className="ter-dropdown__caret"
-            size="8px"
+            size="16px"
           />
         </span>
         <ul className="ter-dropdown__options-list">{this.getOptions()}</ul>
