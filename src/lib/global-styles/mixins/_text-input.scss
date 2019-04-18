@@ -12,9 +12,12 @@
   border-width: $input-border-width;
   border-style: solid;
   border-color: $input-border-color;
-  background-color: $input-bg;
+  background-color: $input-bg-color;
   border-radius: $input-border-radius;
   box-sizing: border-box;
+  &:hover {
+    border-color: $input-focus-border-color;
+  }
   .has-error & {
     border-color: color("danger");
   }

@@ -17,6 +17,10 @@
     @include input-base();
     outline: none;
     position: relative;
+    .is-open & {
+      border-color: color("ui-1");
+      background-color: color("white");
+    }
   }
   &__options-list {
     border: $dropdown-border-size solid $dropdown-border-color;

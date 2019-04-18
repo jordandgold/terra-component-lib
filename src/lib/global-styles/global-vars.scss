@@ -349,7 +349,7 @@ $accordion-arrow-color: color("gray-4");
 $breadcrumbs-caret-color: color("brand-2");
 
 // form inputs
-$input-bg: color("gray-1");
+$input-bg-color: color("gray-1");
 $input-height: 48px;
 $input-text-color: $body-font-color;
 $input-font-size: font-size("sm");
@@ -358,11 +358,12 @@ $input-border-color: color("gray-7");
 $input-border-width: 1px;
 
 $input-placeholder-color: color("gray-5");
-$input-focus-border-color: color("brand-1");
+$input-focus-border-color: color("ui-1");
+$input-focus-bg-color: color("white");
 
 $input-disabled-color: color("gray-5");
 $input-disabled-border-color: color("gray-5");
-$input-disabled-bg: $input-bg;
+$input-disabled-bg: $input-bg-color;
 
 // forms
 $form-label-font-size: font-size("sm");

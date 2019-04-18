@@ -19,6 +19,10 @@
     @include input-base();
     outline: none;
     position: relative;
+    .is-open & {
+      border-color: color("ui-1");
+      background-color: color("white");
+    }
   }
   &__caret {
     position: absolute;
@@ -70,5 +74,8 @@
     border-left: 0px;
     border-right: 0px;
     border-color: color("gray-4");
+    &:hover {
+      border-color: color("gray-4");
+    }
   }
 }
