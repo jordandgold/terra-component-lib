@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./SearchSelect.scss";
 import PropTypes from "prop-types";
+import Icon from "../Icon/Icon";
 
 class SearchSelect extends Component {
   constructor() {
@@ -25,7 +26,15 @@ class SearchSelect extends Component {
 
   filterOptions = () => {
     const filteredOptions = this.getFilteredOptions();
-    return this.renderOptions(filteredOptions);
+    if (filteredOptions.length > 0) {
+      return this.renderOptions(filteredOptions);
+    } else {
+      return (
+        <li className="ter-search-select__options-list-item ter-search-select__options-list-item--inactive">
+          {`No results for ${this.state.searchField}`}
+        </li>
+      );
+    }
   };
 
   getFilteredOptions = () => {
@@ -43,7 +52,7 @@ class SearchSelect extends Component {
         <li
           key={`${option}-${index}`}
           onClick={() => this.handleSelect(option)}
-          className="select-options__items"
+          className="ter-search-select__options-list-item"
         >
           {option}
         </li>
@@ -67,20 +76,28 @@ class SearchSelect extends Component {
 
   render() {
     return (
-      <div className="select-options__search-filter">
-        <p className="ter-search-select-label" onClick={this.toggleDeploy}>
-          {this.props.selection || this.props.defaultText}
-        </p>
-        <ul
-          className={`select-options drop-undefined ${
-            this.state.deployed ? "is-open" : ""
-          }`}
+      <div
+        className={`ter-search-select ${this.state.deployed ? "is-open" : ""}`}
+      >
+        <div
+          className="ter-search-select__selected"
+          onClick={this.toggleDeploy}
         >
+          {this.props.selection || this.props.defaultText}
+          <Icon
+            type="open-caret-down-dark-16px"
+            className="ter-search-select__caret"
+            size="16px"
+          />
+        </div>
+        <ul className="ter-search-select__options-list">
           <input
             ref={input => input && input.focus()}
             type="text"
             value={this.state.searchField}
             onChange={e => this.handleSearchChange(e)}
+            className="ter-search-select__search-input"
+            placeholder="search"
           />
           {this.state.searchField
             ? this.filterOptions()

@@ -8,13 +8,7 @@ class Radios extends Component {
 
     return radios.map((radio, index) => {
       return (
-        <div key={`radio-${index}`}>
-          <label
-            htmlFor={`${name}Choice${index}`}
-            className={`ter-radio__label radio-${index}`}
-          >
-            {radio}
-          </label>
+        <div className="ter-radio" key={`radio-${index}`}>
           <input
             className={`radio-button-${index}`}
             type="radio"
@@ -24,6 +18,12 @@ class Radios extends Component {
             value={radio}
             id={`${name}Choice${index}`}
           />
+          <label
+            htmlFor={`${name}Choice${index}`}
+            className={`ter-radio__label radio-${index}`}
+          >
+            {radio}
+          </label>
         </div>
       );
     });
