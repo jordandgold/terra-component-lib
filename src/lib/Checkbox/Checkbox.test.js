@@ -24,8 +24,29 @@ describe("Checkbox", () => {
   });
 
   it("should call handleChange on click", () => {
-    wrapper.find("input").simulate("change", "test name");
+    const mockEvent = {
+      target: {
+        name: "test name",
+        checked: true
+      }
+    };
+    wrapper.find("input").simulate("change", mockEvent);
 
-    expect(mockHandleChange).toHaveBeenCalledWith("test name");
+    expect(mockHandleChange).toHaveBeenCalledWith(
+      mockEvent.target.name,
+      mockEvent.target.checked
+    );
+  });
+
+  it("should set state", () => {
+    const mockEvent = {
+      target: {
+        name: "test name",
+        checked: true
+      }
+    };
+    wrapper.find("input").simulate("change", mockEvent);
+
+    expect(wrapper.state().checked).toEqual(true);
   });
 });

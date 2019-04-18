@@ -11,8 +11,9 @@ class Checkbox extends Component {
     };
   }
 
-  handleChange = () => {
-    this.setState({ checked: !this.state.checked });
+  handleChange = e => {
+    this.setState({ checked: e.target.checked });
+    this.props.handleChange(e.target.name, e.target.checked);
   };
 
   render() {
@@ -40,6 +41,6 @@ export default Checkbox;
 Checkbox.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  checked: PropTypes.bool.isRequired,
+  checked: PropTypes.bool,
   handleChange: PropTypes.func.isRequired
 };
