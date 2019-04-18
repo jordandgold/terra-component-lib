@@ -1,0 +1,55 @@
+@import "../global-styles/terra.scss";
+
+.ter-checkbox {
+  padding-top: spacing("xxs");
+  padding-bottom: spacing("xxs");
+  box-sizing: content-box;
+  &__label {
+    @include type-setting();
+    font-size: $form-label-font-size;
+    display: block;
+    padding-bottom: spacing("mini");
+    color: $form-label-color;
+  }
+  input[type="checkbox"] {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    &:focus + label:before {
+      outline: 0;
+    }
+  }
+  &__label {
+    @include type-setting();
+    font-size: $form-label-font-size;
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    cursor: pointer;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+    &:before {
+      height: 12px;
+      width: 12px;
+      border: 1px solid $checkbox-border-color;
+      left: 0px;
+      top: 5px;
+    }
+    &:after {
+      height: 8px;
+      width: 8px;
+      left: 3px;
+      top: 8px;
+      background: $checkbox-fill-color;
+      transform: scale(0, 0);
+      transition: transform 100ms ease-in-out;
+      .is-checked & {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}

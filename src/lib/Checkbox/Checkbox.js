@@ -1,23 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Checkbox.scss";
 import PropTypes from "prop-types";
 
-const Checkbox = props => {
-  return (
-    <React.Fragment>
-      <label className="ter-checkbox__label" htmlFor={props.name}>
-        {props.label}
-      </label>
-      <input
-        id={props.name}
-        name={props.name}
-        type="checkbox"
-        checked={props.checked}
-        onChange={() => props.handleChange(props.name)}
-      />
-    </React.Fragment>
-  );
-};
+class Checkbox extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      checked: this.props.checked || false
+    };
+  }
+
+  handleChange = () => {
+    this.setState({ checked: !this.state.checked });
+  };
+
+  render() {
+    let isChecked = this.state.checked ? "is-checked" : "";
+
+    return (
+      <div className={`ter-checkbox ${isChecked}`}>
+        <label className="ter-checkbox__label" htmlFor={this.props.name}>
+          {this.props.label}
+        </label>
+        <input
+          id={this.props.name}
+          name={this.props.name}
+          type="checkbox"
+          checked={this.state.checked}
+          onChange={this.handleChange}
+        />
+      </div>
+    );
+  }
+}
 
 export default Checkbox;
 
