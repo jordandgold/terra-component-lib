@@ -5,14 +5,9 @@ exports[`Radios should match the snapshot 1`] = `
   className="ter-radio-group"
 >
   <div
+    className="ter-radio"
     key="radio-0"
   >
-    <label
-      className="ter-radio__label radio-0"
-      htmlFor="test nameChoice0"
-    >
-      test one
-    </label>
     <input
       checked={true}
       className="radio-button-0"
@@ -22,16 +17,17 @@ exports[`Radios should match the snapshot 1`] = `
       type="radio"
       value="test one"
     />
+    <label
+      className="ter-radio__label radio-0"
+      htmlFor="test nameChoice0"
+    >
+      test one
+    </label>
   </div>
   <div
+    className="ter-radio"
     key="radio-1"
   >
-    <label
-      className="ter-radio__label radio-1"
-      htmlFor="test nameChoice1"
-    >
-      test two
-    </label>
     <input
       checked={false}
       className="radio-button-1"
@@ -41,16 +37,17 @@ exports[`Radios should match the snapshot 1`] = `
       type="radio"
       value="test two"
     />
+    <label
+      className="ter-radio__label radio-1"
+      htmlFor="test nameChoice1"
+    >
+      test two
+    </label>
   </div>
   <div
+    className="ter-radio"
     key="radio-2"
   >
-    <label
-      className="ter-radio__label radio-2"
-      htmlFor="test nameChoice2"
-    >
-      test three
-    </label>
     <input
       checked={false}
       className="radio-button-2"
@@ -60,6 +57,12 @@ exports[`Radios should match the snapshot 1`] = `
       type="radio"
       value="test three"
     />
+    <label
+      className="ter-radio__label radio-2"
+      htmlFor="test nameChoice2"
+    >
+      test three
+    </label>
   </div>
 </div>
 `;
