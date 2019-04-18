@@ -174,10 +174,10 @@ storiesOf("Icon", module).add("Icon", () => (
 
 storiesOf("Dropdown", module).add("Dropdown", () => (
   <Dropdown label="I am a dropdown">
-    <p>Item One</p>
+    <p>I am text</p>
     <Button
       onClick={action("Primary 1 Clicked")}
-      text="Primary 1"
+      text="I am a button"
       className="ter-button--primary--1"
     />
   </Dropdown>
