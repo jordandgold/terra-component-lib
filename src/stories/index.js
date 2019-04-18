@@ -20,6 +20,7 @@ import SearchSelect from "../lib/SearchSelect/SearchSelect";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 import Table from "../lib/Table/Table";
 import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
+import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import {
   CheckboxForm,
@@ -388,5 +389,13 @@ storiesOf("Accordion", module).add("Accordion", () => {
         </p>
       </AccordionFold>
     </Accordion>
+  );
+});
+
+storiesOf("Tooltip", module).add("Tooltip", () => {
+  return (
+    <Tooltip direction="up" tooltipLabel="I am a tooltip">
+      <p>hello</p>
+    </Tooltip>
   );
 });
