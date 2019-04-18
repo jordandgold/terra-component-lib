@@ -1,20 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropdown Option Should match the snapshot 1`] = `
-<li
-  className="ter-dropdown__options-list-item"
-  onClick={[Function]}
->
-  Mock Option
-</li>
-`;
-
 exports[`Dropdown should match the snapshot 1`] = `
 <div
   className="ter-dropdown "
   onClick={[Function]}
-  onKeyUp={[Function]}
-  tabIndex="0"
 >
   <span
     className="ter-dropdown__selected"
@@ -26,24 +15,13 @@ exports[`Dropdown should match the snapshot 1`] = `
       type="open-caret-down-dark-16px"
     />
   </span>
-  <ul
-    className="ter-dropdown__options-list"
-  >
-    <Option
-      key="option 0"
-      onSelect={[Function]}
-      option="Option 1"
-    />
-    <Option
-      key="option 1"
-      onSelect={[Function]}
-      option="Option 2"
-    />
-    <Option
-      key="option 2"
-      onSelect={[Function]}
-      option="Option 3"
-    />
-  </ul>
+  <p>
+    test
+  </p>
+  <Button
+    className="ter-button--primary--1"
+    onClick={[MockFunction]}
+    text="Primary 1"
+  />
 </div>
 `;

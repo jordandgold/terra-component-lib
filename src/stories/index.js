@@ -172,48 +172,15 @@ storiesOf("Icon", module).add("Icon", () => (
   </div>
 ));
 
-const mockDropdownOptions = [
-  "Option 1",
-  "Option 2",
-  "Option 3",
-  "More Options!",
-  "Look, more!",
-  "What's that?",
-  "You want more?!",
-  "FINE",
-  "Option 1",
-  "Option 2",
-  "Option 3",
-  "More Options!",
-  "Look, more!",
-  "What's that?",
-  "You want more?!",
-  "FINE",
-  "Option 1",
-  "Option 2",
-  "Option 3",
-  "More Options!",
-  "Look, more!",
-  "What's that?",
-  "You want more?!",
-  "FINE",
-  "Option 1",
-  "Option 2",
-  "Option 3",
-  "More Options!",
-  "Look, more!",
-  "What's that?",
-  "You want more?!",
-  "FINE",
-  "Zoo"
-];
-
 storiesOf("Dropdown", module).add("Dropdown", () => (
-  <DropdownForm
-    defaultLabel="Select an option"
-    options={mockDropdownOptions}
-    selectOption={action("Option selected!")}
-  />
+  <Dropdown label="I am a dropdown">
+    <p>I am text</p>
+    <Button
+      onClick={action("Primary 1 Clicked")}
+      text="I am a button"
+      className="ter-button--primary--1"
+    />
+  </Dropdown>
 ));
 
 const mockPages = 4;

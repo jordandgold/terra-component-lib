@@ -158,34 +158,21 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
-- `defaultLabel` **(required)** - string indicating the default text to display in the dropdown field
-- `options` **(required)** - array of strings consisting of the different dropdown options
-- `selectOption` **(required)** function for passing up a newly-selected option string, takes an argument of the name being passed down and the option being selected
-- `selected` - string indicating the currently selected item from the dropdown
-- `name` **(required)** - string indicating a reference to the Dropdown component for parent data processing
+- `label` **(required)** - string indicating the default text to display in the dropdown field
+- `children` **(required)** - components rendered inside the individual tabs, should be nested within the component itself
 
 ######Example -
 
 ```
 
-handleOptionSelect = (name, selection) => {
-  this.setState({
-    [name]: selection
-  })
-}
-
-render() {
-  return (
-    <Dropdown
-      defaultLabel='click to select'
-      options={['dog', 'cat', 'bird]}
-      selectOption={this.handleOptionSelect}
-      selected={this.state.selectedDropdown}
-      name='animalDropdown'
-    />
-  )
-}
-
+<Dropdown label='I am a dropdown'>
+  <p>I appear!</p>
+  <Button
+    onClick={mockButtonPush}
+    text="I am a button! In a dropdown!"
+    className="ter-button--primary--1"
+  />
+</Dropdown>
 ```
 
 ---
