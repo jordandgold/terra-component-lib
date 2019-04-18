@@ -1,35 +1,34 @@
 @import "../global-styles/terra.scss";
 
 .ter-dropdown {
-  @include input-base();
   display: block;
-  width: initial;
-  box-sizing: content-box;
+  position: relative;
   outline: none;
   &:hover {
     cursor: pointer;
   }
   &__caret {
     position: absolute;
-    right: 0;
+    right: spacing("xs");
     top: 50%;
     transform: translateY(-50%);
   }
   &__selected {
-    display: block;
+    @include input-base();
+    outline: none;
     position: relative;
   }
   &__options-list {
     border: $dropdown-border-size solid $dropdown-border-color;
     position: absolute;
-    top: calc(100% + #{$dropdown-border-size} + 2px);
-    padding: spacing("xxs") 0;
+    top: calc(100% + #{$dropdown-border-size});
+    padding: 0;
     left: 0;
     list-style: none;
     background: $dropdown-bg;
     width: 100%;
-    margin: calc(#{$dropdown-border-size} * -1);
-    box-sizing: content-box;
+    margin: 0;
+    box-sizing: border-box;
     display: none;
     max-height: 20em;
     overflow: scroll;
@@ -41,7 +40,7 @@
     @include type-setting();
     font-size: $dropdown-item-font-size;
     color: $dropdown-link-color;
-    padding: spacing("mini") spacing("xs");
+    padding: spacing("xxs") spacing("xs");
     display: block;
     text-decoration: none;
     &:hover {
