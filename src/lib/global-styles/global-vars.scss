@@ -327,9 +327,9 @@ $dropdown-item-font-size: font-size("sm");
 $dropdown-border-size: 1px;
 $dropdown-border-color: color("gray-7");
 $dropdown-border-radius: $border-radius-base;
-$dropdown-bg: color("white");
+$dropdown-bg: color("gray-1");
 $dropdown-link-color: color("gray-9");
-$dropdown-link-hover-bg: color("gray-2");
+$dropdown-link-hover-bg: color("gray-3");
 $drodown-arrow-color: color("gray-6");
 $dropdown-no-link-color: color("gray-6");
 
@@ -355,7 +355,7 @@ $input-text-color: $body-font-color;
 $input-font-size: font-size("sm");
 $input-border-radius: $border-radius-base;
 $input-border-color: color("gray-7");
-$input-border-width: 0.05rem;
+$input-border-width: 1px;
 
 $input-placeholder-color: color("gray-5");
 $input-focus-border-color: color("brand-1");

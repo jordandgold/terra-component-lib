@@ -26,7 +26,15 @@ class SearchSelect extends Component {
 
   filterOptions = () => {
     const filteredOptions = this.getFilteredOptions();
-    return this.renderOptions(filteredOptions);
+    if (filteredOptions.length > 0) {
+      return this.renderOptions(filteredOptions);
+    } else {
+      return (
+        <li className="ter-search-select__options-list-item ter-search-select__options-list-item--inactive">
+          {`No results for ${this.state.searchField}`}
+        </li>
+      );
+    }
   };
 
   getFilteredOptions = () => {
@@ -68,7 +76,9 @@ class SearchSelect extends Component {
 
   render() {
     return (
-      <div className="ter-search-select">
+      <div
+        className={`ter-search-select ${this.state.deployed ? "is-open" : ""}`}
+      >
         <div
           className="ter-search-select__selected"
           onClick={this.toggleDeploy}
@@ -80,16 +90,14 @@ class SearchSelect extends Component {
             size="16px"
           />
         </div>
-        <ul
-          className={`ter-search-select__options-list drop-undefined ${
-            this.state.deployed ? "is-open" : ""
-          }`}
-        >
+        <ul className="ter-search-select__options-list">
           <input
             ref={input => input && input.focus()}
             type="text"
             value={this.state.searchField}
             onChange={e => this.handleSearchChange(e)}
+            className="ter-search-select__search-input"
+            placeholder="search"
           />
           {this.state.searchField
             ? this.filterOptions()
