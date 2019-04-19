@@ -186,13 +186,12 @@ You can then use the imported Terra component within your own application.
 
 ######`type` options -
 
-- **open caret** - `"###########"`
+- **open caret** - `"open-caret-[UP/DOWN/RIGHT/LEFT]-[8/16/32]px"`
 
 ######Example -
 
 ```
 <Icon type="open-caret-right-dark-8px" size="8px" />
-
 ```
 
 ---
