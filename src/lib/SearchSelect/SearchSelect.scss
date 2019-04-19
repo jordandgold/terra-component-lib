@@ -1,13 +1,5 @@
 @import "../global-styles/terra.scss";
 
-.ter-search-select__select-options.drop-undefined {
-  display: none;
-}
-
-.ter-search-select__select-options.drop-undefined.is-open {
-  display: block;
-}
-
 .ter-search-select {
   display: block;
   position: relative;
@@ -74,7 +66,8 @@
     border-left: 0px;
     border-right: 0px;
     border-color: color("gray-4");
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: color("gray-4");
     }
   }

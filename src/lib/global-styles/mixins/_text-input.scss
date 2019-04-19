@@ -15,7 +15,8 @@
   background-color: $input-bg-color;
   border-radius: $input-border-radius;
   box-sizing: border-box;
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $input-focus-border-color;
   }
   .has-error & {
