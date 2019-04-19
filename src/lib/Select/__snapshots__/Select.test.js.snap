@@ -2,7 +2,7 @@
 
 exports[`Select SelectOption should match the snapshot 1`] = `
 <li
-  className="select-options__item"
+  className="ter-select__options-list-item"
   onClick={[Function]}
 >
   kitty
@@ -11,17 +11,23 @@ exports[`Select SelectOption should match the snapshot 1`] = `
 
 exports[`Select should match the snapshop 1`] = `
 <div
+  className="ter-select is-open"
   onKeyUp={[Function]}
   tabIndex="0"
 >
-  <p
-    className="ter-select__label"
+  <div
+    className="ter-select__selected"
     onClick={[Function]}
   >
     Test default text
-  </p>
+    <Icon
+      className="ter-search-select__caret"
+      size="16px"
+      type="open-caret-down-dark-16px"
+    />
+  </div>
   <ul
-    className="select-options is-open"
+    className="ter-select__options-list is-open"
   >
     <SelectOption
       key="cats-0"
