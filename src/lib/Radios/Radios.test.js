@@ -27,9 +27,9 @@ describe("Radios", () => {
   describe("generateRadios", () => {
     it("should return some JSX", () => {
       const expected = [
-        '<div><label for="test nameChoice0" class="ter-radio__label radio-0">test one</label><input type="radio" class="radio-button-0" name="test name" checked="" value="test one" id="test nameChoice0"/></div>',
-        '<div><label for="test nameChoice1" class="ter-radio__label radio-1">test two</label><input type="radio" class="radio-button-1" name="test name" value="test two" id="test nameChoice1"/></div>',
-        '<div><label for="test nameChoice2" class="ter-radio__label radio-2">test three</label><input type="radio" class="radio-button-2" name="test name" value="test three" id="test nameChoice2"/></div>'
+        '<div class="ter-radio"><input type="radio" class="radio-button-0" name="test name" checked="" value="test one" id="test nameChoice0"/><label for="test nameChoice0" class="ter-radio__label radio-0">test one</label></div>',
+        '<div class="ter-radio"><input type="radio" class="radio-button-1" name="test name" value="test two" id="test nameChoice1"/><label for="test nameChoice1" class="ter-radio__label radio-1">test two</label></div>',
+        '<div class="ter-radio"><input type="radio" class="radio-button-2" name="test name" value="test three" id="test nameChoice2"/><label for="test nameChoice2" class="ter-radio__label radio-2">test three</label></div>'
       ];
       const radioWrappers = wrapper
         .instance()

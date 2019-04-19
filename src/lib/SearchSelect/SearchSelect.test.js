@@ -43,7 +43,7 @@ describe("SearchSelect", () => {
       const spy = jest.spyOn(wrapper.instance(), "toggleDeploy");
       wrapper.instance().forceUpdate();
 
-      wrapper.find(".ter-search-select-label").simulate("click");
+      wrapper.find(".ter-search-select__selected").simulate("click");
 
       expect(spy).toHaveBeenCalled();
     });
@@ -142,9 +142,9 @@ describe("SearchSelect", () => {
     it("should return some JSX", () => {
       const mockOptions = ["cat", "dog", "fish"];
       const expected = [
-        '<li class="select-options__items">cat</li>',
-        '<li class="select-options__items">dog</li>',
-        '<li class="select-options__items">fish</li>'
+        '<li class="ter-search-select__options-list-item">cat</li>',
+        '<li class="ter-search-select__options-list-item">dog</li>',
+        '<li class="ter-search-select__options-list-item">fish</li>'
       ];
 
       const result = wrapper
@@ -195,7 +195,7 @@ describe("SearchSelect", () => {
 
       const spy = jest.spyOn(wrapper.instance(), "handleSelect");
 
-      wrapper.find(".select-options__items").simulate("click");
+      wrapper.find(".ter-search-select__options-list-item").simulate("click");
 
       expect(spy).toHaveBeenCalledWith("cats");
     });
