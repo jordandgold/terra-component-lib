@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Select.scss";
 import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
+import Icon from "../Icon/Icon";
 
 class Select extends Component {
   constructor() {
@@ -69,11 +70,23 @@ class Select extends Component {
 
   render() {
     return (
-      <div onKeyUp={e => this.handleKeyup(e)} tabIndex="0">
-        <p className="ter-select__label" onClick={this.toggleDeploy}>
+      <div
+        className={`ter-select ${!this.state.deployed && "is-open"}`}
+        onKeyUp={e => this.handleKeyup(e)}
+        tabIndex="0"
+      >
+        <div className="ter-select__selected" onClick={this.toggleDeploy}>
           {this.props.selection || this.props.defaultText}
-        </p>
-        <ul className={`select-options ${!this.state.deployed && "is-open"}`}>
+          <Icon
+            type="open-caret-down-dark-16px"
+            className="ter-search-select__caret"
+            size="16px"
+          />
+        </div>
+        <ul
+          className={`ter-select__options-list ${!this.state.deployed &&
+            "is-open"}`}
+        >
           {this.generateOptions()}
         </ul>
       </div>
@@ -85,7 +98,10 @@ export class SelectOption extends Component {
   render() {
     const { option, onClick } = this.props;
     return (
-      <li className="select-options__item" onClick={() => onClick(option)}>
+      <li
+        className="ter-select__options-list-item"
+        onClick={() => onClick(option)}
+      >
         {option}
       </li>
     );
