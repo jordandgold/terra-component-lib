@@ -47,7 +47,7 @@ describe("MultipleSearchSelect", () => {
       const spy = jest.spyOn(wrapper.instance(), "toggleDeploy");
       wrapper.instance().forceUpdate();
 
-      wrapper.find(".ter-search-select-label").simulate("click");
+      wrapper.find(".ter-multi-search-select__selected").simulate("click");
 
       expect(spy).toHaveBeenCalled();
     });
@@ -150,9 +150,9 @@ describe("MultipleSearchSelect", () => {
     it("should return some JSX", () => {
       const mockOptions = ["cat", "dog", "fish"];
       const expected = [
-        '<li class="select-options__items">cat</li>',
-        '<li class="select-options__items">dog</li>',
-        '<li class="select-options__items">fish</li>'
+        '<li class="ter-multi-search-select__options-list-item">cat</li>',
+        '<li class="ter-multi-search-select__options-list-item">dog</li>',
+        '<li class="ter-multi-search-select__options-list-item">fish</li>'
       ];
 
       const result = wrapper
@@ -197,7 +197,9 @@ describe("MultipleSearchSelect", () => {
 
       const spy = jest.spyOn(wrapper.instance(), "handleSelect");
 
-      wrapper.find(".select-options__items").simulate("click");
+      wrapper
+        .find(".ter-multi-search-select__options-list-item")
+        .simulate("click");
 
       expect(spy).toHaveBeenCalledWith("cats");
     });
@@ -217,8 +219,8 @@ describe("MultipleSearchSelect", () => {
       );
 
       const expected = [
-        '<span class="badge option">dogs</span>',
-        '<span class="badge option">cats</span>'
+        '<span class="ter-multi-search-select__option ter-badge">dogs<svg viewBox="0 0 8 8" class="ter-icon ter-icon--open-x-dark-16px ter-icon--8px ter-multi-search-select__option-close"><use xlink:href="[object Object]#ter-icon--open-x-dark-16px"></use></svg></span>',
+        '<span class="ter-multi-search-select__option ter-badge">cats<svg viewBox="0 0 8 8" class="ter-icon ter-icon--open-x-dark-16px ter-icon--8px ter-multi-search-select__option-close"><use xlink:href="[object Object]#ter-icon--open-x-dark-16px"></use></svg></span>'
       ];
 
       const response = wrapper
@@ -291,7 +293,9 @@ describe("MultipleSearchSelect", () => {
       const spy = jest.spyOn(wrapper.instance(), "removeSelection");
       wrapper.instance().forceUpdate();
 
-      wrapper.find(".badge.option").simulate("click", mockEvent, "dogs");
+      wrapper
+        .find(".ter-multi-search-select__option.ter-badge")
+        .simulate("click", mockEvent, "dogs");
 
       expect(spy).toHaveBeenCalledWith(mockEvent, mockSelection);
     });
