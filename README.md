@@ -181,7 +181,18 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
+- `type` - string indicating the type of icon rendered
+- `size` - string indicating icon size
+
+######`type` options -
+
+- **open caret** - `"open-caret-[UP/DOWN/RIGHT/LEFT]-[8/16/32]px"`
+
 ######Example -
+
+```
+<Icon type="open-caret-right-dark-8px" size="8px" />
+```
 
 ---
 
@@ -285,12 +296,12 @@ You can then use the imported Terra component within your own application.
 ######Example -
 
 ```
-      <Radios
-        radios={['radio one', 'radio two', 'radio three]}
-        selectRadio={this.selectRadio}
-        selected={this.state.selectedRadio}
-        name="selectedRadio"
-      />
+<Radios
+  radios={['radio one', 'radio two', 'radio three]}
+  selectRadio={this.selectRadio}
+  selected={this.state.selectedRadio}
+  name="selectedRadio"
+/>
 ```
 
 ---
@@ -449,14 +460,14 @@ const tableDataSource = {
 ######Example -
 
 ```
-  <Tabs
-    selected={1}
-    fullWidth={true}
-  >
-    <p>I am the first tab</p>
-    <p>I am the second tab</p>
-    <p>I am the third tab</p>
-  </Tabs>
+<Tabs
+  selected={1}
+  fullWidth={true}
+>
+  <p>I am the first tab</p>
+  <p>I am the second tab</p>
+  <p>I am the third tab</p>
+</Tabs>
 ```
 
 ---
@@ -465,4 +476,22 @@ const tableDataSource = {
 
 ######Props -
 
+- `direction` **(required)**- string indicating the direction that the Tooltip will render relative to its hover text
+- `toolTipLabel` **(required)**- string used for generating the text that the user will hover over to display the Tooltip
+- `children` **(required)**- components rendered inside the Tooltip, should be nested within the component itself
+
+######`direction` options -
+
+- **Up** - `"up"`
+- **Down** - `"down"`
+- **Right** - `"right"`
+- **Left** - `"left"`
+
 ######Example -
+
+```
+<Tooltip direction="up" tooltipLabel="I am a tooltip">
+  <p>I am the inner content within a tooltip</p>
+  <a href='www.link.com'>Link</a>
+</Tooltip>
+```
