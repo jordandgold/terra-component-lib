@@ -7,12 +7,13 @@
     cursor: pointer;
   }
   &__content {
-    @include depth(1);
+    @include z-index(1);
+    box-shadow: box-shadow(1);
     font-size: $tooltip-font-size;
     display: none;
     background-color: $tooltip-bg;
     padding: spacing("xs");
-    // min-width: 300px;
+    max-width: 300px;
     position: absolute;
     border-radius: $tooltip-border-radius;
     color: $tooltip-text-color;
@@ -85,7 +86,7 @@
           bottom: calc(-1 * #{spacing("mini")});
         }
       }
-      [data-direction="bottom"] & {
+      [data-direction="down"] & {
         border-bottom-color: $tooltip-bg;
         border-top: none;
         left: 50%;
@@ -109,6 +110,10 @@
           top: calc(-1 * #{spacing("mini")});
         }
       }
+    }
+    p {
+      font-size: $tooltip-font-size;
+      margin-bottom: 0;
     }
   }
 }
