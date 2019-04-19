@@ -1,0 +1,88 @@
+@import "../global-styles/terra.scss";
+
+.ter-multi-search-select {
+  display: block;
+  position: relative;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &__selected {
+    @include input-base();
+    outline: none;
+    position: relative;
+    .is-open & {
+      border-color: color("ui-1");
+      background-color: color("white");
+    }
+  }
+  &__caret {
+    position: absolute;
+    right: spacing("xs");
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__options-list {
+    border: $dropdown-border-size solid $dropdown-border-color;
+    position: absolute;
+    top: calc(100% + #{$dropdown-border-size});
+    padding: 0;
+    left: 0;
+    list-style: none;
+    background: $dropdown-bg;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: none;
+    max-height: 20em;
+    overflow: scroll;
+    .is-open & {
+      display: block;
+    }
+  }
+  &__options-list-item {
+    @include type-setting();
+    font-size: $dropdown-item-font-size;
+    color: $dropdown-link-color;
+    padding: spacing("xxs") spacing("xs");
+    display: block;
+    text-decoration: none;
+    &:hover {
+      color: darken($dropdown-link-color, 10%);
+      background: $dropdown-link-hover-bg;
+      text-decoration: none;
+    }
+  }
+  &__search-input {
+    @include input-base();
+    background: white;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: color("gray-4");
+    &:hover {
+      border-color: color("gray-4");
+    }
+  }
+  &__option {
+    font-size: 12px;
+    padding: spacing("micro") spacing("mini");
+    background-color: color("ui-1");
+    color: color("white");
+    font-weight: font-weight("extra-bold");
+    text-transform: uppercase;
+    margin: 0 spacing("micro");
+    position: relative;
+    top: calc(#{(spacing("micro") / 2) * -1});
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover {
+      background-color: darken(color("ui-1"), 10%);
+    }
+    &-close {
+      margin-left: spacing("micro");
+      fill: color("white");
+    }
+  }
+}
