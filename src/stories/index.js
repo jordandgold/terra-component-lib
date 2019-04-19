@@ -394,8 +394,22 @@ storiesOf("Accordion", module).add("Accordion", () => {
 
 storiesOf("Tooltip", module).add("Tooltip", () => {
   return (
-    <Tooltip direction="up" tooltipLabel="I am a tooltip">
-      <p>hello</p>
-    </Tooltip>
+    <div className="pad-xl text-center">
+      <Tooltip direction="up" tooltipLabel="Up Tooltip">
+        <p>hello</p>
+      </Tooltip>
+      <br />
+      <Tooltip direction="down" tooltipLabel="Down Tooltip">
+        <p>hello</p>
+      </Tooltip>
+      <br />
+      <Tooltip direction="left" tooltipLabel="Left Tooltip">
+        <p>hello</p>
+      </Tooltip>
+      <br />
+      <Tooltip direction="right" tooltipLabel="Right Tooltip">
+        <p>hello</p>
+      </Tooltip>
+    </div>
   );
 });
