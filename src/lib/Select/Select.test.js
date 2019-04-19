@@ -46,7 +46,7 @@ describe("Select", () => {
       const spy = jest.spyOn(wrapper.instance(), "toggleDeploy");
       wrapper.instance().forceUpdate();
 
-      wrapper.find(".ter-select__label").simulate("click");
+      wrapper.find(".ter-select__selected").simulate("click");
 
       expect(spy).toHaveBeenCalled();
     });
@@ -113,7 +113,7 @@ describe("Select", () => {
       const spy = jest.spyOn(wrapper.instance(), "handleKeyup");
       wrapper.instance().forceUpdate();
 
-      wrapper.find("div").simulate("keyup", mockEventObject);
+      wrapper.find(".ter-select").simulate("keyup", mockEventObject);
 
       expect(spy).toHaveBeenCalled();
     });
@@ -236,9 +236,9 @@ describe("Select", () => {
   describe("generateOptions", () => {
     it("should return some JSX", () => {
       const expected = [
-        '<li class="select-options__item">cats</li>',
-        '<li class="select-options__item">dogs</li>',
-        '<li class="select-options__item">birds</li>'
+        '<li class="ter-select__options-list-item">cats</li>',
+        '<li class="ter-select__options-list-item">dogs</li>',
+        '<li class="ter-select__options-list-item">birds</li>'
       ];
       const result = wrapper
         .instance()
