@@ -2,66 +2,73 @@
 
 exports[`MultipleSearchSelect should match the snapshot 1`] = `
 <div
-  className="select-options__search-filter"
+  className="ter-multi-search-select "
 >
-  <p
-    className="ter-search-select-label"
+  <div
+    className="ter-multi-search-select__selected"
     onClick={[Function]}
   >
     mock default text
-  </p>
+    <Icon
+      className="ter-multi-search-select__caret"
+      size="16px"
+      type="open-caret-down-dark-16px"
+    />
+  </div>
   <ul
-    className="select-options drop-undefined "
+    className="ter-multi-search-select__options-list "
   >
     <input
+      className="ter-multi-search-select__search-input"
       onChange={[Function]}
+      placeholder="search"
       type="text"
       value=""
     />
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="cats-0"
       onClick={[Function]}
     >
       cats
     </li>
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="dogs-1"
       onClick={[Function]}
     >
       dogs
     </li>
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="turtles-2"
       onClick={[Function]}
     >
       turtles
     </li>
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="fish-3"
       onClick={[Function]}
     >
       fish
     </li>
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="ferrets-4"
       onClick={[Function]}
     >
       ferrets
     </li>
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="hamsters-5"
       onClick={[Function]}
     >
       hamsters
     </li>
     <li
-      className="select-options__items"
+      className="ter-multi-search-select__options-list-item"
       key="birds-6"
       onClick={[Function]}
     >

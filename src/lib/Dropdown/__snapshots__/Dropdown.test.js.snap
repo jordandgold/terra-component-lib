@@ -22,8 +22,8 @@ exports[`Dropdown should match the snapshot 1`] = `
     Select an option
     <Icon
       className="ter-dropdown__caret"
-      size="8px"
-      type="open-caret-down-dark-8px"
+      size="16px"
+      type="open-caret-down-dark-16px"
     />
   </span>
   <ul
