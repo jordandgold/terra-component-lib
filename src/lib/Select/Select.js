@@ -11,8 +11,6 @@ class Select extends Component {
     this.state = {
       deployed: false
     };
-
-    this.selectOptionRefs = [];
   }
 
   toggleDeploy = () => {
@@ -26,27 +24,15 @@ class Select extends Component {
       return;
     }
 
-    const node = this.selectOptionRefs.find(option => {
-      return (
-        option.current.props.option[0].toLowerCase() === e.key.toLowerCase()
-      );
+    const nodes = Array.from(
+      document.querySelectorAll(".ter-select__options-list-item")
+    );
+
+    const node = nodes.find(node => {
+      return node.innerText[0].toLowerCase() === e.key.toLowerCase();
     });
 
-    if (!node) {
-      return;
-    }
-
-    const nodeLocation = ReactDOM.findDOMNode(node.current);
-
-    window.scrollTo(0, nodeLocation.offsetTop);
-  };
-
-  createOptionRef = () => {
-    const optionRef = React.createRef();
-
-    this.selectOptionRefs.push(optionRef);
-
-    return optionRef;
+    node.scrollIntoView();
   };
 
   handleSelection = selection => {
@@ -61,7 +47,6 @@ class Select extends Component {
         <SelectOption
           key={`${option}-${index}`}
           onClick={this.handleSelection}
-          ref={this.createOptionRef()}
           option={option}
         />
       );
@@ -71,7 +56,7 @@ class Select extends Component {
   render() {
     return (
       <div
-        className={`ter-select ${!this.state.deployed && "is-open"}`}
+        className={`ter-select ${this.state.deployed && "is-open"}`}
         onKeyUp={e => this.handleKeyup(e)}
         tabIndex="0"
       >
@@ -84,7 +69,7 @@ class Select extends Component {
           />
         </div>
         <ul
-          className={`ter-select__options-list ${!this.state.deployed &&
+          className={`ter-select__options-list ${this.state.deployed &&
             "is-open"}`}
         >
           {this.generateOptions()}
