@@ -300,7 +300,32 @@ storiesOf("Select", module).add("Select", () => {
     "fish",
     "ferrets",
     "hamsters",
-    "birds"
+    "birds",
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "cats",
+    "dogs",
+    "turtles",
+    "fish",
+    "ferrets",
+    "hamsters",
+    "zebra"
   ];
 
   return (

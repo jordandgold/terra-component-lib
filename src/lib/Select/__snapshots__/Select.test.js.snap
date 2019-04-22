@@ -11,7 +11,7 @@ exports[`Select SelectOption should match the snapshot 1`] = `
 
 exports[`Select should match the snapshop 1`] = `
 <div
-  className="ter-select is-open"
+  className="ter-select false"
   onKeyUp={[Function]}
   tabIndex="0"
 >
@@ -27,7 +27,7 @@ exports[`Select should match the snapshop 1`] = `
     />
   </div>
   <ul
-    className="ter-select__options-list is-open"
+    className="ter-select__options-list false"
   >
     <SelectOption
       key="cats-0"
