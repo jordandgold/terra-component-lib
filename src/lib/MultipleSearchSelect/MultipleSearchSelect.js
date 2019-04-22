@@ -12,6 +12,22 @@ class MultipleSearchSelect extends Component {
     };
   }
 
+  componentDidMount() {
+    document.addEventListener("mousedown", this.toggleClose, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.toggleClose, false);
+  }
+
+  toggleClose = e => {
+    if (!this.state.deployed || this.node.contains(e.target)) {
+      return;
+    }
+
+    this.toggleDeploy();
+  };
+
   toggleDeploy = () => {
     this.setState({
       deployed: !this.state.deployed
@@ -104,6 +120,7 @@ class MultipleSearchSelect extends Component {
   render() {
     return (
       <div
+        ref={node => (this.node = node)}
         className={`ter-multi-search-select ${
           this.state.deployed ? "is-open" : ""
         }`}

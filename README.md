@@ -110,7 +110,7 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
-- `image` - object consisting of a `link` and `description` key/value pairs (strings) used to create a link to the image location and the alt description text for the image
+- `image` **(required)** - object consisting of a `link` and `description` key/value pairs (strings) used to create a link to the image location and the alt description text for the image
 - `title` **(required)** - string used to determine the title for the card
 - `text` - an array of strings used to generate body text
 - `label` - string used for generating label text

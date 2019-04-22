@@ -25,6 +25,78 @@ describe("Select", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should call removeEventListener on unmount", () => {
+    const dom = new JSDOM(wrapper.html());
+    global.document = dom.window.document;
+    global.window = dom.window;
+
+    const mockRemoveEventListener = jest.fn();
+
+    global.document.removeEventListener = mockRemoveEventListener;
+
+    wrapper.instance().componentWillUnmount();
+
+    expect(mockRemoveEventListener).toHaveBeenCalled();
+  });
+
+  describe("toggleClose", () => {
+    it("should return if node contains target", () => {
+      const mockEvent = {
+        target: "hello"
+      };
+
+      const spy = jest.spyOn(wrapper.instance(), "toggleClose");
+      wrapper.instance().forceUpdate();
+
+      const mockContains = jest.fn().mockImplementation(() => true);
+
+      wrapper.instance().node = { contains: mockContains };
+
+      wrapper.state().deployed = true;
+
+      wrapper.instance().toggleClose(mockEvent);
+
+      expect(spy).toHaveReturned();
+    });
+
+    it("should return if closed", () => {
+      const mockEvent = {
+        target: "no"
+      };
+
+      const spy = jest.spyOn(wrapper.instance(), "toggleClose");
+      wrapper.instance().forceUpdate();
+
+      const mockContains = jest.fn().mockImplementation(() => false);
+
+      wrapper.instance().node = { contains: mockContains };
+
+      wrapper.state().deployed = false;
+
+      wrapper.instance().toggleClose(mockEvent);
+
+      expect(spy).toHaveReturned();
+    });
+
+    it("should call toggleDeploy", () => {
+      const mockEvent = {
+        target: "no"
+      };
+
+      const spy = jest.spyOn(wrapper.instance(), "toggleDeploy");
+      wrapper.instance().forceUpdate();
+
+      const mockContains = jest.fn().mockImplementation(() => false);
+      wrapper.instance().node = { contains: mockContains };
+
+      wrapper.state().deployed = true;
+
+      wrapper.instance().toggleClose(mockEvent);
+
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
   describe("toggleDeploy", () => {
     it("should call setState", () => {
       wrapper.instance().toggleDeploy();
