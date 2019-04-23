@@ -42,6 +42,7 @@ You can then use the imported Terra component within your own application.
 - `onClick` **(required)** - determines the method called when the 'close' button is clicked
 - `text` **(required)** - determines the text displayed in the alert
 - `type` - determines the type of alert
+- `name` - string used for the check box's name for parent state management
 
 ######Example -
 
@@ -71,9 +72,10 @@ You can then use the imported Terra component within your own application.
 
 ######Props -
 
-- `onClick` **(required)** - function that determines the method called when the button is clicked taking an argument of the event object.
+- `onClick` **(required)** - function that determines the method called when the button is clicked taking an argument of the event object
 - `className` **(required)** - string that determines the type of button (see options) - interpolates into component `className` - see options below
 - `text` **(required)** - string that determines the inner text of the button element
+- `name` - string used for the check box's name for parent state management
 
 ######`className` options -
 
@@ -139,7 +141,7 @@ You can then use the imported Terra component within your own application.
 - `label` **(required)** - string used for the check box's label
 - `name` **(required)** - string used for the check box's name for parent state management
 - `checked` **(required)** - boolean used to indicate whether or not the checkbox is checked, you should use whatever state property cooresponds to the component's `name`
-- `handleChange` **(required)** - function called when the checkbox is changed, best used for changing the `checked` state, takes a single argument of the components `name`
+- `handleChange` **(required)** - function called when the checkbox is changed, best used for changing the `checked` state, takes a single argument of the the event object.
 
 ######Example -
 
@@ -201,9 +203,11 @@ You can then use the imported Terra component within your own application.
 ######Props -
 
 - `className` - string interpolated into the className of the component for styling options: use with caution.
+
 - `title` - string used for the modal's title
+- `name` - string used for the check box's name for parent state management
 - `body` - string used for the modal's body text
-- `closeModal` **(required)** - function used to no longer render the modal, takes no arguments
+- `closeModal` **(required)** - function used to no longer render the modal, takes an argument of the name passed down in props
 - `buttonOne` - object consisting of an `onClick` method, `text` label string, and `className` for styling. See `<Button>` for options.
 - `buttonTwo` - object consisting of an `onClick` method, `text` label string, and `className` for styling. See `<Button>` for options.
 
@@ -274,7 +278,8 @@ You can then use the imported Terra component within your own application.
 
 - `pages` **(required)** - number indicating the total number of pages accessible via the component
 - `activePage` **(required)** - number indicating the index of the current page in the Pagination array - i.e. passing in `0` would display the first page
-- `handleClick` **(required)** - function used to set the new index of the currently displayed item in the Paginiation array, takes a single argument of the new index
+- `handleClick` **(required)** - function used to set the new index of the currently displayed item in the Paginiation array, takes arguments of the new index and the component's `name`
+- `name` - string used for the check box's name for parent state management
 
 ######Example -
 
@@ -311,9 +316,10 @@ You can then use the imported Terra component within your own application.
 ######Props -
 
 - `searchItems` - an array of strings used for generating predictive text
-- `handleSubmit` **(required)** - function passed down for passing up the search string, takes a single argument of the field's search string
+- `handleSubmit` **(required)** - function passed down for passing up the search string, takes two arguments of the field's search string and the `name` prop
 - `placeholder` - string used for generating a custom string of placeholder text, defaults to `Search`
 - `predictiveSearch` - boolean used to tell the component whether or not to produce a list of predictive search items
+- `name` - string used to name the radio component for processing in the parent component, should be unique
 
 ######Example -
 
@@ -335,7 +341,8 @@ You can then use the imported Terra component within your own application.
 - `defaultText` **(required)** - string used for generating the default text in the selected field
 - `options` **(required)** - array of strings to select from
 - `selection` **(required)** - string indicating the currently-selected string
-- `handleSelect` **(required)** - function used for changing the currently selected string, takes a single argument of the newly selected item as a string
+- `handleSelect` **(required)** - function used for changing the currently selected string, takes two arguments of the newly selected item as a string and the `name` prop
+- `name` - string used to name the radio component for processing in the parent component, should be unique
 
 ######Example -
 
@@ -355,7 +362,7 @@ You can then use the imported Terra component within your own application.
 ######Props -
 
 - `options` **(required)** - array of strings used for generating select options
-- `handleSelection` **(required)** - function used for changing the currently selection, takes two arguments of the new selection and the component's `name`
+- `handleSelection` **(required)** - function used for changing the currently selection, takes two arguments of the new selection and the component's `name` prop
 - `selection` **(required)** - string indicating the current select
 - `defaultText` **(required)** - string indicating the default text in the selected field
 - `name` **(required)** - string used for parent processing of the component
@@ -406,8 +413,9 @@ const tableDataSource = {
 ######Props -
 
 - `label` - string used for the label element of the input
-- `inputChange` **(required)** - function that determines what happens when the input value has changed, takes a single argument of the event object
+- `inputChange` **(required)** - function that determines what happens when the input value has changed, takes two arguments of the event object and the component's `name` prop
 - `value` **(required)** - string for the value of the input
+- `name` - string used for parent processing of the component
 
 ######Example -
 
@@ -433,7 +441,7 @@ const tableDataSource = {
   ```
   { className: "error", message: "error!" }
   ```
-- `name` **(required)** - string used as the field name
+- `name` **(required)** - string used as the field name, returned in the event object
 
 ######Example -
 

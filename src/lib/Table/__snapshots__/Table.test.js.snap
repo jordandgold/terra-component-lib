@@ -6,21 +6,23 @@ exports[`Table should match the snapshot 1`] = `
     className="ter-table ter-table--loose"
   >
     <thead>
-      <th
-        key="t-head-cell-0"
-      >
-        Table Head 1
-      </th>
-      <th
-        key="t-head-cell-1"
-      >
-        Table Head 2
-      </th>
-      <th
-        key="t-head-cell-2"
-      >
-        Table Head 3
-      </th>
+      <tr>
+        <th
+          key="t-head-cell-0"
+        >
+          Table Head 1
+        </th>
+        <th
+          key="t-head-cell-1"
+        >
+          Table Head 2
+        </th>
+        <th
+          key="t-head-cell-2"
+        >
+          Table Head 3
+        </th>
+      </tr>
     </thead>
     <tbody>
       <tr
@@ -91,21 +93,23 @@ exports[`Table should match the snapshot with a false boolean 1`] = `
     className="ter-table "
   >
     <thead>
-      <th
-        key="t-head-cell-0"
-      >
-        Table Head 1
-      </th>
-      <th
-        key="t-head-cell-1"
-      >
-        Table Head 2
-      </th>
-      <th
-        key="t-head-cell-2"
-      >
-        Table Head 3
-      </th>
+      <tr>
+        <th
+          key="t-head-cell-0"
+        >
+          Table Head 1
+        </th>
+        <th
+          key="t-head-cell-1"
+        >
+          Table Head 2
+        </th>
+        <th
+          key="t-head-cell-2"
+        >
+          Table Head 3
+        </th>
+      </tr>
     </thead>
     <tbody>
       <tr

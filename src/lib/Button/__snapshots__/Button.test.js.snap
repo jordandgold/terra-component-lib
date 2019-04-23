@@ -4,6 +4,7 @@ exports[`Button should match the snapshot 1`] = `
 <Fragment>
   <button
     className="ter-button test class"
+    name="test name"
     onClick={[Function]}
   >
     test text

@@ -13,6 +13,7 @@ describe("Alert", () => {
         text="This is an alert."
         type="ter-alert--default"
         onClick={mockOnClick}
+        name="test name"
       />
     );
   });
@@ -28,7 +29,7 @@ describe("Alert", () => {
   });
 
   it("should call onClick when clicked", () => {
-    wrapper.find(".ter-alert").simulate("click");
-    expect(mockOnClick).toHaveBeenCalled();
+    wrapper.find(".ter-alert__close").simulate("click");
+    expect(mockOnClick).toHaveBeenCalledWith("test name");
   });
 });

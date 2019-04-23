@@ -7,7 +7,7 @@ exports[`Modal should match the snap shot 1`] = `
   <button
     aria-label="Close Modal"
     className="ter-modal__close"
-    onClick={[MockFunction]}
+    onClick={[Function]}
   >
     <Icon
       size="16px"
@@ -18,7 +18,7 @@ exports[`Modal should match the snap shot 1`] = `
     className="ter-modal__body"
   >
     <h4
-      class="ter-modal__title"
+      className="ter-modal__title"
     >
       test title
     </h4>
@@ -46,7 +46,7 @@ exports[`Modal should match the snap shot with no buttons 1`] = `
   <button
     aria-label="Close Modal"
     className="ter-modal__close"
-    onClick={[MockFunction]}
+    onClick={[Function]}
   >
     <Icon
       size="16px"
@@ -57,7 +57,7 @@ exports[`Modal should match the snap shot with no buttons 1`] = `
     className="ter-modal__body"
   >
     <h4
-      class="ter-modal__title"
+      className="ter-modal__title"
     >
       test title
     </h4>
@@ -75,7 +75,7 @@ exports[`Modal should match the snap shot with one button 1`] = `
   <button
     aria-label="Close Modal"
     className="ter-modal__close"
-    onClick={[MockFunction]}
+    onClick={[Function]}
   >
     <Icon
       size="16px"
@@ -86,7 +86,7 @@ exports[`Modal should match the snap shot with one button 1`] = `
     className="ter-modal__body"
   >
     <h4
-      class="ter-modal__title"
+      className="ter-modal__title"
     >
       test title
     </h4>

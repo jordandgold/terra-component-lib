@@ -12,6 +12,7 @@ describe("TextArea", () => {
       <TextArea
         inputChange={mockHandleChange}
         value="mock value"
+        name="name"
         label="mock label"
       />
     );
@@ -29,6 +30,6 @@ describe("TextArea", () => {
     };
     wrapper.find("textarea").simulate("change", mockObject);
 
-    expect(mockHandleChange).toHaveBeenCalledWith(mockObject);
+    expect(mockHandleChange).toHaveBeenCalledWith(mockObject, "name");
   });
 });

@@ -15,7 +15,7 @@ exports[`Notification should match the snapshot 1`] = `
     />
   </button>
   <div
-    class="ter-notification__body"
+    className="ter-notification__body"
   >
     <p>
       This is a mock notification message

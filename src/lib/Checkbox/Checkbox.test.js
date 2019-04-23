@@ -32,10 +32,7 @@ describe("Checkbox", () => {
     };
     wrapper.find("input").simulate("change", mockEvent);
 
-    expect(mockHandleChange).toHaveBeenCalledWith(
-      mockEvent.target.name,
-      mockEvent.target.checked
-    );
+    expect(mockHandleChange).toHaveBeenCalledWith(mockEvent);
   });
 
   it("should set state", () => {

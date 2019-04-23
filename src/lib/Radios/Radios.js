@@ -39,6 +39,6 @@ export default Radios;
 Radios.propTypes = {
   radios: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   name: PropTypes.string.isRequired,
-  selected: PropTypes.string.isRequired,
+  selected: PropTypes.string,
   selectRadio: PropTypes.func.isRequired
 };

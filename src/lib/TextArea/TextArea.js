@@ -9,7 +9,7 @@ class TextArea extends Component {
         <label className="ter-form-item__label">{this.props.label}</label>
         <textarea
           defaultValue={this.props.value}
-          onChange={e => this.props.inputChange(e)}
+          onChange={e => this.props.inputChange(e, this.props.name)}
           name={this.props.name}
           className="ter-textarea"
         />
@@ -23,5 +23,6 @@ export default TextArea;
 TextArea.propTypes = {
   label: PropTypes.string.isRequired,
   inputChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string
 };

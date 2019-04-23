@@ -5,16 +5,13 @@ import PropTypes from "prop-types";
 import "./Alert.scss";
 
 const Alert = props => {
-  const { onClick, type, text, closeAlert } = props;
+  const { onClick, type, text, name } = props;
 
   return (
-    <div
-      onClick={onClick}
-      className={`ter-alert ter-alert--${type || "default"}`}
-    >
+    <div className={`ter-alert ter-alert--${type || "default"}`}>
       <button
         className="ter-alert__close"
-        onClick={closeAlert}
+        onClick={() => onClick(name)}
         aria-label="Close Alert"
       >
         <Icon type="enclosed-x-dark-16px" size="16px" />
@@ -29,5 +26,6 @@ export default Alert;
 Alert.propTypes = {
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
-  type: PropTypes.string
+  type: PropTypes.string,
+  name: PropTypes.string
 };

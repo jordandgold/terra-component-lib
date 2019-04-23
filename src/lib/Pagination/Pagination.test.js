@@ -15,6 +15,7 @@ describe("Pagination", () => {
         pages={mockPages}
         activePage={mockActivePage}
         handleClick={mockHandleClick}
+        name="name"
       />
     );
   });
@@ -35,7 +36,12 @@ describe("Pagination", () => {
     mockHandleClick = jest.fn();
 
     wrapper = shallow(
-      <Pagination pages={4} activePage={3} handleClick={mockHandleClick} />
+      <Pagination
+        name="name"
+        pages={4}
+        activePage={3}
+        handleClick={mockHandleClick}
+      />
     );
 
     wrapper.find(".ter-pagination__list-item").simulate("click");
@@ -65,6 +71,7 @@ describe("Pagination", () => {
 
       wrapper = shallow(
         <Pagination
+          name="name"
           pages={3}
           activePage={mockActivePage}
           handleClick={mockHandleClick}
@@ -92,6 +99,7 @@ describe("Pagination", () => {
 
       wrapper = shallow(
         <Pagination
+          name="name"
           pages={4}
           activePage={mockActivePage}
           handleClick={mockHandleClick}
@@ -164,7 +172,12 @@ describe("Pagination", () => {
       mockHandleClick = jest.fn();
 
       wrapper = shallow(
-        <Pagination pages={4} activePage={1} handleClick={mockHandleClick} />
+        <Pagination
+          pages={4}
+          name="name"
+          activePage={1}
+          handleClick={mockHandleClick}
+        />
       );
 
       const expected = [
@@ -179,7 +192,7 @@ describe("Pagination", () => {
           return shallow(item).html();
         });
 
-      expect(result).toEqual(expected);
+      expect(result).toEqual(expected, "name");
     });
   });
 
@@ -190,7 +203,12 @@ describe("Pagination", () => {
     beforeEach(() => {
       mockProcessClick = jest.fn();
       pageWrapper = shallow(
-        <Page activePage={false} page={3} handleClick={mockProcessClick} />
+        <Page
+          name="name"
+          activePage={false}
+          page={3}
+          handleClick={mockProcessClick}
+        />
       );
     });
 
@@ -212,7 +230,7 @@ describe("Pagination", () => {
         const expected = 2;
         pageWrapper.instance().handleClick();
 
-        expect(mockProcessClick).toHaveBeenCalledWith(expected);
+        expect(mockProcessClick).toHaveBeenCalledWith(expected, "name");
       });
 
       it("should return if the active page", () => {

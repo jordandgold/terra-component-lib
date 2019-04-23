@@ -18,7 +18,8 @@ describe("Modal", () => {
     buttonOne = {
       onClick: mockOnClickOne,
       text: "button one mock text",
-      className: "mock class"
+      className: "mock class",
+      name: "hello"
     };
     buttonTwo = {
       onClick: mockOnClickTwo,
@@ -28,6 +29,7 @@ describe("Modal", () => {
 
     wrapper = shallow(
       <Modal
+        name="hello"
         className="test"
         title="test title"
         body="test body"
@@ -72,6 +74,6 @@ describe("Modal", () => {
   it("should call close modal on click", () => {
     wrapper.find(".ter-modal__close").simulate("click");
 
-    expect(mockCloseModal).toHaveBeenCalled();
+    expect(mockCloseModal).toHaveBeenCalledWith("hello");
   });
 });
