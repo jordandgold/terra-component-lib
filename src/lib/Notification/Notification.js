@@ -14,7 +14,7 @@ const Notification = props => {
       >
         <Icon type="enclosed-x-dark-16px" size="16px" />
       </button>
-      <div class="ter-notification__body">
+      <div className="ter-notification__body">
         <p>{text}</p>
       </div>
     </section>

@@ -24,7 +24,7 @@ const Modal = props => {
         <Icon type="enclosed-x-dark-16px" size="16px" />
       </button>
       <div className="ter-modal__body">
-        <h4 class="ter-modal__title">{title}</h4>
+        <h4 className="ter-modal__title">{title}</h4>
         <p>{body}</p>
         {buttonOne && (
           <Button

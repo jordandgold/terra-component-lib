@@ -6,7 +6,7 @@ exports[`TextInput should match the snapshot 1`] = `
 >
   <label
     className="ter-form-item__label"
-    for="mock name"
+    htmlFor="mock name"
   >
     mock label
   </label>
@@ -27,7 +27,7 @@ exports[`TextInput should match the snapshot with a status message 1`] = `
 >
   <label
     className="ter-form-item__label"
-    for="mock name"
+    htmlFor="mock name"
   >
     mock label
   </label>

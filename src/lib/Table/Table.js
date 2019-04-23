@@ -27,7 +27,11 @@ class Table extends Component {
     return (
       <React.Fragment>
         <table className={`ter-table ${variantClass}`}>
-          {this.props.data.head && <thead>{this.generateHeadCells()}</thead>}
+          {this.props.data.head && (
+            <thead>
+              <tr>{this.generateHeadCells()}</tr>
+            </thead>
+          )}
           <tbody>{this.generateBody()}</tbody>
         </table>
       </React.Fragment>

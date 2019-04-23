@@ -14,13 +14,13 @@ export class CheckboxForm extends Component {
     super(props);
 
     this.state = {
-      [props.name]: false
+      [this.props.name]: false
     };
   }
 
   handleChange = e => {
     this.setState({
-      [props.name]: e.target.checked
+      [this.props.name]: e.target.checked
     });
   };
 
@@ -74,13 +74,13 @@ export class TextAreaForm extends Component {
     super(props);
 
     this.state = {
-      [props.name]: ""
+      value: ""
     };
   }
 
   handleChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      value: event.target.value
     });
   };
 
@@ -88,7 +88,7 @@ export class TextAreaForm extends Component {
     return (
       <form>
         <TextArea
-          value={this.state[this.props.name].value}
+          value={this.state.value}
           inputChange={this.handleChange}
           name={this.props.name}
           label={this.props.label}

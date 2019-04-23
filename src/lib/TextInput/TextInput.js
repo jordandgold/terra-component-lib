@@ -14,7 +14,7 @@ class TextInput extends Component {
         className={`ter-form-item ${status && statusMessage[status.className]}`}
       >
         {label && (
-          <label className="ter-form-item__label" for={name}>
+          <label className="ter-form-item__label" htmlFor={name}>
             {label}
           </label>
         )}
