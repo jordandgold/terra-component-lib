@@ -12,6 +12,7 @@ exports[`TextArea should match the snapshot 1`] = `
   <textarea
     className="ter-textarea"
     defaultValue="mock value"
+    name="name"
     onChange={[Function]}
   />
 </div>

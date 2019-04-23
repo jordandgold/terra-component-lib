@@ -12,7 +12,12 @@ describe("Button", () => {
   beforeEach(() => {
     mockOnClick = jest.fn();
     wrapper = shallow(
-      <Button className="test class" onClick={mockOnClick} text="test text" />
+      <Button
+        name="test name"
+        className="test class"
+        onClick={mockOnClick}
+        text="test text"
+      />
     );
   });
 
@@ -23,7 +28,8 @@ describe("Button", () => {
   it("should call onClick method when clicked", () => {
     mockEventObject = {
       target: {
-        innerHTML: "hello"
+        innerHTML: "hello",
+        name: "test name"
       }
     };
     wrapper.find(".ter-button").simulate("click", mockEventObject);

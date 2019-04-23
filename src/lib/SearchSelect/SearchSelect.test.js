@@ -25,6 +25,7 @@ describe("SearchSelect", () => {
         selection={undefined}
         handleSelect={mockHandleSelect}
         options={mockOptions}
+        name="name"
       />
     );
   });
@@ -253,7 +254,7 @@ describe("SearchSelect", () => {
 
       wrapper.instance().handleSelect("mock option");
 
-      expect(mockHandleSelect).toHaveBeenCalledWith("mock option");
+      expect(mockHandleSelect).toHaveBeenCalledWith("mock option", "name");
     });
 
     it("should call handleSelect on click", () => {

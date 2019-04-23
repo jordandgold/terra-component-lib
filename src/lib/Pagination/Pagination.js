@@ -14,6 +14,7 @@ class Pagination extends Component {
       for (let i = 0; i < 2; i++) {
         pages.push(
           <Page
+            name={this.props.name}
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
@@ -27,6 +28,7 @@ class Pagination extends Component {
       for (let i = 0; i < 3; i++) {
         pages.push(
           <Page
+            name={this.props.name}
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
@@ -40,6 +42,7 @@ class Pagination extends Component {
       for (let i = 0; i < 3; i++) {
         pages.push(
           <Page
+            name={this.props.name}
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
@@ -51,6 +54,7 @@ class Pagination extends Component {
       for (let i = totalPages - 3; i < totalPages; i++) {
         pages.push(
           <Page
+            name={this.props.name}
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
@@ -62,6 +66,7 @@ class Pagination extends Component {
       for (let i = totalPages - 3; i < totalPages; i++) {
         pages.push(
           <Page
+            name={this.props.name}
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
@@ -73,6 +78,7 @@ class Pagination extends Component {
       for (let i = activePage - 2; i < activePage + 1; i++) {
         pages.push(
           <Page
+            name={this.props.name}
             key={`list-item-${i + 1}`}
             activePage={activePage}
             page={i + 1}
@@ -91,7 +97,12 @@ class Pagination extends Component {
         <ul className="ter-pagination__list">
           {this.props.activePage + 1 > 1 && this.props.activePage > 0 && (
             <li
-              onClick={() => this.props.handleClick(this.props.activePage - 1)}
+              onClick={() =>
+                this.props.handleClick(
+                  this.props.activePage - 1,
+                  this.props.name
+                )
+              }
               className="ter-pagination__list-item ter-pagination__list-item--previous"
             >
               <Icon type="open-caret-left-dark-8px" size="8px" />
@@ -117,7 +128,8 @@ export default Pagination;
 Pagination.propTypes = {
   pages: PropTypes.number.isRequired,
   activePage: PropTypes.number.isRequired,
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func.isRequired,
+  name: PropTypes.string
 };
 
 export class Page extends Component {
@@ -125,7 +137,7 @@ export class Page extends Component {
     if (this.props.activePage === this.props.page) {
       return;
     } else {
-      this.props.handleClick(this.props.page - 1);
+      this.props.handleClick(this.props.page - 1, this.props.name);
     }
   };
 

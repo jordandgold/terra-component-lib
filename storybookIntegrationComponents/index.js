@@ -18,9 +18,9 @@ export class CheckboxForm extends Component {
     };
   }
 
-  handleChange = (name, checked) => {
+  handleChange = e => {
     this.setState({
-      [name]: checked
+      [props.name]: e.target.checked
     });
   };
 

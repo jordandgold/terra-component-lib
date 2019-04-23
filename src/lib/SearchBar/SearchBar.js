@@ -38,7 +38,7 @@ class SearchBar extends Component {
       return;
     }
 
-    this.props.handleSubmit(this.state.input);
+    this.props.handleSubmit(this.state.input, this.props.name);
   };
 
   render() {
@@ -74,5 +74,6 @@ SearchBar.propTypes = {
   searchItems: PropTypes.arrayOf(PropTypes.string.isRequired),
   handleSubmit: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  predictiveSearch: PropTypes.bool
+  predictiveSearch: PropTypes.bool,
+  name: PropTypes.string
 };

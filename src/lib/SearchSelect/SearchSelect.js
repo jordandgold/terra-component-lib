@@ -87,7 +87,7 @@ class SearchSelect extends Component {
       deployed: false
     });
 
-    this.props.handleSelect(option);
+    this.props.handleSelect(option, this.props.name);
   };
 
   render() {
@@ -132,5 +132,6 @@ SearchSelect.propTypes = {
   defaultText: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   selection: PropTypes.string,
-  handleSelect: PropTypes.func.isRequired
+  handleSelect: PropTypes.func.isRequired,
+  name: PropTypes.string
 };

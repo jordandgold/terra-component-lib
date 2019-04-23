@@ -15,6 +15,7 @@ describe("SearchBar", () => {
         searchItems={mockSearchItems}
         placeholder="test placeholder"
         predictiveSearch={true}
+        name="name"
       />
     );
   });
@@ -31,6 +32,7 @@ describe("SearchBar", () => {
         handleSubmit={mockHandleSubmit}
         searchItems={mockSearchItems}
         predictiveSearch={true}
+        name="name"
       />
     );
     expect(wrapper).toMatchSnapshot();
@@ -44,6 +46,7 @@ describe("SearchBar", () => {
         handleSubmit={mockHandleSubmit}
         searchItems={mockSearchItems}
         predictiveSearch={true}
+        name="name"
       />
     );
 
@@ -156,7 +159,7 @@ describe("SearchBar", () => {
       };
       wrapper.instance().handleSubmit(mockEvent);
 
-      expect(mockHandleSubmit).toHaveBeenCalledWith("test input");
+      expect(mockHandleSubmit).toHaveBeenCalledWith("test input", "name");
     });
 
     it("should call handleSubmit on submit", () => {
