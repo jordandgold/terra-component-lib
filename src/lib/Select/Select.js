@@ -13,6 +13,22 @@ class Select extends Component {
     };
   }
 
+  componentDidMount() {
+    document.addEventListener("mousedown", this.toggleClose);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.toggleClose);
+  }
+
+  toggleClose = e => {
+    if (this.node.contains(e.target) || !this.state.deployed) {
+      return;
+    }
+
+    this.toggleDeploy();
+  };
+
   toggleDeploy = () => {
     this.setState({
       deployed: !this.state.deployed
@@ -56,6 +72,7 @@ class Select extends Component {
   render() {
     return (
       <div
+        ref={node => (this.node = node)}
         className={`ter-select ${this.state.deployed && "is-open"}`}
         onKeyUp={e => this.handleKeyup(e)}
         tabIndex="0"
