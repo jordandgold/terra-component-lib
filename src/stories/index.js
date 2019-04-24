@@ -17,6 +17,7 @@ import TextArea from "../lib/TextArea/TextArea";
 import Checkbox from "../lib/Checkbox/Checkbox";
 import Select from "../lib/Select/Select";
 import SearchSelect from "../lib/SearchSelect/SearchSelect";
+import SearchBar from "../lib/SearchBar/SearchBar";
 import MultipleSearchSelect from "../lib/MultipleSearchSelect/MultipleSearchSelect";
 import Table from "../lib/Table/Table";
 import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
@@ -437,4 +438,8 @@ storiesOf("Tooltip", module).add("Tooltip", () => {
       </Tooltip>
     </div>
   );
+});
+
+storiesOf("SearchBar", module).add("SearchBar", () => {
+  return <SearchBar />;
 });
