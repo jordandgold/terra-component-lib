@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero2 should match the snapshot 1`] = `
+<section
+  className="ter-hero2 container-fluid row flex- row"
+>
+  <img
+    alt="dock on water"
+    className="ter-hero2__image col-lg-7"
+    src="./sampleImage.png"
+  />
+  <div
+    className="ter-hero2__content col-lg-5 middle-lg"
+  >
+    <h3
+      className="ter-hero2__title"
+    >
+      Good design is innovative
+    </h3>
+    <p
+      className="ter-hero2__body"
+    >
+      Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive
+    </p>
+    <Button
+      className="ter-button--primary--1"
+      name="ctaOne"
+      onClick={[MockFunction]}
+      text="Button"
+    />
+    <Button
+      className="ter-button--primary--1"
+      name="ctaOne"
+      onClick={[MockFunction]}
+      text="Button"
+    />
+    <a>
+      Sub-CTA
+    </a>
+  </div>
+</section>
+`;
