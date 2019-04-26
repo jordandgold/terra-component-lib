@@ -1,12 +1,44 @@
 @import "../../../global-styles/terra.scss";
 
-.ter-her2 {
-  &.__image {
+.ter-hero2 {
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  max-width: 1400px;
+
+  &__image-wrapper {
+    overflow: hidden;
+    padding: 0;
   }
-  &.__content {
+  &__image {
+    display: block;
+    // max-width: 100%;
   }
-  &.__title {
+  &__content {
+    display: grid;
+    align-items: center;
+    padding: 32px 48px;
   }
-  &.__body {
+  .ter-cta-section {
+    width: 150px;
+
+    .ter-button {
+      display: block;
+      margin: 24px 0 8px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  &__title {
+    font-size: font-size("xl");
+  }
+  &__body {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 0;
   }
 }

@@ -37,7 +37,7 @@ import {
 } from "../../storybookIntegrationComponents/";
 import { heroTwoContent } from "./mockContent";
 
-storiesOf("Button", module)
+storiesOf("Atoms|Button", module)
   .add("Primary Buttons", () => (
     <div>
       <Button
@@ -97,7 +97,7 @@ storiesOf("Button", module)
     </div>
   ));
 
-storiesOf("Alert", module).add("Alerts", () => (
+storiesOf("Molecules|Alert", module).add("Alerts", () => (
   <div>
     <Alert
       onClick={action("Clicked!")}
@@ -128,7 +128,7 @@ storiesOf("Alert", module).add("Alerts", () => (
 const mockBody =
   "Must go faster... go, go, go, go, go! Jaguar shark! So tell me - does it really exist? Just my luck, no ice. What do they got in there? King Kong? Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. So you two dig up, dig up dinosaurs?";
 
-storiesOf("Modal", module).add("Modal", () => (
+storiesOf("Molecules|Modal", module).add("Modal", () => (
   <Modal
     closeModal={action("close!")}
     title="Modal title"
@@ -146,20 +146,21 @@ storiesOf("Modal", module).add("Modal", () => (
   />
 ));
 
-storiesOf("Notification", module).add("Notification", () => (
+storiesOf("Molecules|Notification", module).add("Notification", () => (
   <Notification onClick={action("clicked!")} type="default" text={mockBody} />
 ));
 
-storiesOf("Icon", module).add("Icon", () => (
+storiesOf("Atoms|Icon", module).add("Icon", () => (
   <div>
     <Icon type="open-caret-right-dark-8px" size="8px" />
     <Icon type="open-caret-up-dark-8px" size="8px" />
     <Icon type="open-caret-down-dark-8px" size="8px" />
     <Icon type="open-caret-left-dark-8px" size="8px" />
+    <Icon type="enclosed-check-dark-32px" icon="32px" />
   </div>
 ));
 
-storiesOf("Dropdown", module).add("Dropdown", () => (
+storiesOf("Molecules|Dropdown", module).add("Dropdown", () => (
   <Dropdown label="I am a dropdown">
     <p>I am text</p>
     <Button
@@ -172,7 +173,7 @@ storiesOf("Dropdown", module).add("Dropdown", () => (
 
 const mockPages = 4;
 
-storiesOf("Pagination", module).add("Pagination", () => (
+storiesOf("Molecules|Pagination", module).add("Pagination", () => (
   <PaginationContainer pages={mockPages} />
 ));
 
@@ -182,11 +183,11 @@ const mockBreadcrumbs = [
   { link: "test", text: "Breadcrumb" }
 ];
 
-storiesOf("Breadcrumb", module).add("Breadcrumb", () => (
+storiesOf("Molecules|Breadcrumb", module).add("Breadcrumb", () => (
   <Breadcrumbs breadcrumbs={mockBreadcrumbs} />
 ));
 
-storiesOf("TextInput", module).add("TextInput", () => (
+storiesOf("Molecules|TextInput", module).add("TextInput", () => (
   <div>
     <TextInputForm
       label="Form Item Label"
@@ -209,7 +210,7 @@ storiesOf("TextInput", module).add("TextInput", () => (
   </div>
 ));
 
-storiesOf("Radios", module).add("Radios", () => {
+storiesOf("Molecules|Radios", module).add("Radios", () => {
   const mockRadios = ["label one", "label two", "label three"];
   return (
     <div>
@@ -222,7 +223,7 @@ storiesOf("Radios", module).add("Radios", () => {
   );
 });
 
-storiesOf("TextArea", module).add("TextArea", () => {
+storiesOf("Molecules|TextArea", module).add("TextArea", () => {
   return (
     <TextAreaForm
       handleChange={action("ohh, text!")}
@@ -233,11 +234,11 @@ storiesOf("TextArea", module).add("TextArea", () => {
   );
 });
 
-storiesOf("Checkbox", module).add("Checkbox", () => {
+storiesOf("Molecules|Checkbox", module).add("Checkbox", () => {
   return <CheckboxForm name="checkbox" label="This is a checkbox" />;
 });
 
-storiesOf("SearchSelect", module).add("SearchSelect", () => {
+storiesOf("Molecules|SearchSelect", module).add("SearchSelect", () => {
   const mockOptions = [
     "cats",
     "dogs",
@@ -258,27 +259,30 @@ storiesOf("SearchSelect", module).add("SearchSelect", () => {
   );
 });
 
-storiesOf("MultipleSearchSelect", module).add("MultipleSearchSelect", () => {
-  const mockOptions = [
-    "cats",
-    "dogs",
-    "turtles",
-    "fish",
-    "ferrets",
-    "hamsters",
-    "birds"
-  ];
+storiesOf("Molecules|MultipleSearchSelect", module).add(
+  "MultipleSearchSelect",
+  () => {
+    const mockOptions = [
+      "cats",
+      "dogs",
+      "turtles",
+      "fish",
+      "ferrets",
+      "hamsters",
+      "birds"
+    ];
 
-  return (
-    <MultipleSearchSelectForm
-      defaultText="This is a MultipleSearchSelect component"
-      options={mockOptions}
-      name="test name"
-    />
-  );
-});
+    return (
+      <MultipleSearchSelectForm
+        defaultText="This is a MultipleSearchSelect component"
+        options={mockOptions}
+        name="test name"
+      />
+    );
+  }
+);
 
-storiesOf("Select", module).add("Select", () => {
+storiesOf("Molecules|Select", module).add("Select", () => {
   const mockOptions = [
     "cats",
     "dogs",
@@ -325,7 +329,7 @@ storiesOf("Select", module).add("Select", () => {
   );
 });
 
-storiesOf("Table", module).add("Table", () => {
+storiesOf("Molecules|Table", module).add("Table", () => {
   const mockData = {
     head: ["Table Head 1", "Table Head 2", "Table Head 3"],
     body: [
@@ -338,7 +342,7 @@ storiesOf("Table", module).add("Table", () => {
   return <Table data={mockData} />;
 });
 
-storiesOf("Tabs", module).add("Tabs", () => {
+storiesOf("Molecules|Tabs", module).add("Tabs", () => {
   return (
     <Tabs selected={0} fullWidth={false}>
       <TabsPanel name="First">
@@ -372,7 +376,7 @@ storiesOf("Tabs", module).add("Tabs", () => {
   );
 });
 
-storiesOf("Accordion", module).add("Accordion", () => {
+storiesOf("Molecules|Accordion", module).add("Accordion", () => {
   return (
     <Accordion defaultActive={0}>
       <AccordionFold title="Test one">
@@ -403,7 +407,7 @@ storiesOf("Accordion", module).add("Accordion", () => {
   );
 });
 
-storiesOf("Tooltip", module).add("Tooltip", () => {
+storiesOf("Atoms|Tooltip", module).add("Tooltip", () => {
   return (
     <div className="pad-xl text-center">
       <Tooltip direction="up" tooltipLabel="Up Tooltip">
@@ -425,52 +429,38 @@ storiesOf("Tooltip", module).add("Tooltip", () => {
   );
 });
 
-storiesOf("SearchBar", module).add("SearchBar", () => {
-  return <SearchBar />;
-});
+storiesOf("Heroes|Hero-2", module)
+  .add("Hero-2 Image Left", () => {
+    const { image, title, body, ctas } = heroTwoContent;
+    ctas.ctaOne.onClick = action("clicked an option");
+    ctas.ctaTwo.onClick = action("clicked an option");
 
-storiesOf("Hero-2", module).add("Hero-2", () => {
-  const {
-    imageSide,
-    image,
-    title,
-    body,
-    ctaOne,
-    ctaTwo,
-    subCTA
-  } = heroTwoContent;
-  return (
-    <div>
-      <Hero2 imageSide={imageSide} image={image} title={title} body={body}>
-        <Button
-          className={ctaOne.className}
-          name={ctaOne.name}
-          text={ctaOne.text}
-          onClick={action("CTA 1 Clicked")}
-        />
-        <Button
-          className={ctaTwo.className}
-          name={ctaTwo.name}
-          text={ctaTwo.text}
-          onClick={action("CTA 2 Clicked")}
-        />
-        <a>{subCTA.text}</a>
-      </Hero2>
-      <Hero2 imageSide="right" image={image} title={title} body={body}>
-        <Button
-          className={ctaOne.className}
-          name={ctaOne.name}
-          text={ctaOne.text}
-          onClick={action("CTA 1 Clicked")}
-        />
-        <Button
-          className={ctaTwo.className}
-          name={ctaTwo.name}
-          text={ctaTwo.text}
-          onClick={action("CTA 2 Clicked")}
-        />
-        <a>{subCTA.text}</a>
-      </Hero2>
-    </div>
-  );
+    return (
+      <Hero2
+        imageSide="left"
+        image={image}
+        title={title}
+        body={body}
+        ctas={ctas}
+      />
+    );
+  })
+  .add("Hero-2 Image Right", () => {
+    const { image, title, body, ctas } = heroTwoContent;
+    ctas.ctaOne.onClick = action("clicked an option");
+    ctas.ctaTwo.onClick = action("clicked an option");
+
+    return (
+      <Hero2
+        imageSide="right"
+        image={image}
+        title={title}
+        body={body}
+        ctas={ctas}
+      />
+    );
+  });
+
+storiesOf("Molecules|SearchBar", module).add("SearchBar", () => {
+  return <SearchBar />;
 });
