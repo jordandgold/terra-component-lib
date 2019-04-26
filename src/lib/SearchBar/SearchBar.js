@@ -43,21 +43,15 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <form
-        onSubmit={e => this.handleSubmit(e)}
-        className="ter-search-bar ter-input"
-      >
-        <div className="ter-search-bar__input ter-input__wrap">
-          <input
-            type="text"
-            value={this.state.input}
-            onChange={e => this.handleChange(e)}
-            placeholder={this.props.placeholder || "Search"}
-          />
-        </div>
-        <button className="ter-search-bar__submit">
-          <i className="fi flaticon-magnifying-glass" />
-        </button>
+      <form onSubmit={e => this.handleSubmit(e)} className="ter-search-bar">
+        <input
+          type="text"
+          value={this.state.input}
+          onChange={e => this.handleChange(e)}
+          placeholder={this.props.placeholder || "Search"}
+          className="ter-search-bar__input"
+        />
+        <button className="ter-search-bar__submit">Submit</button>
         {this.props.predictiveSearch &&
           this.state.input &&
           this.renderPredictiveSearchItems() && (
