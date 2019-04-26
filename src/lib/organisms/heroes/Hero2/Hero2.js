@@ -1,32 +1,36 @@
 import React from "react";
 import "./Hero2.scss";
 import PropTypes from "prop-types";
+import CTASection from "../../../CTASection/CTASection";
 
-const Hero = props => {
-  const { imageSide, image, title, body, children } = props;
+const Hero2 = props => {
+  const { imageSide, image, title, body, ctas } = props;
+  const imageStyle = {
+    backgroundImage: `url(${image.url})`
+  };
   return (
     <section
-      className={`ter-hero2 container-fluid row ${
-        imageSide === "right" ? "flex-row-reverse" : "flex- row"
+      className={`ter-hero2 container-fluid ${
+        imageSide === "right" ? "row reverse" : "row"
       }`}
     >
-      <img
-        className="ter-hero2__image col-lg-7"
-        src={image.url}
-        alt={image.altText}
-      />
-      <div className="ter-hero2__content col-lg-5 middle-lg">
-        <h3 className="ter-hero2__title">{title}</h3>
-        <p className="ter-hero2__body">{body}</p>
-        {children}
+      <div className="ter-hero2__image-wrapper col-xs-12 col-sm-6 col-lg-7">
+        <img className="ter-hero2__image" src={image.url} alt={image.altText} />
+      </div>
+      <div className="ter-hero2__content col-xs-12 col-sm-6 col-lg-5 middle-lg">
+        <div className="ter-hero2__content-wrapper">
+          <h3 className="ter-hero2__title">{title}</h3>
+          <p className="ter-hero2__body">{body}</p>
+          {ctas && <CTASection ctas={ctas} />}
+        </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Hero2;
 
-Hero.propTypes = {
+Hero2.propTypes = {
   imageSide: PropTypes.string.isRequired,
   image: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -34,5 +38,22 @@ Hero.propTypes = {
   }).isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  children: PropTypes.node
+  ctas: PropTypes.shape({
+    ctaOne: PropTypes.shape({
+      onClick: PropTypes.func.isRequired,
+      text: PropTypes.string.isRequired,
+      className: PropTypes.string.isRequired,
+      name: PropTypes.string
+    }),
+    ctaTwo: PropTypes.shape({
+      onClick: PropTypes.func.isRequired,
+      text: PropTypes.string.isRequired,
+      className: PropTypes.string.isRequired,
+      name: PropTypes.string
+    }),
+    subCTA: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired
+    })
+  })
 };

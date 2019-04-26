@@ -7,17 +7,20 @@ export const heroTwoContent = {
   title: "Good design is innovative",
   body:
     "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive",
-  ctaOne: {
-    className: "ter-button--primary--1",
-    name: "ctaOne",
-    text: "Button"
-  },
-  ctaTwo: {
-    className: "ter-button--primary--1",
-    name: "ctaOne",
-    text: "Button"
-  },
-  subCTA: {
-    text: "Sub-CTA"
+  ctas: {
+    ctaOne: {
+      className: "ter-button--primary--1",
+      name: "ctaOne",
+      text: "Button"
+    },
+    ctaTwo: {
+      className: "ter-button--secondary--1",
+      name: "ctaOne",
+      text: "Button"
+    },
+    subCTA: {
+      text: "Sub-CTA",
+      link: "mock link"
+    }
   }
 };
