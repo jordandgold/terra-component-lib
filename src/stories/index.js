@@ -23,6 +23,7 @@ import Table from "../lib/Table/Table";
 import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
+import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import {
   CheckboxForm,
   TextInputForm,
@@ -34,23 +35,7 @@ import {
   PaginationContainer,
   DropdownForm
 } from "../../storybookIntegrationComponents/";
-// import { Button, Welcome } from "@storybook/react/demo";
-
-// storiesOf("Welcome", module).add("to Storybook", () => (
-//   <Welcome showApp={linkTo("Button")} />
-// ));
-
-// storiesOf("Button", module)
-//   .add("with text", () => (
-//     <Button onClick={action("clicked")}>Hello Button</Button>
-//   ))
-//   .add("with some emoji", () => (
-//     <Button onClick={action("clicked")}>
-//       <span role="img" aria-label="so cool">
-//         😀 😎 👍 💯
-//       </span>
-//     </Button>
-//   ));
+import { heroTwoContent } from "./mockContent";
 
 storiesOf("Button", module)
   .add("Primary Buttons", () => (
@@ -442,4 +427,50 @@ storiesOf("Tooltip", module).add("Tooltip", () => {
 
 storiesOf("SearchBar", module).add("SearchBar", () => {
   return <SearchBar />;
+});
+
+storiesOf("Hero-2", module).add("Hero-2", () => {
+  const {
+    imageSide,
+    image,
+    title,
+    body,
+    ctaOne,
+    ctaTwo,
+    subCTA
+  } = heroTwoContent;
+  return (
+    <div>
+      <Hero2 imageSide={imageSide} image={image} title={title} body={body}>
+        <Button
+          className={ctaOne.className}
+          name={ctaOne.name}
+          text={ctaOne.text}
+          onClick={action("CTA 1 Clicked")}
+        />
+        <Button
+          className={ctaTwo.className}
+          name={ctaTwo.name}
+          text={ctaTwo.text}
+          onClick={action("CTA 2 Clicked")}
+        />
+        <a>{subCTA.text}</a>
+      </Hero2>
+      <Hero2 imageSide="right" image={image} title={title} body={body}>
+        <Button
+          className={ctaOne.className}
+          name={ctaOne.name}
+          text={ctaOne.text}
+          onClick={action("CTA 1 Clicked")}
+        />
+        <Button
+          className={ctaTwo.className}
+          name={ctaTwo.name}
+          text={ctaTwo.text}
+          onClick={action("CTA 2 Clicked")}
+        />
+        <a>{subCTA.text}</a>
+      </Hero2>
+    </div>
+  );
 });
