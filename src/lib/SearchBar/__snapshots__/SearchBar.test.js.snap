@@ -2,25 +2,20 @@
 
 exports[`SearchBar should match snapshot with predictiveSearch 1`] = `
 <form
-  className="ter-search-bar ter-input"
+  className="ter-search-bar"
   onSubmit={[Function]}
 >
-  <div
-    className="ter-search-bar__input ter-input__wrap"
-  >
-    <input
-      onChange={[Function]}
-      placeholder="Search"
-      type="text"
-      value="d"
-    />
-  </div>
+  <input
+    className="ter-search-bar__input"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+    value="d"
+  />
   <button
     className="ter-search-bar__submit"
   >
-    <i
-      className="fi flaticon-magnifying-glass"
-    />
+    Submit
   </button>
   <ul>
     <li
@@ -39,50 +34,40 @@ exports[`SearchBar should match snapshot with predictiveSearch 1`] = `
 
 exports[`SearchBar should match snapshot without placeholder props 1`] = `
 <form
-  className="ter-search-bar ter-input"
+  className="ter-search-bar"
   onSubmit={[Function]}
 >
-  <div
-    className="ter-search-bar__input ter-input__wrap"
-  >
-    <input
-      onChange={[Function]}
-      placeholder="Search"
-      type="text"
-      value=""
-    />
-  </div>
+  <input
+    className="ter-search-bar__input"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+    value=""
+  />
   <button
     className="ter-search-bar__submit"
   >
-    <i
-      className="fi flaticon-magnifying-glass"
-    />
+    Submit
   </button>
 </form>
 `;
 
 exports[`SearchBar should match the snapshot 1`] = `
 <form
-  className="ter-search-bar ter-input"
+  className="ter-search-bar"
   onSubmit={[Function]}
 >
-  <div
-    className="ter-search-bar__input ter-input__wrap"
-  >
-    <input
-      onChange={[Function]}
-      placeholder="test placeholder"
-      type="text"
-      value=""
-    />
-  </div>
+  <input
+    className="ter-search-bar__input"
+    onChange={[Function]}
+    placeholder="test placeholder"
+    type="text"
+    value=""
+  />
   <button
     className="ter-search-bar__submit"
   >
-    <i
-      className="fi flaticon-magnifying-glass"
-    />
+    Submit
   </button>
 </form>
 `;
