@@ -1,11 +1,7 @@
 import React from "react";
 import Feat6A from "./Feat6A";
 import { shallow, mount } from "enzyme";
-import Button from "../../../Button/Button";
-import {
-  heroTwoContent,
-  featSixAContent
-} from "../../../../stories/mockContent";
+import { featSixAContent } from "../../../../stories/mockContent";
 
 describe("Feat6A", () => {
   let wrapper;

@@ -40,3 +40,17 @@ export const featSixAContent = {
     }
   }
 };
+
+export const featNineContent = {
+  image: {
+    url: "./1-to-1.png",
+    altText: "dock on water"
+  },
+  imageSide: "right",
+  quote: {
+    text:
+      "Using SketchUp Studio's Sefiara Software, we were able to study multiple options within a short period of time, which allowed the team to arrive at a design direction that we all felt comfortable with much faster with meaningful data as opposed to 'rules of thumb' and broad assumptions.",
+    source: "Leonard Sciarra",
+    sourceTitle: "Senior Associate at Gensler, AIA, ASHRAE, LEED AP+"
+  }
+};

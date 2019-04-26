@@ -1,0 +1,40 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-feat9 {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1400px;
+  display: flex;
+
+  &--image {
+    width: 300px;
+    height: 300px;
+    padding-top: 32px;
+    box-sizing: content-box;
+  }
+
+  &--content {
+    margin: 32px 16px;
+  }
+
+  &--quote-icon {
+    height: 32px;
+    width: 32px;
+    margin-top: 32px;
+    margin-left: 64px;
+  }
+
+  &--quote-text {
+  }
+  &--quote-source {
+    font-weight: font-weight("bold");
+    margin-bottom: 16px;
+    margin-left: 8px;
+  }
+  &--quote-source-title {
+    color: color("gray-6");
+    font-size: font-size("micro");
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+}
