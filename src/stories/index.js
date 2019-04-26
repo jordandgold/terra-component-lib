@@ -24,6 +24,7 @@ import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
+import Feat6A from "../lib/organisms/featurettes/Feat6A/Feat6A";
 import {
   CheckboxForm,
   TextInputForm,
@@ -35,7 +36,7 @@ import {
   PaginationContainer,
   DropdownForm
 } from "../../storybookIntegrationComponents/";
-import { heroTwoContent } from "./mockContent";
+import { heroTwoContent, featSixAContent } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
   .add("Primary Buttons", () => (
@@ -447,8 +448,8 @@ storiesOf("Heroes|Hero-2", module)
   })
   .add("Hero-2 Image Right", () => {
     const { image, title, body, ctas } = heroTwoContent;
-    ctas.ctaOne.onClick = action("clicked an option");
-    ctas.ctaTwo.onClick = action("clicked an option");
+    ctas.ctaOne.onClick = action("clicked CTA One");
+    ctas.ctaTwo.onClick = action("clicked CTA Two");
 
     return (
       <Hero2
@@ -463,4 +464,12 @@ storiesOf("Heroes|Hero-2", module)
 
 storiesOf("Molecules|SearchBar", module).add("SearchBar", () => {
   return <SearchBar />;
+});
+
+storiesOf("Featurettes|Feat-6a", module).add("Featurette-6a", () => {
+  const { title, ctas } = featSixAContent;
+  ctas.ctaOne.onClick = action("clicked CTA One");
+  ctas.ctaTwo.onClick = action("clicked CTA Two");
+
+  return <Feat6A title={title} ctas={ctas} />;
 });
