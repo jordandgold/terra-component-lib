@@ -4,9 +4,9 @@ export const heroTwoContent = {
     url: "./sampleImage.png",
     altText: "dock on water"
   },
-  title: "Good design is innovative",
+  title: "Good design is innovative.",
   body:
-    "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive",
+    "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.",
   ctas: {
     ctaOne: {
       className: "ter-button--primary--1",
@@ -21,6 +21,22 @@ export const heroTwoContent = {
     subCTA: {
       text: "Sub-CTA",
       link: "mock link"
+    }
+  }
+};
+
+export const featSixAContent = {
+  title: "Good design is innovative.",
+  ctas: {
+    ctaOne: {
+      className: "ter-button--primary--1",
+      name: "ctaOne",
+      text: "Button"
+    },
+    ctaTwo: {
+      className: "ter-button--secondary--1",
+      name: "ctaOne",
+      text: "Button"
     }
   }
 };
