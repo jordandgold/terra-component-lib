@@ -26,6 +26,7 @@ import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Feat6A from "../lib/organisms/featurettes/Feat6A/Feat6A";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
+import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import {
   CheckboxForm,
   TextInputForm,
@@ -40,7 +41,8 @@ import {
 import {
   heroTwoContent,
   featSixAContent,
-  featNineContent
+  featNineContent,
+  featSevenContent
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -483,4 +485,10 @@ storiesOf("Featurettes|Feat-9", module).add("Featurette-9", () => {
   const { imageSide, image, quote } = featNineContent;
 
   return <Feat9 imageSide={imageSide} image={image} quote={quote} />;
+});
+
+storiesOf("Featurettes|Feat-7", module).add("Featurette-7", () => {
+  const { title, content } = featSevenContent;
+
+  return <Feat7 title={title} content={content} />;
 });
