@@ -1,0 +1,52 @@
+@import "../global-styles/terra.scss";
+
+@mixin table-base {
+  width: 100%;
+  font-size: $table-font-size;
+  tr {
+    th {
+      margin: 0;
+      border: 0;
+    }
+    td {
+      border: 0;
+    }
+  }
+}
+
+.ter-table {
+  @include table-base();
+  border-spacing: 0px;
+  tr {
+    th {
+      padding: spacing("xxs");
+      font-weight: font-weight("bold");
+      background-color: $table-header-bg;
+    }
+    td {
+      vertical-align: top;
+      padding: spacing("xxs");
+      font-weight: font-weight("light");
+    }
+    &:nth-child(even) {
+      td {
+        background-color: $table-row-bg-even;
+      }
+    }
+    &:nth-child(odd) {
+      td {
+        background-color: $table-row-bg-odd;
+      }
+    }
+  }
+  &--loose {
+    tr {
+      th {
+        padding: spacing("md") spacing("xxs");
+      }
+      td {
+        padding: spacing("md") spacing("xxs");
+      }
+    }
+  }
+}

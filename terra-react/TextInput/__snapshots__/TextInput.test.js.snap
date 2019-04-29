@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput should match the snapshot 1`] = `
+<div
+  className="ter-form-item undefined"
+>
+  <label
+    className="ter-form-item__label"
+    htmlFor="mock name"
+  >
+    mock label
+  </label>
+  <input
+    className="ter-input"
+    name="mock name"
+    onChange={[Function]}
+    placeholder="mock placeholder"
+    type="text"
+    value="mock value"
+  />
+</div>
+`;
+
+exports[`TextInput should match the snapshot with a status message 1`] = `
+<div
+  className="ter-form-item has-error"
+>
+  <label
+    className="ter-form-item__label"
+    htmlFor="mock name"
+  >
+    mock label
+  </label>
+  <input
+    className="ter-input"
+    name="mock name"
+    onChange={[Function]}
+    placeholder="mock placeholder"
+    type="text"
+    value="mock value"
+  />
+  <p
+    className="ter-form-item__status-message"
+  >
+    error!
+  </p>
+</div>
+`;

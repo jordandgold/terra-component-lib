@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat6A should match the snapshot 1`] = `
+<section
+  className="ter-feat6a"
+>
+  <h3
+    className="ter-feat6a--title"
+  >
+    Good design is innovative.
+  </h3>
+  <CTASection
+    ctas={
+      Object {
+        "ctaOne": Object {
+          "className": "ter-button--primary--1",
+          "name": "ctaOne",
+          "onClick": [MockFunction],
+          "text": "Button",
+        },
+        "ctaTwo": Object {
+          "className": "ter-button--secondary--1",
+          "name": "ctaOne",
+          "onClick": [MockFunction],
+          "text": "Button",
+        },
+      }
+    }
+  />
+</section>
+`;
