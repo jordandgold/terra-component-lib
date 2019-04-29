@@ -1,9 +1,0 @@
-/**
- * Font Weight
- */
-
-@each $weight, $value in $font-weight-scale {
-    .font-weight-#{$weight} {
-        font-weight: $value;
-    }
-}

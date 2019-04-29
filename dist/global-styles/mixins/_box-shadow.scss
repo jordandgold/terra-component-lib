@@ -1,7 +1,0 @@
-/**
- * Box Shadow
- */
-
-@mixin box-shadow($level) {
-	box-shadow: map-get($box-shadows, $level);
-}
