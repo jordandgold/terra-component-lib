@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should match the snapshot 1`] = `
+<Fragment>
+  <table
+    className="ter-table ter-table--loose"
+  >
+    <thead>
+      <tr>
+        <th
+          key="t-head-cell-0"
+        >
+          Table Head 1
+        </th>
+        <th
+          key="t-head-cell-1"
+        >
+          Table Head 2
+        </th>
+        <th
+          key="t-head-cell-2"
+        >
+          Table Head 3
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        key="row-0"
+      >
+        <td
+          key="cell-0-0"
+        >
+          Row 1 Cell 1
+        </td>
+        <td
+          key="cell-0-1"
+        >
+          Row 1 Cell 2
+        </td>
+        <td
+          key="cell-0-2"
+        >
+          Row 1 Cell 3
+        </td>
+      </tr>
+      <tr
+        key="row-1"
+      >
+        <td
+          key="cell-1-0"
+        >
+          Row 2 Cell 1
+        </td>
+        <td
+          key="cell-1-1"
+        >
+          Row 2 Cell 2
+        </td>
+        <td
+          key="cell-1-2"
+        >
+          Row 2 Cell 3
+        </td>
+      </tr>
+      <tr
+        key="row-2"
+      >
+        <td
+          key="cell-2-0"
+        >
+          Row 3 Cell 1
+        </td>
+        <td
+          key="cell-2-1"
+        >
+          Row 3 Cell 2
+        </td>
+        <td
+          key="cell-2-2"
+        >
+          Row 3 Cell 3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</Fragment>
+`;
+
+exports[`Table should match the snapshot with a false boolean 1`] = `
+<Fragment>
+  <table
+    className="ter-table "
+  >
+    <thead>
+      <tr>
+        <th
+          key="t-head-cell-0"
+        >
+          Table Head 1
+        </th>
+        <th
+          key="t-head-cell-1"
+        >
+          Table Head 2
+        </th>
+        <th
+          key="t-head-cell-2"
+        >
+          Table Head 3
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        key="row-0"
+      >
+        <td
+          key="cell-0-0"
+        >
+          Row 1 Cell 1
+        </td>
+        <td
+          key="cell-0-1"
+        >
+          Row 1 Cell 2
+        </td>
+        <td
+          key="cell-0-2"
+        >
+          Row 1 Cell 3
+        </td>
+      </tr>
+      <tr
+        key="row-1"
+      >
+        <td
+          key="cell-1-0"
+        >
+          Row 2 Cell 1
+        </td>
+        <td
+          key="cell-1-1"
+        >
+          Row 2 Cell 2
+        </td>
+        <td
+          key="cell-1-2"
+        >
+          Row 2 Cell 3
+        </td>
+      </tr>
+      <tr
+        key="row-2"
+      >
+        <td
+          key="cell-2-0"
+        >
+          Row 3 Cell 1
+        </td>
+        <td
+          key="cell-2-1"
+        >
+          Row 3 Cell 2
+        </td>
+        <td
+          key="cell-2-2"
+        >
+          Row 3 Cell 3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</Fragment>
+`;

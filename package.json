@@ -1,6 +1,6 @@
 {
   "name": "terra-component-lib",
-  "version": "0.1.0",
+  "version": "0.2.3",
   "dependencies": {
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2"

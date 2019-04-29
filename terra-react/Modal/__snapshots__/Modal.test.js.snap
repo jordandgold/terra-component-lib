@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match the snap shot 1`] = `
+<aside
+  className="ter-modal test"
+>
+  <button
+    aria-label="Close Modal"
+    className="ter-modal__close"
+    onClick={[Function]}
+  >
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
+  </button>
+  <div
+    className="ter-modal__body"
+  >
+    <h4
+      className="ter-modal__title"
+    >
+      test title
+    </h4>
+    <p>
+      test body
+    </p>
+    <Button
+      className="mock class"
+      onClick={[MockFunction]}
+      text="button one mock text"
+    />
+    <Button
+      className="mock class"
+      onClick={[MockFunction]}
+      text="button one mock text"
+    />
+  </div>
+</aside>
+`;
+
+exports[`Modal should match the snap shot with no buttons 1`] = `
+<aside
+  className="ter-modal test"
+>
+  <button
+    aria-label="Close Modal"
+    className="ter-modal__close"
+    onClick={[Function]}
+  >
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
+  </button>
+  <div
+    className="ter-modal__body"
+  >
+    <h4
+      className="ter-modal__title"
+    >
+      test title
+    </h4>
+    <p>
+      test body
+    </p>
+  </div>
+</aside>
+`;
+
+exports[`Modal should match the snap shot with one button 1`] = `
+<aside
+  className="ter-modal test"
+>
+  <button
+    aria-label="Close Modal"
+    className="ter-modal__close"
+    onClick={[Function]}
+  >
+    <Icon
+      size="16px"
+      type="enclosed-x-dark-16px"
+    />
+  </button>
+  <div
+    className="ter-modal__body"
+  >
+    <h4
+      className="ter-modal__title"
+    >
+      test title
+    </h4>
+    <p>
+      test body
+    </p>
+    <Button
+      className="mock class"
+      onClick={[MockFunction]}
+      text="button one mock text"
+    />
+  </div>
+</aside>
+`;

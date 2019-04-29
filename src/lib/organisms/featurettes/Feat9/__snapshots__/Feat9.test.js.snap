@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat9 should match the snapshot 1`] = `
+<section
+  className="ter-feat9"
+>
+  <img
+    alt="dock on water"
+    className="ter-feat9--image"
+    src="./1-to-1.png"
+  />
+  <div
+    className="ter-feat9--full-quote-wrapper"
+  >
+    <img
+      alt="downward quote"
+      className="ter-feat9--quote-icon"
+      src="./quote.png"
+    />
+    <div
+      className="ter-feat9--content"
+    >
+      <p
+        className="ter-feat9--quote-text"
+      >
+        Using SketchUp Studio's Sefiara Software, we were able to study multiple options within a short period of time, which allowed the team to arrive at a design direction that we all felt comfortable with much faster with meaningful data as opposed to 'rules of thumb' and broad assumptions.
+      </p>
+      <p
+        className="ter-feat9--quote-source"
+      >
+        - 
+        Leonard Sciarra
+      </p>
+      <p
+        className="ter-feat9--quote-source-title"
+      >
+        Senior Associate at Gensler, AIA, ASHRAE, LEED AP+
+      </p>
+    </div>
+  </div>
+</section>
+`;

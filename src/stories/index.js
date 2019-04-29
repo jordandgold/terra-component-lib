@@ -25,6 +25,7 @@ import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Feat6A from "../lib/organisms/featurettes/Feat6A/Feat6A";
+import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import {
   CheckboxForm,
   TextInputForm,
@@ -36,7 +37,11 @@ import {
   PaginationContainer,
   DropdownForm
 } from "../../storybookIntegrationComponents/";
-import { heroTwoContent, featSixAContent } from "./mockContent";
+import {
+  heroTwoContent,
+  featSixAContent,
+  featNineContent
+} from "./mockContent";
 
 storiesOf("Atoms|Button", module)
   .add("Primary Buttons", () => (
@@ -472,4 +477,10 @@ storiesOf("Featurettes|Feat-6a", module).add("Featurette-6a", () => {
   ctas.ctaTwo.onClick = action("clicked CTA Two");
 
   return <Feat6A title={title} ctas={ctas} />;
+});
+
+storiesOf("Featurettes|Feat-9", module).add("Featurette-9", () => {
+  const { imageSide, image, quote } = featNineContent;
+
+  return <Feat9 imageSide={imageSide} image={image} quote={quote} />;
 });

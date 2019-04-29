@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should match the snapshot 1`] = `
+<div
+  className="ter-checkbox "
+>
+  <label
+    className="ter-checkbox__label"
+    htmlFor="test name"
+  >
+    test label
+  </label>
+  <input
+    checked={false}
+    id="test name"
+    name="test name"
+    onChange={[Function]}
+    type="checkbox"
+  />
+</div>
+`;
