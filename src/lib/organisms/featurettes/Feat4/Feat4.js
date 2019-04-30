@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Feat4.scss";
-import ButtonLink from "../../../ButtonLink/ButtonLink";
+import ButtonLinkCard from "../../../ButtonLinkCard/ButtonLinkCard";
+import IconListItem from "../../../IconListItem/IconListItem";
 
 class Feat4 extends Component {
   generateCards = () => {
@@ -14,9 +15,21 @@ class Feat4 extends Component {
     }
   };
 
-  generateACards = () => {};
+  generateACards = () => {
+    return this.props.content.map((card, index) => {
+      return (
+        <IconListItem content={card} key={`icon-list-item-card-${index}`} />
+      );
+    });
+  };
 
-  generateCCards = () => {};
+  generateCCards = () => {
+    return this.props.content.map((card, index) => {
+      return (
+        <ButtonLinkCard content={card} key={`button-link-card-${index}`} />
+      );
+    });
+  };
 
   generateDCards = () => {};
 
@@ -47,33 +60,12 @@ Feat4.propTypes = {
     url: PropTypes.string.isRequired,
     altText: PropTypes.string.isRequired
   }),
-  content: PropTypes.shape({
+  content: PropTypes.arrayOf({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    link: PropTypes.string
+    link: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
   }).isRequired
-};
-
-const ACard = ({ title, body, link }) => {
-  return (
-    <article>
-      <div />
-    </article>
-  );
-};
-
-const CCard = ({ title, body, link }) => {
-  return (
-    <article>
-      <div />
-    </article>
-  );
-};
-
-const DCard = ({ title, body, link }) => {
-  return (
-    <article>
-      <div />
-    </article>
-  );
 };
