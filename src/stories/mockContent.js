@@ -65,19 +65,19 @@ export const featSevenContent = {
       link: "#"
     },
     {
-      title: "Design!",
+      title: "Aesthetics!",
       body:
         "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
       link: "#"
     },
     {
-      title: "Design!",
+      title: "Useability!",
       body:
         "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua. Qui proident ipsum excepteur aute eiusmod excepteur commodo pariatur mollit officia. Dolore occaecat tempor do in officia elit deserunt cillum sunt labore ad tempor.",
       link: "#"
     },
     {
-      title: "Design!",
+      title: "Coffee!",
       body:
         "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
       link: "#"
