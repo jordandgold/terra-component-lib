@@ -4,6 +4,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
+import ButtonLink from "../lib/ButtonLink/ButtonLink";
+
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
@@ -99,6 +101,66 @@ storiesOf("Atoms|Button", module)
       />
       <Button
         onClick={action("Secondary 5 Clicked")}
+        text="Secondary 5"
+        className="ter-button--secondary--5"
+      />
+    </div>
+  ));
+
+storiesOf("Atoms|ButtonLink", module)
+  .add("Primary Buttons", () => (
+    <div>
+      <ButtonLink
+        link="#"
+        text="Primary 1"
+        className="ter-button--primary--1"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 2"
+        className="ter-button--primary--2"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 3"
+        className="ter-button--primary--3"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 4"
+        className="ter-button--primary--4"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 5"
+        className="ter-button--primary--5"
+      />
+    </div>
+  ))
+  .add("Secondary ButtonLink", () => (
+    <div>
+      <ButtonLink
+        link="#"
+        text="Secondary 1"
+        className="ter-button--secondary--1"
+      />
+      <ButtonLink
+        link="#"
+        text="Secondary 2"
+        className="ter-button--secondary--2"
+      />
+      <ButtonLink
+        link="#"
+        text="Secondary 3"
+        className="ter-button--secondary--3"
+      />
+      <ButtonLink
+        link="#"
+        text="Secondary 4"
+        className="ter-button--secondary--4"
+      />
+      <ButtonLink
+        link="#"
         text="Secondary 5"
         className="ter-button--secondary--5"
       />
