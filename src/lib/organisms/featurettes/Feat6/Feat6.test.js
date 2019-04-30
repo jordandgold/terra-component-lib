@@ -1,9 +1,9 @@
 import React from "react";
-import Feat6A from "./Feat6A";
+import Feat6 from "./Feat6";
 import { shallow, mount } from "enzyme";
 import { featSixAContent } from "../../../../stories/mockContent";
 
-describe("Feat6A", () => {
+describe("Feat6", () => {
   let wrapper;
 
   beforeEach(() => {
@@ -12,7 +12,7 @@ describe("Feat6A", () => {
     ctas.ctaOne.onClick = jest.fn();
     ctas.ctaTwo.onClick = jest.fn();
 
-    wrapper = shallow(<Feat6A title={title} ctas={ctas} />);
+    wrapper = shallow(<Feat6 title={title} ctas={ctas} />);
   });
 
   it("should match the snapshot", () => {

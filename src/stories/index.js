@@ -24,7 +24,7 @@ import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
-import Feat6A from "../lib/organisms/featurettes/Feat6A/Feat6A";
+import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import {
@@ -473,12 +473,12 @@ storiesOf("Molecules|SearchBar", module).add("SearchBar", () => {
   return <SearchBar />;
 });
 
-storiesOf("Featurettes|Feat-6a", module).add("Featurette-6a", () => {
+storiesOf("Featurettes|Feat-6", module).add("Featurette-6", () => {
   const { title, ctas } = featSixAContent;
   ctas.ctaOne.onClick = action("clicked CTA One");
   ctas.ctaTwo.onClick = action("clicked CTA Two");
 
-  return <Feat6A title={title} ctas={ctas} />;
+  return <Feat6 title={title} ctas={ctas} />;
 });
 
 storiesOf("Featurettes|Feat-9", module).add("Featurette-9", () => {

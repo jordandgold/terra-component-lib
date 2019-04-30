@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Feat6A should match the snapshot 1`] = `
+exports[`Feat6 should match the snapshot 1`] = `
 <section
   className="ter-feat6a"
 >
