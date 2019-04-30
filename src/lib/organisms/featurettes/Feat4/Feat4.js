@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Feat4.scss";
+import ButtonLink from "../../../ButtonLink/ButtonLink";
 
 class Feat4 extends Component {
-  generateCards = () => {};
+  generateCards = () => {
+    if (this.props.variant === "c") {
+      return this.generateCCards();
+    } else if (this.props.variant === "d") {
+      return this.generateDCards();
+    } else {
+      return this.generateACards();
+    }
+  };
 
   generateACards = () => {};
 
@@ -41,6 +50,30 @@ Feat4.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired
-  })
+    link: PropTypes.string
+  }).isRequired
+};
+
+const ACard = ({ title, body, link }) => {
+  return (
+    <article>
+      <div />
+    </article>
+  );
+};
+
+const CCard = ({ title, body, link }) => {
+  return (
+    <article>
+      <div />
+    </article>
+  );
+};
+
+const DCard = ({ title, body, link }) => {
+  return (
+    <article>
+      <div />
+    </article>
+  );
 };
