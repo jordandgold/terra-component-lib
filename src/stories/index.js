@@ -4,6 +4,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
+import ButtonLink from "../lib/ButtonLink/ButtonLink";
+
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
@@ -24,9 +26,12 @@ import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
-import Feat6A from "../lib/organisms/featurettes/Feat6A/Feat6A";
+import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
+import IconListItem from "../lib/IconListItem/IconListItem";
+import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
+import LinkTile from "../lib/LinkTile/LinkTile";
 import {
   CheckboxForm,
   TextInputForm,
@@ -99,6 +104,66 @@ storiesOf("Atoms|Button", module)
       />
       <Button
         onClick={action("Secondary 5 Clicked")}
+        text="Secondary 5"
+        className="ter-button--secondary--5"
+      />
+    </div>
+  ));
+
+storiesOf("Atoms|ButtonLink", module)
+  .add("Primary Buttons", () => (
+    <div>
+      <ButtonLink
+        link="#"
+        text="Primary 1"
+        className="ter-button--primary--1"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 2"
+        className="ter-button--primary--2"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 3"
+        className="ter-button--primary--3"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 4"
+        className="ter-button--primary--4"
+      />
+      <ButtonLink
+        link="#"
+        text="Primary 5"
+        className="ter-button--primary--5"
+      />
+    </div>
+  ))
+  .add("Secondary ButtonLink", () => (
+    <div>
+      <ButtonLink
+        link="#"
+        text="Secondary 1"
+        className="ter-button--secondary--1"
+      />
+      <ButtonLink
+        link="#"
+        text="Secondary 2"
+        className="ter-button--secondary--2"
+      />
+      <ButtonLink
+        link="#"
+        text="Secondary 3"
+        className="ter-button--secondary--3"
+      />
+      <ButtonLink
+        link="#"
+        text="Secondary 4"
+        className="ter-button--secondary--4"
+      />
+      <ButtonLink
+        link="#"
         text="Secondary 5"
         className="ter-button--secondary--5"
       />
@@ -473,12 +538,12 @@ storiesOf("Molecules|SearchBar", module).add("SearchBar", () => {
   return <SearchBar />;
 });
 
-storiesOf("Featurettes|Feat-6a", module).add("Featurette-6a", () => {
+storiesOf("Featurettes|Feat-6", module).add("Featurette-6", () => {
   const { title, ctas } = featSixAContent;
   ctas.ctaOne.onClick = action("clicked CTA One");
   ctas.ctaTwo.onClick = action("clicked CTA Two");
 
-  return <Feat6A title={title} ctas={ctas} />;
+  return <Feat6 title={title} ctas={ctas} />;
 });
 
 storiesOf("Featurettes|Feat-9", module).add("Featurette-9", () => {
@@ -491,4 +556,41 @@ storiesOf("Featurettes|Feat-7", module).add("Featurette-7", () => {
   const { title, content } = featSevenContent;
 
   return <Feat7 title={title} content={content} />;
+});
+
+storiesOf("Molecules|IconListItem", module).add("IconListItem", () => {
+  const mockContent = {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!"
+  };
+  return <IconListItem content={mockContent} />;
+});
+
+storiesOf("Molecules|ButtonLinkCard", module).add("ButtonLinkCard", () => {
+  const mockContent = {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  };
+
+  return <ButtonLinkCard content={mockContent} />;
+});
+
+storiesOf("Molecules|LinkTile", module).add("LinkTile", () => {
+  const mockContent = {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  };
+
+  return <LinkTile content={mockContent} />;
 });

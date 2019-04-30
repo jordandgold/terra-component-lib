@@ -1,0 +1,10 @@
+@import "../global-styles/terra.scss";
+
+.ter-button-link-card {
+  max-width: 500px;
+  padding: 24px;
+
+  &--title {
+    font-size: font-size("md");
+  }
+}

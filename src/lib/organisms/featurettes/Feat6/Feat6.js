@@ -1,9 +1,9 @@
 import React from "react";
-import "./Feat6A.scss";
+import "./Feat6.scss";
 import PropTypes from "prop-types";
 import CTASection from "../../../CTASection/CTASection";
 
-const Feat6A = props => {
+const Feat6 = props => {
   const { title, ctas } = props;
   return (
     <section className="ter-feat6a">
@@ -13,9 +13,9 @@ const Feat6A = props => {
   );
 };
 
-export default Feat6A;
+export default Feat6;
 
-Feat6A.propTypes = {
+Feat6.propTypes = {
   title: PropTypes.string.isRequired,
   ctas: PropTypes.shape({
     ctaOne: PropTypes.shape({

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonLinkCard should match the snapshot 1`] = `
+<article
+  className="ter-button-link-card"
+>
+  <h4
+    className="ter-button-link-card--title"
+  >
+    Design is good. Period.
+  </h4>
+  <p
+    className="ter-button-link-card--body"
+  >
+    Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
+  </p>
+  <ButtonLink
+    className="ter-button--primary--1"
+    link="#"
+    text="Button"
+  />
+</article>
+`;
