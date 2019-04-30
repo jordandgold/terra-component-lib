@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat7 Feat7Card should match the snapshot 1`] = `
+<Fragment>
+  <a
+    className="ter-feat-nine--card"
+    href="#"
+  >
+    <div
+      className="ter-feat-nine--card-content-wrapper"
+    >
+      <h4
+        className="ter-feat-nine--card-title"
+      >
+        Design!
+      </h4>
+      <p
+        className="ter-feat-nine--card-body"
+      >
+        Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.
+      </p>
+    </div>
+    <Icon
+      size="32px"
+      type="enclosed-arrow-right-dark-32px"
+    />
+  </a>
+</Fragment>
+`;
+
+exports[`Feat7 should match the snapshot 1`] = `
+<section
+  className="ter-feat-nine"
+>
+  <h2
+    className="ter-feat-nine--title"
+  >
+    Design is cool, I guess
+  </h2>
+  <div
+    className="ter-feat-nine--card-container"
+  >
+    <Feat7Card
+      card={
+        Object {
+          "body": "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
+          "link": "#",
+          "title": "Design!",
+        }
+      }
+      key="feat-9-card-0"
+    />
+    <Feat7Card
+      card={
+        Object {
+          "body": "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
+          "link": "#",
+          "title": "Design!",
+        }
+      }
+      key="feat-9-card-1"
+    />
+    <Feat7Card
+      card={
+        Object {
+          "body": "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
+          "link": "#",
+          "title": "Design!",
+        }
+      }
+      key="feat-9-card-2"
+    />
+    <Feat7Card
+      card={
+        Object {
+          "body": "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
+          "link": "#",
+          "title": "Design!",
+        }
+      }
+      key="feat-9-card-3"
+    />
+  </div>
+</section>
+`;

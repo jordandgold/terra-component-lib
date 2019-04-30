@@ -15,7 +15,7 @@ exports[`Feat9 should match the snapshot 1`] = `
     <img
       alt="downward quote"
       className="ter-feat9--quote-icon"
-      src="./quote.png"
+      src="./ico-quote.svg"
     />
     <div
       className="ter-feat9--content"
