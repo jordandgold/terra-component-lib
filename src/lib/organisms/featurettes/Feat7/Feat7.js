@@ -35,7 +35,7 @@ Feat7.propTypes = {
   )
 };
 
-const Feat7Card = props => {
+export const Feat7Card = props => {
   const { title, body, link } = props.card;
   return (
     <React.Fragment>
@@ -44,7 +44,9 @@ const Feat7Card = props => {
           <h4 className="ter-feat-nine--card-title">{title}</h4>
           <p className="ter-feat-nine--card-body">{body}</p>
         </div>
-        <Icon type="enclosed-arrow-right-dark-32px" size="32px" />
+        <div className="ter-feat-nine--icon-wrapper">
+          <Icon type="enclosed-arrow-right-dark-32px" size="32px" />
+        </div>
       </a>
     </React.Fragment>
   );
