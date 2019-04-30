@@ -1,0 +1,15 @@
+@import "../global-styles/terra.scss";
+
+.ter-link-tile {
+  max-width: 500px;
+  padding: 16px;
+
+  &--link-wrapper {
+    margin-bottom: 16px;
+  }
+
+  &--title {
+    font-size: font-size("md");
+    margin-right: 8px;
+  }
+}

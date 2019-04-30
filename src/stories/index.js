@@ -31,6 +31,7 @@ import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
+import LinkTile from "../lib/LinkTile/LinkTile";
 import {
   CheckboxForm,
   TextInputForm,
@@ -578,4 +579,18 @@ storiesOf("Molecules|ButtonLinkCard", module).add("ButtonLinkCard", () => {
   };
 
   return <ButtonLinkCard content={mockContent} />;
+});
+
+storiesOf("Molecules|LinkTile", module).add("LinkTile", () => {
+  const mockContent = {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  };
+
+  return <LinkTile content={mockContent} />;
 });
