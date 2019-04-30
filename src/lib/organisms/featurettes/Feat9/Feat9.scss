@@ -47,14 +47,15 @@
   .ter-feat9 {
     margin: 0 auto;
     padding: 0;
-    max-width: 1400px;
+    max-width: 400px;
     display: block;
     grid-template-columns: 1fr;
 
     &--image {
-      margin: auto;
+      // margin: auto;
       width: 200px;
       height: 200px;
+      margin-left: 48px;
     }
 
     &--full-quote-wrapper {
@@ -68,6 +69,10 @@
   .ter-feat9 {
     &--full-quote-wrapper {
       max-width: 300px;
+    }
+
+    &--image {
+      margin: auto;
     }
   }
 }

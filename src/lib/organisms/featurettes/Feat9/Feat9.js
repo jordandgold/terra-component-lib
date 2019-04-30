@@ -10,7 +10,7 @@ const Feat9 = props => {
       <div className="ter-feat9--full-quote-wrapper">
         <img
           className="ter-feat9--quote-icon"
-          src="./quote.png"
+          src="./ico-quote.svg"
           alt="downward quote"
         />
         <div className="ter-feat9--content">

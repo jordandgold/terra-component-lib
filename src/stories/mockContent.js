@@ -54,3 +54,33 @@ export const featNineContent = {
     sourceTitle: "Senior Associate at Gensler, AIA, ASHRAE, LEED AP+"
   }
 };
+
+export const featSevenContent = {
+  title: "Design is cool, I guess",
+  content: [
+    {
+      title: "Design!",
+      body:
+        "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua. Irure laboris aute ullamco ad Lorem et culpa id commodo quis sunt labore in id.",
+      link: "#"
+    },
+    {
+      title: "Aesthetics!",
+      body:
+        "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
+      link: "#"
+    },
+    {
+      title: "Useability!",
+      body:
+        "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua. Qui proident ipsum excepteur aute eiusmod excepteur commodo pariatur mollit officia. Dolore occaecat tempor do in officia elit deserunt cillum sunt labore ad tempor.",
+      link: "#"
+    },
+    {
+      title: "Coffee!",
+      body:
+        "Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua.",
+      link: "#"
+    }
+  ]
+};
