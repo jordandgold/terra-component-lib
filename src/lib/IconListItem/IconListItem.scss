@@ -1,0 +1,15 @@
+@import "../global-styles/terra.scss";
+
+.ter-icon-list-item {
+  display: flex;
+  max-width: 500px;
+  padding: 16px;
+
+  &--icon-wrapper {
+    margin-right: 16px;
+  }
+
+  &--title {
+    font-size: font-size("md");
+  }
+}

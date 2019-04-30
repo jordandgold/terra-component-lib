@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconListItem should match the snapshot 1`] = `
+<article
+  className="ter-icon-list-item"
+>
+  <div
+    className="ter-icon-list-item--icon-wrapper"
+  >
+    <Icon
+      size="32px"
+      type="enclosed-arrow-right-dark-32px"
+    />
+  </div>
+  <div
+    className="ter-icon-list-item--content-wrapper"
+  >
+    <h4
+      className="ter-icon-list-item--title"
+    >
+      Design is good. Period.
+    </h4>
+    <p
+      className="ter-icon-list-item--body"
+    >
+      Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
+    </p>
+  </div>
+</article>
+`;
