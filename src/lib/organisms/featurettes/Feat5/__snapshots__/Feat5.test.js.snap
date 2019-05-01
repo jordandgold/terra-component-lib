@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat5 should match the snapshot with icons 1`] = `
+<section
+  className="ter-feat-five"
+>
+  <h2
+    className="ter-feat-five__title"
+  >
+    Design is design
+  </h2>
+  <h4
+    className="ter-feat-five__subtitle"
+  >
+    It's like, this thing, you know?
+  </h4>
+  <div
+    className="ter-feat-five__dumpling-container"
+  >
+    <div
+      key="dumpling-0"
+    >
+      <Dumpling
+        icon={
+          Object {
+            "size": "48px",
+            "type": "enclosed-check-dark-48px",
+          }
+        }
+        link={
+          Object {
+            "url": "#",
+          }
+        }
+        size="small"
+        title="Dumplin'"
+      />
+    </div>
+    <div
+      key="dumpling-1"
+    >
+      <Dumpling
+        icon={
+          Object {
+            "size": "48px",
+            "type": "enclosed-check-dark-48px",
+          }
+        }
+        link={
+          Object {
+            "url": "#",
+          }
+        }
+        size="small"
+        title="Dumplin'"
+      />
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Feat5 should match the snapshot with images 1`] = `
+<section
+  className="ter-feat-five"
+>
+  <h2
+    className="ter-feat-five__title"
+  >
+    Design is design
+  </h2>
+  <h4
+    className="ter-feat-five__subtitle"
+  >
+    It's like, this thing, you know?
+  </h4>
+  <div
+    className="ter-feat-five__dumpling-container"
+  >
+    <div
+      key="dumpling-0"
+    >
+      <Dumpling
+        image={
+          Object {
+            "altText": "test text",
+            "url": "./1-to-1.png",
+          }
+        }
+        link={
+          Object {
+            "url": "#",
+          }
+        }
+        size="small"
+        title="Dumplin'"
+      />
+    </div>
+    <div
+      key="dumpling-1"
+    >
+      <Dumpling
+        image={
+          Object {
+            "altText": "test text",
+            "url": "./1-to-1.png",
+          }
+        }
+        link={
+          Object {
+            "url": "#",
+          }
+        }
+        size="small"
+        title="Dumplin'"
+      />
+    </div>
+  </div>
+</section>
+`;

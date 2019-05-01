@@ -30,9 +30,12 @@ import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import Feat4 from "../lib/organisms/featurettes/Feat4/Feat4";
+import Feat5 from "../lib/organisms/featurettes/Feat5/Feat5";
+
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
+import Dumpling from "../lib/Dumpling/Dumpling";
 import {
   CheckboxForm,
   TextInputForm,
@@ -48,7 +51,9 @@ import {
   heroTwoContent,
   featSixAContent,
   featNineContent,
-  featSevenContent
+  featSevenContent,
+  mockDumplings,
+  mockImageDumplings
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -779,4 +784,48 @@ storiesOf("Featurettes|Feat-4", module)
     ];
 
     return <Feat4 content={mockContentD} variant="d" columns={2} />;
+  });
+
+storiesOf("Molecules|Dumpling", module)
+  .add("Dumpling - Small, Icon", () => {
+    return (
+      <Dumpling
+        icon={{ type: "enclosed-check-dark-48px", size: "48px" }}
+        size="small"
+        title="Dumplin'"
+        link={{ url: "#" }}
+      />
+    );
+  })
+  .add("Dumpling - Small, Image", () => {
+    return (
+      <Dumpling
+        image={{ url: "1-to-1.png", altText: "1-to-1 image" }}
+        size="small"
+        title="Dumplin'"
+        link={{ url: "#" }}
+      />
+    );
+  });
+
+storiesOf("Featurettes|Feat-5", module)
+  .add("Featurette-5 w/ Icon", () => {
+    return (
+      <Feat5
+        dumplings={mockDumplings}
+        dumplingSize="small"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  })
+  .add("Featurette-5 w/ Image", () => {
+    return (
+      <Feat5
+        dumplings={mockImageDumplings}
+        dumplingSize="small"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
   });

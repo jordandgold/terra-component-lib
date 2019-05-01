@@ -1,0 +1,42 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-feat-five {
+  padding-top: 32px;
+
+  &__title {
+    font-size: font-size("xl");
+  }
+
+  &__subtitle {
+    font-weight: font-weight("light");
+    color: color("gray-7");
+  }
+
+  &__subtitle,
+  &__title {
+    text-align: center;
+  }
+
+  &__dumpling-container {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ter-feat-five {
+    &__title {
+      font-size: font-size("lg");
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .ter-feat-five {
+    &__dumpling-container {
+      justify-content: space-around;
+    }
+  }
+}
