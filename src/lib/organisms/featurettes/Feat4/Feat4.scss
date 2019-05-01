@@ -35,3 +35,38 @@
     padding: 32px;
   }
 }
+
+@media (max-width: 1200px) {
+  .ter-feat-four {
+    &__card-container {
+      &.three-columns {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .ter-feat-four {
+    &__card-container {
+      &.three-columns {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .ter-icon-list-item {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .ter-feat-four {
+    &__card-container {
+      &.three-columns,
+      &.two-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
