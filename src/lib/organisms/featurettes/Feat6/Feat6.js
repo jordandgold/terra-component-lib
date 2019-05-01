@@ -7,7 +7,7 @@ const Feat6 = props => {
   const { title, ctas } = props;
   return (
     <section className="ter-feat6a">
-      <h3 className="ter-feat6a--title">{title}</h3>
+      <h3 className="ter-feat6a__title">{title}</h3>
       <CTASection ctas={ctas} />
     </section>
   );
