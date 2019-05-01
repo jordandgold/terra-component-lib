@@ -5,10 +5,10 @@ exports[`LinkTile should match the snapshot 1`] = `
   className="ter-link-tile"
 >
   <div
-    className="ter-link-tile--link-wrapper"
+    className="ter-link-tile__link-wrapper"
   >
     <a
-      className="ter-link-tile--title"
+      className="ter-link-tile__title"
       href="#"
     >
       Design is good. Period.
@@ -19,7 +19,7 @@ exports[`LinkTile should match the snapshot 1`] = `
     />
   </div>
   <p
-    className="ter-link-tile--body"
+    className="ter-link-tile__body"
   >
     Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
   </p>

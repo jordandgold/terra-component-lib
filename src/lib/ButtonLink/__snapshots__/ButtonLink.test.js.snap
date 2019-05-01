@@ -3,7 +3,7 @@
 exports[`ButtonLink should match the snapshot 1`] = `
 <Fragment>
   <a
-    className="ter-ButtonLink test class"
+    className="ter-button test class"
     href="#"
   >
     test text

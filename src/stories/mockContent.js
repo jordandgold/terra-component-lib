@@ -84,3 +84,42 @@ export const featSevenContent = {
     }
   ]
 };
+
+export const featFourContent = [
+  {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  },
+  {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  },
+  {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  },
+  {
+    title: "Design is good. Period.",
+    body:
+      "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+    link: {
+      url: "#",
+      text: "Button"
+    }
+  }
+];
