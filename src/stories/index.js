@@ -29,6 +29,7 @@ import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
+import Feat4 from "../lib/organisms/featurettes/Feat4/Feat4";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
@@ -594,3 +595,188 @@ storiesOf("Molecules|LinkTile", module).add("LinkTile", () => {
 
   return <LinkTile content={mockContent} />;
 });
+
+storiesOf("Featurettes|Feat-4", module)
+  .add("Featurette-4A", () => {
+    const mockContent = [
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      }
+    ];
+
+    return (
+      <Feat4
+        title="Good design is good."
+        content={mockContent}
+        variant="a"
+        columns={3}
+      />
+    );
+  })
+  .add("Featurette-4B", () => {
+    const mockContent = [
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      }
+    ];
+
+    return (
+      <Feat4
+        title="Good design is good."
+        content={mockContent}
+        variant="a"
+        columns={2}
+        image={{ url: "./3x2-ph.png", altText: "placeholder image" }}
+      />
+    );
+  })
+  .add("Featurette-4C", () => {
+    const mockContent = [
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      }
+    ];
+
+    return <Feat4 content={mockContent} variant="c" columns={2} />;
+  })
+  .add("Featurette-4D", () => {
+    const mockContentD = [
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      },
+      {
+        title: "Design is good. Period.",
+        body:
+          "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+        link: {
+          url: "#",
+          text: "Button"
+        }
+      }
+    ];
+
+    return <Feat4 content={mockContentD} variant="d" columns={2} />;
+  });
