@@ -6,17 +6,17 @@ const Feat9 = props => {
   const { image, quote } = props;
   return (
     <section className="ter-feat9">
-      <img className="ter-feat9--image" src={image.url} alt={image.altText} />
-      <div className="ter-feat9--full-quote-wrapper">
+      <img className="ter-feat9__image" src={image.url} alt={image.altText} />
+      <div className="ter-feat9__full-quote-wrapper">
         <img
-          className="ter-feat9--quote-icon"
+          className="ter-feat9__quote-icon"
           src="./ico-quote.svg"
           alt="downward quote"
         />
-        <div className="ter-feat9--content">
-          <p className="ter-feat9--quote-text">{quote.text}</p>
-          <p className="ter-feat9--quote-source">- {quote.source}</p>
-          <p className="ter-feat9--quote-source-title">{quote.sourceTitle}</p>
+        <div className="ter-feat9__content">
+          <p className="ter-feat9__quote-text">{quote.text}</p>
+          <p className="ter-feat9__quote-source">- {quote.source}</p>
+          <p className="ter-feat9__quote-source-title">{quote.sourceTitle}</p>
         </div>
       </div>
     </section>
