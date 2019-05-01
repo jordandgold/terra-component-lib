@@ -14,7 +14,7 @@ const Dumpling = ({ title, link, size, icon, image }) => {
       {image && (
         <img
           src={image.url}
-          altText={image.altText}
+          alt={image.altText}
           className="ter-dumpling__image"
         />
       )}

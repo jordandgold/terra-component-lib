@@ -55,8 +55,8 @@ describe("Feat5", () => {
 
     it("should return some jsx if images", () => {
       const expected = [
-        '<div><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" altText="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>',
-        '<div><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" altText="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
+        '<div><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>',
+        '<div><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
       ];
 
       wrapper = shallow(
