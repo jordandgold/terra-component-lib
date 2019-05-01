@@ -1,10 +1,9 @@
 @import "../global-styles/terra.scss";
 
 .ter-button-link-card {
-  max-width: 500px;
   padding: 24px;
 
-  &--title {
+  &__title {
     font-size: font-size("md");
   }
 }

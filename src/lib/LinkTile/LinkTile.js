@@ -8,13 +8,13 @@ const LinkTile = ({ content }) => {
 
   return (
     <article className="ter-link-tile">
-      <div className="ter-link-tile--link-wrapper">
-        <a className="ter-link-tile--title" href={link.url}>
+      <div className="ter-link-tile__link-wrapper">
+        <a className="ter-link-tile__title" href={link.url}>
           {title}
         </a>
         <Icon type="enclosed-caret-right-dark-24px" size="24px" />
       </div>
-      <p className="ter-link-tile--body">{body}</p>
+      <p className="ter-link-tile__body">{body}</p>
     </article>
   );
 };
@@ -26,8 +26,7 @@ LinkTile.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     link: PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      text: PropTypes.string
+      url: PropTypes.string.isRequired
     }).isRequired
   })
 };

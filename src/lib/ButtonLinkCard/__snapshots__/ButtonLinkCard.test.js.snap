@@ -5,12 +5,12 @@ exports[`ButtonLinkCard should match the snapshot 1`] = `
   className="ter-button-link-card"
 >
   <h4
-    className="ter-button-link-card--title"
+    className="ter-button-link-card__title"
   >
     Design is good. Period.
   </h4>
   <p
-    className="ter-button-link-card--body"
+    className="ter-button-link-card__body"
   >
     Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
   </p>

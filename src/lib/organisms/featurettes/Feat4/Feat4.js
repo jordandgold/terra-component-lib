@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Feat4.scss";
-import ButtonLinkCard from "../../../ButtonLinkCard/ButtonLinkCard";
 import IconListItem from "../../../IconListItem/IconListItem";
-
+import ButtonLinkCard from "../../../ButtonLinkCard/ButtonLinkCard";
+import LinkTile from "../../../LinkTile/LinkTile";
 class Feat4 extends Component {
   generateCards = () => {
     if (this.props.variant === "c") {
@@ -31,21 +31,38 @@ class Feat4 extends Component {
     });
   };
 
-  generateDCards = () => {};
+  generateDCards = () => {
+    return this.props.content.map((card, index) => {
+      return <LinkTile content={card} key={`link-tile-${index}`} />;
+    });
+  };
 
   render() {
-    const { image } = this.props;
+    const { image, columns, title } = this.props;
     return (
       <section className="ter-feat-four">
         {image && (
           <img
             src={image.url}
             alt={image.altText}
-            className="ter-feat-four--image"
+            className="ter-feat-four__image"
           />
         )}
-        <div className="ter-feat-four--card-container">
-          {this.generateCards}
+        {title && (
+          <h3
+            className={`ter-feat-four__title ${
+              !image ? "ter-feat-four__title--no-image" : ""
+            }`}
+          >
+            {title}
+          </h3>
+        )}
+        <div
+          className={`ter-feat-four__card-container ${
+            columns === 3 ? "three-columns" : "two-columns"
+          }`}
+        >
+          {this.generateCards()}
         </div>
       </section>
     );
@@ -55,17 +72,21 @@ class Feat4 extends Component {
 export default Feat4;
 
 Feat4.propTypes = {
+  title: PropTypes.string,
   variant: PropTypes.string.isRequired,
   image: PropTypes.shape({
     url: PropTypes.string.isRequired,
     altText: PropTypes.string.isRequired
   }),
-  content: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    link: PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+  content: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      link: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired
+      })
     })
-  }).isRequired
+  ),
+  columns: PropTypes.number
 };

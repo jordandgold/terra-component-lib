@@ -5,27 +5,27 @@ exports[`Hero2 should match the snapshot 1`] = `
   className="ter-hero2 container-fluid row"
 >
   <div
-    className="ter-hero2--image-wrapper col-xs-12 col-sm-6 col-lg-7"
+    className="ter-hero2__image-wrapper col-xs-12 col-sm-6 col-lg-7"
   >
     <img
       alt="dock on water"
-      className="ter-hero2--image"
+      className="ter-hero2__image"
       src="./sampleImage.png"
     />
   </div>
   <div
-    className="ter-hero2--content col-xs-12 col-sm-6 col-lg-5 middle-lg"
+    className="ter-hero2__content col-xs-12 col-sm-6 col-lg-5 middle-lg"
   >
     <div
-      className="ter-hero2--content-wrapper"
+      className="ter-hero2__content-wrapper"
     >
       <h3
-        className="ter-hero2--title"
+        className="ter-hero2__title"
       >
         Good design is innovative.
       </h3>
       <p
-        className="ter-hero2--body"
+        className="ter-hero2__body"
       >
         Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.
       </p>

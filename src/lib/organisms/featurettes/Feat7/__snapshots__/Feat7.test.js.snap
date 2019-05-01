@@ -3,25 +3,25 @@
 exports[`Feat7 Feat7Card should match the snapshot 1`] = `
 <Fragment>
   <a
-    className="ter-feat-nine--card"
+    className="ter-feat-nine__card"
     href="#"
   >
     <div
-      className="ter-feat-nine--card-content-wrapper"
+      className="ter-feat-nine__card-content-wrapper"
     >
       <h4
-        className="ter-feat-nine--card-title"
+        className="ter-feat-nine__card-title"
       >
         Design!
       </h4>
       <p
-        className="ter-feat-nine--card-body"
+        className="ter-feat-nine__card-body"
       >
         Enim laborum ad anim laborum ad minim ipsum proident est cillum aliqua. Irure laboris aute ullamco ad Lorem et culpa id commodo quis sunt labore in id.
       </p>
     </div>
     <div
-      className="ter-feat-nine--icon-wrapper"
+      className="ter-feat-nine__icon-wrapper"
     >
       <Icon
         size="32px"
@@ -37,12 +37,12 @@ exports[`Feat7 should match the snapshot 1`] = `
   className="ter-feat-nine"
 >
   <h2
-    className="ter-feat-nine--title"
+    className="ter-feat-nine__title"
   >
     Design is cool, I guess
   </h2>
   <div
-    className="ter-feat-nine--card-container"
+    className="ter-feat-nine__card-container"
   >
     <Feat7Card
       card={

@@ -5,7 +5,7 @@ exports[`IconListItem should match the snapshot 1`] = `
   className="ter-icon-list-item"
 >
   <div
-    className="ter-icon-list-item--icon-wrapper"
+    className="ter-icon-list-item__icon-wrapper"
   >
     <Icon
       size="32px"
@@ -13,15 +13,15 @@ exports[`IconListItem should match the snapshot 1`] = `
     />
   </div>
   <div
-    className="ter-icon-list-item--content-wrapper"
+    className="ter-icon-list-item__content-wrapper"
   >
     <h4
-      className="ter-icon-list-item--title"
+      className="ter-icon-list-item__title"
     >
       Design is good. Period.
     </h4>
     <p
-      className="ter-icon-list-item--body"
+      className="ter-icon-list-item__body"
     >
       Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
     </p>

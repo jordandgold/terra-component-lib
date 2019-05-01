@@ -2,14 +2,13 @@
 
 .ter-icon-list-item {
   display: flex;
-  max-width: 500px;
   padding: 16px;
 
-  &--icon-wrapper {
+  &__icon-wrapper {
     margin-right: 16px;
   }
 
-  &--title {
+  &__title {
     font-size: font-size("md");
   }
 }

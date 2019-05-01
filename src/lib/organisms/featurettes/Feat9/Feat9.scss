@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 350px 1fr;
 
-  &--image {
+  &__image {
     width: 300px;
     height: 300px;
     padding-top: 32px;
@@ -16,26 +16,26 @@
     display: block;
   }
 
-  &--full-quote-wrapper {
+  &__full-quote-wrapper {
     display: flex;
     margin-left: 48px;
   }
 
-  &--quote-icon {
+  &__quote-icon {
     height: 32px;
     margin-top: 32px;
   }
 
-  &--content {
+  &__content {
     margin: 32px 16px;
   }
 
-  &--quote-source {
+  &__quote-source {
     font-weight: font-weight("bold");
     margin-bottom: 16px;
     margin-left: 8px;
   }
-  &--quote-source-title {
+  &__quote-source-title {
     color: color("gray-6");
     font-size: font-size("micro");
     text-transform: uppercase;
@@ -51,14 +51,14 @@
     display: block;
     grid-template-columns: 1fr;
 
-    &--image {
+    &__image {
       // margin: auto;
       width: 200px;
       height: 200px;
       margin-left: 48px;
     }
 
-    &--full-quote-wrapper {
+    &__full-quote-wrapper {
       max-width: 400px;
       margin: auto;
     }
@@ -67,11 +67,11 @@
 
 @media (max-width: 600px) {
   .ter-feat9 {
-    &--full-quote-wrapper {
+    &__full-quote-wrapper {
       max-width: 300px;
     }
 
-    &--image {
+    &__image {
       margin: auto;
     }
   }
