@@ -13,8 +13,8 @@ class Feat7 extends Component {
     const { title, content } = this.props;
     return (
       <section className="ter-feat-nine">
-        <h2 className="ter-feat-nine--title">{title}</h2>
-        <div className="ter-feat-nine--card-container">
+        <h2 className="ter-feat-nine__title">{title}</h2>
+        <div className="ter-feat-nine__card-container">
           {this.renderCards()}
         </div>
       </section>
@@ -39,12 +39,12 @@ export const Feat7Card = props => {
   const { title, body, link } = props.card;
   return (
     <React.Fragment>
-      <a className="ter-feat-nine--card" href={link}>
-        <div className="ter-feat-nine--card-content-wrapper">
-          <h4 className="ter-feat-nine--card-title">{title}</h4>
-          <p className="ter-feat-nine--card-body">{body}</p>
+      <a className="ter-feat-nine__card" href={link}>
+        <div className="ter-feat-nine__card-content-wrapper">
+          <h4 className="ter-feat-nine__card-title">{title}</h4>
+          <p className="ter-feat-nine__card-body">{body}</p>
         </div>
-        <div className="ter-feat-nine--icon-wrapper">
+        <div className="ter-feat-nine__icon-wrapper">
           <Icon type="enclosed-arrow-right-dark-32px" size="32px" />
         </div>
       </a>
