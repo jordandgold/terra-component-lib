@@ -1,14 +1,13 @@
 @import "../global-styles/terra.scss";
 
 .ter-link-tile {
-  max-width: 600px;
   padding: 32px;
 
-  &--link-wrapper {
+  &__link-wrapper {
     margin-bottom: 16px;
   }
 
-  &--title {
+  &__title {
     font-size: font-size("md");
     margin-right: 8px;
     color: color("ui-1");
