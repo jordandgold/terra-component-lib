@@ -6,8 +6,8 @@ import ButtonLink from "../ButtonLink/ButtonLink";
 const ButtonLinkCard = ({ content }) => {
   return (
     <article className="ter-button-link-card">
-      <h4 className="ter-button-link-card--title">{content.title}</h4>
-      <p className="ter-button-link-card--body">{content.body}</p>
+      <h4 className="ter-button-link-card__title">{content.title}</h4>
+      <p className="ter-button-link-card__body">{content.body}</p>
       <ButtonLink
         link={content.link.url}
         text={content.link.text}
