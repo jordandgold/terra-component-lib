@@ -1,1 +1,37 @@
 @import "../../../global-styles/terra.scss";
+
+.ter-feat-four {
+  max-width: 1400px;
+  margin: auto;
+
+  &__title {
+    text-align: center;
+    font-size: font-size(lg);
+    margin-bottom: 24px;
+
+    &--no-image {
+      padding-top: 32px;
+    }
+  }
+
+  &__card-container {
+    display: grid;
+    padding: 0 16px;
+
+    &.three-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &.two-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__image {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 32px;
+  }
+}
