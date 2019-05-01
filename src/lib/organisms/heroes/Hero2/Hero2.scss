@@ -6,15 +6,15 @@
   justify-content: center;
   max-width: 1400px;
 
-  &--image-wrapper {
+  &__image-wrapper {
     overflow: hidden;
     padding: 0;
   }
-  &--image {
+  &__image {
     display: block;
     // max-width: 100%;
   }
-  &--content {
+  &__content {
     display: grid;
     align-items: center;
     padding: 32px 48px;
@@ -33,10 +33,10 @@
       margin: auto;
     }
   }
-  &--title {
+  &__title {
     font-size: font-size("xl");
   }
-  &--body {
+  &__body {
     font-size: 24px;
     font-weight: 100;
     margin-bottom: 0;

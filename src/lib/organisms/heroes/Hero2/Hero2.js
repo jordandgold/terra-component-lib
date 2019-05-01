@@ -14,13 +14,13 @@ const Hero2 = props => {
         imageSide === "right" ? "row reverse" : "row"
       }`}
     >
-      <div className="ter-hero2--image-wrapper col-xs-12 col-sm-6 col-lg-7">
-        <img className="ter-hero2--image" src={image.url} alt={image.altText} />
+      <div className="ter-hero2__image-wrapper col-xs-12 col-sm-6 col-lg-7">
+        <img className="ter-hero2__image" src={image.url} alt={image.altText} />
       </div>
-      <div className="ter-hero2--content col-xs-12 col-sm-6 col-lg-5 middle-lg">
-        <div className="ter-hero2--content-wrapper">
-          <h3 className="ter-hero2--title">{title}</h3>
-          <p className="ter-hero2--body">{body}</p>
+      <div className="ter-hero2__content col-xs-12 col-sm-6 col-lg-5 middle-lg">
+        <div className="ter-hero2__content-wrapper">
+          <h3 className="ter-hero2__title">{title}</h3>
+          <p className="ter-hero2__body">{body}</p>
           {ctas && <CTASection ctas={ctas} />}
         </div>
       </div>
