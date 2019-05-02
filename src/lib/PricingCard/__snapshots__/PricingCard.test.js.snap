@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PricingCard should match the snapshot 1`] = `
+<article
+  className="ter-pricing-card"
+>
+  <p
+    className="ter-pricing-card__product"
+  >
+    SketchUp
+  </p>
+  <p
+    className="ter-pricing-card__version"
+  >
+    Shop
+  </p>
+  <p
+    className="ter-pricing-card__description"
+  >
+    Ullamco exercitation excepteur nostrud ipsum veniam est enim.
+  </p>
+  <h3
+    className="ter-pricing-card__cost"
+  >
+    $119/yr
+  </h3>
+  <p
+    className="ter-pricing-card__currency"
+  >
+    USD
+  </p>
+  <ButtonLink
+    className="ter-button--secondary--1"
+    link="#"
+    text="Subscribe"
+  />
+</article>
+`;

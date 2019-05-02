@@ -36,6 +36,7 @@ import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
 import Dumpling from "../lib/Dumpling/Dumpling";
+import PricingCard from "../lib/PricingCard/PrincingCard";
 import {
   CheckboxForm,
   TextInputForm,
@@ -915,5 +916,27 @@ storiesOf("Featurettes|Feat-2", module).add("Featurette-2", () => {
         </p>
       </AccordionFold>
     </Feat2>
+  );
+});
+
+storiesOf("Molecules|PricingCard", module).add("Pricing Card", () => {
+  const mockDescription =
+    "Ullamco exercitation excepteur nostrud ipsum veniam est enim.";
+  const mockButtonLink = {
+    link: "#",
+    text: "Subscribe"
+  };
+
+  return (
+    <div style={{ width: "300px", margin: "32px" }}>
+      <PricingCard
+        product="SketchUp"
+        version="Shop"
+        description={mockDescription}
+        cost="$119/yr"
+        currency="USD"
+        buttonLink={mockButtonLink}
+      />
+    </div>
   );
 });
