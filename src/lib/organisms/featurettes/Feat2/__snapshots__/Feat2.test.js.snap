@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat2 should match the snapshot 1`] = `
+<section
+  className="ter-feat-two"
+>
+  <img
+    alt="Placeholder image"
+    className="ter-feat-two__image--mobile"
+    src="./1-to-1.png"
+  />
+  <h2
+    className="ter-feat-two__title"
+  >
+    Good design is a thing, apparently.
+  </h2>
+  <p
+    className="ter-feat-two__text"
+  >
+    Eu elit non Lorem deserunt sint aute aliquip esse non sint tempor deserunt voluptate reprehenderit. Duis duis aute sint tempor proident officia enim aliqua enim sit exercitation. Ex culpa dolor ex reprehenderit adipisicing. Magna dolore occaecat nisi voluptate sunt qui nulla cupidatat minim sit non nisi exercitation occaecat.
+  </p>
+  <div
+    className="ter-feat-two__accordion-image-container"
+  >
+    <div
+      className="ter-feat-two__image-wrapper"
+    >
+      <img
+        alt="Placeholder image"
+        className="ter-feat-two__image-desktop ter-feat-two__image"
+        src="./1-to-1.png"
+      />
+    </div>
+    <div
+      className="ter-feat-two__accordion-wrapper"
+    >
+      <Accordion
+        defaultActive={0}
+      >
+        <AccordionFold
+          title="Test one"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit sollicitudin.
+          </p>
+        </AccordionFold>
+        <AccordionFold
+          title="Test two"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit sollicitudin.
+          </p>
+        </AccordionFold>
+        <AccordionFold
+          title="Test three"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit sollicitudin.
+          </p>
+        </AccordionFold>
+      </Accordion>
+    </div>
+  </div>
+</section>
+`;

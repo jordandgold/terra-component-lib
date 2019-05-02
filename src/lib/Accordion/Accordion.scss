@@ -3,6 +3,7 @@
 .ter-accordion {
   margin-bottom: spacing("sm");
   border-bottom: $accordion-border-width solid $accordion-border-color;
+  width: 100%;
   &__fold {
     font-size: $accordion-font-size;
     margin-bottom: spacing("sm");

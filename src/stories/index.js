@@ -31,7 +31,7 @@ import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import Feat4 from "../lib/organisms/featurettes/Feat4/Feat4";
 import Feat5 from "../lib/organisms/featurettes/Feat5/Feat5";
-
+import Feat2 from "../lib/organisms/featurettes/Feat2/Feat2";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
@@ -879,3 +879,41 @@ storiesOf("Molecules|Card", module)
       </div>
     );
   });
+
+storiesOf("Featurettes|Feat-2", module).add("Featurette-2", () => {
+  const mockImage = { url: "./1-to-1.png", altText: "Placeholder image" };
+  const mockText =
+    "Eu elit non Lorem deserunt sint aute aliquip esse non sint tempor deserunt voluptate reprehenderit. Duis duis aute sint tempor proident officia enim aliqua enim sit exercitation. Ex culpa dolor ex reprehenderit adipisicing. Magna dolore occaecat nisi voluptate sunt qui nulla cupidatat minim sit non nisi exercitation occaecat.";
+  return (
+    <Feat2
+      image={mockImage}
+      title="Good design is a thing, apparently."
+      text={mockText}
+    >
+      <AccordionFold title="Test one">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </AccordionFold>
+      <AccordionFold title="Test two">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </AccordionFold>
+      <AccordionFold title="Test three">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </AccordionFold>
+    </Feat2>
+  );
+});
