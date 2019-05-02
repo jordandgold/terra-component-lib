@@ -2,13 +2,14 @@
 
 .ter-dumpling {
   width: 200px;
-  margin: auto;
-  padding: 32px 0;
+  margin: spacing("auto");
+  padding: spacing("sm") spacing("none");
 
   &__icon-wrapper {
-    padding-bottom: 24px;
+    padding-bottom: spacing("sm");
+
     .ter-icon {
-      margin: auto;
+      margin: spacing("auto");
       display: block;
       fill: color("ui-1");
     }
@@ -21,7 +22,7 @@
   }
 
   &__link {
-    padding-top: 16px;
+    padding-top: spacing("xs");
     text-align: center;
     display: block;
     font-weight: font-weight("bold");
@@ -31,6 +32,6 @@
     max-width: 75px;
     max-height: 75px;
     display: block;
-    margin: 0 auto 32px;
+    margin: spacing("none") spacing("auto") spacing("md");
   }
 }

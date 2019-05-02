@@ -1,7 +1,7 @@
 @import "../global-styles/terra.scss";
 
 .ter-link-tile {
-  padding: 32px;
+  padding: spacing("md");
   transition: 0.2s;
 
   &:hover {
@@ -11,12 +11,12 @@
   }
 
   &__link-wrapper {
-    margin-bottom: 16px;
+    margin-bottom: spacing("xs");
   }
 
   &__title {
     font-size: font-size("md");
-    margin-right: 8px;
+    margin-right: spacing("mini");
     color: color("ui-1");
   }
 

@@ -1,7 +1,7 @@
 @import "../global-styles/terra.scss";
 
 .ter-button-link-card {
-  padding: 24px;
+  padding: spacing("sm");
 
   &__title {
     font-size: font-size("md");

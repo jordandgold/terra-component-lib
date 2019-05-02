@@ -1,7 +1,7 @@
 @import "../../../global-styles/terra.scss";
 
 .ter-feat-five {
-  padding-top: 32px;
+  padding-top: spacing("md");
 
   &__title {
     font-size: font-size("xl");
@@ -18,7 +18,7 @@
   }
 
   &__dumpling-container {
-    margin-top: 32px;
+    margin-top: spacing("md");
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

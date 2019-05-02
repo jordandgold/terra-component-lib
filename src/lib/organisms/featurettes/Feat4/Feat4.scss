@@ -2,21 +2,21 @@
 
 .ter-feat-four {
   max-width: 1400px;
-  margin: auto;
+  margin: spacing("auto");
 
   &__title {
     text-align: center;
     font-size: font-size(lg);
-    margin-bottom: 24px;
+    margin-bottom: spacing("sm");
 
     &--no-image {
-      padding-top: 32px;
+      padding-top: spacing("md");
     }
   }
 
   &__card-container {
     display: grid;
-    padding: 0 16px;
+    padding: spacing("none") spacing("xs");
 
     &.three-columns {
       grid-template-columns: 1fr 1fr 1fr;
@@ -32,7 +32,7 @@
     display: block;
     width: 100%;
     height: auto;
-    padding: 32px;
+    padding: spacing("md");
   }
 }
 
