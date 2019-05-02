@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Card.scss";
+import Button from "../Button/Button";
+import ButtonLink from "../ButtonLink/ButtonLink";
 
 import PropTypes from "prop-types";
 
@@ -15,7 +17,15 @@ class Card extends Component {
   };
 
   render() {
-    const { image, title, text, label, link, category } = this.props;
+    const {
+      image,
+      title,
+      text,
+      button,
+      buttonLink,
+      link,
+      category
+    } = this.props;
     return (
       <article className="card">
         {image && (
@@ -29,7 +39,21 @@ class Card extends Component {
         <h4 className="card-title">{title}</h4>
         {text && this.generateText()}
         {link && <a href={link.link}>{link.label}</a>}
-        {label && <button>{label}</button>}
+        {button && (
+          <Button
+            name={button.name}
+            text={button.text}
+            className="ter-button--primary--1"
+            onClick={button.onClick}
+          />
+        )}
+        {buttonLink && (
+          <ButtonLink
+            link={buttonLink.link}
+            text={buttonLink.text}
+            className="ter-button--primary--1"
+          />
+        )}
       </article>
     );
   }
@@ -41,7 +65,15 @@ Card.propTypes = {
   image: PropTypes.object,
   title: PropTypes.string.isRequired,
   text: PropTypes.array,
-  label: PropTypes.string,
+  button: PropTypes.shape({
+    onClick: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+  }),
+  buttonLink: PropTypes.shape({
+    link: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  }),
   link: PropTypes.object,
   category: PropTypes.string
 };
