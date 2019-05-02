@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
 import ButtonLink from "../lib/ButtonLink/ButtonLink";
-
+import Card from "../lib/Card/Card";
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
@@ -30,9 +30,13 @@ import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import Feat4 from "../lib/organisms/featurettes/Feat4/Feat4";
+import Feat5 from "../lib/organisms/featurettes/Feat5/Feat5";
+import Feat2 from "../lib/organisms/featurettes/Feat2/Feat2";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
+import Dumpling from "../lib/Dumpling/Dumpling";
+import PricingCard from "../lib/PricingCard/PrincingCard";
 import {
   CheckboxForm,
   TextInputForm,
@@ -48,7 +52,12 @@ import {
   heroTwoContent,
   featSixAContent,
   featNineContent,
-  featSevenContent
+  featSevenContent,
+  mockDumplings,
+  mockImageDumplings,
+  mockButtonCardContent,
+  mockButtonLinkCardContent,
+  mockLinkCardContent
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -780,3 +789,154 @@ storiesOf("Featurettes|Feat-4", module)
 
     return <Feat4 content={mockContentD} variant="d" columns={2} />;
   });
+
+storiesOf("Molecules|Dumpling", module)
+  .add("Dumpling - Small, Icon", () => {
+    return (
+      <Dumpling
+        icon={{ type: "enclosed-check-dark-48px", size: "48px" }}
+        size="small"
+        title="Dumplin'"
+        link={{ url: "#" }}
+      />
+    );
+  })
+  .add("Dumpling - Small, Image", () => {
+    return (
+      <Dumpling
+        image={{ url: "1-to-1.png", altText: "1-to-1 image" }}
+        size="small"
+        title="Dumplin'"
+        link={{ url: "#" }}
+      />
+    );
+  });
+
+storiesOf("Featurettes|Feat-5", module)
+  .add("Featurette-5a w/ Icon", () => {
+    return (
+      <Feat5
+        dumplings={mockDumplings}
+        type="a"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  })
+  .add("Featurette-5a w/ Image", () => {
+    return (
+      <Feat5
+        dumplings={mockImageDumplings}
+        type="a"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  })
+  .add("Featurette-5b w/ Icon", () => {
+    return (
+      <Feat5
+        dumplings={mockDumplings}
+        type="b"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  })
+  .add("Featurette-5b w/ Image", () => {
+    return (
+      <Feat5
+        dumplings={mockImageDumplings}
+        type="b"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  });
+
+storiesOf("Molecules|Card", module)
+  .add("Card w/ Button", () => {
+    const { title, text, image, button } = mockButtonCardContent;
+    button.onClick = action("Action Button Clicked");
+    return (
+      <div style={{ width: "500px" }}>
+        <Card title={title} text={text} image={image} button={button} />
+      </div>
+    );
+  })
+  .add("Card w/ ButtonLink", () => {
+    const { title, text, image, buttonLink } = mockButtonLinkCardContent;
+    return (
+      <div style={{ width: "500px" }}>
+        <Card title={title} text={text} image={image} buttonLink={buttonLink} />
+      </div>
+    );
+  })
+  .add("Card w/ Link", () => {
+    const { title, text, image, link } = mockLinkCardContent;
+    return (
+      <div style={{ width: "500px" }}>
+        <Card title={title} text={text} image={image} link={link} />
+      </div>
+    );
+  });
+
+storiesOf("Featurettes|Feat-2", module).add("Featurette-2", () => {
+  const mockImage = { url: "./1-to-1.png", altText: "Placeholder image" };
+  const mockText =
+    "Eu elit non Lorem deserunt sint aute aliquip esse non sint tempor deserunt voluptate reprehenderit. Duis duis aute sint tempor proident officia enim aliqua enim sit exercitation. Ex culpa dolor ex reprehenderit adipisicing. Magna dolore occaecat nisi voluptate sunt qui nulla cupidatat minim sit non nisi exercitation occaecat.";
+  return (
+    <Feat2
+      image={mockImage}
+      title="Good design is a thing, apparently."
+      text={mockText}
+    >
+      <AccordionFold title="Test one">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </AccordionFold>
+      <AccordionFold title="Test two">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </AccordionFold>
+      <AccordionFold title="Test three">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          lobortis augue ligula, eget gravida tellus lacinia id. Sed ultricies
+          mi malesuada tincidunt dapibus. Donec porta ligula sagittis elit
+          sollicitudin.
+        </p>
+      </AccordionFold>
+    </Feat2>
+  );
+});
+
+storiesOf("Molecules|PricingCard", module).add("Pricing Card", () => {
+  const mockDescription =
+    "Ullamco exercitation excepteur nostrud ipsum veniam est enim.";
+  const mockButtonLink = {
+    link: "#",
+    text: "Subscribe"
+  };
+
+  return (
+    <div style={{ width: "300px", margin: "32px" }}>
+      <PricingCard
+        product="SketchUp"
+        version="Shop"
+        description={mockDescription}
+        cost="$119/yr"
+        currency="USD"
+        buttonLink={mockButtonLink}
+      />
+    </div>
+  );
+});

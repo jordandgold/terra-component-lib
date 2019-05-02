@@ -1,0 +1,36 @@
+@import "../global-styles/terra.scss";
+
+.ter-card {
+  background: $card-bg;
+  position: relative;
+  border-width: $card-border-width;
+  border-style: solid;
+  border-color: $card-border-color;
+  border-radius: $card-border-radius;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $card-box-shadow;
+  &[href] {
+    display: block;
+  }
+  &__body {
+    font-size: $card-font-size;
+    display: block;
+    padding: spacing("md") spacing("sm");
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    p {
+      font-size: $card-font-size;
+    }
+  }
+  &__image {
+    margin: spacing("none");
+    padding: spacing("none");
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

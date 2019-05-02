@@ -108,6 +108,46 @@ You can then use the imported Terra component within your own application.
 
 ---
 
+#### ButtonLink
+
+######Props -
+
+- `link` **(required)** - string that provides the markup necessary to populate the `<a>` tag
+- `className` **(required)** - string that determines the type of button (see options) - interpolates into component `className` - see options below
+- `text` **(required)** - string that determines the inner text of the button element
+- `name` - string used for the check box's name for parent state management
+
+######`className` options -
+
+- **Primary 1** - `"ter-button-primary--1"`
+- **Primary 2** - `"ter-button-primary--2"`
+- **Primary 3** - `"ter-button-primary--3"`
+- **Primary 4** - `"ter-button-primary--4"`
+- **Primary 5** - `"ter-button-primary--5"`
+- **Secondary 1** - `"ter-button-secondary--1"`
+- **Secondary 2** - `"ter-button-secondary--2"`
+- **Secondary 3** - `"ter-button-secondary--3"`
+- **Secondary 4** - `"ter-button-secondary--4"`
+- **Secondary 5** - `"ter-button-secondary--5"`
+- **Small Button** - `"ter-button--small"`
+
+######Example -
+
+```
+<Button
+  text="Button"
+  link='www.hello.com'
+  className="ter-button--primary--1"
+/>
+<Button
+  text="Button"
+  link='www.hello.com'
+  className="ter-button--secondary--2 ter-button--small"
+/>
+```
+
+---
+
 #### Card
 
 ######Props -
@@ -175,6 +215,37 @@ You can then use the imported Terra component within your own application.
     className="ter-button--primary--1"
   />
 </Dropdown>
+```
+
+---
+
+#### Dumpling
+
+######Props -
+
+- `title` **(required)** - string that is used to generate the title text
+- `link` **(required)** - object with a url key/value pair used to provide the `href` value for the `<a>` tag
+- `size` **(required)** - string used to indicate the dumpling size ('small' or 'large')
+- `icon` - object used for generating the Icon component within the dumpling with `type` and `size` key/value pairs
+- `image` - object used for generating an `<img>` tag with `url` and `altText` key/value pairs
+
+######Examples -
+
+```
+
+<Dumpling
+  image={{ url: "./1-to-1.png", altText: "1-to-1 image" }}
+  size="small"
+  title="Dumplin'"
+  link={{ url: "#" }}
+/>
+
+<Dumpling
+  icon={{ type: "enclosed-check-dark-48px", size: "48px" }}
+  size="small"
+  title="Dumplin'"
+  link={{ url: "#" }}
+/>
 ```
 
 ---

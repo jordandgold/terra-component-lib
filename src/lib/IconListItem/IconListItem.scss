@@ -2,10 +2,10 @@
 
 .ter-icon-list-item {
   display: flex;
-  padding: 16px;
+  padding: spacing("xs");
 
   &__icon-wrapper {
-    margin-right: 16px;
+    margin-right: spacing("xs");
   }
 
   &__title {

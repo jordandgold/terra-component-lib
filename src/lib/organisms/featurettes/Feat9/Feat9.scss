@@ -1,8 +1,8 @@
 @import "../../../global-styles/terra.scss";
 
 .ter-feat9 {
-  margin: 0 auto;
-  padding: 0;
+  margin: spacing("none") spacing("auto");
+  padding: spacing("none");
   max-width: 1400px;
   display: grid;
   grid-template-columns: 350px 1fr;
@@ -10,7 +10,7 @@
   &__image {
     width: 300px;
     height: 300px;
-    padding-top: 32px;
+    padding-top: spacing("md");
     box-sizing: content-box;
     justify-self: end;
     display: block;
@@ -18,49 +18,49 @@
 
   &__full-quote-wrapper {
     display: flex;
-    margin-left: 48px;
+    margin-left: spacing("lg");
   }
 
   &__quote-icon {
-    height: 32px;
-    margin-top: 32px;
+    height: spacing("md");
+    margin-top: spacing("md");
   }
 
   &__content {
-    margin: 32px 16px;
+    margin: spacing("md") spacing("xs");
   }
 
   &__quote-source {
     font-weight: font-weight("bold");
-    margin-bottom: 16px;
-    margin-left: 8px;
+    margin-bottom: spacing("xs");
+    margin-left: spacing("mini");
   }
   &__quote-source-title {
     color: color("gray-6");
     font-size: font-size("micro");
     text-transform: uppercase;
-    margin-left: 8px;
+    margin-left: spacing("mini");
   }
 }
 
 @media (max-width: 900px) {
   .ter-feat9 {
-    margin: 0 auto;
-    padding: 0;
+    margin: spacing("none") spacing("auto");
+    padding: spacing("none");
     max-width: 400px;
     display: block;
     grid-template-columns: 1fr;
 
     &__image {
-      // margin: auto;
+      // margin: spacing('auto');
       width: 200px;
       height: 200px;
-      margin-left: 48px;
+      margin-left: spacing("lg");
     }
 
     &__full-quote-wrapper {
       max-width: 400px;
-      margin: auto;
+      margin: spacing("auto");
     }
   }
 }
@@ -72,7 +72,7 @@
     }
 
     &__image {
-      margin: auto;
+      margin: spacing("auto");
     }
   }
 }

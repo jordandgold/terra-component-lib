@@ -1,0 +1,70 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-feat-five {
+  padding-top: spacing("md");
+
+  &__title {
+    font-size: font-size("xl");
+  }
+
+  &__subtitle {
+    font-weight: font-weight("light");
+    color: color("gray-7");
+  }
+
+  &__subtitle,
+  &__title {
+    text-align: center;
+  }
+
+  &__dumpling-container {
+    @include grid-container;
+    margin-top: spacing("md");
+  }
+
+  &__dumpling-wrapper--b {
+    @include grid-column(3);
+
+    @media (max-width: 900px) {
+      @include grid-column(6);
+    }
+
+    @media (max-width: 600px) {
+      @include grid-column(12);
+    }
+  }
+
+  &__dumpling-wrapper--a {
+    @include grid-column(4);
+
+    @media (max-width: 900px) {
+      @include grid-column(12);
+    }
+
+    @media (max-width: 600px) {
+      @include grid-column(12);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .ter-feat-five {
+    &__title {
+      font-size: font-size("lg");
+    }
+
+    .ter-icon {
+      // transform: scale(0.66666);
+
+      // LEFT OUT PER REC FROM JORDAN
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .ter-feat-five {
+    &__dumpling-container {
+      justify-content: space-around;
+    }
+  }
+}

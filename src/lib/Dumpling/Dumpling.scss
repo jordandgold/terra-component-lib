@@ -1,0 +1,36 @@
+@import "../global-styles/terra.scss";
+
+.ter-dumpling {
+  margin: spacing("auto");
+  padding: spacing("sm") spacing("none");
+
+  &__icon-wrapper {
+    padding-bottom: spacing("sm");
+
+    .ter-icon {
+      margin: spacing("auto");
+      display: block;
+      fill: color("ui-1");
+    }
+  }
+
+  &__small-dash {
+    width: 25px;
+    margin: auto;
+    border-top: solid 1px color("ui-1");
+  }
+
+  &__link {
+    padding-top: spacing("xs");
+    text-align: center;
+    display: block;
+    font-weight: font-weight("bold");
+  }
+
+  &__image {
+    max-width: 75px;
+    max-height: 75px;
+    display: block;
+    margin: spacing("none") spacing("auto") spacing("md");
+  }
+}
