@@ -16,7 +16,7 @@ class Feat5 extends Component {
           >
             <Dumpling
               title={dumpling.title}
-              size={this.props.dumplingSize}
+              size={this.props.type === "b" ? "small" : "large"}
               link={dumpling.link}
               icon={dumpling.icon}
             />
@@ -32,7 +32,7 @@ class Feat5 extends Component {
           >
             <Dumpling
               title={dumpling.title}
-              size={this.props.dumplingSize}
+              size={this.props.type === "b" ? "small" : "large"}
               link={dumpling.link}
               image={dumpling.image}
             />

@@ -257,13 +257,13 @@ export const mockTestImageDumplings = [
   {
     title: "Dumplin'",
     link: { url: "#" },
-    size: "small",
+    dumplingSize: "small",
     image: { url: "./1-to-1.png", altText: "test text" }
   },
   {
     title: "Dumplin'",
     link: { url: "#" },
-    size: "small",
+    dumplingSize: "small",
     image: { url: "./1-to-1.png", altText: "test text" }
   }
 ];
@@ -272,19 +272,22 @@ export const mockButtonCardContent = {
   title: "This is a card title",
   text: "Esse adipisicing commodo cupidatat fugiat.",
   image: { url: "./placeholder.jpg", altText: "placeholder image" },
-  button: { text: "Do Something", name: "name" }
+  button: { text: "Do Something", name: "name" },
+  size: "small"
 };
 
 export const mockButtonLinkCardContent = {
   title: "This is a card title",
   text: "Esse adipisicing commodo cupidatat fugiat.",
   image: { url: "./placeholder.jpg", altText: "placeholder image" },
-  buttonLink: { text: "Go Somewhere", link: "#" }
+  buttonLink: { text: "Go Somewhere", link: "#" },
+  size: "small"
 };
 
 export const mockLinkCardContent = {
   title: "This is a card title",
   text: "Esse adipisicing commodo cupidatat fugiat.",
   image: { url: "./placeholder.jpg", altText: "placeholder image" },
-  link: { url: "#", text: "Go Somewhere" }
+  link: { url: "#", text: "Go Somewhere" },
+  size: "small"
 };
