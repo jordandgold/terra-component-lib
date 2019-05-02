@@ -18,6 +18,7 @@ exports[`Feat5 should match the snapshot with icons 1`] = `
     className="ter-feat-five__dumpling-container"
   >
     <div
+      className="ter-feat-five__dumpling-wrapper"
       key="dumpling-0"
     >
       <Dumpling
@@ -37,6 +38,7 @@ exports[`Feat5 should match the snapshot with icons 1`] = `
       />
     </div>
     <div
+      className="ter-feat-five__dumpling-wrapper"
       key="dumpling-1"
     >
       <Dumpling
@@ -77,6 +79,7 @@ exports[`Feat5 should match the snapshot with images 1`] = `
     className="ter-feat-five__dumpling-container"
   >
     <div
+      className="ter-feat-five__dumpling-wrapper"
       key="dumpling-0"
     >
       <Dumpling
@@ -96,6 +99,7 @@ exports[`Feat5 should match the snapshot with images 1`] = `
       />
     </div>
     <div
+      className="ter-feat-five__dumpling-wrapper"
       key="dumpling-1"
     >
       <Dumpling

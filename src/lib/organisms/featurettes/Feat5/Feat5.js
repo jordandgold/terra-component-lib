@@ -8,7 +8,12 @@ class Feat5 extends Component {
     return this.props.dumplings.map((dumpling, index) => {
       if (dumpling.icon) {
         return (
-          <div key={`dumpling-${index}`}>
+          <div
+            className={`ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--${
+              this.props.type
+            }`}
+            key={`dumpling-${index}`}
+          >
             <Dumpling
               title={dumpling.title}
               size={this.props.dumplingSize}
@@ -19,7 +24,12 @@ class Feat5 extends Component {
         );
       } else if (dumpling.image) {
         return (
-          <div key={`dumpling-${index}`}>
+          <div
+            className={`ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--${
+              this.props.type
+            }`}
+            key={`dumpling-${index}`}
+          >
             <Dumpling
               title={dumpling.title}
               size={this.props.dumplingSize}
@@ -51,7 +61,7 @@ export default Feat5;
 Feat5.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  dumplingSize: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   dumplings: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

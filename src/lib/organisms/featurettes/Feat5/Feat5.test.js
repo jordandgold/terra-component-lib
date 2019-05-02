@@ -13,7 +13,7 @@ describe("Feat5", () => {
     wrapper = shallow(
       <Feat5
         dumplings={mockTestIconDumplings}
-        dumplingSize="small"
+        type="b"
         title="Design is design"
         subtitle="It's like, this thing, you know?"
       />
@@ -28,7 +28,7 @@ describe("Feat5", () => {
     wrapper = shallow(
       <Feat5
         dumplings={mockTestImageDumplings}
-        dumplingSize="small"
+        type="b"
         title="Design is design"
         subtitle="It's like, this thing, you know?"
       />
@@ -40,8 +40,8 @@ describe("Feat5", () => {
   describe("getDumplings", () => {
     it("should return some jsx if icons", () => {
       const expected = [
-        '<div><article class="ter-dumpling ter-dumpling--small"><div class="ter-dumpling__icon-wrapper"><svg viewBox="0 0 8 8" class="ter-icon ter-icon--enclosed-check-dark-48px ter-icon--48px undefined"><use xlink:href="[object Object]#ter-icon--enclosed-check-dark-48px"></use></svg></div><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>',
-        '<div><article class="ter-dumpling ter-dumpling--small"><div class="ter-dumpling__icon-wrapper"><svg viewBox="0 0 8 8" class="ter-icon ter-icon--enclosed-check-dark-48px ter-icon--48px undefined"><use xlink:href="[object Object]#ter-icon--enclosed-check-dark-48px"></use></svg></div><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
+        '<div class="ter-feat-five__dumpling-wrapper"><article class="ter-dumpling ter-dumpling--small"><div class="ter-dumpling__icon-wrapper"><svg viewBox="0 0 8 8" class="ter-icon ter-icon--enclosed-check-dark-48px ter-icon--48px undefined"><use xlink:href="[object Object]#ter-icon--enclosed-check-dark-48px"></use></svg></div><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>',
+        '<div class="ter-feat-five__dumpling-wrapper"><article class="ter-dumpling ter-dumpling--small"><div class="ter-dumpling__icon-wrapper"><svg viewBox="0 0 8 8" class="ter-icon ter-icon--enclosed-check-dark-48px ter-icon--48px undefined"><use xlink:href="[object Object]#ter-icon--enclosed-check-dark-48px"></use></svg></div><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
       ];
       const response = wrapper
         .instance()
@@ -55,14 +55,14 @@ describe("Feat5", () => {
 
     it("should return some jsx if images", () => {
       const expected = [
-        '<div><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>',
-        '<div><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
+        '<div class="ter-feat-five__dumpling-wrapper"><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>',
+        '<div class="ter-feat-five__dumpling-wrapper"><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
       ];
 
       wrapper = shallow(
         <Feat5
           dumplings={mockTestImageDumplings}
-          dumplingSize="small"
+          type="b"
           title="Design is design"
           subtitle="It's like, this thing, you know?"
         />

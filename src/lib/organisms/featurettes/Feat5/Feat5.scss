@@ -18,10 +18,32 @@
   }
 
   &__dumpling-container {
+    @include grid-container;
     margin-top: spacing("md");
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  }
+
+  &__dumpling-wrapper--b {
+    @include grid-column(3);
+
+    @media (max-width: 900px) {
+      @include grid-column(6);
+    }
+
+    @media (max-width: 600px) {
+      @include grid-column(12);
+    }
+  }
+
+  &__dumpling-wrapper--a {
+    @include grid-column(4);
+
+    @media (max-width: 900px) {
+      @include grid-column(12);
+    }
+
+    @media (max-width: 600px) {
+      @include grid-column(12);
+    }
   }
 }
 
@@ -29,6 +51,12 @@
   .ter-feat-five {
     &__title {
       font-size: font-size("lg");
+    }
+
+    .ter-icon {
+      // transform: scale(0.66666);
+
+      // LEFT OUT PER REC FROM JORDAN
     }
   }
 }

@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import Button from "../lib/Button/Button";
 import ButtonLink from "../lib/ButtonLink/ButtonLink";
-
+import Card from "../lib/Card/Card";
 import Alert from "../lib/Alert/Alert";
 import Modal from "../lib/Modal/Modal";
 import Notification from "../lib/Notification/Notification";
@@ -53,7 +53,10 @@ import {
   featNineContent,
   featSevenContent,
   mockDumplings,
-  mockImageDumplings
+  mockImageDumplings,
+  mockButtonCardContent,
+  mockButtonLinkCardContent,
+  mockLinkCardContent
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -809,23 +812,70 @@ storiesOf("Molecules|Dumpling", module)
   });
 
 storiesOf("Featurettes|Feat-5", module)
-  .add("Featurette-5 w/ Icon", () => {
+  .add("Featurette-5a w/ Icon", () => {
     return (
       <Feat5
         dumplings={mockDumplings}
-        dumplingSize="small"
+        type="a"
         title="Design is design"
         subtitle="It's like, this thing, you know?"
       />
     );
   })
-  .add("Featurette-5 w/ Image", () => {
+  .add("Featurette-5a w/ Image", () => {
     return (
       <Feat5
         dumplings={mockImageDumplings}
-        dumplingSize="small"
+        type="a"
         title="Design is design"
         subtitle="It's like, this thing, you know?"
       />
+    );
+  })
+  .add("Featurette-5b w/ Icon", () => {
+    return (
+      <Feat5
+        dumplings={mockDumplings}
+        type="b"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  })
+  .add("Featurette-5b w/ Image", () => {
+    return (
+      <Feat5
+        dumplings={mockImageDumplings}
+        type="b"
+        title="Design is design"
+        subtitle="It's like, this thing, you know?"
+      />
+    );
+  });
+
+storiesOf("Molecules|Card", module)
+  .add("Card w/ Button", () => {
+    const { title, text, image, button } = mockButtonCardContent;
+    button.onClick = action("Action Button Clicked");
+    return (
+      <div style={{ width: "500px" }}>
+        <Card title={title} text={text} image={image} button={button} />
+      </div>
+    );
+  })
+  .add("Card w/ ButtonLink", () => {
+    const { title, text, image, buttonLink } = mockButtonLinkCardContent;
+    return (
+      <div style={{ width: "500px" }}>
+        <Card title={title} text={text} image={image} buttonLink={buttonLink} />
+      </div>
+    );
+  })
+  .add("Card w/ Link", () => {
+    const { title, text, image, link } = mockLinkCardContent;
+    return (
+      <div style={{ width: "500px" }}>
+        <Card title={title} text={text} image={image} link={link} />
+      </div>
     );
   });
