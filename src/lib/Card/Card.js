@@ -6,54 +6,40 @@ import ButtonLink from "../ButtonLink/ButtonLink";
 import PropTypes from "prop-types";
 
 class Card extends Component {
-  generateText = () => {
-    return this.props.text.map((paragraph, index) => {
-      return (
-        <p className="card-text" key={`card-text-${index}`}>
-          {paragraph}
-        </p>
-      );
-    });
-  };
-
   render() {
-    const {
-      image,
-      title,
-      text,
-      button,
-      buttonLink,
-      link,
-      category
-    } = this.props;
+    const { image, title, text, button, buttonLink, link } = this.props;
+
     return (
-      <article className="card">
+      <article className="ter-card">
         {image && (
-          <img
-            src={image.link}
-            alt={image.description}
-            className="card-hero-image"
-          />
+          <figure className="ter-card__image">
+            <img src={image.url} alt={image.altText} />
+          </figure>
         )}
-        {category && <p>{category}</p>}
-        <h4 className="card-title">{title}</h4>
-        {text && this.generateText()}
-        {link && <a href={link.link}>{link.label}</a>}
-        {button && (
-          <Button
-            name={button.name}
-            text={button.text}
-            className="ter-button--primary--1"
-            onClick={button.onClick}
-          />
-        )}
-        {buttonLink && (
-          <ButtonLink
-            link={buttonLink.link}
-            text={buttonLink.text}
-            className="ter-button--primary--1"
-          />
-        )}
+        <div className="ter-card__body">
+          <h4 className="ter-card__title">{title}</h4>
+          {text && <p className="ter-card__text">{text}</p>}
+          {link && (
+            <a className="ter-card__link" href={link.link}>
+              {link.text}
+            </a>
+          )}
+          {button && (
+            <Button
+              name={button.name}
+              text={button.text}
+              className="ter-button--primary--1"
+              onClick={button.onClick}
+            />
+          )}
+          {buttonLink && (
+            <ButtonLink
+              link={buttonLink.link}
+              text={buttonLink.text}
+              className="ter-button--primary--1"
+            />
+          )}
+        </div>
       </article>
     );
   }
@@ -64,7 +50,7 @@ export default Card;
 Card.propTypes = {
   image: PropTypes.object,
   title: PropTypes.string.isRequired,
-  text: PropTypes.array,
+  text: PropTypes.string,
   button: PropTypes.shape({
     onClick: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired,
@@ -74,6 +60,5 @@ Card.propTypes = {
     link: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
   }),
-  link: PropTypes.object,
-  category: PropTypes.string
+  link: PropTypes.object
 };

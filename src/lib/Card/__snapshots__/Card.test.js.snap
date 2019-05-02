@@ -2,48 +2,44 @@
 
 exports[`Card should match the snapshot 1`] = `
 <article
-  className="card"
+  className="ter-card"
 >
-  <img
-    alt="This is a mock image description"
-    className="card-hero-image"
-    src="http://www.mocklink.com/mockImage.jpg"
-  />
-  <p>
-    Hello! I am a category!
-  </p>
-  <h4
-    className="card-title"
+  <figure
+    className="ter-card__image"
   >
-    This is a mock title
-  </h4>
-  <p
-    className="card-text"
-    key="card-text-0"
+    <img
+      alt="This is a mock image description"
+      src="http://www.mocklink.com/mockImage.jpg"
+    />
+  </figure>
+  <div
+    className="ter-card__body"
   >
-    This is the first paragraph
-  </p>
-  <p
-    className="card-text"
-    key="card-text-1"
-  >
-    This is the second paragraph
-  </p>
-  <a
-    href="http://www.mocklink.com"
-  >
-    I am a link!
-  </a>
-  <Button
-    className="ter-button--primary--1"
-    name="mock name"
-    onClick={[MockFunction]}
-    text="mock text"
-  />
-  <ButtonLink
-    className="ter-button--primary--1"
-    link="mock link"
-    text="mock text"
-  />
+    <h4
+      className="ter-card__title"
+    >
+      This is a mock title
+    </h4>
+    <p
+      className="ter-card__text"
+    >
+      This is the first paragraph
+    </p>
+    <a
+      className="ter-card__link"
+      href="http://www.mocklink.com"
+    />
+    <Button
+      className="ter-button--primary--1"
+      name="mock name"
+      onClick={[MockFunction]}
+      text="mock text"
+    />
+    <ButtonLink
+      className="ter-button--primary--1"
+      link="mock link"
+      text="mock text"
+    />
+  </div>
 </article>
 `;
