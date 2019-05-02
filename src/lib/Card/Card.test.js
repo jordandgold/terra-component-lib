@@ -15,7 +15,16 @@ describe("Card", () => {
     "This is the first paragraph",
     "This is the second paragraph"
   ];
-  const mockLabel = "I am a mock label";
+  const mockButton = {
+    name: "mock name",
+    text: "mock text",
+    className: "hello",
+    onClick: jest.fn()
+  };
+  const mockButtonLink = {
+    link: "mock link",
+    text: "mock text"
+  };
   const mockLink = {
     link: "http://www.mocklink.com",
     label: "I am a link!"
@@ -28,7 +37,8 @@ describe("Card", () => {
         image={mockImage}
         title={mockTitle}
         text={mockText}
-        label={mockLabel}
+        button={mockButton}
+        buttonLink={mockButtonLink}
         link={mockLink}
         category={mockCategory}
       />

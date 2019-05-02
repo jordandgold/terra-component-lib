@@ -34,8 +34,16 @@ exports[`Card should match the snapshot 1`] = `
   >
     I am a link!
   </a>
-  <button>
-    I am a mock label
-  </button>
+  <Button
+    className="ter-button--primary--1"
+    name="mock name"
+    onClick={[MockFunction]}
+    text="mock text"
+  />
+  <ButtonLink
+    className="ter-button--primary--1"
+    link="mock link"
+    text="mock text"
+  />
 </article>
 `;
