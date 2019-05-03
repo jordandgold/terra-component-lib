@@ -32,6 +32,7 @@ import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
 import Feat4 from "../lib/organisms/featurettes/Feat4/Feat4";
 import Feat5 from "../lib/organisms/featurettes/Feat5/Feat5";
 import Feat2 from "../lib/organisms/featurettes/Feat2/Feat2";
+import Feat8 from "../lib/organisms/featurettes/Feat8/Feat8";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
@@ -57,7 +58,8 @@ import {
   mockImageDumplings,
   mockButtonCardContent,
   mockButtonLinkCardContent,
-  mockLinkCardContent
+  mockLinkCardContent,
+  mockCards
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -938,5 +940,16 @@ storiesOf("Molecules|PricingCard", module).add("Pricing Card", () => {
         buttonLink={mockButtonLink}
       />
     </div>
+  );
+});
+
+storiesOf("Featurettes|Feat-8", module).add("Featurette-8", () => {
+  const mockButtonLink = { link: "#", text: "Button" };
+  return (
+    <Feat8
+      title="Good design is innovative."
+      buttonLink={mockButtonLink}
+      cards={mockCards}
+    />
   );
 });

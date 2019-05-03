@@ -1,0 +1,57 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-feat-eight {
+  padding: spacing("md");
+
+  @media (min-width: $breakpoint-xs) {
+    padding: spacing("xxl") spacing("md");
+  }
+
+  &__title {
+    margin: auto;
+    font-size: font-size("lg");
+    text-align: center;
+  }
+
+  .ter-button {
+    margin: spacing("md") 0 0;
+    // width: 100%;
+    display: block;
+
+    @media (min-width: $breakpoint-xs) {
+      width: auto;
+      display: inline-block;
+      padding: 0 spacing("xxl");
+    }
+  }
+
+  &__button-link-wrapper {
+    @media (min-width: $breakpoint-xs) {
+      text-align: center;
+    }
+  }
+
+  &__card-container {
+    // @include grid-container();
+    // padding: spacing("lg") 0 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $breakpoint-xs) {
+      justify-content: center;
+    }
+  }
+
+  .ter-card {
+    // @include grid-column(12);
+    margin: spacing("lg") auto 0;
+
+    @media (min-width: $breakpoint-xs) {
+      max-width: 300px;
+      margin: spacing("lg") spacing("sm") 0;
+
+      // @include grid-column(6);
+      // align-self: center;
+    }
+  }
+}

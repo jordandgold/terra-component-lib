@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat8 should match the snapshot 1`] = `
+<section
+  className="ter-feat-eight"
+>
+  <h2
+    className="ter-feat-eight__title"
+  >
+    Good design is innovative.
+  </h2>
+  <Button
+    className="ter-button--primary--1"
+    name="name"
+    onClick={[MockFunction]}
+    text="test"
+  />
+  <div
+    className="ter-feat-eight__button-link-wrapper"
+  >
+    <ButtonLink
+      className="ter-button--primary--1"
+      link="#"
+      text="Button"
+    />
+  </div>
+  <div
+    className="ter-feat-eight__card-container"
+  >
+    <Card
+      className="ter-button--primary--1"
+      image={
+        Object {
+          "altText": "Placeholder",
+          "url": "./placeholder.jpg",
+        }
+      }
+      key="feat-eight-card-0"
+      text="Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
+      title="Card Title"
+    />
+    <Card
+      className="ter-button--primary--1"
+      image={
+        Object {
+          "altText": "Placeholder",
+          "url": "./placeholder.jpg",
+        }
+      }
+      key="feat-eight-card-1"
+      text="Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
+      title="Card Title"
+    />
+    <Card
+      className="ter-button--primary--1"
+      image={
+        Object {
+          "altText": "Placeholder",
+          "url": "./placeholder.jpg",
+        }
+      }
+      key="feat-eight-card-2"
+      text="Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
+      title="Card Title"
+    />
+  </div>
+</section>
+`;

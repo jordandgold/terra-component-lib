@@ -2,6 +2,7 @@
 
 .ter-card {
   background: $card-bg;
+  margin-top: spacing("lg");
   position: relative;
   border-width: $card-border-width;
   border-style: solid;
