@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero4 should match the snapshot 1`] = `
+<section
+  className="ter-hero-four"
+>
+  <div
+    className="ter-hero-four__video-container"
+  >
+    <iframe
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen={true}
+      className="ter-hero-four__video"
+      frameBorder="0"
+      height="315"
+      src="https://www.youtube.com/embed/UY7r0juBF8Y"
+      width="560"
+    />
+  </div>
+  <div
+    className="ter-hero-four__content-container"
+  >
+    <h2
+      className="ter-hero-four__title"
+    >
+      Design is design.
+    </h2>
+    <p
+      className="ter-hero-four__text"
+    >
+      Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis.
+    </p>
+    <CTALinkSection
+      ctas={
+        Object {
+          "ctaOne": Object {
+            "className": "ter-button--primary--1",
+            "link": "#",
+            "text": "Button",
+          },
+          "ctaTwo": Object {
+            "className": "ter-button--secondary--1",
+            "link": "#",
+            "text": "Button",
+          },
+          "subCTA": Object {
+            "link": "#",
+            "text": "Button",
+          },
+        }
+      }
+    />
+  </div>
+</section>
+`;

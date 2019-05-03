@@ -1,20 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CTASection should match the snapshot 1`] = `
+exports[`CTALinkSection should match the snapshot 1`] = `
 <section
   className="ter-cta-section"
 >
-  <Button
+  <ButtonLink
     className="ter-button--primary--1"
-    name="ctaOne"
-    onClick={[MockFunction]}
-    text="Button"
+    link="Button"
+    text="ctaOne"
   />
-  <Button
+  <ButtonLink
     className="ter-button--secondary--1"
-    name="ctaOne"
-    onClick={[MockFunction]}
-    text="Button"
+    link="Button"
+    text="ctaOne"
   />
   <a
     className="ter-cta-section__link"
