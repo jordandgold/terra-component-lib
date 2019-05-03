@@ -291,3 +291,33 @@ export const mockLinkCardContent = {
   link: { url: "#", text: "Go Somewhere" },
   size: "small"
 };
+
+export const mockCards = [
+  {
+    image: {
+      url: "./placeholder.jpg",
+      altText: "Placeholder"
+    },
+    title: "Card Title",
+    text:
+      "Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
+  },
+  {
+    image: {
+      url: "./placeholder.jpg",
+      altText: "Placeholder"
+    },
+    title: "Card Title",
+    text:
+      "Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
+  },
+  {
+    image: {
+      url: "./placeholder.jpg",
+      altText: "Placeholder"
+    },
+    title: "Card Title",
+    text:
+      "Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
+  }
+];
