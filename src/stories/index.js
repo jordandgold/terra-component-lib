@@ -26,6 +26,7 @@ import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
+import Hero4 from "../lib/organisms/heroes/Hero4/Hero4";
 import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
@@ -950,6 +951,33 @@ storiesOf("Featurettes|Feat-8", module).add("Featurette-8", () => {
       title="Good design is innovative."
       buttonLink={mockButtonLink}
       cards={mockCards}
+    />
+  );
+});
+
+storiesOf("Heroes|Hero-4", module).add("Hero-4", () => {
+  const mockCTALinks = {
+    ctaOne: {
+      className: "ter-button--primary--1",
+      text: "Button",
+      link: "#"
+    },
+    ctaTwo: {
+      className: "ter-button--secondary--1",
+      text: "Button",
+      link: "#"
+    },
+    subCTA: {
+      text: "Button",
+      link: "#"
+    }
+  };
+
+  return (
+    <Hero4
+      title="Design is design."
+      text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+      ctas={mockCTALinks}
     />
   );
 });

@@ -1,26 +1,24 @@
 import React from "react";
-import "./CTASection.scss";
+import "./CTALinkSection.scss";
 import PropTypes from "prop-types";
-import Button from "../Button/Button";
+import ButtonLink from "../ButtonLink/ButtonLink";
 
-const CTASection = props => {
+const CTALinkSection = props => {
   const { ctaOne, ctaTwo, subCTA } = props.ctas;
   return (
     <section className="ter-cta-section">
       {ctaOne && (
-        <Button
+        <ButtonLink
           className={ctaOne.className}
-          name={ctaOne.name}
           text={ctaOne.text}
-          onClick={ctaOne.onClick}
+          link={ctaOne.link}
         />
       )}
       {ctaTwo && (
-        <Button
+        <ButtonLink
           className={ctaTwo.className}
-          name={ctaTwo.name}
           text={ctaTwo.text}
-          onClick={ctaTwo.onClick}
+          link={ctaTwo.link}
         />
       )}
       {subCTA && <a className="ter-cta-section__link">{subCTA.text}</a>}
@@ -28,22 +26,20 @@ const CTASection = props => {
   );
 };
 
-export default CTASection;
+export default CTALinkSection;
 
-CTASection.propTypes = {
+CTALinkSection.propTypes = {
   ctaOne: PropTypes.shape({
-    onClick: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
-    name: PropTypes.string
+    link: PropTypes.string
   }),
   ctaTwo: PropTypes.shape({
-    onClick: PropTypes.func.isRequired,
     text: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
-    name: PropTypes.string
+    link: PropTypes.string
   }),
-  ctaOne: PropTypes.shape({
+  subCTA: PropTypes.shape({
     text: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired
   })
