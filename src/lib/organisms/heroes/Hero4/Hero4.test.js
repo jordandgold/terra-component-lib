@@ -21,12 +21,15 @@ describe("Hero4", () => {
     }
   };
 
+  const mockVideo = { url: "test" };
+
   beforeEach(() => {
     wrapper = shallow(
       <Hero4
         title="Design is design."
         text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
         ctas={mockCTALinks}
+        video={mockVideo}
       />
     );
   });

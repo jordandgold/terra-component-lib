@@ -8,12 +8,11 @@ exports[`Hero4 should match the snapshot 1`] = `
     className="ter-hero-four__video-container"
   >
     <iframe
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen={true}
+      allow="accelerometer; undefined; encrypted-media; gyroscope; picture-in-picture undefined"
       className="ter-hero-four__video"
       frameBorder="0"
       height="315"
-      src="https://www.youtube.com/embed/UY7r0juBF8Y"
+      src="test"
       width="560"
     />
   </div>

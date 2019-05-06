@@ -4,17 +4,18 @@ import PropTypes from "prop-types";
 import CTALinkSection from "../../../CTALinkSection/CTALinkSection";
 
 const Hero4 = props => {
-  const { title, text, ctas } = props;
+  const { title, text, ctas, video } = props;
   return (
     <section className="ter-hero-four">
       <div className="ter-hero-four__video-container">
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/UY7r0juBF8Y"
+          src={video.url}
           frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
+          allow={`accelerometer; ${video.autoplay &&
+            "autoplay"}; encrypted-media; gyroscope; picture-in-picture ${video.allowFullScreen &&
+            "fullscreen"}`}
           className="ter-hero-four__video"
         />
       </div>
@@ -30,6 +31,11 @@ const Hero4 = props => {
 export default Hero4;
 
 Hero4.propTypes = {
+  video: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    autoPlay: PropTypes.bool,
+    allowFullScreen: PropTypes.bool
+  }).isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   ctas: PropTypes.shape({
