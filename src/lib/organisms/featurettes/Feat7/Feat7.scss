@@ -21,7 +21,7 @@
     margin: spacing("md") spacing("auto");
     max-width: 600px;
     display: flex;
-    align-items: center;
+    // align-items: center;
     border-top: solid 1px color("gray-3");
     border-bottom: solid 1px color("gray-3");
     padding: spacing("md");
@@ -48,6 +48,7 @@
 
   &__icon-wrapper {
     width: 50px;
+    align-self: center;
   }
 }
 

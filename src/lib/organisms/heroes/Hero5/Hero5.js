@@ -16,8 +16,8 @@ const Hero5 = props => {
       </div>
       <div className="ter-hero-five__content-container">
         <h2 className="ter-hero-five__title">{title}</h2>
-        <h3 className="ter-hero-five__subtitle">{subtitle}</h3>
-        <p className="ter-hero-five__text">{text}</p>
+        {subtitle && <h3 className="ter-hero-five__subtitle">{subtitle}</h3>}
+        {text && <p className="ter-hero-five__text">{text}</p>}
         <CTALinkSection ctas={ctas} />
       </div>
     </section>
@@ -29,7 +29,7 @@ export default Hero5;
 Hero5.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   ctas: PropTypes.shape({
     ctaOne: PropTypes.shape({
       className: PropTypes.string.isRequired,

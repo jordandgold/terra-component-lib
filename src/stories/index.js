@@ -1076,6 +1076,7 @@ storiesOf("Heroes|Hero-4", module).add("Hero-4", () => {
       title="Design is design."
       text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
       ctas={mockCTALinks}
+      allowFullScreen={true}
     />
   );
 });
