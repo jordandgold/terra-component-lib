@@ -19,11 +19,7 @@ class Card extends Component {
         <div className="ter-card__body">
           <h4 className="ter-card__title">{title}</h4>
           {text && <p className="ter-card__text">{text}</p>}
-          {link && (
-            <a className="ter-card__link" href={link.link}>
-              {link.text}
-            </a>
-          )}
+
           {button && (
             <Button
               name={button.name}
@@ -38,6 +34,11 @@ class Card extends Component {
               text={buttonLink.text}
               className="ter-button--primary--1"
             />
+          )}
+          {link && (
+            <a className="ter-card__link" href={link.link}>
+              {link.text}
+            </a>
           )}
         </div>
       </article>

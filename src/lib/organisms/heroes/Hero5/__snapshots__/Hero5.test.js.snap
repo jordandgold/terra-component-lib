@@ -21,9 +21,61 @@ exports[`Hero5 should match the snapshot 1`] = `
     >
       Design is design.
     </h2>
+    <p
+      className="ter-hero-five__text"
+    >
+      Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis.
+    </p>
+    <CTALinkSection
+      ctas={
+        Object {
+          "ctaOne": Object {
+            "className": "ter-button--primary--1",
+            "link": "#",
+            "text": "Button",
+          },
+          "ctaTwo": Object {
+            "className": "ter-button--secondary--1",
+            "link": "#",
+            "text": "Button",
+          },
+          "subCTA": Object {
+            "link": "#",
+            "text": "Button",
+          },
+        }
+      }
+    />
+  </div>
+</section>
+`;
+
+exports[`Hero5 should match the snapshot with a subtitle 1`] = `
+<section
+  className="ter-hero-five"
+>
+  <div
+    className="ter-hero-five__image-container"
+  >
+    <img
+      alt="test"
+      className="ter-hero-five__image"
+      src="test"
+    />
+  </div>
+  <div
+    className="ter-hero-five__content-container"
+  >
+    <h2
+      className="ter-hero-five__title"
+    >
+      Design is design.
+    </h2>
     <h3
       className="ter-hero-five__subtitle"
-    />
+    >
+      I am a subtitle
+    </h3>
     <p
       className="ter-hero-five__text"
     >

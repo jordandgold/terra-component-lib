@@ -35,4 +35,18 @@ describe("Hero5", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should match the snapshot with a subtitle", () => {
+    wrapper = shallow(
+      <Hero5
+        title="Design is design."
+        subtitle="I am a subtitle"
+        text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+        ctas={mockCTALinks}
+        image={{ url: "test", altText: "test" }}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });

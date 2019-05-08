@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hero2 should match the snapshot 1`] = `
+exports[`Hero2 should match the snapshot left 1`] = `
 <section
   className="ter-hero-two"
 >
@@ -58,6 +58,73 @@ exports[`Hero2 should match the snapshot 1`] = `
           },
         }
       }
+    />
+  </div>
+</section>
+`;
+
+exports[`Hero2 should match the snapshot right 1`] = `
+<section
+  className="ter-hero-two ter-hero-two--right-image"
+>
+  <div
+    className="ter-hero-two__image-container ter-hero-two__image-container--right-image"
+  >
+    <img
+      alt="placeholder"
+      className="ter-hero-two__image ter-hero-two__image--4x3"
+      src="./800x600.png"
+    />
+  </div>
+  <div
+    className="ter-hero-two__content-container ter-hero-two__content-container--left"
+  >
+    <h2
+      className="ter-hero-two__title"
+    >
+      Good design is innovative.
+    </h2>
+    <h3
+      className="ter-hero-two__subtitle"
+    />
+    <p
+      className="ter-hero-two__text"
+    >
+      Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.
+    </p>
+    <CTALinkSection
+      ctas={
+        Object {
+          "ctaOne": Object {
+            "className": "ter-button--primary--1",
+            "link": "#",
+            "text": "Button",
+          },
+          "ctaTwo": Object {
+            "className": "ter-button--secondary--1",
+            "link": "#",
+            "text": "Button",
+          },
+          "subCTA": Object {
+            "link": "#",
+            "text": "Sub-CTA",
+          },
+        }
+      }
+    />
+  </div>
+  <div
+    className="ter-hero-two__image-container"
+  >
+    <img
+      alt="placeholder"
+      className="ter-hero-two__image ter-hero-two__image--1x1"
+      src="./1-to-1.png"
+    />
+    <img
+      alt="placeholder"
+      className="ter-hero-two__image ter-hero-two__image--3x2"
+      src="./3x2-ph.png"
     />
   </div>
 </section>
