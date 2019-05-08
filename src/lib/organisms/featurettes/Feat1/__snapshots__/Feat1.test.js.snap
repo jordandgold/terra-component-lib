@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat1 should match the snapshot 1`] = `
+<section
+  className="ter-feat-one ter-feat-one--a"
+>
+  <div
+    className="ter-feat-one__image-wrapper ter-feat-one__image-wrapper--a"
+  >
+    <img
+      alt="placeholder"
+      className="ter-feat-one__image"
+      src="./1-to-1.png"
+    />
+  </div>
+  <div
+    className="ter-feat-one__content-container ter-feat-one__content-container--a"
+  >
+     
+    <h3
+      className="ter-feat-one__title"
+    >
+      Design is good.
+    </h3>
+    <h4
+      className="ter-feat-one__subtitle"
+    >
+      You should know about it, maybe?
+    </h4>
+    <p
+      className="ter-feat-one__text"
+    >
+      Cillum et laboris aliquip consequat. Consectetur commodo nisi laborum voluptate. Commodo est ullamco pariatur ut nostrud pariatur.
+    </p>
+    <ButtonLink
+      className="ter-button--primary--1"
+      link="#"
+      text="Button"
+    />
+  </div>
+</section>
+`;

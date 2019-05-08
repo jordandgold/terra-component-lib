@@ -37,6 +37,7 @@ import Feat4 from "../lib/organisms/featurettes/Feat4/Feat4";
 import Feat5 from "../lib/organisms/featurettes/Feat5/Feat5";
 import Feat2 from "../lib/organisms/featurettes/Feat2/Feat2";
 import Feat8 from "../lib/organisms/featurettes/Feat8/Feat8";
+import Feat1 from "../lib/organisms/featurettes/Feat1/Feat1";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
@@ -1181,6 +1182,53 @@ storiesOf("Heroes|Hero-1", module)
         text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
         ctas={mockCTALinks}
         contentSide="right"
+      />
+    );
+  });
+
+storiesOf("Featurettes|Feat-1", module)
+  .add("Featurette-1a", () => {
+    const mockTitle = "Design is good.";
+    const mockSubtitle = "You should know about it, maybe?";
+    const mockText =
+      "Cillum et laboris aliquip consequat. Consectetur commodo nisi laborum voluptate. Commodo est ullamco pariatur ut nostrud pariatur.";
+    const mockCTA = { link: "#", text: "Button" };
+    const mockImage = { url: "./1-to-1.png", altText: "placeholder" };
+    return (
+      <Feat1
+        title={mockTitle}
+        subtitle={mockSubtitle}
+        text={mockText}
+        cta={mockCTA}
+        variant="a"
+        image={mockImage}
+      />
+    );
+  })
+  .add("Featurette-1b", () => {
+    const mockTitle = "Design is good.";
+    const mockText =
+      "Cillum et laboris aliquip consequat. Consectetur commodo nisi laborum voluptate. Commodo est ullamco pariatur ut nostrud pariatur.";
+    const mockImage = { url: "./1-to-1.png", altText: "placeholder" };
+    return (
+      <Feat1 title={mockTitle} text={mockText} variant="b" image={mockImage} />
+    );
+  })
+  .add("Featurette-1c", () => {
+    const mockTitle = "Design is good.";
+    const mockSubtitle = "You should know about it, maybe?";
+    const mockText =
+      "Cillum et laboris aliquip consequat. Consectetur commodo nisi laborum voluptate. Commodo est ullamco pariatur ut nostrud pariatur.";
+    const mockCTA = { link: "#", text: "Button" };
+    const mockImage = { url: "./1-to-1.png", altText: "placeholder" };
+    return (
+      <Feat1
+        title={mockTitle}
+        subtitle={mockSubtitle}
+        text={mockText}
+        cta={mockCTA}
+        variant="c"
+        image={mockImage}
       />
     );
   });

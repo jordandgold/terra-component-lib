@@ -1,0 +1,112 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-feat-one {
+  padding: spacing("lg") spacing("md");
+
+  @media (min-width: $breakpoint-xs) {
+    max-width: 700px;
+    margin: auto;
+    padding-top: spacing("mega");
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    @include grid-container;
+  }
+
+  &--a {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: $breakpoint-sm) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      @include grid-container;
+    }
+  }
+
+  &--b,
+  &--c {
+    @media (min-width: $breakpoint-sm) {
+      padding: spacing("mega") spacing("md");
+      align-items: center;
+    }
+  }
+
+  &__image-wrapper {
+    margin-bottom: spacing("md");
+
+    @media (min-width: $breakpoint-sm) {
+      @include grid-column(6);
+    }
+
+    &--a {
+      margin-top: spacing("lg");
+      margin-bottom: 0;
+
+      @media (min-width: $breakpoint-md) {
+        @include grid-column(6);
+        align-self: self-end;
+        margin-top: 0;
+      }
+    }
+
+    &--b,
+    &--c {
+      @media (min-width: $breakpoint-sm) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content-container {
+    @media (min-width: $breakpoint-sm) {
+      @include grid-column(6);
+    }
+
+    &--a {
+      @media (min-width: $breakpoint-md) {
+        @include grid-column(6);
+      }
+    }
+  }
+
+  &__title {
+    font-size: font-size("lg");
+  }
+
+  &__subtitle {
+    font-size: font-size("base");
+    font-weight: font-weight("light");
+    color: grayscale("gray-7");
+  }
+
+  &__text {
+    margin-top: spacing("md");
+    margin-bottom: 0;
+  }
+
+  .ter-button {
+    display: block;
+    margin-top: spacing("md");
+
+    @media (min-width: $breakpoint-xs) {
+      display: inline-block;
+      padding-right: spacing("lg");
+      padding-left: spacing("lg");
+      // max-width: 200px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: spacing("md");
+    }
+  }
+}
