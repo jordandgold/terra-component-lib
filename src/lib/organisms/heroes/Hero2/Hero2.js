@@ -1,55 +1,87 @@
 import React from "react";
 import "./Hero2.scss";
 import PropTypes from "prop-types";
-import CTASection from "../../../CTASection/CTASection";
+import CTALinkSection from "../../../CTALinkSection/CTALinkSection";
 
 const Hero2 = props => {
-  const { imageSide, image, title, body, ctas } = props;
-  const imageStyle = {
-    backgroundImage: `url(${image.url})`
-  };
-  return (
-    <section
-      className={`ter-hero2 container-fluid ${
-        imageSide === "right" ? "row reverse" : "row"
-      }`}
-    >
-      <div className="ter-hero2__image-wrapper col-xs-12 col-sm-6 col-lg-7">
-        <img className="ter-hero2__image" src={image.url} alt={image.altText} />
-      </div>
-      <div className="ter-hero2__content col-xs-12 col-sm-6 col-lg-5 middle-lg">
-        <div className="ter-hero2__content-wrapper">
-          <h3 className="ter-hero2__title">{title}</h3>
-          <p className="ter-hero2__body">{body}</p>
-          {ctas && <CTASection ctas={ctas} />}
+  const { title, text, ctas, images, subtitle, imageSide } = props;
+  if (imageSide === "right") {
+    return (
+      <section className="ter-hero-two ter-hero-two--right-image">
+        <div className="ter-hero-two__image-container ter-hero-two__image-container--right-image">
+          <img
+            className="ter-hero-two__image ter-hero-two__image--4x3"
+            src={images.imageFourXThree.url}
+            alt={images.imageFourXThree.altText}
+          />
         </div>
-      </div>
-    </section>
-  );
+        <div className="ter-hero-two__content-container ter-hero-two__content-container--left">
+          <h2 className="ter-hero-two__title">{title}</h2>
+          <h3 className="ter-hero-two__subtitle">{subtitle}</h3>
+          <p className="ter-hero-two__text">{text}</p>
+          <CTALinkSection ctas={ctas} />
+        </div>
+        <div className="ter-hero-two__image-container">
+          <img
+            className="ter-hero-two__image ter-hero-two__image--1x1"
+            src={images.imageOneXOne.url}
+            alt={images.imageOneXOne.altText}
+          />
+          <img
+            className="ter-hero-two__image ter-hero-two__image--3x2"
+            src={images.imageThreeXTwo.url}
+            alt={images.imageThreeXTwo.altText}
+          />
+        </div>
+      </section>
+    );
+  } else {
+    return (
+      <section className="ter-hero-two">
+        <div className="ter-hero-two__image-container">
+          <img
+            className="ter-hero-two__image ter-hero-two__image--1x1"
+            src={images.imageOneXOne.url}
+            alt={images.imageOneXOne.altText}
+          />
+          <img
+            className="ter-hero-two__image ter-hero-two__image--4x3"
+            src={images.imageFourXThree.url}
+            alt={images.imageFourXThree.altText}
+          />
+          <img
+            className="ter-hero-two__image ter-hero-two__image--3x2"
+            src={images.imageThreeXTwo.url}
+            alt={images.imageThreeXTwo.altText}
+          />
+        </div>
+        <div className="ter-hero-two__content-container">
+          <h2 className="ter-hero-two__title">{title}</h2>
+          <h3 className="ter-hero-two__subtitle">{subtitle}</h3>
+          <p className="ter-hero-two__text">{text}</p>
+          <CTALinkSection ctas={ctas} />
+        </div>
+      </section>
+    );
+  }
 };
 
 export default Hero2;
 
 Hero2.propTypes = {
-  imageSide: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    altText: PropTypes.string.isRequired
-  }).isRequired,
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  text: PropTypes.string.isRequired,
   ctas: PropTypes.shape({
     ctaOne: PropTypes.shape({
-      onClick: PropTypes.func.isRequired,
-      text: PropTypes.string.isRequired,
       className: PropTypes.string.isRequired,
-      name: PropTypes.string
+      text: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired
     }),
     ctaTwo: PropTypes.shape({
-      onClick: PropTypes.func.isRequired,
-      text: PropTypes.string.isRequired,
       className: PropTypes.string.isRequired,
-      name: PropTypes.string
+      text: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired
     }),
     subCTA: PropTypes.shape({
       text: PropTypes.string.isRequired,

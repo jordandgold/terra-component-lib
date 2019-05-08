@@ -6,13 +6,11 @@ exports[`CTASection should match the snapshot 1`] = `
 >
   <Button
     className="ter-button--primary--1"
-    name="ctaOne"
     onClick={[MockFunction]}
     text="Button"
   />
   <Button
     className="ter-button--secondary--1"
-    name="ctaOne"
     onClick={[MockFunction]}
     text="Button"
   />

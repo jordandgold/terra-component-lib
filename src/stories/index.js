@@ -27,6 +27,8 @@ import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Hero4 from "../lib/organisms/heroes/Hero4/Hero4";
+import Hero5 from "../lib/organisms/heroes/Hero5/Hero5";
+
 import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
@@ -51,7 +53,7 @@ import {
   DropdownForm
 } from "../../storybookIntegrationComponents/";
 import {
-  heroTwoContent,
+  // heroTwoContent,
   featSixAContent,
   featNineContent,
   featSevenContent,
@@ -246,16 +248,16 @@ storiesOf("Atoms|Icon", module).add("Icon", () => (
   </div>
 ));
 
-storiesOf("Molecules|Dropdown", module).add("Dropdown", () => (
-  <Dropdown label="I am a dropdown">
-    <p>I am text</p>
-    <Button
-      onClick={action("Primary 1 Clicked")}
-      text="I am a button"
-      className="ter-button--primary--1"
-    />
-  </Dropdown>
-));
+// storiesOf("Molecules|Dropdown", module).add("Dropdown", () => (
+//   <Dropdown label="I am a dropdown">
+//     <p>I am text</p>
+//     <Button
+//       onClick={action("Primary 1 Clicked")}
+//       text="I am a button"
+//       className="ter-button--primary--1"
+//     />
+//   </Dropdown>
+// ));
 
 const mockPages = 4;
 
@@ -517,32 +519,122 @@ storiesOf("Atoms|Tooltip", module).add("Tooltip", () => {
 
 storiesOf("Heroes|Hero-2", module)
   .add("Hero-2 Image Left", () => {
-    const { image, title, body, ctas } = heroTwoContent;
-    ctas.ctaOne.onClick = action("clicked an option");
-    ctas.ctaTwo.onClick = action("clicked an option");
+    const heroTwoContent = {
+      images: {
+        imageThreeXTwo: {
+          url: "./3x2-ph.png",
+          altText: "placeholder"
+        },
+        imageFourXThree: {
+          url: "./800x600.png",
+          altText: "placeholder"
+        },
+        imageOneXOne: {
+          url: "./1-to-1.png",
+          altText: "placeholder"
+        }
+      },
+      title: "Good design is innovative.",
+      text:
+        "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.",
+      ctas: {
+        ctaOne: {
+          className: "ter-button--primary--1",
+          link: "#",
+          text: "Button"
+        },
+        ctaTwo: {
+          className: "ter-button--secondary--1",
+          link: "#",
+          text: "Button"
+        },
+        subCTA: {
+          text: "Sub-CTA",
+          link: "#"
+        }
+      }
+    };
 
     return (
       <Hero2
         imageSide="left"
-        image={image}
-        title={title}
-        body={body}
-        ctas={ctas}
+        images={{
+          imageThreeXTwo: {
+            url: "./3x2-ph.png",
+            altText: "placeholder"
+          },
+          imageFourXThree: {
+            url: "./800x600.png",
+            altText: "placeholder"
+          },
+          imageOneXOne: {
+            url: "./1-to-1.png",
+            altText: "placeholder"
+          }
+        }}
+        title="Good design is innovative."
+        text={heroTwoContent.text}
+        ctas={heroTwoContent.ctas}
       />
     );
   })
   .add("Hero-2 Image Right", () => {
-    const { image, title, body, ctas } = heroTwoContent;
-    ctas.ctaOne.onClick = action("clicked CTA One");
-    ctas.ctaTwo.onClick = action("clicked CTA Two");
+    const heroTwoContent = {
+      images: {
+        imageThreeXTwo: {
+          url: "./3x2-ph.png",
+          altText: "placeholder"
+        },
+        imageFourXThree: {
+          url: "./800x600.png",
+          altText: "placeholder"
+        },
+        imageOneXOne: {
+          url: "./1-to-1.png",
+          altText: "placeholder"
+        }
+      },
+      title: "Good design is innovative.",
+      text:
+        "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.",
+      ctas: {
+        ctaOne: {
+          className: "ter-button--primary--1",
+          link: "#",
+          text: "Button"
+        },
+        ctaTwo: {
+          className: "ter-button--secondary--1",
+          link: "#",
+          text: "Button"
+        },
+        subCTA: {
+          text: "Sub-CTA",
+          link: "#"
+        }
+      }
+    };
 
     return (
       <Hero2
         imageSide="right"
-        image={image}
-        title={title}
-        body={body}
-        ctas={ctas}
+        images={{
+          imageThreeXTwo: {
+            url: "./3x2-ph.png",
+            altText: "placeholder"
+          },
+          imageFourXThree: {
+            url: "./800x600.png",
+            altText: "placeholder"
+          },
+          imageOneXOne: {
+            url: "./1-to-1.png",
+            altText: "placeholder"
+          }
+        }}
+        title="Good design is innovative."
+        text={heroTwoContent.text}
+        ctas={heroTwoContent.ctas}
       />
     );
   });
@@ -973,9 +1065,50 @@ storiesOf("Heroes|Hero-4", module).add("Hero-4", () => {
     }
   };
 
+  const mockVideo = {
+    url: "https://www.youtube.com/embed/UY7r0juBF8Y",
+    allowFullScreen: "true"
+  };
+
   return (
     <Hero4
+      video={mockVideo}
       title="Design is design."
+      text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+      ctas={mockCTALinks}
+      allowFullScreen={true}
+    />
+  );
+});
+
+storiesOf("Heroes|Hero-5", module).add("Hero-5", () => {
+  const mockCTALinks = {
+    ctaOne: {
+      className: "ter-button--primary--1",
+      text: "Button",
+      link: "#"
+    },
+    ctaTwo: {
+      className: "ter-button--secondary--1",
+      text: "Button",
+      link: "#"
+    },
+    subCTA: {
+      text: "Button",
+      link: "#"
+    }
+  };
+
+  const mockImage = {
+    url: "./1-to-1.png",
+    altText: "placeholder"
+  };
+
+  return (
+    <Hero5
+      image={mockImage}
+      title="Design is design."
+      subtitle="Nulla ex commodo reprehenderit aliquip."
       text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
       ctas={mockCTALinks}
     />

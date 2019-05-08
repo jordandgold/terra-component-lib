@@ -1,26 +1,35 @@
 export const heroTwoContent = {
-  imageSide: "left",
-  image: {
-    url: "./sampleImage.png",
-    altText: "dock on water"
+  images: {
+    imageThreeXTwo: {
+      url: "./3x2-ph.png",
+      altText: "placeholder"
+    },
+    imageFourXThree: {
+      url: "./800x600.png",
+      altText: "placeholder"
+    },
+    imageOneXOne: {
+      url: "./1-to-1.png",
+      altText: "placeholder"
+    }
   },
   title: "Good design is innovative.",
-  body:
+  text:
     "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.",
   ctas: {
     ctaOne: {
       className: "ter-button--primary--1",
-      name: "ctaOne",
+      link: "#",
       text: "Button"
     },
     ctaTwo: {
       className: "ter-button--secondary--1",
-      name: "ctaOne",
+      link: "#",
       text: "Button"
     },
     subCTA: {
       text: "Sub-CTA",
-      link: "mock link"
+      link: "#"
     }
   }
 };
