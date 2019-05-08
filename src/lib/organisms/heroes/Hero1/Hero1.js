@@ -51,6 +51,9 @@ class Hero1 extends Component {
 
   render() {
     const { images, contentSide, title, text, ctas } = this.props;
+    const side = {
+      right: "-"
+    };
     return (
       <section className="ter-hero-one">
         {this.state.size === "mobile" && (
@@ -74,25 +77,41 @@ class Hero1 extends Component {
             alt={images.desktop.altText}
           />
         )}
-        <div
-          className={`ter-hero-one__content-container ${
-            contentSide === "right"
-              ? "ter-hero-one__content-container--right"
-              : "ter-hero-one__content-container--left"
-          }`}
-          style={
-            this.state.size === "desktop"
-              ? {
-                  transform: `translate(48px, -${this.state.contentHeight +
-                    48}px)`
-                }
-              : {}
-          }
-        >
-          <h2 className="ter-hero-one__title">{title}</h2>
-          <p className="ter-hero-one__text">{text}</p>
-          <CTALinkSection ctas={ctas} />
-        </div>
+        {contentSide === "right" ? (
+          <div
+            className="ter-hero-one__content-container"
+            style={
+              this.state.size === "desktop"
+                ? {
+                    transform: `translate(-48px, -${this.state.contentHeight +
+                      48}px)`,
+                    float: "right"
+                  }
+                : {}
+            }
+          >
+            <h2 className="ter-hero-one__title">{title}</h2>
+            <p className="ter-hero-one__text">{text}</p>
+            <CTALinkSection ctas={ctas} />
+          </div>
+        ) : (
+          <div
+            className="ter-hero-one__content-container"
+            style={
+              this.state.size === "desktop"
+                ? {
+                    transform: `translate(48px, -${this.state.contentHeight +
+                      48}px)`,
+                    float: "left"
+                  }
+                : {}
+            }
+          >
+            <h2 className="ter-hero-one__title">{title}</h2>
+            <p className="ter-hero-one__text">{text}</p>
+            <CTALinkSection ctas={ctas} />
+          </div>
+        )}
       </section>
     );
   }
@@ -101,6 +120,7 @@ class Hero1 extends Component {
 export default Hero1;
 
 Hero1.propTypes = {
+  contentSide: PropTypes.string,
   images: PropTypes.shape({
     desktop: PropTypes.shape({
       url: PropTypes.string.isRequired,

@@ -48,7 +48,7 @@ exports[`Hero1 should match the snapshot left 1`] = `
       src="1-to-1.png"
     />
     <div
-      className="ter-hero-one__content-container ter-hero-one__content-container--left"
+      className="ter-hero-one__content-container"
       style={Object {}}
     >
       <h2
@@ -169,7 +169,7 @@ exports[`Hero1 should match the snapshot right 1`] = `
       src="1-to-1.png"
     />
     <div
-      className="ter-hero-one__content-container ter-hero-one__content-container--right"
+      className="ter-hero-one__content-container"
       style={Object {}}
     >
       <h2

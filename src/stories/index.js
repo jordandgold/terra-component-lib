@@ -1116,36 +1116,71 @@ storiesOf("Heroes|Hero-5", module).add("Hero-5", () => {
   );
 });
 
-storiesOf("Heroes|Hero-1", module).add("Hero-1", () => {
-  const mockCTALinks = {
-    ctaOne: {
-      className: "ter-button--primary--1",
-      text: "Button",
-      link: "#"
-    },
-    ctaTwo: {
-      className: "ter-button--secondary--1",
-      text: "Button",
-      link: "#"
-    },
-    subCTA: {
-      text: "Button",
-      link: "#"
-    }
-  };
+storiesOf("Heroes|Hero-1", module)
+  .add("Hero-1 Left", () => {
+    const mockCTALinks = {
+      ctaOne: {
+        className: "ter-button--primary--1",
+        text: "Button",
+        link: "#"
+      },
+      ctaTwo: {
+        className: "ter-button--secondary--1",
+        text: "Button",
+        link: "#"
+      },
+      subCTA: {
+        text: "Button",
+        link: "#"
+      }
+    };
 
-  const mockImage = {
-    desktop: { url: "./1600x1200.png", altText: "placeholder image" },
-    tablet: { url: "./800x600.png", altText: "placeholder image" },
-    mobile: { url: "1-to-1.png", altText: "placeholder image" }
-  };
+    const mockImage = {
+      desktop: { url: "./1600x1200.png", altText: "placeholder image" },
+      tablet: { url: "./800x600.png", altText: "placeholder image" },
+      mobile: { url: "1-to-1.png", altText: "placeholder image" }
+    };
 
-  return (
-    <Hero1
-      images={mockImage}
-      title="Design is design."
-      text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
-      ctas={mockCTALinks}
-    />
-  );
-});
+    return (
+      <Hero1
+        images={mockImage}
+        title="Design is design."
+        text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+        ctas={mockCTALinks}
+      />
+    );
+  })
+  .add("Hero-1 Right", () => {
+    const mockCTALinks = {
+      ctaOne: {
+        className: "ter-button--primary--1",
+        text: "Button",
+        link: "#"
+      },
+      ctaTwo: {
+        className: "ter-button--secondary--1",
+        text: "Button",
+        link: "#"
+      },
+      subCTA: {
+        text: "Button",
+        link: "#"
+      }
+    };
+
+    const mockImage = {
+      desktop: { url: "./1600x1200.png", altText: "placeholder image" },
+      tablet: { url: "./800x600.png", altText: "placeholder image" },
+      mobile: { url: "1-to-1.png", altText: "placeholder image" }
+    };
+
+    return (
+      <Hero1
+        images={mockImage}
+        title="Design is design."
+        text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+        ctas={mockCTALinks}
+        contentSide="right"
+      />
+    );
+  });
