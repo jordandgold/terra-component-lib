@@ -25,10 +25,6 @@ exports[`Card should match the snapshot 1`] = `
     >
       This is the first paragraph
     </p>
-    <a
-      className="ter-card__link"
-      href="http://www.mocklink.com"
-    />
     <Button
       className="ter-button--primary--1"
       name="mock name"
@@ -39,6 +35,10 @@ exports[`Card should match the snapshot 1`] = `
       className="ter-button--primary--1"
       link="mock link"
       text="mock text"
+    />
+    <a
+      className="ter-card__link"
+      href="http://www.mocklink.com"
     />
   </div>
 </article>

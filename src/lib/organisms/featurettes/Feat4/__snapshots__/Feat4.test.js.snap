@@ -62,3 +62,275 @@ exports[`Feat4 should match the snapshot 1`] = `
   </div>
 </section>
 `;
+
+exports[`Feat4 should match the snapshot with 3 columns 1`] = `
+<section
+  className="ter-feat-four"
+>
+  <div
+    className="ter-feat-four__card-container three-columns"
+  >
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-0"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-1"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-2"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-3"
+    />
+  </div>
+</section>
+`;
+
+exports[`Feat4 should match the snapshot with a title 1`] = `
+<section
+  className="ter-feat-four"
+>
+  <h3
+    className="ter-feat-four__title ter-feat-four__title--no-image"
+  >
+    test
+  </h3>
+  <div
+    className="ter-feat-four__card-container two-columns"
+  >
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-0"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-1"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-2"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-3"
+    />
+  </div>
+</section>
+`;
+
+exports[`Feat4 should match the snapshot with a title and image 1`] = `
+<section
+  className="ter-feat-four"
+>
+  <img
+    alt="test"
+    className="ter-feat-four__image"
+    src="test"
+  />
+  <h3
+    className="ter-feat-four__title "
+  >
+    test
+  </h3>
+  <div
+    className="ter-feat-four__card-container two-columns"
+  >
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-0"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-1"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-2"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-3"
+    />
+  </div>
+</section>
+`;
+
+exports[`Feat4 should match the snapshot with an image 1`] = `
+<section
+  className="ter-feat-four"
+>
+  <img
+    alt="test"
+    className="ter-feat-four__image"
+    src="test"
+  />
+  <div
+    className="ter-feat-four__card-container two-columns"
+  >
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-0"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-1"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-2"
+    />
+    <IconListItem
+      content={
+        Object {
+          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
+          "link": Object {
+            "text": "Button",
+            "url": "#",
+          },
+          "title": "Design is good. Period.",
+        }
+      }
+      key="icon-list-item-card-3"
+    />
+  </div>
+</section>
+`;

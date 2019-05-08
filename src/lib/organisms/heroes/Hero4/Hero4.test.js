@@ -37,4 +37,17 @@ describe("Hero4", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should match the snapshot with video allowances", () => {
+    const mockVideo = { url: "test", autoplay: true, allowFullScreen: true };
+
+    wrapper = shallow(
+      <Hero4
+        title="Design is design."
+        text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+        ctas={mockCTALinks}
+        video={mockVideo}
+      />
+    );
+  });
 });

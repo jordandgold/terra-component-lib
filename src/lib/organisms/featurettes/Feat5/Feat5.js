@@ -5,41 +5,60 @@ import "./Feat5.scss";
 
 class Feat5 extends Component {
   getDumplings = () => {
-    return this.props.dumplings.map((dumpling, index) => {
-      if (dumpling.icon) {
-        return (
-          <div
-            className={`ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--${
-              this.props.type
-            }`}
-            key={`dumpling-${index}`}
-          >
-            <Dumpling
-              title={dumpling.title}
-              size={this.props.type === "b" ? "small" : "large"}
-              link={dumpling.link}
-              icon={dumpling.icon}
-            />
-          </div>
-        );
-      } else if (dumpling.image) {
-        return (
-          <div
-            className={`ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--${
-              this.props.type
-            }`}
-            key={`dumpling-${index}`}
-          >
-            <Dumpling
-              title={dumpling.title}
-              size={this.props.type === "b" ? "small" : "large"}
-              link={dumpling.link}
-              image={dumpling.image}
-            />
-          </div>
-        );
-      }
-    });
+    if (this.props.dumplings[0].icon) {
+      return this.props.dumplings.map((dumpling, index) => {
+        return this.returnIconDumpling(dumpling, index);
+      });
+    } else {
+      // Would prefer an else/if here, but can't get it to pass test coverage - potential code smell
+      return this.props.dumplings.map((dumpling, index) => {
+        return this.returnImageDumpling(dumpling, index);
+      });
+    }
+  };
+
+  returnIconDumpling = (dumpling, index) => {
+    const sizes = {
+      a: "large",
+      b: "small"
+    };
+    return (
+      <div
+        className={`ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--${
+          this.props.type
+        }`}
+        key={`dumpling-${index}`}
+      >
+        <Dumpling
+          title={dumpling.title}
+          size={sizes[this.props.type]}
+          link={dumpling.link}
+          icon={dumpling.icon}
+        />
+      </div>
+    );
+  };
+
+  returnImageDumpling = (dumpling, index) => {
+    const sizes = {
+      a: "large",
+      b: "small"
+    };
+    return (
+      <div
+        className={`ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--${
+          this.props.type
+        }`}
+        key={`dumpling-${index}`}
+      >
+        <Dumpling
+          title={dumpling.title}
+          size={sizes[this.props.type]}
+          link={dumpling.link}
+          image={dumpling.image}
+        />
+      </div>
+    );
   };
 
   render() {

@@ -1,0 +1,70 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-hero-one {
+  &__image {
+    width: 100%;
+  }
+
+  &__content-container {
+    background: color("white");
+    padding: spacing("md") spacing("sm");
+    max-width: 85%;
+    margin: auto;
+    transform: translateY(-100px);
+    box-shadow: $card-box-shadow;
+
+    @media (min-width: $breakpoint-xs) {
+      padding: spacing("md") spacing("md");
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      max-width: 700px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: font-size("lg");
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: font-size("xl");
+    }
+  }
+
+  &__text {
+    font-size: font-size("base");
+    font-weight: font-weight("light");
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: font-size("md");
+    }
+  }
+
+  .ter-cta-section {
+    @media (min-width: $breakpoint-xs) {
+      max-width: 200px;
+    }
+  }
+
+  .ter-button {
+    display: block;
+
+    &--secondary--1 {
+      margin-top: spacing("xs");
+    }
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: spacing("md");
+    }
+  }
+
+  .ter-cta-section__link {
+    display: block;
+    text-align: center;
+    font-size: font-size("base");
+    margin-top: spacing("xxs");
+  }
+}

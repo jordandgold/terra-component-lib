@@ -59,6 +59,21 @@ describe("Feat5", () => {
         '<div class="ter-feat-five__dumpling-wrapper ter-feat-five__dumpling-wrapper--b"><article class="ter-dumpling ter-dumpling--small"><img src="./1-to-1.png" alt="test text" class="ter-dumpling__image"/><div class="ter-dumpling__small-dash"></div><a class="ter-dumpling__link ter-dumpling__link--small" href="#">Dumplin&#x27;</a><div></div></article></div>'
       ];
 
+      const mockTestImageDumplings = [
+        {
+          title: "Dumplin'",
+          link: { url: "#" },
+          dumplingSize: "small",
+          image: { url: "./1-to-1.png", altText: "test text" }
+        },
+        {
+          title: "Dumplin'",
+          link: { url: "#" },
+          dumplingSize: "small",
+          image: { url: "./1-to-1.png", altText: "test text" }
+        }
+      ];
+
       wrapper = shallow(
         <Feat5
           dumplings={mockTestImageDumplings}
@@ -76,6 +91,46 @@ describe("Feat5", () => {
         });
 
       expect(response).toEqual(expected);
+    });
+
+    it("should call returnIconDumpling", () => {
+      const spy = jest.spyOn(wrapper.instance(), "returnIconDumpling");
+
+      wrapper.instance().getDumplings();
+
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it("should call returnImageDumpling", () => {
+      const mockTestImageDumplings = [
+        {
+          title: "Dumplin'",
+          link: { url: "#" },
+          dumplingSize: "small",
+          image: { url: "./1-to-1.png", altText: "test text" }
+        },
+        {
+          title: "Dumplin'",
+          link: { url: "#" },
+          dumplingSize: "small",
+          image: { url: "./1-to-1.png", altText: "test text" }
+        }
+      ];
+
+      wrapper = shallow(
+        <Feat5
+          dumplings={mockTestImageDumplings}
+          type="b"
+          title="Design is design"
+          subtitle="It's like, this thing, you know?"
+        />
+      );
+
+      const spy = jest.spyOn(wrapper.instance(), "returnImageDumpling");
+
+      wrapper.instance().getDumplings();
+
+      expect(spy).toHaveBeenCalled();
     });
   });
 });

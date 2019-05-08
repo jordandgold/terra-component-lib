@@ -16,6 +16,52 @@ describe("Feat4", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should match the snapshot with an image", () => {
+    const mockImage = { url: "test", altText: "test" };
+    wrapper = shallow(
+      <Feat4
+        content={featFourContent}
+        columns={2}
+        variant="a"
+        image={mockImage}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match the snapshot with a title", () => {
+    wrapper = shallow(
+      <Feat4 content={featFourContent} columns={2} variant="a" title="test" />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match the snapshot with a title and image", () => {
+    const mockImage = { url: "test", altText: "test" };
+
+    wrapper = shallow(
+      <Feat4
+        content={featFourContent}
+        columns={2}
+        variant="a"
+        title="test"
+        image={mockImage}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should match the snapshot with 3 columns", () => {
+    wrapper = shallow(
+      <Feat4 content={featFourContent} columns={3} variant="a" />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe("generateCards", () => {
     it("should call generateACards", () => {
       const spy = jest.spyOn(wrapper.instance(), "generateACards");

@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero1 should match the snapshot left 1`] = `
+<Hero1
+  ctas={
+    Object {
+      "ctaOne": Object {
+        "className": "ter-button--primary--1",
+        "link": "#",
+        "text": "Button",
+      },
+      "ctaTwo": Object {
+        "className": "ter-button--secondary--1",
+        "link": "#",
+        "text": "Button",
+      },
+      "subCTA": Object {
+        "link": "#",
+        "text": "Button",
+      },
+    }
+  }
+  images={
+    Object {
+      "desktop": Object {
+        "altText": "placeholder image",
+        "url": "./1600x1200.png",
+      },
+      "mobile": Object {
+        "altText": "placeholder image",
+        "url": "1-to-1.png",
+      },
+      "tablet": Object {
+        "altText": "placeholder image",
+        "url": "./800x600.png",
+      },
+    }
+  }
+  text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+  title="Design is design."
+>
+  <section
+    className="ter-hero-one"
+  >
+    <img
+      alt="placeholder image"
+      className="ter-hero-one__image ter-hero-one__image--mobile"
+      src="1-to-1.png"
+    />
+    <div
+      className="ter-hero-one__content-container"
+      style={Object {}}
+    >
+      <h2
+        className="ter-hero-one__title"
+      >
+        Design is design.
+      </h2>
+      <p
+        className="ter-hero-one__text"
+      >
+        Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis.
+      </p>
+      <CTALinkSection
+        ctas={
+          Object {
+            "ctaOne": Object {
+              "className": "ter-button--primary--1",
+              "link": "#",
+              "text": "Button",
+            },
+            "ctaTwo": Object {
+              "className": "ter-button--secondary--1",
+              "link": "#",
+              "text": "Button",
+            },
+            "subCTA": Object {
+              "link": "#",
+              "text": "Button",
+            },
+          }
+        }
+      >
+        <section
+          className="ter-cta-section"
+        >
+          <ButtonLink
+            className="ter-button--primary--1"
+            link="#"
+            text="Button"
+          >
+            <a
+              className="ter-button ter-button--primary--1"
+              href="#"
+            >
+              Button
+            </a>
+          </ButtonLink>
+          <ButtonLink
+            className="ter-button--secondary--1"
+            link="#"
+            text="Button"
+          >
+            <a
+              className="ter-button ter-button--secondary--1"
+              href="#"
+            >
+              Button
+            </a>
+          </ButtonLink>
+          <a
+            className="ter-cta-section__link"
+          >
+            Button
+          </a>
+        </section>
+      </CTALinkSection>
+    </div>
+  </section>
+</Hero1>
+`;
+
+exports[`Hero1 should match the snapshot right 1`] = `
+<Hero1
+  contentSide="right"
+  ctas={
+    Object {
+      "ctaOne": Object {
+        "className": "ter-button--primary--1",
+        "link": "#",
+        "text": "Button",
+      },
+      "ctaTwo": Object {
+        "className": "ter-button--secondary--1",
+        "link": "#",
+        "text": "Button",
+      },
+      "subCTA": Object {
+        "link": "#",
+        "text": "Button",
+      },
+    }
+  }
+  images={
+    Object {
+      "desktop": Object {
+        "altText": "placeholder image",
+        "url": "./1600x1200.png",
+      },
+      "mobile": Object {
+        "altText": "placeholder image",
+        "url": "1-to-1.png",
+      },
+      "tablet": Object {
+        "altText": "placeholder image",
+        "url": "./800x600.png",
+      },
+    }
+  }
+  text="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
+  title="Design is design."
+>
+  <section
+    className="ter-hero-one"
+  >
+    <img
+      alt="placeholder image"
+      className="ter-hero-one__image ter-hero-one__image--mobile"
+      src="1-to-1.png"
+    />
+    <div
+      className="ter-hero-one__content-container"
+      style={Object {}}
+    >
+      <h2
+        className="ter-hero-one__title"
+      >
+        Design is design.
+      </h2>
+      <p
+        className="ter-hero-one__text"
+      >
+        Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis.
+      </p>
+      <CTALinkSection
+        ctas={
+          Object {
+            "ctaOne": Object {
+              "className": "ter-button--primary--1",
+              "link": "#",
+              "text": "Button",
+            },
+            "ctaTwo": Object {
+              "className": "ter-button--secondary--1",
+              "link": "#",
+              "text": "Button",
+            },
+            "subCTA": Object {
+              "link": "#",
+              "text": "Button",
+            },
+          }
+        }
+      >
+        <section
+          className="ter-cta-section"
+        >
+          <ButtonLink
+            className="ter-button--primary--1"
+            link="#"
+            text="Button"
+          >
+            <a
+              className="ter-button ter-button--primary--1"
+              href="#"
+            >
+              Button
+            </a>
+          </ButtonLink>
+          <ButtonLink
+            className="ter-button--secondary--1"
+            link="#"
+            text="Button"
+          >
+            <a
+              className="ter-button ter-button--secondary--1"
+              href="#"
+            >
+              Button
+            </a>
+          </ButtonLink>
+          <a
+            className="ter-cta-section__link"
+          >
+            Button
+          </a>
+        </section>
+      </CTALinkSection>
+    </div>
+  </section>
+</Hero1>
+`;
