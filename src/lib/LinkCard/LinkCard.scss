@@ -1,0 +1,22 @@
+@import "../global-styles/terra.scss";
+
+.ter-link-card {
+  &__title {
+    margin-bottom: spacing("xs");
+  }
+  &__text {
+    font-size: font-size("sm");
+    margin-bottom: spacing("xs");
+  }
+
+  &__link {
+    font-size: font-size("sm");
+    font-weight: font-weight("bold");
+  }
+
+  .ter-icon {
+    fill: color("ui-1");
+    margin-left: spacing("mini");
+    transform: translateY(3px);
+  }
+}

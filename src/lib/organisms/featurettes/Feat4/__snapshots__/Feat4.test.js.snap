@@ -10,11 +10,11 @@ exports[`Feat4 should match the snapshot 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -23,11 +23,11 @@ exports[`Feat4 should match the snapshot 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -36,11 +36,11 @@ exports[`Feat4 should match the snapshot 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -49,11 +49,11 @@ exports[`Feat4 should match the snapshot 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -73,11 +73,11 @@ exports[`Feat4 should match the snapshot with 3 columns 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -86,11 +86,11 @@ exports[`Feat4 should match the snapshot with 3 columns 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -99,11 +99,11 @@ exports[`Feat4 should match the snapshot with 3 columns 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -112,11 +112,11 @@ exports[`Feat4 should match the snapshot with 3 columns 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -141,11 +141,11 @@ exports[`Feat4 should match the snapshot with a title 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -154,11 +154,11 @@ exports[`Feat4 should match the snapshot with a title 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -167,11 +167,11 @@ exports[`Feat4 should match the snapshot with a title 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -180,11 +180,11 @@ exports[`Feat4 should match the snapshot with a title 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -214,11 +214,11 @@ exports[`Feat4 should match the snapshot with a title and image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -227,11 +227,11 @@ exports[`Feat4 should match the snapshot with a title and image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -240,11 +240,11 @@ exports[`Feat4 should match the snapshot with a title and image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -253,11 +253,11 @@ exports[`Feat4 should match the snapshot with a title and image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -282,11 +282,11 @@ exports[`Feat4 should match the snapshot with an image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -295,11 +295,11 @@ exports[`Feat4 should match the snapshot with an image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -308,11 +308,11 @@ exports[`Feat4 should match the snapshot with an image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }
@@ -321,11 +321,11 @@ exports[`Feat4 should match the snapshot with an image 1`] = `
     <IconListItem
       content={
         Object {
-          "body": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "link": Object {
             "text": "Button",
             "url": "#",
           },
+          "text": "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
           "title": "Design is good. Period.",
         }
       }

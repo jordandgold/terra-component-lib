@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkCard should match the snapshot 1`] = `
+<article
+  className="ter-link-card"
+>
+  <h4
+    className="ter-link-card__title"
+  >
+    Good design is innovative
+  </h4>
+  <p
+    className="ter-link-card__text"
+  >
+    Quis nulla in officia veniam exercitation quis deserunt exercitation. Ea minim irure nostrud ipsum incididunt minim dolore elit ut eu esse ut officia.
+  </p>
+  <a
+    className="ter-link-card__link"
+    url="#"
+  >
+    Sub-CTA
+    <Icon
+      size="32px"
+      type="enclosed-arrow-right-dark-32px"
+    />
+  </a>
+</article>
+`;

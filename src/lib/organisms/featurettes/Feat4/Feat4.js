@@ -81,7 +81,7 @@ Feat4.propTypes = {
   content: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
       link: PropTypes.shape({
         url: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
