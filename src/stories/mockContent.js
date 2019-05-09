@@ -330,3 +330,32 @@ export const mockCards = [
       "Irure cillum ad culpa ad non cillum irure dolore ad nostrud aliqua mollit. Eiusmod id mollit non voluptate qui qui ut ullamco officia eiusmod laboris veniam amet culpa."
   }
 ];
+
+export const mockFeat3Content = {
+  title: "Good design is aesthetic.",
+  text:
+    "Fugiat ad est sit non elit nulla laborum occaecat proident non. Fugiat non commodo occaecat veniam amet voluptate ea consequat excepteur ea velit. Quis duis fugiat veniam enim velit cupidatat minim. Sint dolor ex eu veniam laborum non elit nulla ea do. Dolor aute eu Lorem reprehenderit adipisicing magna reprehenderit dolore mollit ullamco officia quis ea. Veniam voluptate excepteur aliquip aute aliqua qui cupidatat pariatur. Elit do sint dolore officia duis incididunt duis.",
+  content: [
+    {
+      title: "Good design is innovative",
+      text:
+        "Cupidatat ea in duis ullamco nostrud cupidatat quis aliqua ex labore occaecat sit. Tempor irure non amet fugiat qui ea occaecat qui. Aliquip esse eu exercitation veniam irure consectetur quis cupidatat incididunt reprehenderit sint."
+    },
+    {
+      title: "Good design is innovative",
+      text:
+        "Cupidatat ea in duis ullamco nostrud cupidatat quis aliqua ex labore occaecat sit. Tempor irure non amet fugiat qui ea occaecat qui. Aliquip esse eu exercitation veniam irure consectetur quis cupidatat incididunt reprehenderit sint."
+    },
+    {
+      title: "Good design is innovative",
+      text:
+        "Cupidatat ea in duis ullamco nostrud cupidatat quis aliqua ex labore occaecat sit. Tempor irure non amet fugiat qui ea occaecat qui. Aliquip esse eu exercitation veniam irure consectetur quis cupidatat incididunt reprehenderit sint."
+    }
+  ],
+  cta: { link: "#", text: "Sub-CTA" },
+  images: {
+    desktop: { url: "./600x900.png", altText: "placeholder" },
+    tablet: { url: "./800x600.png", altText: "placeholder" },
+    mobile: { url: "./1-to-1.png", altText: "placeholder" }
+  }
+};

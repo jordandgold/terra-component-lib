@@ -25,6 +25,7 @@ import Table from "../lib/Table/Table";
 import Tabs, { TabsPanel } from "../lib/Tabs/Tabs";
 import Tooltip from "../lib/Tooltip/Tooltip";
 import Accordion, { AccordionFold } from "../lib/Accordion/Accordion";
+import LinkCard from "../lib/LinkCard/LinkCard";
 import Hero1 from "../lib/organisms/heroes/Hero1/Hero1";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Hero4 from "../lib/organisms/heroes/Hero4/Hero4";
@@ -38,6 +39,7 @@ import Feat5 from "../lib/organisms/featurettes/Feat5/Feat5";
 import Feat2 from "../lib/organisms/featurettes/Feat2/Feat2";
 import Feat8 from "../lib/organisms/featurettes/Feat8/Feat8";
 import Feat1 from "../lib/organisms/featurettes/Feat1/Feat1";
+import Feat3 from "../lib/organisms/featurettes/Feat3/Feat3";
 import IconListItem from "../lib/IconListItem/IconListItem";
 import ButtonLinkCard from "../lib/ButtonLinkCard/ButtonLinkCard";
 import LinkTile from "../lib/LinkTile/LinkTile";
@@ -64,7 +66,8 @@ import {
   mockButtonCardContent,
   mockButtonLinkCardContent,
   mockLinkCardContent,
-  mockCards
+  mockCards,
+  mockFeat3Content
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -1232,3 +1235,28 @@ storiesOf("Featurettes|Feat-1", module)
       />
     );
   });
+
+storiesOf("Molecules|LinkCard", module).add("LinkCard", () => {
+  const mockLink = { url: "#", text: "Sub-CTA" };
+  return (
+    <LinkCard
+      title="Good design is innovative"
+      text="Quis nulla in officia veniam exercitation quis deserunt exercitation. Ea minim irure nostrud ipsum incididunt minim dolore elit ut eu esse ut officia."
+      link={mockLink}
+    />
+  );
+});
+
+storiesOf("Featurettes|Feat-3", module).add("Featurette-3", () => {
+  const { title, text, content, cta, images } = mockFeat3Content;
+
+  return (
+    <Feat3
+      title={title}
+      text={text}
+      content={content}
+      cta={cta}
+      images={images}
+    />
+  );
+});
