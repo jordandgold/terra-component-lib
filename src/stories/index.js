@@ -29,6 +29,7 @@ import LinkCard from "../lib/LinkCard/LinkCard";
 import Hero1 from "../lib/organisms/heroes/Hero1/Hero1";
 import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Hero4 from "../lib/organisms/heroes/Hero4/Hero4";
+import Hero3 from "../lib/organisms/heroes/Hero3/Hero3";
 import Hero5 from "../lib/organisms/heroes/Hero5/Hero5";
 
 import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
@@ -1048,6 +1049,27 @@ storiesOf("Featurettes|Feat-8", module).add("Featurette-8", () => {
       title="Good design is innovative."
       buttonLink={mockButtonLink}
       cards={mockCards}
+    />
+  );
+});
+
+storiesOf("Heroes|Hero-3", module).add("Hero-3", () => {
+  const mockImages = {
+    imageFourByOne: {
+      url: "http://fpoimg.com/1600x400?text=4:1",
+      altText: "placeholder image"
+    },
+    imageTwoByOne: {
+      url: "http://fpoimg.com/1600x800?text=2:1",
+      altText: "placeholder image"
+    }
+  };
+
+  return (
+    <Hero3
+      images={mockImages}
+      headerText="Good design is innovative."
+      subHeaderText="Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis."
     />
   );
 });
