@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero4 should match the snapshot 1`] = `
+<section
+  className="ter-hero-3"
+>
+  <figure
+    className="ter-hero-3__hero-image ter-hero-3__hero-image--4x1"
+  >
+    <img
+      alt="placeholder image"
+      src="http://fpoimg.com/1600x400?text=4:1"
+    />
+  </figure>
+  <figure
+    className="ter-hero-3__hero-image ter-hero-3__hero-image--2x1"
+  >
+    <img
+      alt="placeholder image"
+      src="http://fpoimg.com/1600x800?text=2:1"
+    />
+  </figure>
+  <div
+    className="ter-hero-3__container"
+  >
+    <aside
+      className="ter-hero-3__card ter-card"
+    >
+      <div
+        className="ter-card__body"
+      >
+        <h1
+          className="ter-hero-3__header"
+        >
+          Good design is innovative.
+        </h1>
+        <div
+          className="ter-hero-3__sub-header"
+        >
+          Esse aliquip ad in et ut ipsum paEu elit consectetur aliquip excepteur fugiat ut qui dolor pariatur consectetur.riatur elit quis.
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+`;
