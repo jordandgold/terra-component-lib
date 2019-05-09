@@ -68,7 +68,8 @@ import {
   mockButtonLinkCardContent,
   mockLinkCardContent,
   mockCards,
-  mockFeat3Content
+  mockFeat3Content,
+  mockFeat3ContentTwo
 } from "./mockContent";
 
 storiesOf("Atoms|Button", module)
@@ -672,7 +673,7 @@ storiesOf("Featurettes|Feat-7", module).add("Featurette-7", () => {
 storiesOf("Molecules|IconListItem", module).add("IconListItem", () => {
   const mockContent = {
     title: "Design is good. Period.",
-    body:
+    text:
       "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!"
   };
   return <IconListItem content={mockContent} />;
@@ -681,7 +682,7 @@ storiesOf("Molecules|IconListItem", module).add("IconListItem", () => {
 storiesOf("Molecules|ButtonLinkCard", module).add("ButtonLinkCard", () => {
   const mockContent = {
     title: "Design is good. Period.",
-    body:
+    text:
       "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
     link: {
       url: "#",
@@ -695,7 +696,7 @@ storiesOf("Molecules|ButtonLinkCard", module).add("ButtonLinkCard", () => {
 storiesOf("Molecules|LinkTile", module).add("LinkTile", () => {
   const mockContent = {
     title: "Design is good. Period.",
-    body:
+    text:
       "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
     link: {
       url: "#",
@@ -711,7 +712,7 @@ storiesOf("Featurettes|Feat-4", module)
     const mockContent = [
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -720,7 +721,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -729,7 +730,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -738,7 +739,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -760,7 +761,7 @@ storiesOf("Featurettes|Feat-4", module)
     const mockContent = [
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -769,7 +770,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -778,7 +779,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -787,7 +788,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -810,7 +811,7 @@ storiesOf("Featurettes|Feat-4", module)
     const mockContent = [
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -819,7 +820,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -828,7 +829,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -837,7 +838,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -852,7 +853,7 @@ storiesOf("Featurettes|Feat-4", module)
     const mockContentD = [
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -861,7 +862,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -870,7 +871,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -879,7 +880,7 @@ storiesOf("Featurettes|Feat-4", module)
       },
       {
         title: "Design is good. Period.",
-        body:
+        text:
           "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
         link: {
           url: "#",
@@ -1269,16 +1270,30 @@ storiesOf("Molecules|LinkCard", module).add("LinkCard", () => {
   );
 });
 
-storiesOf("Featurettes|Feat-3", module).add("Featurette-3", () => {
-  const { title, text, content, cta, images } = mockFeat3Content;
+storiesOf("Featurettes|Feat-3", module)
+  .add("Featurette-3a", () => {
+    const { title, text, content, cta, images } = mockFeat3Content;
 
-  return (
-    <Feat3
-      title={title}
-      text={text}
-      content={content}
-      cta={cta}
-      images={images}
-    />
-  );
-});
+    return (
+      <Feat3
+        title={title}
+        // text={text}
+        content={content}
+        cta={cta}
+        images={images}
+      />
+    );
+  })
+  .add("Featurette-3b", () => {
+    const { title, text, content, cta, images } = mockFeat3ContentTwo;
+
+    return (
+      <Feat3
+        title={title}
+        text={text}
+        content={content}
+        cta={cta}
+        images={images}
+      />
+    );
+  });

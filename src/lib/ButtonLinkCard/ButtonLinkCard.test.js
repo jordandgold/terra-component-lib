@@ -8,7 +8,7 @@ describe("ButtonLinkCard", () => {
   beforeEach(() => {
     const mockContent = {
       title: "Design is good. Period.",
-      body:
+      text:
         "Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!",
       link: {
         url: "#",

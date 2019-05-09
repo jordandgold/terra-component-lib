@@ -11,7 +11,7 @@ const IconListItem = ({ content }) => {
       </div>
       <div className="ter-icon-list-item__content-wrapper">
         <h4 className="ter-icon-list-item__title">{content.title}</h4>
-        <p className="ter-icon-list-item__body">{content.body}</p>
+        <p className="ter-icon-list-item__body">{content.text}</p>
       </div>
     </article>
   );
@@ -22,6 +22,6 @@ export default IconListItem;
 IconListItem.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired
   })
 };

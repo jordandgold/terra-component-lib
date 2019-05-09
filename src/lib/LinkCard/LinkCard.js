@@ -10,7 +10,7 @@ const LinkCard = ({ title, text, link }) => {
       <p className="ter-link-card__text">{text}</p>
       <a className="ter-link-card__link" url={link.url}>
         {link.text}
-        <Icon type="enclosed-arrow-right-dark-32px" icon="32px" />
+        <Icon type="enclosed-arrow-right-dark-32px" size="32px" />
       </a>
     </article>
   );

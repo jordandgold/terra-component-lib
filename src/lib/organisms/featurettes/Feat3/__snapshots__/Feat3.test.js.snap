@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feat3 should match the snapshot with links 1`] = `
+<section
+  className="ter-feat-three"
+>
+  <div
+    className="ter-feat-three__image-wrapper"
+  >
+    <img
+      alt="placeholder"
+      className="ter-feat-three__image ter-feat-three__image--desktop"
+      src="./800x1600.png"
+    />
+    <img
+      alt="placeholder"
+      className="ter-feat-three__image ter-feat-three__image--tablet"
+      src="./800x600.png"
+    />
+    <img
+      alt="placeholder"
+      className="ter-feat-three__image ter-feat-three__image--mobile"
+      src="./1-to-1.png"
+    />
+  </div>
+  <div
+    className="ter-feat-three__content-container"
+  >
+    <h2
+      className="ter-feat-three__title"
+    >
+      Good design is aesthetic.
+    </h2>
+    <p
+      className="ter-feat-three__text"
+    >
+      Fugiat ad est sit non elit nulla laborum occaecat proident non. Fugiat non commodo occaecat veniam amet voluptate ea consequat excepteur ea velit. Quis duis fugiat veniam enim velit cupidatat minim. Sint dolor ex eu veniam laborum non elit nulla ea do. Dolor aute eu Lorem reprehenderit adipisicing magna reprehenderit dolore mollit ullamco officia quis ea. Veniam voluptate excepteur aliquip aute aliqua qui cupidatat pariatur. Elit do sint dolore officia duis incididunt duis.
+    </p>
+    <LinkCard
+      key="link-card-0"
+      link={
+        Object {
+          "text": "Button",
+          "url": "#",
+        }
+      }
+      text="Cupidatat ea in duis ullamco nostrud cupidatat quis aliqua ex labore occaecat sit. Tempor irure non amet fugiat qui ea occaecat qui. Aliquip esse eu exercitation veniam irure consectetur quis cupidatat incididunt reprehenderit sint."
+      title="Good design is innovative"
+    />
+    <LinkCard
+      key="link-card-1"
+      link={
+        Object {
+          "text": "Button",
+          "url": "#",
+        }
+      }
+      text="Cupidatat ea in duis ullamco nostrud cupidatat quis aliqua ex labore occaecat sit. Tempor irure non amet fugiat qui ea occaecat qui. Aliquip esse eu exercitation veniam irure consectetur quis cupidatat incididunt reprehenderit sint."
+      title="Good design is innovative"
+    />
+    <LinkCard
+      key="link-card-2"
+      link={
+        Object {
+          "text": "Button",
+          "url": "#",
+        }
+      }
+      text="Cupidatat ea in duis ullamco nostrud cupidatat quis aliqua ex labore occaecat sit. Tempor irure non amet fugiat qui ea occaecat qui. Aliquip esse eu exercitation veniam irure consectetur quis cupidatat incididunt reprehenderit sint."
+      title="Good design is innovative"
+    />
+    <ButtonLink
+      className="ter-button--primary--1"
+      link="#"
+      text="Sub-CTA"
+    />
+  </div>
+</section>
+`;

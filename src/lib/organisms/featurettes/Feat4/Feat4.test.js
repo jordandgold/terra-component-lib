@@ -134,6 +134,7 @@ describe("Feat4", () => {
         '<article class="ter-icon-list-item"><div class="ter-icon-list-item__icon-wrapper"><svg viewBox="0 0 8 8" class="ter-icon ter-icon--enclosed-arrow-right-dark-32px ter-icon--32px undefined"><use xlink:href="[object Object]#ter-icon--enclosed-arrow-right-dark-32px"></use></svg></div><div class="ter-icon-list-item__content-wrapper"><h4 class="ter-icon-list-item__title">Design is good. Period.</h4><p class="ter-icon-list-item__body">Forget the fat lady! You&#x27;re obsessed with the fat lady! Drive us out of here!</p></div></article>',
         '<article class="ter-icon-list-item"><div class="ter-icon-list-item__icon-wrapper"><svg viewBox="0 0 8 8" class="ter-icon ter-icon--enclosed-arrow-right-dark-32px ter-icon--32px undefined"><use xlink:href="[object Object]#ter-icon--enclosed-arrow-right-dark-32px"></use></svg></div><div class="ter-icon-list-item__content-wrapper"><h4 class="ter-icon-list-item__title">Design is good. Period.</h4><p class="ter-icon-list-item__body">Forget the fat lady! You&#x27;re obsessed with the fat lady! Drive us out of here!</p></div></article>'
       ];
+
       const response = wrapper
         .instance()
         .generateACards()

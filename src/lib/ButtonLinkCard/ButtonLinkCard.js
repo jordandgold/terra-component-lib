@@ -7,7 +7,7 @@ const ButtonLinkCard = ({ content }) => {
   return (
     <article className="ter-button-link-card">
       <h4 className="ter-button-link-card__title">{content.title}</h4>
-      <p className="ter-button-link-card__body">{content.body}</p>
+      <p className="ter-button-link-card__body">{content.text}</p>
       <ButtonLink
         link={content.link.url}
         text={content.link.text}
@@ -22,7 +22,7 @@ export default ButtonLinkCard;
 ButtonLinkCard.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
     link: PropTypes.shape({
       url: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired

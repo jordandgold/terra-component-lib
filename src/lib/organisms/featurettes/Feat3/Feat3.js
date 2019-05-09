@@ -41,17 +41,17 @@ class Feat3 extends Component {
           <img
             src={images.desktop.url}
             alt={images.desktop.altText}
-            className="ter-feat-three__image--desktop"
+            className="ter-feat-three__image ter-feat-three__image--desktop"
           />
           <img
             src={images.tablet.url}
             alt={images.tablet.altText}
-            className="ter-feat-three__image--tablet"
+            className="ter-feat-three__image ter-feat-three__image--tablet"
           />
           <img
             src={images.mobile.url}
             alt={images.mobile.altText}
-            className="ter-feat-three__image--mobile"
+            className="ter-feat-three__image ter-feat-three__image--mobile"
           />
         </div>
         <div className="ter-feat-three__content-container">
@@ -60,7 +60,7 @@ class Feat3 extends Component {
           {this.getContent()}
           {cta && (
             <ButtonLink
-              url={cta.url}
+              link={cta.link}
               text={cta.text}
               className="ter-button--primary--1"
             />
@@ -98,7 +98,7 @@ Feat3.propTypes = {
       })
     ),
     cta: PropTypes.shape({
-      url: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired
     })
   })
