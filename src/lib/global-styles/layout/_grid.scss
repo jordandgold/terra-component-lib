@@ -11,7 +11,8 @@
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
 
-.container-fluid, .container {
+.container-fluid,
+.container {
   margin-right: auto;
   margin-left: auto;
 }
@@ -23,6 +24,14 @@
 
 .container-fluid {
   @include container();
+}
+
+@mixin container-wrap {
+  padding-right: var(--outer-margin, 2rem);
+  padding-left: var(--outer-margin, 2rem);
+  box-sizing: border-box;
+  max-width: 64rem;
+  margin: 0 auto;
 }
 
 .wrap {
@@ -55,7 +64,7 @@
   flex-direction: column-reverse;
 }
 
-[class^='col-'] {
+[class^="col-"] {
   padding-right: var(--half-gutter-width, 0.5rem);
   padding-left: var(--half-gutter-width, 0.5rem);
 }
@@ -833,4 +842,3 @@
     order: 1;
   }
 }
-

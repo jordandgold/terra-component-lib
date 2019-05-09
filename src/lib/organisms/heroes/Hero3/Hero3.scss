@@ -1,0 +1,59 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-hero-3 {
+  &__hero-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    &--4x1 {
+      display: none;
+      @media screen and (min-width: $breakpoint-sm) {
+        display: block;
+      }
+    }
+    &--2x1 {
+      display: block;
+      @media screen and (min-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+  &__container {
+    @include container-wrap;
+    display: flex;
+    width: 100%;
+    height: auto;
+    transform: translate(0, calc(#{spacing("xxl")} * -1));
+    justify-content: center;
+    @media screen and (min-width: $breakpoint-xs) {
+      transform: translate(0, calc(#{spacing("super")} * -1));
+    }
+  }
+  &__card {
+    background-color: rgba(255, 255, 255, 0.95);
+    display: block;
+    flex-basis: 550px;
+    margin-top: auto;
+    margin-bottom: calc(#{spacing("md")} * -1);
+    align-self: center;
+    @media screen and (min-width: $breakpoint-xs) {
+      margin-bottom: calc(#{spacing("sm")} * -1);
+    }
+  }
+  &__header {
+    font-size: font-size("xl");
+    text-align: center;
+  }
+  &__sub-header {
+    font-size: font-size("md");
+    font-weight: font-weight("light");
+    margin-bottom: spacing("md");
+    text-align: center;
+  }
+}
