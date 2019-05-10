@@ -11,12 +11,12 @@ const Hero6 = props => {
   if (imageSide === "right") {
     return (
       <section className="ter-hero-six ter-hero-six--right-image">
-        <div className="ter-hero-six__content-container ter-hero-six__content-container--left">
+        <aside className="ter-hero-six__content-container ter-hero-six__content-container--left">
           <h2 className="ter-hero-six__title">{title}</h2>
           <p className="ter-hero-six__text">{text}</p>
           <CTALinkSection ctas={ctas} />
-        </div>
-        <div
+        </aside>
+        <figure
           style={imageStyle}
           className="ter-hero-six__image-container ter-hero-six__image-container--right-image"
         />
@@ -25,12 +25,12 @@ const Hero6 = props => {
   } else {
     return (
       <section className="ter-hero-six">
-        <div className="ter-hero-six__image-container" />
-        <div className="ter-hero-six__content-container">
+        <figure className="ter-hero-six__image-container" />
+        <aside className="ter-hero-six__content-container">
           <h2 className="ter-hero-six__title">{title}</h2>
           <p className="ter-hero-six__text">{text}</p>
           <CTALinkSection ctas={ctas} />
-        </div>
+        </aside>
       </section>
     );
   }
