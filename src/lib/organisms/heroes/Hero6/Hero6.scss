@@ -1,0 +1,73 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-hero-six {
+  padding: spacing("lg") spacing("md");
+  position: relative;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include grid-container();
+    padding: 0;
+    // overflow: hidden;
+  }
+
+  &--right-image {
+    @media screen and (min-width: $breakpoint-sm) {
+      padding-left: spacing("md");
+      padding-right: 0;
+      // margin-right: 0;
+    }
+  }
+
+  &__image-container {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    height: 100%;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-sm) {
+      @include grid-column(8);
+      display: block;
+      // overflow: hidden;
+    }
+
+    &--right-image {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__content-container {
+    @media screen and (min-width: $breakpoint-sm) {
+      @include grid-column(4);
+      align-self: center;
+      padding-top: spacing("mega");
+      padding-bottom: spacing("mega");
+    }
+  }
+
+  &__title {
+    font-size: font-size("xl");
+  }
+
+  .ter-cta-section {
+    @media screen and (min-width: $breakpoint-xs) {
+      width: 175px;
+    }
+  }
+
+  .ter-button {
+    display: block;
+
+    @media screen and (min-width: $breakpoint-xs) {
+      display: inline-block;
+      padding-left: spacing("lg");
+      padding-right: spacing("lg");
+    }
+
+    &--secondary--1 {
+      margin-top: spacing("sm");
+    }
+  }
+}
