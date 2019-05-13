@@ -69,4 +69,15 @@
     font-weight: font-weight("light");
     margin-bottom: spacing("md");
   }
+  .ter-cta-section {
+    @media (min-width: $breakpoint-xs) {
+      max-width: 200px;
+    }
+    &__link {
+      display: block;
+      text-align: center;
+      font-size: font-size("base");
+      margin-top: spacing("xxs");
+    }
+  }
 }
