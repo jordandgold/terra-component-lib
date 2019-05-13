@@ -1,0 +1,83 @@
+@import "../../../global-styles/terra.scss";
+
+.ter-hero-6 {
+  background-color: color("white");
+  position: relative;
+  &--right {
+    .ter-hero-6__hero-image {
+      right: 0;
+      left: unset;
+    }
+    .ter-hero-6__content {
+      grid-column-end: auto;
+    }
+  }
+  &__hero-image {
+    display: block;
+    @media screen and (min-width: $breakpoint-sm) {
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 54%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    &--3x2 {
+      display: none;
+      @media screen and (min-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+    &--4x3 {
+      display: block;
+      @media screen and (min-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+    &--1x1 {
+      display: none;
+      @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+  }
+  &__container {
+    @include grid-container();
+  }
+  &__content {
+    padding: spacing("md") 0;
+    @include grid-column(12);
+    @media screen and (min-width: $breakpoint-sm) {
+      @include grid-column(5);
+      grid-column-end: -1;
+      padding: spacing("mega") 0;
+    }
+  }
+  .ter-cta-section {
+    align-self: flex-start;
+  }
+  .ter-header {
+    font-size: font-size("xl");
+  }
+  .ter-sub-header {
+    font-size: font-size("md");
+    font-weight: font-weight("light");
+    margin-bottom: spacing("md");
+  }
+  .ter-cta-section {
+    @media (min-width: $breakpoint-xs) {
+      max-width: 200px;
+    }
+    &__link {
+      display: block;
+      text-align: center;
+      font-size: font-size("base");
+      margin-top: spacing("xxs");
+    }
+  }
+}

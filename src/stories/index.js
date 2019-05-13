@@ -31,7 +31,7 @@ import Hero2 from "../lib/organisms/heroes/Hero2/Hero2";
 import Hero4 from "../lib/organisms/heroes/Hero4/Hero4";
 import Hero3 from "../lib/organisms/heroes/Hero3/Hero3";
 import Hero5 from "../lib/organisms/heroes/Hero5/Hero5";
-
+import Hero6 from "../lib/organisms/heroes/Hero6/Hero6";
 import Feat6 from "../lib/organisms/featurettes/Feat6/Feat6";
 import Feat9 from "../lib/organisms/featurettes/Feat9/Feat9";
 import Feat7 from "../lib/organisms/featurettes/Feat7/Feat7";
@@ -1294,6 +1294,94 @@ storiesOf("Featurettes|Feat-3", module)
         content={content}
         cta={cta}
         images={images}
+      />
+    );
+  });
+
+storiesOf("Heroes|Hero-6", module)
+  .add("Hero-6 Image Left", () => {
+    const heroSixContent = {
+      images: {
+        imageThreeByTwo: {
+          url: "http://fpoimg.com/2400x1600?text=3:2",
+          altText: "placeholder image"
+        },
+        imageFourByThree: {
+          url: "http://fpoimg.com/1600x1200?text=4:3",
+          altText: "placeholder image"
+        },
+        imageOneByOne: {
+          url: "http://fpoimg.com/1600x1600?text=1:1",
+          altText: "placeholder image"
+        }
+      },
+      title: "Good design is innovative.",
+      text:
+        "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.",
+      ctas: {
+        ctaOne: {
+          className: "ter-button--primary--1",
+          link: "#",
+          text: "Button"
+        },
+        ctaTwo: {
+          className: "ter-button--secondary--1",
+          link: "#",
+          text: "Button"
+        }
+      }
+    };
+
+    return (
+      <Hero6
+        imageSide="left"
+        images={heroSixContent.images}
+        title="Good design is innovative."
+        text={heroSixContent.text}
+        ctas={heroSixContent.ctas}
+      />
+    );
+  })
+  .add("Hero-6 Image Right", () => {
+    const heroSixContent = {
+      images: {
+        imageThreeByTwo: {
+          url: "http://fpoimg.com/2400x1600?text=3:2",
+          altText: "placeholder image"
+        },
+        imageFourByThree: {
+          url: "http://fpoimg.com/1600x1200?text=4:3",
+          altText: "placeholder image"
+        },
+        imageOneByOne: {
+          url: "http://fpoimg.com/1600x1600?text=1:1",
+          altText: "placeholder image"
+        }
+      },
+      title: "Good design is innovative.",
+      text:
+        "Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.",
+      ctas: {
+        ctaOne: {
+          className: "ter-button--primary--1",
+          link: "#",
+          text: "Button"
+        },
+        ctaTwo: {
+          className: "ter-button--secondary--1",
+          link: "#",
+          text: "Button"
+        }
+      }
+    };
+
+    return (
+      <Hero6
+        imageSide="right"
+        images={heroSixContent.images}
+        title="Good design is innovative."
+        text={heroSixContent.text}
+        ctas={heroSixContent.ctas}
       />
     );
   });
