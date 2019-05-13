@@ -1301,9 +1301,19 @@ storiesOf("Featurettes|Feat-3", module)
 storiesOf("Heroes|Hero-6", module)
   .add("Hero-6 Image Left", () => {
     const heroSixContent = {
-      image: {
-        url: "./1200x600.png",
-        altText: "placeholder"
+      images: {
+        imageThreeByTwo: {
+          url: "http://fpoimg.com/2400x1600?text=3:2",
+          altText: "placeholder image"
+        },
+        imageFourByThree: {
+          url: "http://fpoimg.com/1600x1200?text=4:3",
+          altText: "placeholder image"
+        },
+        imageOneByOne: {
+          url: "http://fpoimg.com/1600x1600?text=1:1",
+          altText: "placeholder image"
+        }
       },
       title: "Good design is innovative.",
       text:
@@ -1325,7 +1335,7 @@ storiesOf("Heroes|Hero-6", module)
     return (
       <Hero6
         imageSide="left"
-        image={heroSixContent.image}
+        images={heroSixContent.images}
         title="Good design is innovative."
         text={heroSixContent.text}
         ctas={heroSixContent.ctas}
@@ -1334,9 +1344,19 @@ storiesOf("Heroes|Hero-6", module)
   })
   .add("Hero-6 Image Right", () => {
     const heroSixContent = {
-      image: {
-        url: "./1200x600.png",
-        altText: "placeholder"
+      images: {
+        imageThreeByTwo: {
+          url: "http://fpoimg.com/2400x1600?text=3:2",
+          altText: "placeholder image"
+        },
+        imageFourByThree: {
+          url: "http://fpoimg.com/1600x1200?text=4:3",
+          altText: "placeholder image"
+        },
+        imageOneByOne: {
+          url: "http://fpoimg.com/1600x1600?text=1:1",
+          altText: "placeholder image"
+        }
       },
       title: "Good design is innovative.",
       text:
@@ -1358,7 +1378,7 @@ storiesOf("Heroes|Hero-6", module)
     return (
       <Hero6
         imageSide="right"
-        image={heroSixContent.image}
+        images={heroSixContent.images}
         title="Good design is innovative."
         text={heroSixContent.text}
         ctas={heroSixContent.ctas}

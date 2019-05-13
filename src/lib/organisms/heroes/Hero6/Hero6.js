@@ -4,22 +4,25 @@ import PropTypes from "prop-types";
 import CTALinkSection from "../../../CTALinkSection/CTALinkSection";
 
 const Hero6 = props => {
-  const { title, text, ctas, image, imageSide } = props;
-  const imageStyle = {
-    background: `url(${image.url})`
+  const { title, text, ctas, images, imageSide } = props;
+  const imageStyleThreeByTwo = {
+    background: `url(${images.imageThreeByTwo.url})`
+  };
+  const imageStyleOneByOne = {
+    background: `url(${images.imageOneByOne.url})`
   };
   return (
     <section class={`ter-hero-6 ter-hero-6--${imageSide}`}>
       <figure
         class="ter-hero-6__hero-image ter-hero-6__hero-image--3x2"
-        style={imageStyle}
+        style={imageStyleThreeByTwo}
       />
       <figure
         class="ter-hero-6__hero-image ter-hero-6__hero-image--1x1"
-        style={imageStyle}
+        style={imageStyleOneByOne}
       />
       <figure class="ter-hero-6__hero-image ter-hero-6__hero-image--4x3">
-        <img src="{image.url}" />
+        <img src={images.imageFourByThree.url} />
       </figure>
       <div class="ter-hero-6__container">
         <aside class="ter-hero-6__content">
@@ -38,6 +41,20 @@ Hero6.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   text: PropTypes.string.isRequired,
+  images: PropTypes.shape({
+    imageThreeByTwo: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    }),
+    imageFourByThree: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    }),
+    imageOneByOne: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  }),
   ctas: PropTypes.shape({
     ctaOne: PropTypes.shape({
       className: PropTypes.string.isRequired,
