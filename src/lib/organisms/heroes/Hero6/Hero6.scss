@@ -1,73 +1,72 @@
 @import "../../../global-styles/terra.scss";
 
-.ter-hero-six {
-  padding: spacing("lg") spacing("md");
+.ter-hero-6 {
+  background-color: color("white");
   position: relative;
-
-  @media screen and (min-width: $breakpoint-sm) {
-    @include grid-container();
-    padding: 0;
-    // overflow: hidden;
-  }
-
-  &--right-image {
-    @media screen and (min-width: $breakpoint-sm) {
-      padding-left: spacing("md");
-      padding-right: 0;
-      // margin-right: 0;
+  &--left {
+    .ter-hero-6__hero-image {
+      right: 0;
+      left: unset;
+    }
+    .ter-hero-6__content {
+      grid-column-end: auto;
     }
   }
-
-  &__image-container {
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: none;
-    height: 100%;
-    width: 100%;
+  &__hero-image {
+    display: block;
     @media screen and (min-width: $breakpoint-sm) {
-      @include grid-column(8);
-      display: block;
-      // overflow: hidden;
-    }
-
-    &--right-image {
+      background-size: cover;
+      position: absolute;
       left: 0;
       top: 0;
+      height: 100%;
+      width: 54%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    &--3x2 {
+      display: none;
+      @media screen and (min-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+    &--4x3 {
+      display: block;
+      @media screen and (min-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+    &--1x1 {
+      display: none;
+      @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+        display: block;
+      }
     }
   }
-
-  &__content-container {
+  &__container {
+    @include grid-container();
+  }
+  &__content {
+    padding: spacing("md") 0;
+    @include grid-column(12);
     @media screen and (min-width: $breakpoint-sm) {
-      @include grid-column(4);
-      align-self: center;
-      padding-top: spacing("mega");
-      padding-bottom: spacing("mega");
+      @include grid-column(5);
+      grid-column-end: -1;
+      padding: spacing("mega") 0;
     }
   }
-
-  &__title {
+  .ter-cta-section {
+    align-self: flex-start;
+  }
+  .ter-header {
     font-size: font-size("xl");
   }
-
-  .ter-cta-section {
-    @media screen and (min-width: $breakpoint-xs) {
-      width: 175px;
-    }
-  }
-
-  .ter-button {
-    display: block;
-
-    @media screen and (min-width: $breakpoint-xs) {
-      display: inline-block;
-      padding-left: spacing("lg");
-      padding-right: spacing("lg");
-    }
-
-    &--secondary--1 {
-      margin-top: spacing("sm");
-    }
+  .ter-sub-header {
+    font-size: font-size("md");
+    font-weight: font-weight("light");
+    margin-bottom: spacing("md");
   }
 }

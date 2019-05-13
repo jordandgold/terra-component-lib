@@ -8,32 +8,28 @@ const Hero6 = props => {
   const imageStyle = {
     background: `url(${image.url})`
   };
-  if (imageSide === "right") {
-    return (
-      <section className="ter-hero-six ter-hero-six--right-image">
-        <aside className="ter-hero-six__content-container ter-hero-six__content-container--left">
-          <h2 className="ter-hero-six__title">{title}</h2>
-          <p className="ter-hero-six__text">{text}</p>
+  return (
+    <section class={`ter-hero-6 ter-hero-6--${imageSide}`}>
+      <figure
+        class="ter-hero-6__hero-image ter-hero-6__hero-image--3x2"
+        style={imageStyle}
+      />
+      <figure
+        class="ter-hero-6__hero-image ter-hero-6__hero-image--1x1"
+        style={imageStyle}
+      />
+      <figure class="ter-hero-6__hero-image ter-hero-6__hero-image--4x3">
+        <img src="{image.url}" />
+      </figure>
+      <div class="ter-hero-6__container">
+        <aside class="ter-hero-6__content">
+          <h2 className="ter-hero-6__title">{title}</h2>
+          <p className="ter-hero-6__text">{text}</p>
           <CTALinkSection ctas={ctas} />
         </aside>
-        <figure
-          style={imageStyle}
-          className="ter-hero-six__image-container ter-hero-six__image-container--right-image"
-        />
-      </section>
-    );
-  } else {
-    return (
-      <section className="ter-hero-six">
-        <figure className="ter-hero-six__image-container" />
-        <aside className="ter-hero-six__content-container">
-          <h2 className="ter-hero-six__title">{title}</h2>
-          <p className="ter-hero-six__text">{text}</p>
-          <CTALinkSection ctas={ctas} />
-        </aside>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 };
 
 export default Hero6;
