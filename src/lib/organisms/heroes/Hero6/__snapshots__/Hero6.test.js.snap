@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero6 should match the snapshot 1`] = `
+<section
+  class="ter-hero-6 ter-hero-6--left"
+>
+  <figure
+    class="ter-hero-6__hero-image ter-hero-6__hero-image--3x2"
+    style={
+      Object {
+        "background": "url(http://fpoimg.com/2400x1600?text=3:2)",
+      }
+    }
+  />
+  <figure
+    class="ter-hero-6__hero-image ter-hero-6__hero-image--1x1"
+    style={
+      Object {
+        "background": "url(http://fpoimg.com/1600x1600?text=1:1)",
+      }
+    }
+  />
+  <figure
+    class="ter-hero-6__hero-image ter-hero-6__hero-image--4x3"
+  >
+    <img
+      src="http://fpoimg.com/1600x1200?text=4:3"
+    />
+  </figure>
+  <div
+    class="ter-hero-6__container"
+  >
+    <aside
+      class="ter-hero-6__content"
+    >
+      <h2
+        className="ter-hero-6__title"
+      >
+        Good design is innovative.
+      </h2>
+      <p
+        className="ter-hero-6__text"
+      >
+        Good design is aesthetic. Good design makes a product understandable. Good design is unobtrusive.
+      </p>
+      <CTALinkSection
+        ctas={
+          Object {
+            "ctaOne": Object {
+              "className": "ter-button--primary--1",
+              "link": "#",
+              "text": "Button",
+            },
+            "ctaTwo": Object {
+              "className": "ter-button--secondary--1",
+              "link": "#",
+              "text": "Button",
+            },
+          }
+        }
+      />
+    </aside>
+  </div>
+</section>
+`;

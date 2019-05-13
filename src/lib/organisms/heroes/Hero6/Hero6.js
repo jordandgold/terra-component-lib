@@ -44,15 +44,15 @@ Hero6.propTypes = {
   images: PropTypes.shape({
     imageThreeByTwo: PropTypes.shape({
       url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+      altText: PropTypes.string.isRequired
     }),
     imageFourByThree: PropTypes.shape({
       url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+      altText: PropTypes.string.isRequired
     }),
     imageOneByOne: PropTypes.shape({
       url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+      altText: PropTypes.string.isRequired
     })
   }),
   ctas: PropTypes.shape({
